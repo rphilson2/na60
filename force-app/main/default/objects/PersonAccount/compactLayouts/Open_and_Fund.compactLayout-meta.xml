@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_and_Fund</fullName>
+    <fields>Name</fields>
+    <fields>SSN__pc</fields>
+    <fields>Birth_Date__pc</fields>
+    <fields>Mother_s_Maiden_Name__pc</fields>
+    <fields>Place_of_Birth__pc</fields>
+    <label>Open and Fund</label>
+</CompactLayout>

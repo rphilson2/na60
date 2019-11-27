@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Joint_Formal_Addressee__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Spouse_Client_Record__pc  &lt;&gt; &quot;&quot;,
+IF (LastName = Spouse_Client_Record__pr.LastName,
+
+IF( Put_This_Contact_First__c  = TRUE,
+IF(Spouse_Client_Record__pc  &lt;&gt; &quot;&quot;,  
+     IF(TEXT( Spouse_Client_Record__pr.Salutation ) &lt;&gt; &quot;&quot;,
+          IF(TEXT(Salutation) &lt;&gt; &quot;&quot;, TEXT(Salutation), FirstName) &amp; &quot; &amp; &quot; &amp; TEXT(Spouse_Client_Record__pr.Salutation) &amp; &quot; &quot; &amp; &quot; &quot; &amp; LastName,
+          IF(TEXT(Salutation) &lt;&gt; &quot;&quot;, TEXT(Salutation), FirstName) &amp; &quot; &amp; &quot; &amp; Spouse_Client_Record__pr.FirstName &amp; &quot; &quot; &amp; LastName
+     ),&quot;&quot;)
+,
+IF(Spouse_Client_Record__pc  &lt;&gt; &quot;&quot;,  
+     IF(TEXT( Spouse_Client_Record__pr.Salutation ) &lt;&gt; &quot;&quot;,
+          TEXT(Spouse_Client_Record__pr.Salutation) &amp; &quot; &amp; &quot; &amp; IF(TEXT(Salutation) &lt;&gt; &quot;&quot;, TEXT(Salutation), FirstName) &amp; &quot; &quot; &amp; LastName,
+          Spouse_Client_Record__pr.FirstName &amp; &quot; &amp; &quot; &amp; IF(TEXT(Salutation) &lt;&gt; &quot;&quot;, TEXT(Salutation), FirstName) &amp; &quot; &quot; &amp; LastName
+     ),&quot;&quot;)
+)
+,
+
+IF( Put_This_Contact_First__c  = TRUE, Formal_Addressee__c &amp; &quot; &amp; &quot; &amp; Spouse_Client_Record__pr.Formal_Addressee__c , Spouse_Client_Record__pr.Formal_Addressee__c &amp; &quot; &amp; &quot; &amp; Formal_Addressee__c)
+),&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Joint Formal Addressee</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Referral</fullName>
+    <active>true</active>
+    <description>Minimal Fields for user input</description>
+    <label>New Referral</label>
+    <picklistValues>
+        <picklist>Referral_Product__c</picklist>
+        <values>
+            <fullName>CTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Lending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FNIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mortgage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Business Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wealth Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Referral_Status__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified - No Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualified_Create_Opp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unqualified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retail_Product__c</picklist>
+        <values>
+            <fullName>Bill%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harry A Koch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lending Product %28not HELOC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paycor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paymaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TSYS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Triggered_Flow_Category__c</picklist>
+        <values>
+            <fullName>REFI19</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

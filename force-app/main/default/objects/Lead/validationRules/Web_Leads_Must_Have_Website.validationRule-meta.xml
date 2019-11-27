@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Leads_Must_Have_Website</fullName>
+    <active>true</active>
+    <description>Prevents spam by validating that a website value has been passed into Salesforce.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &#39;Mortgage_Lead&#39;,
+ISBLANK(Website)
+)</errorConditionFormula>
+    <errorMessage>A Mortgage Lead cannot be created without a website.</errorMessage>
+</ValidationRule>

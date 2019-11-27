@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Ticket Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Suite Tickets</fullName>
+                <default>false</default>
+                <label>Suite Tickets</label>
+            </value>
+            <value>
+                <fullName>Outside Tickets</fullName>
+                <default>false</default>
+                <label>Outside Tickets</label>
+            </value>
+            <value>
+                <fullName>Club Tickets</fullName>
+                <default>false</default>
+                <label>Club Tickets</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

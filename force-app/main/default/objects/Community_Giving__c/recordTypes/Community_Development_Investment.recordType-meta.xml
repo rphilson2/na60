@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Development_Investment</fullName>
+    <active>true</active>
+    <label>Community Development Investment</label>
+    <picklistValues>
+        <picklist>Application_Round__c</picklist>
+        <values>
+            <fullName>Round 1 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 1 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 2 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 2 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 3 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 3 2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 4 2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round 4 2018</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Flood_Community_Focus_Area__c</picklist>
+        <values>
+            <fullName>Addressing health and human service needs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cleaning up and protecting natural resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Implementing Housing Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restoring Economic Activity and Small Business Vitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strengthening infrastructure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Columbus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fremont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kearney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Platte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_to_Decline__c</picklist>
+        <values>
+            <fullName>Insufficient or Ineligible CRA Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otherwise Ineligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside of Footprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weak Alignment with Grant Program Goals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reviewed_by_FIC_Disposition__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommended</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reviewed_by_MCIC_Decision__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommended</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reviewed_outside_of_MCIC_Decision__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Picklist__c</picklist>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Decline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

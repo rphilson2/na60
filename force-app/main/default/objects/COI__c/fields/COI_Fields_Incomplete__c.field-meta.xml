@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COI_Fields_Incomplete__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR (
+   ISBLANK(TEXT( COI_Type__c )),
+    ISBLANK( Email__c ),
+       ISBLANK( Phone__c )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>COI Fields Incomplete</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

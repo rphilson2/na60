@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Healthcare_Practitioners__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Healthcare Practitioners</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anesthesiologist</fullName>
+                <default>false</default>
+                <label>Anesthesiologist</label>
+            </value>
+            <value>
+                <fullName>Athletic Trainer</fullName>
+                <default>false</default>
+                <label>Athletic Trainer</label>
+            </value>
+            <value>
+                <fullName>Cardiovascular Tech</fullName>
+                <default>false</default>
+                <label>Cardiovascular Tech</label>
+            </value>
+            <value>
+                <fullName>Chiropractor</fullName>
+                <default>false</default>
+                <label>Chiropractor</label>
+            </value>
+            <value>
+                <fullName>Dental Hygienist</fullName>
+                <default>false</default>
+                <label>Dental Hygienist</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Diagnosing &amp; Treatment-All Other</fullName>
+                <default>false</default>
+                <label>Diagnosing &amp; Treatment-All Other</label>
+            </value>
+            <value>
+                <fullName>Diagnostic Medical Sonographer</fullName>
+                <default>false</default>
+                <label>Diagnostic Medical Sonographer</label>
+            </value>
+            <value>
+                <fullName>Dietitian &amp; Nutritionist</fullName>
+                <default>false</default>
+                <label>Dietitian &amp; Nutritionist</label>
+            </value>
+            <value>
+                <fullName>Emergency Medical Tech &amp; Paramedic</fullName>
+                <default>false</default>
+                <label>Emergency Medical Tech &amp; Paramedic</label>
+            </value>
+            <value>
+                <fullName>Health Tech - All Other</fullName>
+                <default>false</default>
+                <label>Health Tech - All Other</label>
+            </value>
+            <value>
+                <fullName>Laboratory Technician</fullName>
+                <default>false</default>
+                <label>Laboratory Technician</label>
+            </value>
+            <value>
+                <fullName>Medical Records Technician</fullName>
+                <default>false</default>
+                <label>Medical Records Technician</label>
+            </value>
+            <value>
+                <fullName>Nuclear Medicine Technologist</fullName>
+                <default>false</default>
+                <label>Nuclear Medicine Technologist</label>
+            </value>
+            <value>
+                <fullName>Nurse - Licensed</fullName>
+                <default>false</default>
+                <label>Nurse - Licensed</label>
+            </value>
+            <value>
+                <fullName>Nurse - Registered</fullName>
+                <default>false</default>
+                <label>Nurse - Registered</label>
+            </value>
+            <value>
+                <fullName>Occupational Health &amp; Safety Technician</fullName>
+                <default>false</default>
+                <label>Occupational Health &amp; Safety Technician</label>
+            </value>
+            <value>
+                <fullName>Optician - Dispensing</fullName>
+                <default>false</default>
+                <label>Optician - Dispensing</label>
+            </value>
+            <value>
+                <fullName>Oral Surgeon</fullName>
+                <default>false</default>
+                <label>Oral Surgeon</label>
+            </value>
+            <value>
+                <fullName>Orthodontist &amp; Prosthodontist</fullName>
+                <default>false</default>
+                <label>Orthodontist &amp; Prosthodontist</label>
+            </value>
+            <value>
+                <fullName>Orthotics &amp; Prosthetics</fullName>
+                <default>false</default>
+                <label>Orthotics &amp; Prosthetics</label>
+            </value>
+            <value>
+                <fullName>Pharmacist</fullName>
+                <default>false</default>
+                <label>Pharmacist</label>
+            </value>
+            <value>
+                <fullName>Physician Assistant</fullName>
+                <default>false</default>
+                <label>Physician Assistant</label>
+            </value>
+            <value>
+                <fullName>Physician/Surgeon</fullName>
+                <default>false</default>
+                <label>Physician/Surgeon</label>
+            </value>
+            <value>
+                <fullName>Practitioner/Tech - All Other</fullName>
+                <default>false</default>
+                <label>Practitioner/Tech - All Other</label>
+            </value>
+            <value>
+                <fullName>Psychiatric Technician</fullName>
+                <default>false</default>
+                <label>Psychiatric Technician</label>
+            </value>
+            <value>
+                <fullName>Psychiatrist</fullName>
+                <default>false</default>
+                <label>Psychiatrist</label>
+            </value>
+            <value>
+                <fullName>Radiology Tech</fullName>
+                <default>false</default>
+                <label>Radiology Tech</label>
+            </value>
+            <value>
+                <fullName>Respiratory Therapy Technician</fullName>
+                <default>false</default>
+                <label>Respiratory Therapy Technician</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Surgical Technologist</fullName>
+                <default>false</default>
+                <label>Surgical Technologist</label>
+            </value>
+            <value>
+                <fullName>Therapist</fullName>
+                <default>false</default>
+                <label>Therapist</label>
+            </value>
+            <value>
+                <fullName>Veterinarian</fullName>
+                <default>false</default>
+                <label>Veterinarian</label>
+            </value>
+            <value>
+                <fullName>Veterinary Tech</fullName>
+                <default>false</default>
+                <label>Veterinary Tech</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

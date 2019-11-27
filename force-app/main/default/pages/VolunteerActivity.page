@@ -1,0 +1,41 @@
+<apex:page standardController="Volunteer_Activity__c" sidebar="false"  standardStylesheets="true" extensions="VolunteerTrackingExtension" showheader="false">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>Employee Volunteer Activity Reporting</title>
+<body>
+<apex:form >
+<!--
+<span class="head" ><apex:commandLink action="{!viewVolunteerReporting}" style="text-decoration: none;color: #006633;" >Employee Volunteer Activity Reporting</apex:commandLink></span>
+-->
+<p style="margin-bottom:30px" />
+<div class="copy">Volunteer Activity for: {!Employee_fullname}</div>
+           <apex:pageBlock >    
+           <apex:pageMessages ></apex:pageMessages>
+           <apex:pageBlockSection columns="1">
+            <!--apex:outputText value="{!Organization_name}" id="volunteerOrganization" label="Organization Name  " style="vertical-align:top;color:{!Orgname_color}"/-->
+              <apex:inputField value="{!vact.Employee_Market__c}" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Employee_Market__c.InlineHelpText}" id="employeemarket" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Name}" id="ActivityName" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Name.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Activity_Date_Intranet__c}" id="ActivityDate" showDatePicker="True" styleClass="outputtext"/>              
+              <apex:inputField value="{!vact.Volunteer_Events__c}" id="ActivityCategory" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Volunteer_Events__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Duration_hours__c}" id="numberhours" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Duration_hours__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Sessions__c}" id="numberSessions" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Sessions__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Event_Summary__c}" id="ActivityDetails" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Event_Summary__c.InlineHelpText}" style="width:750px;height:100px;vertical-align:top;"/>
+              <apex:outputText value="Activity Details –additional information relating to the volunteer activity including a description of the presentations(s), # of presentations,"
+              style="color:#005734;margin-left:330px;font-style:italic"/>
+              <apex:outputText value="# of attendees, # of FNB employees assisting (including yourself), and employee names and email addresses."
+              style="color:#005734;margin-left:330px;font-style:italic"/>
+              <apex:outputtext value="*New Organization" style="color:blue;font-style:italic" rendered="{!vact.Not_Listed__c}"/>           
+              <!-- apex:commandLink action="{!noserve}" type="image/png" -->
+                  <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/noserve.jpg')}" style="margin-left:400px"/>
+              <!-- /apex:commandlink -->           
+           </apex:pageBlockSection>
+           </apex:pageBlock>
+          <!-- apex:commandLink action="{!viewVolunteerActivityBack}" type="image/png" -->
+            <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/back.png')}" />
+        <!-- /apex:commandlink -->
+        <!-- apex:commandLink action="{!viewVolunteerActivityForward}" type="image/png" -->
+            <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/next.png')}" style="margin-left:100px" />
+        <!-- /apex:commandlink -->
+    </apex:form>
+<p style="margin-bottom:100px" />
+</body>   
+</apex:page>

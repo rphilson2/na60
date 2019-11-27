@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market__c</fullName>
+    <description>The internal market used to organize Business Monitoring tasks</description>
+    <externalId>false</externalId>
+    <label>Market</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agribusiness/Co-Banking</fullName>
+                <default>false</default>
+                <label>Agribusiness/Co-Banking</label>
+            </value>
+            <value>
+                <fullName>Colorado Commercial</fullName>
+                <default>false</default>
+                <label>Colorado Commercial</label>
+            </value>
+            <value>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Specialty Banking</fullName>
+                <default>false</default>
+                <label>Specialty Banking</label>
+            </value>
+            <value>
+                <fullName>Commercial - Hansen</fullName>
+                <default>false</default>
+                <label>Commercial - Hansen</label>
+            </value>
+            <value>
+                <fullName>Commercial - Struthers</fullName>
+                <default>false</default>
+                <label>Commercial - Struthers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

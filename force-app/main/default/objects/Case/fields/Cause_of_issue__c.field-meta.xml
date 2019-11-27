@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause_of_issue__c</fullName>
+    <description>Used for reporting on internal Mortgage Support cases</description>
+    <externalId>false</externalId>
+    <label>Cause of issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>System Issue (general)</fullName>
+                <default>false</default>
+                <label>System Issue (general)</label>
+            </value>
+            <value>
+                <fullName>System Issue (known issue)</fullName>
+                <default>false</default>
+                <label>System Issue (known issue)</label>
+            </value>
+            <value>
+                <fullName>User input (basic)</fullName>
+                <default>false</default>
+                <label>User input (basic)</label>
+            </value>
+            <value>
+                <fullName>User input (advanced)</fullName>
+                <default>false</default>
+                <label>User input (advanced)</label>
+            </value>
+            <value>
+                <fullName>User knowledge (basic)</fullName>
+                <default>false</default>
+                <label>User knowledge (basic)</label>
+            </value>
+            <value>
+                <fullName>User knowledge (advanced)</fullName>
+                <default>false</default>
+                <label>User knowledge (advanced)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

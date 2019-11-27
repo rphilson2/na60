@@ -1,0 +1,74 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="Appendix C: Examples of Programs Supported with a Community Development Grant" styleClass="outputtextbold"/></center>
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Stable Housing: " styleClass="outputtextbold"/><apex:outputText value="Increase access to safe, affordable, and quality housing through 
+                                construction, site development, housing rehabilitation, homeownership education, and 
+                                foreclosure prevention programs and services." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Neighborhood Revitalization: " styleClass="outputtextbold"/><apex:outputText value="Stimulate revitalization that attracts 
+                                or retains individuals and/or businesses to blighted, underserved, and distressed communities." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Affordable housing construction, renovation and repairs</li>
+                                    <li>Affordable housing construction predevelopment expenses</li>
+                                    <li>Down payment assistance programs</li>
+                                    <li>Homebuyer education</li>
+                                    <li>Remediation of home health hazards</li>
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Educated Workforce: " styleClass="outputtextbold"/><apex:outputText value="Strengthen individual core competencies 
+                                that will improve personal economic self-sufficiency, including adult basic education, and 
+                                vocational and employability training." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Career education and support</li>
+                                    <li>Computer coding and programming summer academy</li>
+                                    <li>Low interest auto loans for transportation to/from work </li>
+                                    <li>College and career readiness programming</li>
+                                    <li>Financial education, budgeting, coaching and cash flow management</li>
+                                    <li>Pathways to help out-of-school and unemployed young adults connect to the workforce</li>
+                                    <li>Workforce training for near-homeless youth, homeless veterans</li>
+                                    <li>Adult basic education, literacy and GED instruction</li>
+                                    <li>Vocational training</li>
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Strong Local Economies: " styleClass="outputtextbold"/><apex:outputText value="Grow local economies 
+                                through small business and entrepreneurial development and job creation by supporting training, technical 
+                                assistance, education and microfinance." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Technical assistance, and training for small businesses, start-ups and entrepreneurs</li>
+                                    <li>Microlending</li>
+                                    <li>Education, asset and credit building, peer support and network development</li>
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

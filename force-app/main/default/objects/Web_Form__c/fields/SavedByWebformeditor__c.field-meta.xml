@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SavedByWebformeditor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is internal to the app and is used to track if people didn&#39;t forget to override the edit and new buttons on the webform object. Only the webform editor will set this flag.</description>
+    <externalId>false</externalId>
+    <label>SavedByWebformeditor</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,81 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td class="outputtext">If a Bank employee encouraged you to apply, please provide his/her name:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Encouraging_Bank_Employee__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Is the Bank directly involved with your organization as a member of Board of Directors, committee, or other volunteer capacity?:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.First_National_Bank_Employee_on_Board__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><i>If Yes, please describe:</i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Provide_Name_and_Service_Description__c}" id="Provide_Name_and_Service_Description__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Provide_Name_and_Service_Description__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Do you have a direct or indirect business relationship with First National Bank?</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Have_Relationship__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><i>If Yes, please describe:</i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Please_Describe_Relationship__c}" id="Please_Describe_Relationship__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Please_Describe_Relationship__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr14}" styleClass="myButton"/>
+                                </td>                                
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

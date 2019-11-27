@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unactioned_for_7_Days__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(NOW()-7&gt;CreatedDate, LastModifiedDate == CreatedDate)</formula>
+    <inlineHelpText>This box will check itself when the lead or referral has not been modified beyond 7 days of creation</inlineHelpText>
+    <label>Unactioned for 7 Days</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

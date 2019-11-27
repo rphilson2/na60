@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAW_Subject__c</fullName>
+    <description>Use this picklist to specify the FAW Subject.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this picklist to specify the FAW Subject.</inlineHelpText>
+    <label>FAW Subject</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Benefit Fair</fullName>
+                <default>false</default>
+                <label>Benefit Fair</label>
+            </value>
+            <value>
+                <fullName>Community</fullName>
+                <default>false</default>
+                <label>Community</label>
+            </value>
+            <value>
+                <fullName>Financial Education</fullName>
+                <default>false</default>
+                <label>Financial Education</label>
+            </value>
+            <value>
+                <fullName>Kids Banking</fullName>
+                <default>false</default>
+                <label>Kids Banking</label>
+            </value>
+            <value>
+                <fullName>Meet &amp; Greet</fullName>
+                <default>false</default>
+                <label>Meet &amp; Greet</label>
+            </value>
+            <value>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+                <label>Orientation</label>
+            </value>
+            <value>
+                <fullName>Sale Call</fullName>
+                <default>false</default>
+                <label>Sale Call</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,35 @@
+<apex:page standardController="Prospect_Profile__c">
+    <apex:pageBlock >
+             <apex:pageBlockSection title="Significant Industry Trends Affecting This Sector">
+             <apex:outputPanel layout="block" style="white-space:nowrap;">
+                 <table width="50px" align="left">
+                 <tr>
+                        <td width="150px"><h2><apex:outputText value="1: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.IndustryTrends1__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="150px"><h2><apex:outputText value="2: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.IndustryTrends2__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr>
+                        <td width="150px"><h2><apex:outputText value="3: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.IndustryTrends3__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="150px"><h2><apex:outputText value="4: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.IndustryTrends4__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr>
+                        <td width="150px"><h2><apex:outputText value="5: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.IndustryTrends5__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 </table>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

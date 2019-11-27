@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Buildings_and_Ground__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Buildings and Ground</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Janitor &amp; Cleaner</fullName>
+                <default>false</default>
+                <label>Janitor &amp; Cleaner</label>
+            </value>
+            <value>
+                <fullName>Landscape &amp; Ground Keeping</fullName>
+                <default>false</default>
+                <label>Landscape &amp; Ground Keeping</label>
+            </value>
+            <value>
+                <fullName>Maid &amp; Housekeeping</fullName>
+                <default>false</default>
+                <label>Maid &amp; Housekeeping</label>
+            </value>
+            <value>
+                <fullName>Odd Jobs</fullName>
+                <default>false</default>
+                <label>Odd Jobs</label>
+            </value>
+            <value>
+                <fullName>Owner of Landscaping Service</fullName>
+                <default>false</default>
+                <label>Owner of Landscaping Service</label>
+            </value>
+            <value>
+                <fullName>Pest Control Worker</fullName>
+                <default>false</default>
+                <label>Pest Control Worker</label>
+            </value>
+            <value>
+                <fullName>Pesticide Handler &amp; Sprayer</fullName>
+                <default>false</default>
+                <label>Pesticide Handler &amp; Sprayer</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Landscape &amp; Grounds keeping</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Landscape &amp; Grounds keeping</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Landscape &amp; Janitorial</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Landscape &amp; Janitorial</label>
+            </value>
+            <value>
+                <fullName>Tree Trimmer &amp; Pruner</fullName>
+                <default>false</default>
+                <label>Tree Trimmer &amp; Pruner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

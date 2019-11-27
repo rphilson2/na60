@@ -1,0 +1,19 @@
+<apex:page standardController="COI__c">
+    <apex:tabPanel >
+        <apex:tab label="Open Leads">
+            <apex:include pageName="COI_Leads_Related_List_Open"/>
+        </apex:tab>
+        <apex:tab label="Closed Leads">
+            <apex:include pageName="COI_Leads_Related_List_Not_Open"/>
+        </apex:tab>
+        <apex:tab label="Accounts">
+            <apex:include pageName="COI_Unfunded_Accounts_Related_List"/>
+        </apex:tab>
+            <apex:tab label="Opportunities">
+            <apex:include pageName="COI_Opportunities_Related_List"/>
+        </apex:tab>
+        <apex:tab label="Unfunded Trusts">
+            <apex:include pageName="COI_Funded_Trust_Related_List"/>
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

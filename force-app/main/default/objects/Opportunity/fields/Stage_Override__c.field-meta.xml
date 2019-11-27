@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox, available only to Admins, will prevent the validation rules that run against Opportunity Stage progressions and permit an Opportunity to move backward out of a stage.</description>
+    <externalId>false</externalId>
+    <label>Stage Override</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

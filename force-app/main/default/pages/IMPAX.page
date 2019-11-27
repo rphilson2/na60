@@ -1,0 +1,49 @@
+<apex:page standardController="IMPAX__c" sidebar="false"  standardStylesheets="true" extensions="IMPAX_Controller" showheader="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>IMPAX</title>
+<body>
+<apex:form >
+<center><apex:outputText value="Account Name:  " style="font-weight:Bold;font-size:20px"/>
+        <apex:outputText value="{!account_name}" style="font-weight:normal;font-size:20px"/></center>
+<center><apex:outputText value="IMPAX Profile:  " style="font-weight:bold;font-size:16px" rendered="{!IF(new_flag = false, true, false)}"/>
+        <apex:outputText value="{!IMPAX__c.name}" style="font-weight:normal;font-size:16px" rendered="{!IF(new_flag = false, true, false)}"/></center>
+<center><apex:outputText value="New IMPAX Profile" style="font-weight:bold;font-size:16px" rendered="{!IF(new_flag = true && IMPAX_allowed = true, true, false)}"/></center>
+
+<p style="margin-bottom:30px" />
+    <apex:pageMessages escape="false"></apex:pageMessages>
+    <apex:outputPanel rendered="{!IMPAX_allowed}">
+    <apex:pageBlock >
+        <style>
+            body .bPageBlock .pbBody .maroon .pbSubheader{
+                background-color:#450000;
+            }
+        </style>
+           <apex:pageBlockButtons location="top">
+           <!--apex:commandButton action="{!DeleteIMPAX}" value="Delete" rendered="{!IF(new_flag = true, false, true)}"/ -->
+              <apex:commandButton action="{!InsertIMPAX}" value="   Save New IMPAX Profile   " rendered="{!IF(new_flag = true, true, false)}"/>
+              <apex:commandButton action="{!UpdateIMPAX}" value="   Save Updates to Profile   " rendered="{!IF(new_flag = false, true, false)}"/>              
+              <apex:commandButton action="{!cancelIMPAX}" value="   Cancel and Return   "/>
+              <apex:commandButton action="{!DeleteIMPAX}" value="   Delete IMPAX Profile   " rendered="{!IF(new_flag = true, false, true)}"/>
+           </apex:pageBlockButtons>                         
+           <apex:outputPanel styleClass="maroon" layout="block">        
+              <apex:pageBlockSection columns="1" title="Information">
+                 <apex:inputField value="{!IMPAX__c.name}" id="IMPAXName" html-title="{!$ObjectType.IMPAX__c.fields.Name.InlineHelpText}" style="vertical-align:top;"/>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection columns="2" title="Profiles, Goals, and Concerns">
+                 <apex:inputField value="{!IMPAX__c.Profile__c}" html-title="{!$ObjectType.IMPAX__c.fields.Profile__c.InlineHelpText}" id="Profile" style="width:600px;height:100px;vertical-align:top;"/>
+                 <apex:inputField value="{!IMPAX__c.Goals__c}" html-title="{!$ObjectType.IMPAX__c.fields.Goals__c.InlineHelpText}" id="Goals" style="width:600px;height:100px;vertical-align:top;"/>
+                 <apex:inputField value="{!IMPAX__c.Concerns__c}" html-title="{!$ObjectType.IMPAX__c.fields.Concerns__c.InlineHelpText}" id="Concerns" style="width:600px;height:100px;vertical-align:top;"/>
+                 <apex:inputField value="{!IMPAX__c.Outside_Assets__c}" html-title="{!$ObjectType.IMPAX__c.fields.Outside_Assets__c.InlineHelpText}" id="Outside_Assets" style="width:600px;height:100px;vertical-align:top;"/>
+                 <apex:inputField value="{!IMPAX__c.Follow_Up_Items__c}" html-title="{!$ObjectType.IMPAX__c.fields.Follow_Up_Items__c.InlineHelpText}" id="Follow_Up_Items" style="width:600px;height:100px;vertical-align:top;"/>
+              </apex:pageBlockSection>                  
+           </apex:outputPanel>
+        </apex:pageBlock>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!IF(IMPAX_allowed = FALSE, true, false)}"> 
+            <center><apex:commandlink action="{!CancelIMPAX}" value="Return to Customer page" style="color: blue; font-size:12pt; width:240px; Height:35px"/></center>
+        </apex:outputPanel>                          
+    </apex:form>
+<p style="margin-bottom:100px" />
+</body>   
+</apex:page>

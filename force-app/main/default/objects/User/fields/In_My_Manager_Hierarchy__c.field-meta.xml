@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_My_Manager_Hierarchy__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(I_am_Manager__c,I_am_Manager_2__c,I_am_Manager_3__c,I_am_Manager_4__c,I_am_Manager_5__c,I_am_Manager_6__c)</formula>
+    <label>In My Manager Hierarchy</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Personal_Care_and_Service__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Personal Care and Service</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amusement Park/Arcade Attend</fullName>
+                <default>false</default>
+                <label>Amusement Park/Arcade Attend</label>
+            </value>
+            <value>
+                <fullName>Amusement Park/Arcade Owner</fullName>
+                <default>false</default>
+                <label>Amusement Park/Arcade Owner</label>
+            </value>
+            <value>
+                <fullName>Animal Caretaker/Trainer</fullName>
+                <default>false</default>
+                <label>Animal Caretaker/Trainer</label>
+            </value>
+            <value>
+                <fullName>Barber/Hairdresser/Stylist</fullName>
+                <default>false</default>
+                <label>Barber/Hairdresser/Stylist</label>
+            </value>
+            <value>
+                <fullName>Car Wash Attendants</fullName>
+                <default>false</default>
+                <label>Car Wash Attendants</label>
+            </value>
+            <value>
+                <fullName>Car Wash Owner</fullName>
+                <default>false</default>
+                <label>Car Wash Owner</label>
+            </value>
+            <value>
+                <fullName>Child Care Workers</fullName>
+                <default>false</default>
+                <label>Child Care Workers</label>
+            </value>
+            <value>
+                <fullName>Coat/Dressing Room Attendant</fullName>
+                <default>false</default>
+                <label>Coat/Dressing Room Attendant</label>
+            </value>
+            <value>
+                <fullName>Concierge, Baggage Porter &amp; Bellhop</fullName>
+                <default>false</default>
+                <label>Concierge, Baggage Porter &amp; Bellhop</label>
+            </value>
+            <value>
+                <fullName>Cosmetologist</fullName>
+                <default>false</default>
+                <label>Cosmetologist</label>
+            </value>
+            <value>
+                <fullName>Costume Attendants</fullName>
+                <default>false</default>
+                <label>Costume Attendants</label>
+            </value>
+            <value>
+                <fullName>Fitness Trainer/Instructor</fullName>
+                <default>false</default>
+                <label>Fitness Trainer/Instructor</label>
+            </value>
+            <value>
+                <fullName>Flight/Transportation Attendant</fullName>
+                <default>false</default>
+                <label>Flight/Transportation Attendant</label>
+            </value>
+            <value>
+                <fullName>Flight/Transportation School Owner</fullName>
+                <default>false</default>
+                <label>Flight/Transportation School Owner</label>
+            </value>
+            <value>
+                <fullName>Funeral Attendants/Embalmers</fullName>
+                <default>false</default>
+                <label>Funeral Attendants/Embalmers</label>
+            </value>
+            <value>
+                <fullName>Gambler</fullName>
+                <default>false</default>
+                <label>Gambler</label>
+            </value>
+            <value>
+                <fullName>Gaming - Supervisors/Managers</fullName>
+                <default>false</default>
+                <label>Gaming - Supervisors/Managers</label>
+            </value>
+            <value>
+                <fullName>Gaming Dealers</fullName>
+                <default>false</default>
+                <label>Gaming Dealers</label>
+            </value>
+            <value>
+                <fullName>Gaming Service Worker-All Other</fullName>
+                <default>false</default>
+                <label>Gaming Service Worker-All Other</label>
+            </value>
+            <value>
+                <fullName>Gaming &amp; Sports Book Writer &amp; Runner</fullName>
+                <default>false</default>
+                <label>Gaming &amp; Sports Book Writer &amp; Runner</label>
+            </value>
+            <value>
+                <fullName>Gaming Establishment Owner/Partner</fullName>
+                <default>false</default>
+                <label>Gaming Establishment Owner/Partner</label>
+            </value>
+            <value>
+                <fullName>Golf Course/Country Club Owner</fullName>
+                <default>false</default>
+                <label>Golf Course/Country Club Owner</label>
+            </value>
+            <value>
+                <fullName>Golf Course/Country Club Attendant</fullName>
+                <default>false</default>
+                <label>Golf Course/Country Club Attendant</label>
+            </value>
+            <value>
+                <fullName>Manicurist/Skin Specialist</fullName>
+                <default>false</default>
+                <label>Manicurist/Skin Specialist</label>
+            </value>
+            <value>
+                <fullName>Motion Picture Projectionists</fullName>
+                <default>false</default>
+                <label>Motion Picture Projectionists</label>
+            </value>
+            <value>
+                <fullName>Owner/Service Provider</fullName>
+                <default>false</default>
+                <label>Owner/Service Provider</label>
+            </value>
+            <value>
+                <fullName>Personal &amp; Home Care Aides</fullName>
+                <default>false</default>
+                <label>Personal &amp; Home Care Aides</label>
+            </value>
+            <value>
+                <fullName>Personal Care - All Other</fullName>
+                <default>false</default>
+                <label>Personal Care - All Other</label>
+            </value>
+            <value>
+                <fullName>Residential Advisor/Supervisor</fullName>
+                <default>false</default>
+                <label>Residential Advisor/Supervisor</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Shampooers</fullName>
+                <default>false</default>
+                <label>Shampooers</label>
+            </value>
+            <value>
+                <fullName>Slot Key Persons</fullName>
+                <default>false</default>
+                <label>Slot Key Persons</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Personal Service Worker</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Personal Service Worker</label>
+            </value>
+            <value>
+                <fullName>Travel &amp; Tour Guides</fullName>
+                <default>false</default>
+                <label>Travel &amp; Tour Guides</label>
+            </value>
+            <value>
+                <fullName>Travel/Tour Guide Owner</fullName>
+                <default>false</default>
+                <label>Travel/Tour Guide Owner</label>
+            </value>
+            <value>
+                <fullName>Usher/Ticket Taker</fullName>
+                <default>false</default>
+                <label>Usher/Ticket Taker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

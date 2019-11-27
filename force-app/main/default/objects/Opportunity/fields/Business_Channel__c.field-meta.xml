@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Channel__c</fullName>
+    <defaultValue>&quot;Retail&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Business Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Retail</fullName>
+                <default>true</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Consumer Direct</fullName>
+                <default>false</default>
+                <label>Consumer Direct</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Conditionally_Required</fullName>
+    <active>true</active>
+    <description>The country is required if the zip code is populated, so that we can verify the zip code format.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Country__c,&quot;&quot;),
+Zip_Postal_Code__c &lt;&gt; &quot;&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Country__c</errorDisplayField>
+    <errorMessage>Country is required when Zip Code is populated.</errorMessage>
+</ValidationRule>

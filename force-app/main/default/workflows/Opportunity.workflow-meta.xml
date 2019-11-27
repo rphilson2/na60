@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CTS_Imp_Opp_ready_to_Start_Implementation</fullName>
+        <ccEmails>tssupport@fnni.com</ccEmails>
+        <description>This email is sent when the CTS opp reaches &quot;Documentation&quot; stage</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Opp_ready_to_Start_Process</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_to_CO_Cash_Management_Implementation_group</fullName>
+        <ccEmails>coloradocashmanagement@fnni.com</ccEmails>
+        <description>Email alert to CO Cash Management Implementation group</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Opp_ready_to_Start_Process</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_to_IL_Cash_Management_Implementation_group</fullName>
+        <ccEmails>tssupport@fnni.com</ccEmails>
+        <description>Email alert to IL Cash Management Implementation group</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Opp_ready_to_Start_Process</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_to_KS_Cash_Management_Implementation_group</fullName>
+        <ccEmails>treasurymgmtsales@FNBK.com</ccEmails>
+        <description>Email alert to KS Cash Management Implementation group</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Opp_ready_to_Start_Process</template>
+    </alerts>
+    <alerts>
+        <fullName>LLC_BI__Close_Date_Moved</fullName>
+        <ccEmails>Demo@Bankr.com</ccEmails>
+        <description>Close Date Moved</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>LLC_BI__Bankr_Templates/LLC_BI__Workflow_Alert_Close_Date_Accelerated</template>
+    </alerts>
+    <alerts>
+        <fullName>LLC_BI__Guarantee_Fee_Not_Paid</fullName>
+        <ccEmails>Demo@Bankr.com</ccEmails>
+        <description>Guarantee Fee Not Paid</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>LLC_BI__Bankr_Templates/LLC_BI__Guarantee_Fee_Not_Paid</template>
+    </alerts>
+    <alerts>
+        <fullName>LLC_BI__Loan_Withdrawn_Declined</fullName>
+        <ccEmails>Demo@Bankr.com</ccEmails>
+        <description>Loan Withdrawn / Declined</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>LLC_BI__Bankr_Templates/LLC_BI__Loan_Withdrawn_Declined</template>
+    </alerts>
+    <alerts>
+        <fullName>LLC_BI__Order_New_Appraisal_Alert</fullName>
+        <ccEmails>Demo@Bankr.com</ccEmails>
+        <description>Order New Appraisal Alert</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>LLC_BI__Bankr_Templates/LLC_BI__Order_Appraisal</template>
+    </alerts>
+    <alerts>
+        <fullName>LLC_BI__Stage_Change_to_Compliance</fullName>
+        <ccEmails>Demo@Bankr.com</ccEmails>
+        <description>Stage Change to Compliance</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>LLC_BI__Bankr_Templates/LLC_BI__Stage_Change_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Task_Created_Opportunity</fullName>
+        <description>Task-Created Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Opportunities/Task_created_Opportunity</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Choose_Reason_Lost_to_Aged_Out</fullName>
+        <field>Reason_Lost__c</field>
+        <literalValue>Aged Out</literalValue>
+        <name>Choose Reason Lost to Aged Out</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Update_Start_Date_of_Current_Stage</fullName>
+        <field>LLC_BI__Start_Date_at_Current_Stage__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Start Date of Current Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Close_Date_On_Opp_Close</fullName>
+        <description>This Field Update will automatically change the Close Date to NOW when the Opportunity Stage is set to an available CLOSE state.</description>
+        <field>CloseDate</field>
+        <formula>NOW()</formula>
+        <name>Update Close Date On Opp Close</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CTS CO Imp - Opp at Documentation Stage</fullName>
+        <actions>
+            <name>Email_alert_to_CO_Cash_Management_Implementation_group</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Corporate Treasury Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Documentation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>contains</operation>
+            <value>Colorado,CO,KS,Kansas,TX,Texas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>contains</operation>
+            <value>global,CTS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notContain</operation>
+            <value>card,pcard,purchasing card</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CTS IL Imp - Opp at Documentation Stage</fullName>
+        <actions>
+            <name>Email_alert_to_IL_Cash_Management_Implementation_group</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Corporate Treasury Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Documentation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>contains</operation>
+            <value>Illinois,IL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>contains</operation>
+            <value>global,CTS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notContain</operation>
+            <value>card,pcard,purchasing card</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CTS Imp - Opp at Documentation Stage</fullName>
+        <actions>
+            <name>CTS_Imp_Opp_ready_to_Start_Implementation</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Corporate Treasury Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Documentation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>notEqual</operation>
+            <value>CO,Colorado,IL,Illinois,KS,Kansas,TX,Texas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>contains</operation>
+            <value>CTS,global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notContain</operation>
+            <value>card,pcard,purchasing card</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>CTS KS Imp - Opp at Documentation Stage</fullName>
+        <actions>
+            <name>Email_alert_to_KS_Cash_Management_Implementation_group</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Corporate Treasury Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Documentation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingState</field>
+            <operation>contains</operation>
+            <value>Kansas,KS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.UserRoleId</field>
+            <operation>contains</operation>
+            <value>global,CTS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Name</field>
+            <operation>notContain</operation>
+            <value>card,pcard,purchasing card</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fremont Closed Opp Follow Up Tasks</fullName>
+        <actions>
+            <name>Mail_Thank_You_Card</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Onboarding_Annual_Review_Meeting</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Onboarding_Statement_review_call</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Onboarding_Update_Customer_Info</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Onboarding_transer_notify</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Onboarding_welcome</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Opportunity_Owner_Role__c</field>
+            <operation>equals</operation>
+            <value>Great Plains - Fremont</value>
+        </criteriaItems>
+        <description>This rule will ensure minimum client servicing standards are met when opportunies close-win.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Update Start Date of Current Stage</fullName>
+        <actions>
+            <name>LLC_BI__Update_Start_Date_of_Current_Stage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(StageName)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp Close Stage Closed - Update Close Date</fullName>
+        <actions>
+            <name>Update_Close_Date_On_Opp_Close</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.ProfileId</field>
+            <operation>notEqual</operation>
+            <value>Custom System Admin</value>
+        </criteriaItems>
+        <description>This Workflow will check for any Opportunity that has a valid CLOSE stage and trigger a field update to change the close date to NOW.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Mail_Thank_You_Card</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Please send client a Thank You / Welcome card.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Thank you card</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_Annual_Review_Meeting</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Annual Review Meeting.  Schedule another task for next year.</description>
+        <dueDateOffset>365</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Annual Review Meeting</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_Statement_review_call</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Schedule a call for statement review</description>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Statement Review Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_Update_Customer_Info</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Update birthday, anniversary, holiday list, etc</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Update Customer Info</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_transer_notify</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Transfer Notification</description>
+        <dueDateOffset>10</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Transfer Notification</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_welcome</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Send a welcome letter to the customer.</description>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CloseDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onboarding - Welcome Letter</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Modified_Date_and_Time__c</fullName>
+    <description>A new custom field, this &quot;Last Modified Date and Time&quot; will have a corresponding workflow that updates the field whenever a new Case Comment is created. This will force the Case core &quot;Last Modified Date&quot; to update whenever a Case Comment is added, which does not happen automatically.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <label>Last Modified Date and Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Level__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate the customer relationship at the time this activity is assigned</inlineHelpText>
+    <label>Relationship Level</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospect - Low</fullName>
+                <default>false</default>
+                <label>Prospect - Low</label>
+            </value>
+            <value>
+                <fullName>Prospect - Medium</fullName>
+                <default>false</default>
+                <label>Prospect - Medium</label>
+            </value>
+            <value>
+                <fullName>Prospect - High</fullName>
+                <default>false</default>
+                <label>Prospect - High</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

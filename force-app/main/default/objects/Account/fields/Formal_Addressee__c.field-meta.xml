@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formal_Addressee__c</fullName>
+    <description>This field shows what will be displayed on things like envelopes. It is a formal format.</description>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Salutation) &lt;&gt; &quot;&quot;, TEXT(Salutation)  &amp;  &quot; &quot; &amp; LastName,  FirstName  &amp;  &quot; &quot; &amp; LastName)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is what shows up on things like envelopes.</inlineHelpText>
+    <label>Formal Addressee</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

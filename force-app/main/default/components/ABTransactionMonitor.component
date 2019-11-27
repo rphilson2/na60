@@ -1,0 +1,19 @@
+<apex:component controller="ABTransactionMonitorController">
+	<apex:attribute name="elementId" description="Element Id on which scope is registered" type="String" required="true"/>
+	<apex:attribute name="handler" description="Handler function on scope to call" type="String" required="true"/>
+	<nFUSE:PushTopicRegistration topic="TransactionLogUpdate" callback="{!callback}"/>
+	<script type="text/javascript">
+		function {!callback}(raw) {
+			var scope = angular.element(jQuery('#{!elementId}')).scope();
+			var message = {
+				transactionId: raw.data.sobject.{!namespace}External_Id__c,
+				transactionStatus: raw.data.sobject.{!namespace}Transaction_Status__c,
+				objectId: raw.data.sobject.{!namespace}Primary_Object_Id__c,
+				vendorStatus: raw.data.sobject.{!namespace}Vendor_Status__c
+			};
+			scope.$apply(function () {
+				scope.$$childHead.vm.{!handler}(message);
+			});
+		}
+	</script>
+</apex:component>

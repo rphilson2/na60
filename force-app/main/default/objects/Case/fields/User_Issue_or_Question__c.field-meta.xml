@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Issue_or_Question__c</fullName>
+    <externalId>false</externalId>
+    <label>User Issue or Question</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>(PL) Precision Lender</fullName>
+                <default>false</default>
+                <label>(PL) Precision Lender</label>
+            </value>
+            <value>
+                <fullName>(R1) Resource1</fullName>
+                <default>false</default>
+                <label>(R1) Resource1</label>
+            </value>
+            <value>
+                <fullName>(SFO) Salesforce for Outlook</fullName>
+                <default>false</default>
+                <label>(SFO) Salesforce for Outlook</label>
+            </value>
+            <value>
+                <fullName>Browser Issue/Question</fullName>
+                <default>false</default>
+                <label>Browser Issue/Question</label>
+            </value>
+            <value>
+                <fullName>Campaigns</fullName>
+                <default>false</default>
+                <label>Campaigns</label>
+            </value>
+            <value>
+                <fullName>Can&#39;t price a loan</fullName>
+                <default>false</default>
+                <label>Can&#39;t price a loan</label>
+            </value>
+            <value>
+                <fullName>Card Product</fullName>
+                <default>false</default>
+                <label>Card Product</label>
+            </value>
+            <value>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+                <label>Case Management</label>
+            </value>
+            <value>
+                <fullName>COI</fullName>
+                <default>false</default>
+                <label>COI</label>
+            </value>
+            <value>
+                <fullName>Credit Error</fullName>
+                <default>false</default>
+                <label>Credit Error</label>
+            </value>
+            <value>
+                <fullName>Customer Management</fullName>
+                <default>false</default>
+                <label>Customer Management</label>
+            </value>
+            <value>
+                <fullName>Data/File Management</fullName>
+                <default>false</default>
+                <label>Data/File Management</label>
+            </value>
+            <value>
+                <fullName>Data Upload</fullName>
+                <default>false</default>
+                <label>Data Upload</label>
+            </value>
+            <value>
+                <fullName>Dealer / Customer Service</fullName>
+                <default>false</default>
+                <label>Dealer / Customer Service</label>
+            </value>
+            <value>
+                <fullName>Did Not Apply</fullName>
+                <default>false</default>
+                <label>Did Not Apply</label>
+            </value>
+            <value>
+                <fullName>DU Error</fullName>
+                <default>false</default>
+                <label>DU Error</label>
+            </value>
+            <value>
+                <fullName>DU Interpretation</fullName>
+                <default>false</default>
+                <label>DU Interpretation</label>
+            </value>
+            <value>
+                <fullName>Duplicate Account/Contact</fullName>
+                <default>false</default>
+                <label>Duplicate Account/Contact</label>
+            </value>
+            <value>
+                <fullName>Employee / Dealer Incentives</fullName>
+                <default>false</default>
+                <label>Employee / Dealer Incentives</label>
+            </value>
+            <value>
+                <fullName>Empower entry question</fullName>
+                <default>false</default>
+                <label>Empower entry question</label>
+            </value>
+            <value>
+                <fullName>Enrollment Assistance</fullName>
+                <default>false</default>
+                <label>Enrollment Assistance</label>
+            </value>
+            <value>
+                <fullName>Error Message</fullName>
+                <default>false</default>
+                <label>Error Message</label>
+            </value>
+            <value>
+                <fullName>Field or Page Modifications</fullName>
+                <default>false</default>
+                <label>Field or Page Modifications</label>
+            </value>
+            <value>
+                <fullName>Files, Notes, and Attachments</fullName>
+                <default>false</default>
+                <label>Files, Notes, and Attachments</label>
+            </value>
+            <value>
+                <fullName>First in the Community</fullName>
+                <default>false</default>
+                <label>First in the Community</label>
+            </value>
+            <value>
+                <fullName>General Salesforce Question</fullName>
+                <default>true</default>
+                <label>General Salesforce Question</label>
+            </value>
+            <value>
+                <fullName>General tech support issue</fullName>
+                <default>false</default>
+                <label>General tech support issue</label>
+            </value>
+            <value>
+                <fullName>Large Dollar Transactions</fullName>
+                <default>false</default>
+                <label>Large Dollar Transactions</label>
+            </value>
+            <value>
+                <fullName>Loan Program Question</fullName>
+                <default>false</default>
+                <label>Loan Program Question</label>
+            </value>
+            <value>
+                <fullName>Loan Scenario Question</fullName>
+                <default>false</default>
+                <label>Loan Scenario Question</label>
+            </value>
+            <value>
+                <fullName>Login / Reset Password</fullName>
+                <default>false</default>
+                <label>Login / Reset Password</label>
+            </value>
+            <value>
+                <fullName>MCC Code Update Needed</fullName>
+                <default>false</default>
+                <label>MCC Code Update Needed</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>New System Question</fullName>
+                <default>false</default>
+                <label>New System Question</label>
+            </value>
+            <value>
+                <fullName>No Issue</fullName>
+                <default>false</default>
+                <label>No Issue</label>
+            </value>
+            <value>
+                <fullName>Online Channel</fullName>
+                <default>false</default>
+                <label>Online Channel</label>
+            </value>
+            <value>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset/Single Sign On</label>
+            </value>
+            <value>
+                <fullName>Pended Apps</fullName>
+                <default>false</default>
+                <label>Pended Apps</label>
+            </value>
+            <value>
+                <fullName>POS</fullName>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Referrals / Lead Conversion</fullName>
+                <default>false</default>
+                <label>Referrals / Lead Conversion</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>Rewards</fullName>
+                <default>false</default>
+                <label>Rewards</label>
+            </value>
+            <value>
+                <fullName>Task/Event Management</fullName>
+                <default>false</default>
+                <label>Task/Event Management</label>
+            </value>
+            <value>
+                <fullName>Tech Support</fullName>
+                <default>false</default>
+                <label>Tech Support</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Training / Request for</fullName>
+                <default>false</default>
+                <label>Training / Request for</label>
+            </value>
+            <value>
+                <fullName>Trouble printing docs</fullName>
+                <default>false</default>
+                <label>Trouble printing docs</label>
+            </value>
+            <value>
+                <fullName>Unable to access data</fullName>
+                <default>false</default>
+                <label>Unable to access data</label>
+            </value>
+            <value>
+                <fullName>User Activation/DeActivation</fullName>
+                <default>false</default>
+                <label>User Activation/DeActivation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

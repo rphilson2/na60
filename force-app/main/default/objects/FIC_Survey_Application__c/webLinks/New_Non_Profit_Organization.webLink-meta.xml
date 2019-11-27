@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Non_Profit_Organization</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>New Non Profit Organization</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/a0Z/e?Name={!FIC_Survey_Application__c.Name_of_Organization__c}&amp;00Na000000B2yXs={!FIC_Survey_Application__c.Mission_Statement__c}&amp;00Na000000B2yY0={!FIC_Survey_Application__c.Organization_Street_Address__c}&amp;00Na000000B2yXq={!FIC_Survey_Application__c.Organization_City__c}&amp;00Na000000B2yXy={!FIC_Survey_Application__c.Organization_State__c}&amp;00Na000000B2yY2={!FIC_Survey_Application__c.Organization_Zip__c}&amp;00Na000000B2yY1={!FIC_Survey_Application__c.Organization_Website__c}&amp;00Na000000B2yXv={!FIC_Survey_Application__c.Organization_Community_Focus_Area__c}&amp;00Na000000Axfs8={!FIC_Survey_Application__c.Non_Profit_Status__c}&amp;00Na000000AxfsD={!FIC_Survey_Application__c.Non_Profit_Status_Other__c}</url>
+</WebLink>

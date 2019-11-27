@@ -1,0 +1,298 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false" cache="false" expires="0">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>           
+                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Section Three: Program Goals, Outcomes and Strategy</center> 
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="2. Describe the community need you are seeking to address, citing relevant local data and statistics that indicate the need for your program. (1500 character limit)" styleClass="outputtext" /></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Community_Need__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="3. Describe the program/service or initiative for which you are requesting funding (1500 character limit). Include: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>A description of the program for which you are requesting funding.  Include: eligibility criteria, age groups served, duration, frequency, program exit, client outreach/recruitment and any other relevant descriptive elements.</li>
+                                    <li>Describe your organization’s history and success implementing this program.</li>
+                                </ul>
+                                </td></tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Implementation_History__c}"   onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="4. When considering the next 12 months, provide the following outcome targets 
+                                related to both the program for which you are requesting funding and your organization as a whole:" styleClass="outputtext"/></td>
+                                </tr>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Stable_Housing__c = TRUE || FIC_Survey_Application__c.G_Neighborhood_Revitalization__c = TRUE}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Stable Housing/Neighborhood Revitalization Outcomes" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Program" styleClass="outputtextbold"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Organization" styleClass="outputtextbold"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of Housing Units Created/Built:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Housing_Units_Created__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Housing_Units_Created__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of housing units rehabilitated/renovated:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Housing_Units_Rehab_Renov__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Housing_Units_Rehab_Renov__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of homeownership education sessions provided:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Homeownership_Education_Ses__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Homeownership_Education_Sessions__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of housing units financed:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Housing_Units_Financed__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Housing_Units_Financed__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of individuals receiving homeownership education:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Ind_Rec_Homeownership_Educ__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Ind_Rec_Homeownership_Educ__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Educated_Workforce__c = TRUE}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Educated Workforce Outcomes" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Program" styleClass="outputtextbold"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Organization" styleClass="outputtextbold"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Total Number of individuals served:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Individuals_Served__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Individuals_Served__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of adults provided education (financial, GED, ESL):" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Adults_Provided_Education__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Adults_Provided_Education__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of adults provided vocational training/workforce development/work experience:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Adults_Provided_Vocational__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Adults_Provided_Vocational__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of youth provided workforce/career education:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Youth_Provided_Workforce_Caree__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Youth_Provided_Workforce_Career__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of youth provided vocational training/workforce development/work experience:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Youth_Provided_Vocational__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Youth_Provided_Vocational__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Strong_Local_Economies__c = TRUE}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Strong Local Economies Outcomes" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Program" styleClass="outputtextbold"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Organization" styleClass="outputtextbold"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of small businesses assisted:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Small_Businesses_Assisted__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Small_Businesses_Assisted__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of new businesses served:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_New_Businesses_Served__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_New_Businesses_Served__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of workshops and training events provided:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Workshops_and_Training_events__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Workshops_and_Training_Events__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of individual coaching sessions with small businesses:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Individual_Coaching_Sessions__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Individual_Coaching_Sessions__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of full time jobs created:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Jobs_Created_Full_Time__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Jobs_Created_Full_Time__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of part time jobs created:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Jobs_Created_Part_Time__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.Org_Jobs_Created_Part_Time__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Number of jobs retained:" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Jobs_Retained__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Jobs_Retained__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="5. Describe how grant funding will be used to support the program you described in question three. Include:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Specific goals related to program outcomes, AND</li>
+                                    <li>Your strategy to achieve the outcomes identified above.</li>
+                                </ul>
+                                </td></tr>
+                                <tr>
+                                <td><apex:outputText value="(1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>                                                                
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Describe_Grant_Funding_Use__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="6. Describe how your program and strategy will address the community need articulated in question two. (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Strategy_Address_Community_Need__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="7. Describe your plans to sustain this program in future years. (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Plans_to_Sustain_This_Program__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="8. How will you measure both short and long-term impacts? (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Measure_Long_Term_Imp_Out__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="9. List and describe the collaborations with other organizations that relate to this program.  Explain the role of those partners in enhancing your programming. (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Collab_Enhance_Your_Program__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="10. Identify evidence-based practices utilized in the implementation of the program/service/initiative for which you are requesting funding. (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Evidence_Based_Practices_Utilized__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="11. If there are volunteer opportunities for bank employees to become involved with this program, please detail opportunities here. (1500 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Vol_Opportunities_for_Bank_Employees__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr17}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

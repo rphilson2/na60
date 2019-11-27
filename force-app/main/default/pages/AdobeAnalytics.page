@@ -1,0 +1,17 @@
+<apex:page >
+<script type="text/javascript">
+var utag_data = {
+ page_name : "Open and Fund Test", // Tealium variable to identify the page name
+ page_url : "" // page url | prop18
+}
+</script>
+
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+   (function(a,b,c,d){
+   a='//tags.tiqcdn.com/utag/fnbo/ncino-fnni-portal.force.com/prod/utag.js';
+   b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+   a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+   })();
+</script>
+</apex:page>

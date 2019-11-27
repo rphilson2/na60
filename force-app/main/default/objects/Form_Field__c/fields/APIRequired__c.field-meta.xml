@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APIRequired__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field will be checked if the underlying field is required by the SFDC API. This is needed for the correct rendering of the Web Form editor.</description>
+    <externalId>false</externalId>
+    <label>APIRequired</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

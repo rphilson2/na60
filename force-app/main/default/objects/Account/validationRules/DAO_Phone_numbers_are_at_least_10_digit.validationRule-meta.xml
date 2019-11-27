@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DAO_Phone_numbers_are_at_least_10_digit</fullName>
+    <active>true</active>
+    <description>Make sure phone number fields in online deposit application are 10 digits long</description>
+    <errorConditionFormula>OR( 
+AND( 
+NOT(ISBLANK(PersonHomePhone)), 
+LEN(PersonHomePhone) != 10, 
+ISCHANGED(PersonHomePhone), 
+$User.ProfileId = &#39;00e0c00000287hf&#39; 
+), 
+AND( 
+NOT(ISBLANK(PersonMobilePhone)), 
+LEN(PersonMobilePhone) != 10, 
+ISCHANGED(PersonMobilePhone), 
+$User.ProfileId = &#39;00e0c00000287hf&#39; 
+) 
+)</errorConditionFormula>
+    <errorMessage>Invalid Entry. Please enter a valid phone number. Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

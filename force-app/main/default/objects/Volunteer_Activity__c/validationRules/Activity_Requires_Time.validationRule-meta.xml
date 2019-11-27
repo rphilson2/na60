@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Requires_Time</fullName>
+    <active>true</active>
+    <description>Volunteer Activity requires time and place, opportunity does not.</description>
+    <errorConditionFormula>AND(
+  NOT( IsOpportunity__c ),
+  OR(
+     ISNULL( Date_and_Time__c ) 
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Date_and_Time__c</errorDisplayField>
+    <errorMessage>Date and Time is required for a Volunteer Activity.
+If this opportunity is not associated with a date and time, please check the Ongoing Opportunity checkbox.</errorMessage>
+</ValidationRule>

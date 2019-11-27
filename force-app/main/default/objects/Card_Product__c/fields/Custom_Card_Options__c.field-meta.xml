@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Card_Options__c</fullName>
+    <externalId>false</externalId>
+    <label>(*) Custom Card Options</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Card_Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Company Logo Only</fullName>
+                <default>false</default>
+                <label>Company Logo Only</label>
+            </value>
+            <value>
+                <fullName>Custom Card Art</fullName>
+                <default>false</default>
+                <label>Custom Card Art</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Still Needed</fullName>
+                <default>false</default>
+                <label>Still Needed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Commercial &amp; Purchasing</controllingFieldValue>
+            <controllingFieldValue>Commercial Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing with Virtual+</controllingFieldValue>
+            <valueName>Company Logo Only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial &amp; Purchasing</controllingFieldValue>
+            <controllingFieldValue>Commercial Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing with Virtual+</controllingFieldValue>
+            <valueName>Custom Card Art</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial &amp; Purchasing</controllingFieldValue>
+            <controllingFieldValue>Commercial Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing Edition</controllingFieldValue>
+            <controllingFieldValue>Purchasing with Virtual+</controllingFieldValue>
+            <controllingFieldValue>VOX</controllingFieldValue>
+            <valueName>Standard</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

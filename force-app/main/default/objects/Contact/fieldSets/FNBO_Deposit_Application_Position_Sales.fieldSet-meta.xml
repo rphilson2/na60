@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNBO_Deposit_Application_Position_Sales</fullName>
+    <description>FNBO - Deposit Application - Position - Sales and Related</description>
+    <displayedFields>
+        <field>Position_Sales_and_Related__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>FNBO - Deposit Application - Position - Sales and Related</label>
+</FieldSet>

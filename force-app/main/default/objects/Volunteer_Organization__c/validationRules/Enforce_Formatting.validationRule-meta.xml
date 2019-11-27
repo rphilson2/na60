@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_Formatting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+LEN(Tax_ID__c) &gt; 0,
+(OR(
+LEN(Tax_ID__c) &lt;&gt; 10,  
+FIND(&quot;-&quot;,Tax_ID__c) &lt;&gt; 3,  
+NOT(ISNUMBER(LEFT(Tax_ID__c, 2))),  
+NOT(ISNUMBER(RIGHT(Tax_ID__c, 7))))))</errorConditionFormula>
+    <errorDisplayField>Tax_ID__c</errorDisplayField>
+    <errorMessage>The Tax ID must be in the format of xx-xxxxxxx</errorMessage>
+</ValidationRule>

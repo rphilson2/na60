@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Growth_Opp</fullName>
+    <active>true</active>
+    <description>If Pcard type &lt;&gt; Growth, then Annual Spend Growth must be blank</description>
+    <errorConditionFormula>And(
+   Not(ISPICKVAL( P_Card_Type__c , &quot;Growth&quot;)),
+      Not ISBLANK( Additional_Spend_Growth__c ) )</errorConditionFormula>
+    <errorDisplayField>Additional_Spend_Growth__c</errorDisplayField>
+    <errorMessage>Additional Spend Growth can only be populated when Pcard type = Growth</errorMessage>
+</ValidationRule>

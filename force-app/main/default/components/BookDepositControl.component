@@ -1,0 +1,146 @@
+<apex:component controller="BookDepositController">
+    <script type="text/javascript">
+        function redirectToUrl(url) {
+            window.location = url;
+        }
+
+        var destURL = window.location.href;
+    </script>
+    <div class="slds-p-horizontal--large">
+        <div Id="Message">
+            <p class="portal-center-text slds-m-top--small"
+               n-style="pso-application-body-subheader"
+               resizer="true" ng-show="isMediumOrBigger">
+                Almost Finished...
+             </p>
+        </div>
+        <div Id="SuccessMessage" style="display: none">
+            {!$User.FirstName}, {!$Label.PortalDepositAccepted} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl(destURL)'>&nbsp;Continue&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <div Id="ErrorMessage" style="display: none">
+            {!$User.FirstName}, {!$Label.PortalDepositRejected} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.FailedCustomerURL}")'>&nbsp;{!$Label.PortalReturnButtonLabel}&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <div Id="PendingMessage" style="display: none">
+            {!$Label.PortalDepositPending} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.PendingCustomerURL}")'>&nbsp;{!$Label.PortalReturnButtonLabel}&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <div Id="PendingCoOwnerMessage" style="display: none">
+            {!$Label.PortalDepositCoOwnerPending} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.PendingCoOwnerURL}")'>&nbsp;{!$Label.PortalReturnButtonLabel}&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <div Id="EnrollmentFailedMessage" style="display: none">
+            {!$Label.PortalDepositEnrollmentFailed} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.EnrollmentFailedURL}")'>&nbsp;{!$Label.PortalReturnButtonLabel}&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <div Id="AgreementFailedMessage" style="display: none">
+            {!$Label.PortalDepositAgreementFailed} 
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                    <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.AgreementFailedURL}")'>&nbsp;{!$Label.PortalReturnButtonLabel}&nbsp;</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+        jQuery('.portal-loader-overlay').hide();
+	    Visualforce.remoting.timeout = 120000;
+
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.BookDepositController.sendRequest}',
+            getUrlVars()['id'],
+            function(result, event) {
+                jQuery('body > div.portal-loader-overlay.ng-scope').hide();
+                if (event.status) {
+                    document.getElementById("Message").innerHTML = "";
+                    if(result.status === 'Success'){
+						destURL = result.url;
+                        document.getElementById("SuccessMessage").style.display = "block";
+                        document.getElementById("ErrorMessage").style.display = "none";
+                        document.getElementById("PendingMessage").style.display = "none";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                        document.getElementById("AgreementFailedMessage").style.display = "none";
+                     } else if(result.status === 'Pending'){
+						destURL = result.url;
+                        document.getElementById("SuccessMessage").style.display = "none";
+                        document.getElementById("ErrorMessage").style.display = "none";
+                        document.getElementById("PendingMessage").style.display = "block";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                        document.getElementById("AgreementFailedMessage").style.display = "none";
+                    } else if(result.status === 'PendingCoOwner'){
+						destURL = result.url;
+                        document.getElementById("SuccessMessage").style.display = "none";
+                        document.getElementById("ErrorMessage").style.display = "none";
+                        document.getElementById("PendingMessage").style.display = "none";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "block";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                        document.getElementById("AgreementFailedMessage").style.display = "none";
+                    } else if(result.status === 'FailedEnrollment'){
+						destURL = result.url;
+                        document.getElementById("SuccessMessage").style.display = "none";
+                        document.getElementById("ErrorMessage").style.display = "none";
+                        document.getElementById("PendingMessage").style.display = "none";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "block";
+                        document.getElementById("AgreementFailedMessage").style.display = "none";
+                    } else if(result.status === 'AgreementFailed'){
+						destURL = result.url;
+                        document.getElementById("SuccessMessage").style.display = "none";
+                        document.getElementById("ErrorMessage").style.display = "none";
+                        document.getElementById("PendingMessage").style.display = "none";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                        document.getElementById("AgreementFailedMessage").style.display = "block";
+                     } else {
+                        document.getElementById("SuccessMessage").style.display = "none";
+                        document.getElementById("ErrorMessage").style.display = "block";
+                        document.getElementById("PendingMessage").style.display = "none";
+                        document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                        document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                        document.getElementById("AgreementFailedMessage").style.display = "none";
+                    }
+                } else {
+                    document.getElementById("SuccessMessage").style.display = "none";
+                    document.getElementById("ErrorMessage").style.display = "block";
+                    document.getElementById("PendingMessage").style.display = "none";
+                    document.getElementById("PendingCoOwnerMessage").style.display = "none";
+                    document.getElementById("EnrollmentFailedMessage").style.display = "none";
+                    document.getElementById("AgreementFailedMessage").style.display = "none";
+                }
+            },
+            {escape: true}
+        );
+        </script>
+    </div>
+
+    
+</apex:component>

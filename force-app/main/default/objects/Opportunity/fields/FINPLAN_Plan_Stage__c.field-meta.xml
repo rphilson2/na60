@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FINPLAN_Plan_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>FINPLAN - Plan Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Closed - Plan Updated</fullName>
+                <default>false</default>
+                <label>Closed - Plan Updated (Existing Client)</label>
+            </value>
+            <value>
+                <fullName>Closed - Plan Delivered</fullName>
+                <default>false</default>
+                <label>Closed - Plan Delivered (New Client)</label>
+            </value>
+            <value>
+                <fullName>Plan Completed - Ready for Delivery</fullName>
+                <default>false</default>
+                <label>Plan Completed - Ready for Delivery</label>
+            </value>
+            <value>
+                <fullName>Plan Analysis</fullName>
+                <default>false</default>
+                <label>Plan Analysis</label>
+            </value>
+            <value>
+                <fullName>Pending Additional Data</fullName>
+                <default>false</default>
+                <label>Pending Additional Data</label>
+            </value>
+            <value>
+                <fullName>Initial Data Review</fullName>
+                <default>false</default>
+                <label>Initial Data Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

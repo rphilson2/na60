@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Relationship_Wealth__c</fullName>
+    <externalId>false</externalId>
+    <formula>Wealth_Management_RM__r.Is_Me__c</formula>
+    <label>My Relationship - Wealth</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

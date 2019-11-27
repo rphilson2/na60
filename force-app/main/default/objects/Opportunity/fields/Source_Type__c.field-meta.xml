@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Referred_by_Customer__r.Id)), Referred_by_Customer__r.FirstName&amp;&quot; &quot;&amp;Referred_by_Customer__r.LastName&amp;&quot; (Customer Referral)&quot;, IF(NOT(ISBLANK( Lead_Source_COI__r.Name)), Lead_Source_COI__r.Name&amp;&quot; (COI Referral)&quot;, IF(Opp_Created_from_Referral__c,  Related_Referral__r.CreatedBy.User_Full_Name__c&amp;&quot; (Employee Referral)&quot;, &quot;&quot;)))</formula>
+    <label>Source Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

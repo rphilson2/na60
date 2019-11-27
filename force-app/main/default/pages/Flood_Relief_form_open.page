@@ -1,0 +1,21 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="flooddonationrequest_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+    <body>
+           <CENTER>
+              <apex:image id="fnbgreen_4color" value="{!$Resource.Surveyform}" width="550" height="86"/>
+           </CENTER>
+                <hr/>
+                <div class="blankrow"></div>
+                <div class="blankrow"></div>           
+            <apex:form >
+                <center><apex:outputText value="Please use the dropdown box below to select the geographic location of your organization." styleClass="outputtextbold"/></center>
+                <center><apex:outputText value="If your location is not listed here, please select the geographic location closest to where your organization operates:" styleClass="outputtextbold"/></center>
+                <div class="blankrow"></div>
+                <center><apex:inputField value="{!FIC_Survey_Application__c.Market__c}" required="true" styleClass="inputfield"/></center>
+                <div class="blankrow"></div>
+                <div class="blankrow"></div>
+                <!-- apex:commandButton value="NEXT" action="{!launch}" styleClass="myButton"/></center -->
+           </apex:form>
+    </body>
+</apex:page>

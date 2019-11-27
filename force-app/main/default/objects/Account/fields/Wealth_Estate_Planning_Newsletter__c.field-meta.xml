@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Wealth_Estate_Planning_Newsletter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box if you would like your client to receive the First National Wealth Estate Planning Newsletter.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if you would like your client to receive the First National Wealth Estate Planning Newsletter.</inlineHelpText>
+    <label>Wealth Estate Planning Newsletter</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TriggerIsDisabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When &quot;check&quot;, trigger code will be bypassed 
+When &quot;unchecked&quot;, trigger code will be executed</description>
+    <externalId>false</externalId>
+    <label>TriggerIsDisabled</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

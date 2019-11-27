@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Markets_New_Money_or_Refunding__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select which option best describes the deal.</inlineHelpText>
+    <label>Capital Markets - New Money or Refunding</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Loan Refunding</fullName>
+                <default>false</default>
+                <label>Loan Refunding</label>
+            </value>
+            <value>
+                <fullName>New Money</fullName>
+                <default>false</default>
+                <label>New Money</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Refunding</fullName>
+                <default>false</default>
+                <label>Refunding</label>
+            </value>
+            <value>
+                <fullName>Refunding &amp; New Money</fullName>
+                <default>false</default>
+                <label>Refunding &amp; New Money</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

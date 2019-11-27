@@ -1,0 +1,157 @@
+<aura:component controller="dlMatrixController" implements="flexipage:availableForAllPageTypes" access="global">	
+    <aura:attribute name="showDetail" type="Boolean" default="false" />
+    <aura:attribute name="DataType" type="String" default="" />
+    <aura:attribute name="insertDate" type="Date" />
+    <aura:attribute name="statsList" type="CoreDataLoadStatistic__c" /> 
+    <aura:attribute name="errorLog" type="Dataload_Error_Log__C"  description="Error Log items"/>    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.insertDate}" action="{!c.itemsChange}"/>
+    
+    <lightning:card iconName="standard:account" class=".slds-text-title_bold" title="Data Loading Error Log">        
+        <div>           
+            <lightning:input type="date" name="inputDate" value="{!v.insertDate}" />           
+        </div>
+        <table width='60%'>
+            <tr><th width='15%'>Data Type</th><th width='15%'>Status</th><th width='15%'>Records Loaded</th><th>Records Failed</th></tr>
+            <aura:iteration var="sl" items="{!v.statsList}">
+                <tr>
+                    <td><lightning:formattedText value="{!sl.Data_Type__c}" /></td>
+                    <td><lightning:formattedText value="{!sl.Status__c}" /></td>
+                    <td><lightning:formattedNumber value="{!sl.Successful_Record_Count__c}" /></td>
+                    <td>
+                        <aura:if isTrue="{!sl.Failed_Record_Count__c > 0}" >
+                            <aura:if isTrue="{!sl.Data_Type__c == 'PersonCustomer'}" >
+                                <a href='#detailerror' onclick="{!c.personCustomerClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                            
+                            <aura:if isTrue="{!sl.Data_Type__c == 'BusinessCustomer'}" >
+                                <a href='#detailerror' onclick="{!c.businessCustomerClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>                                     
+                                
+                            <aura:if isTrue="{!sl.Data_Type__c == 'MortgageDetails'}" >
+                                <a href='#detailerror' onclick="{!c.mortgageDetailsClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                            <aura:if isTrue="{!sl.Data_Type__c == 'TriggerData'}" >
+                                <a href='#detailerror' onclick="{!c.triggerDataClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                            <aura:if isTrue="{!sl.Data_Type__c == 'PrecisionLenderID'}" >
+                                <a href='#detailerror' onclick="{!c.precisionLenderClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                            <aura:if isTrue="{!sl.Data_Type__c == 'BusinessCIXF'}" >
+                                <a href='#detailerror' onclick="{!c.businessCIXFClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                            <aura:if isTrue="{!sl.Data_Type__c == 'PersonCIXF'}" >
+                                <a href='#detailerror' onclick="{!c.personCIXFClick}">
+                                    <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                                </a>
+                            </aura:if>
+                        <aura:set attribute="else">
+                            <lightning:formattedNumber value="{!sl.Failed_Record_Count__c}" />
+                        </aura:set>
+                        </aura:if>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </table>
+        <br></br>
+        <br></br>
+        <aura:if isTrue="{!v.showDetail}">
+            <div class="slds-text-heading_large"><lightning:formattedText value="{!v.DataType}" /></div>
+            <table id="detailerror" width='100%'>
+            <aura:if isTrue="{!equals(v.DataType,'PersonCustomer')}">
+                <tr>
+                   <th>CIXF</th><th>First Name</th><th>Middle Name</th><th>Last Name</th><th>Error</th>
+                </tr>
+                    <aura:iteration var="el" items="{!v.errorLog}">
+                        <tr>
+                            <td><lightning:formattedText value="{!el.FNB_System_of_Record_Id__c}" /></td>
+                            <td><lightning:formattedText value="{!el.First_Name__c}" /></td>
+                            <td><lightning:formattedText value="{!el.Middle_Name__c}" /></td>
+                            <td><lightning:formattedText value="{!el.Last_Name__c}" /></td>
+                            <td><lightning:formattedText value="{!el.Error__c}" /></td>
+                        </tr>
+                    </aura:iteration>
+               </aura:if>       	    
+         	<aura:if isTrue="{!equals(v.DataType, 'BusinessCustomer')}"> 
+                <tr><th width='5%'>CIXF</th><th width='10%'>Business Name</th><th>Tax ID</th><th>Error</th></tr>
+                <aura:iteration var="e" items="{!v.errorLog}">
+                <tr>
+                     <td><lightning:formattedText value="{!e.FNB_System_of_Record_Id__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Business_Name__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Tax_ID__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Error__c}" /></td>
+                </tr>
+                </aura:iteration>
+            </aura:if>      
+        	<aura:if isTrue="{!equals(v.DataType, 'MortgageDetails')}"> 
+                <tr><th width='5%'>Account Number</th><th width='10%'>Parent Account Number</th><th>Error</th></tr>
+                <aura:iteration var="em" items="{!v.errorLog}">
+                <tr>
+                     <td><lightning:formattedText value="{!em.Account_Number__c}" /></td>
+                     <td><lightning:formattedText value="{!em.Parent_Financial_Account_ID__c}" /></td>
+                     <td><lightning:formattedText value="{!em.Error__c}" /></td>
+                </tr>
+                </aura:iteration>
+            </aura:if>
+            <aura:if isTrue="{!equals(v.DataType, 'TriggerData')}"> 
+                <tr><th width='10%'>ID</th><th width='5%'>Bank Number</th><th width='5%'>Trigger Type</th><th width='10%'>Assignee</th><th>Error</th></tr>
+                <aura:iteration var="e" items="{!v.errorLog}">
+                <tr>
+                     <td><lightning:formattedText value="{!e.TriggerData_ID__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Bank_Number__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Trigger_Type__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Assignee__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Error__c}" /></td>
+                </tr>
+                </aura:iteration>
+            </aura:if>
+            <aura:if isTrue="{!equals(v.DataType, 'PrecisionLender')}"> 
+                <tr><th width='5%'>ID</th><th width='5%'>Precision Lender ID</th><th>Error</th></tr>
+                <aura:iteration var="e" items="{!v.errorLog}">
+                <tr>
+                     <td><lightning:formattedText value="{!e.PL_ID__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Precision_Lender_ID__c}" /></td>
+                     <td><lightning:formattedText value="{!e.Error__c}" /></td>
+                </tr>
+                </aura:iteration>
+            </aura:if>
+            <aura:if isTrue="{!equals(v.DataType,'BusinessCIXF')}">
+                <tr>
+                   <th>ID</th><th>CIXF</th><th>Error</th>
+                </tr>
+                    <aura:iteration var="el" items="{!v.errorLog}">
+                        <tr>
+                            <td><lightning:formattedText value="{!el.CIXF_ID__c}" /></td>
+                            <td><lightning:formattedText value="{!el.CIXF__c}" /></td>                            
+                            <td><lightning:formattedText value="{!el.Error__c}" /></td>
+                        </tr>
+                    </aura:iteration>
+               </aura:if>      
+             <aura:if isTrue="{!equals(v.DataType,'PersonCIXF')}">
+                <tr>
+                   <th>ID</th><th>CIXF</th><th>Error</th>
+                </tr>
+                    <aura:iteration var="el" items="{!v.errorLog}">
+                        <tr>
+                            <td><lightning:formattedText value="{!el.CIXF_ID__c}" /></td>
+                            <td><lightning:formattedText value="{!el.CIXF__c}" /></td>                            
+                            <td><lightning:formattedText value="{!el.Error__c}" /></td>
+                        </tr>
+                    </aura:iteration>
+               </aura:if>    
+         </table>    
+        </aura:if>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,49 @@
+<apex:page standardController="Employee_Board_Membership__c" sidebar="false"
+   standardStylesheets="true" extensions="BoardReportingExtension" showheader="false">
+   <apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+   <style type="text/css"> .bPageHeader { display:none; } .zen-pipedList { display:none; } </style>
+   <style>img { border: none;}</style>
+   <title>{!YEAR(TODAY()-365)} Nonprofit Board Service Reporting</title>
+   <body>
+      <apex:form >
+         <span class="head">
+            <apex:commandLink action="{!viewBoardReporting}"
+               style="text-decoration: none;color: #006633;">{!YEAR(TODAY()-365)} Nonprofit Board
+               Service Reporting</apex:commandLink>
+         </span>
+         <p style="margin-bottom:60px"/>
+         <div class="copy">Board Activity for: {!employee.First_Name__c}</div>
+         <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+              <apex:outputText value="{!ebm.Volunteer_Organization__r.name}" id="volunteerOrganization"  style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Estimated_Total_Service_Hours_This_Year__c}" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Estimated_Total_Service_Hours_This_Year__c.InlineHelpText}" id="v" required="true" style="vertical-align:top;width:30px;"/>
+              <apex:inputField value="{!ebm.Serves_on_Official_Board_of_Directors_Em__c}" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Serves_on_Official_Board_of_Directors_Em__c.InlineHelpText}" id="boardofdirectors" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Serves_on_a_Sub_Committee_Emp__c}" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Serves_on_a_Sub_Committee_Emp__c.InlineHelpText}" id="subcommittee" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Sub_Committee_Type_emp__c}" id="servedCommittee" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Sub_Committee_Type_emp__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Served_on_Loan_Review_Committee__c}" id="servedLoan" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Served_on_Loan_Review_Committee__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Accounting_Bookkeeping__c}" id="contributedAccounting" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Accounting_Bookkeeping__c.InlineHelpText}" style="vertical-align:top;"/>              
+              <apex:inputField value="{!ebm.Assisted_with_Fundraising__c}" id="assistFundraising" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Assisted_with_Fundraising__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.HR_IT_Legal_Services__c}" id="legalServices" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.HR_IT_Legal_Services__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Provides_Tech_Assistance__c}" id="TechAssist" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Provides_Tech_Assistance__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Teaches_Financial_Education__c}" id="TeachFinance" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Teaches_Financial_Education__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Provides_Workforce_Dev_Assistance__c}" id="ProvidesWorkforce" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Provides_Workforce_Dev_Assistance__c.InlineHelpText}" style="vertical-align:top;"/>              
+              <apex:inputField value="{!ebm.Activity_Not_Listed__c}" id="notlisted" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Not_Listed__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!ebm.Service_Details__c}" id="ServiceDetails" html-title="{!$ObjectType.Employee_Board_Membership__c.fields.Service_Details__c.InlineHelpText}" style="width:600px;height:100px;vertical-align:top;"/>
+              <apex:outputText value="Hover over the check boxes and 'Service Details' field to obtain clarification about items on this page."
+              style="color:blue;margin-left:100px;font-style:italic;font-weight:bold"/>              
+                    <apex:commandLink action="{!noserve}" type="image/png">
+                    <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/noserve.jpg')}" style="margin-left:400px"/>
+           </apex:commandlink>
+         </apex:pageBlockSection>
+         </apex:pageBlock>
+
+         <apex:commandLink action="{!viewBoardActivityBack}" type="image/png">
+            <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/back.png')}"/>
+         </apex:commandlink>
+         <apex:commandLink action="{!viewBoardActivityForward}" type="image/png">
+            <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/next.png')}" style="margin-left:100px"/>
+         </apex:commandlink>      
+      </apex:form>
+      <p style="margin-bottom:100px"/>
+   </body>
+</apex:page>

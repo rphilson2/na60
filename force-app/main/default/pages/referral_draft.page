@@ -1,0 +1,199 @@
+<apex:page standardController="Employee_Talent_Referral__c" extensions="innerCircleController" showHeader="false" standardStylesheets="false" sidebar="false">
+<style>
+    .inputtext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        color: #000000;
+    }
+    .myButton {
+        background-color:transparent;
+        border:4px solid #006952;
+        display:inline-block;
+        cursor:pointer;
+        color:#006952;
+        font-family:Arial;
+        font-size:20px;
+        padding:22px 39px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #006952;
+        -webkit-appearance: none;
+    }
+    .myButton:hover {
+        background-color: #006952;
+        color:#ffffff;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    .fixedheader {
+        position:fixed;
+        top:0px;
+        font-stretch: ultra-condensed;
+        left:0px;
+        height:120px;
+        width:100%;
+        z-index: 1000;
+        color:#CCC;
+        background:#006952;
+        padding:20px;
+    }
+    .body{
+        padding-top:190px;
+        margin: auto;
+        max-width: 1080px;
+        position: relative;
+        width: 80%;
+        font-family: "Arial";
+        color:#cf1616;
+    }
+    .fixedfooter {
+        bottom:0px;
+        left:0px;
+        height:40px;
+        width:100%;
+        color:#CCC;
+        line-height: 180%;
+        background:#161616;
+        padding:8px;
+    }
+    .textbar {
+        margin: auto;
+        max-width: 1080px;
+        width: 80%;
+        color:white;
+        padding: 0px;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: "Arial";
+    }
+    .bartext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        background-color: #565656;
+        color:white;
+        padding: 10px;
+    }
+    .blankrow {
+    height: 30px !important;
+    }
+   
+</style>   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <h1>TALENT REFERRAL</h1>
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="REFERRAL INFORMATION" styleClass="bartext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                
+                                <tr>
+                                <td><apex:outputText value="Referrer Department (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Referrer_Dept__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Referring Employee (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Referral_Source_Employee__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Referring Employee Email (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Referring_Employee_Email_if_applicable__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+    
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="APPLICANT INFORMATION" styleClass="bartext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+    
+                                <tr>
+                                <td><apex:outputText value="Candidate Full Name (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Name}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Candidate Phone Number (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Phone_Number__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Candidate Email (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Email__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+    
+                                
+                                <tr>
+                                <td><apex:outputText value="Candidate Address - Street: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Address_Street__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Candidate Address - City: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Address_City__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Candidate Address - State: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Address_State__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Candidate Address - Postal Code: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Candidate_Address_Postal_Code__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Desired Position: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Desired_Position__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Current Salary Range: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Current_Salary_Rane__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Minimum Total Compensation: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Minimum_Total_Compensation__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Desired Career Bands: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Desired_Career_Bands__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Applicant's Areas of Interest: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Applicant_s_Areas_of_Interest__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Previous Employer (if known): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Previous_Employer__c}"  styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Referral Source: " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Referral_Source__c}" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Quick Notes (Required): " styleClass="inputtext"/></td>
+                                <td><apex:inputField value="{!Employee_Talent_Referral__c.Addtl_Notes__c}" required="true" styleClass="inputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr> 
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="SUBMIT REFERRAL AND RETURN TO INNER CIRCLE" action="{!saveanddirect}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+        <div class="fixedfooter">
+        </div>
+    </body>
+</apex:page>

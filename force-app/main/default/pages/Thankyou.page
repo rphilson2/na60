@@ -1,0 +1,67 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" standardController="Community_Giving__c" extensions="GrantReportTemplateCtrl">
+    <apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+<style>
+    .fixedheader {
+        position:fixed;
+        top:0px;
+        font-stretch: ultra-condensed;
+        left:0px;
+        height:86px;
+        width:100%;
+        z-index: 1000;
+        color:white;
+        background:white;
+        padding:20px;
+}
+.outputtext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;      
+        color: #000000;
+}
+    .textbar {
+        margin: auto;
+        max-width: 1080px;
+        width: 80%;
+}
+.outputtextbold1 {
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+ }
+.body {
+        padding-top:128px;
+        margin: auto;
+        max-width: 1080px;
+        position: relative;
+        width: 80%;
+        font-family: "Arial";
+        color:#cf1616;
+    }
+    </style>
+    <apex:form >
+  <body>
+        <div class="fixedheader">
+            <div class="textbar">
+               <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_green.jpg')}" width="720" height="85"/>
+            </div>
+           </div> 
+         <div class="body">
+         <apex:outputText value="Thank you for submitting your progress report.  For information on our funding priorities and upcoming grant cycles, please visit our " styleClass="outputtext"/><apex:outputLink style="color:#006633" value="{!cra_website}" >First in the Community Website</apex:outputLink><apex:outputText value=".  " styleClass="outputtext"/>
+         <apex:outputText value="If you have questions, please email: " styleClass="outputtext"/><apex:outputLink style="color:#020FFA" value="mailto:communitydevelopment@fnni.com">CommunityDevelopment@fnni.com</apex:outputLink><apex:outputText value="." styleClass="outputtext"/>
+         <br/>
+         <br/>
+         <apex:outputText value="To create a PDF of the progress report you just submitted, please click the “Create PDF” button.  You will then be able to save to your files." styleClass="outputtext"/>         
+         <br/>
+         <br/>
+         <br/>
+         <br/>         
+         <apex:commandButton action="{!createpdf}" value="Create PDF" style="background:#E8E8E8; color: #004A31; font-weight:bold; font-size:14pt; width:165px; Height:30px"/>                    
+          
+ </div>
+    
+    </body>
+
+</apex:form>
+</apex:page>

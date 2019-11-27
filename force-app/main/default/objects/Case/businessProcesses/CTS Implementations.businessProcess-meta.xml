@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CTS Implementations</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Customer Pending Training</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>ONB - Completed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>ONB - Customer Pending Testing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>ONB - Final Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>ONB - In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>ONB - In Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Paperwork Sent to Customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sent to Onboarding</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

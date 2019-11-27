@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$User.User_Profile_for_Reporting__c = &quot;nCino Community User&quot;, 
+NOT( ISBLANK( Special_Code__pc ) ), 
+NOT( UPPER( Special_Code__pc ) = &quot;GET200&quot;) 
+)</errorConditionFormula>
+    <errorMessage>The promo code you entered is not valid. Please try again or remove the code to proceed with the application.</errorMessage>
+</ValidationRule>

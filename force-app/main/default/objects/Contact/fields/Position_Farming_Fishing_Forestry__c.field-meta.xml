@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Farming_Fishing_Forestry__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Farming Fishing Forestry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultural Equipment Operator</fullName>
+                <default>false</default>
+                <label>Agricultural Equipment Operator</label>
+            </value>
+            <value>
+                <fullName>Agricultural Inspector</fullName>
+                <default>false</default>
+                <label>Agricultural Inspector</label>
+            </value>
+            <value>
+                <fullName>Animal Breeder</fullName>
+                <default>false</default>
+                <label>Animal Breeder</label>
+            </value>
+            <value>
+                <fullName>Farm Labor Contractor</fullName>
+                <default>false</default>
+                <label>Farm Labor Contractor</label>
+            </value>
+            <value>
+                <fullName>Farm Worker &amp; Laborer</fullName>
+                <default>false</default>
+                <label>Farm Worker &amp; Laborer</label>
+            </value>
+            <value>
+                <fullName>Farmer &amp; Rancher</fullName>
+                <default>false</default>
+                <label>Farmer &amp; Rancher</label>
+            </value>
+            <value>
+                <fullName>Fisherman &amp; Related Worker</fullName>
+                <default>false</default>
+                <label>Fisherman &amp; Related Worker</label>
+            </value>
+            <value>
+                <fullName>Food Inspector</fullName>
+                <default>false</default>
+                <label>Food Inspector</label>
+            </value>
+            <value>
+                <fullName>Forest &amp; Conservation Worker</fullName>
+                <default>false</default>
+                <label>Forest &amp; Conservation Worker</label>
+            </value>
+            <value>
+                <fullName>Grader &amp; Sorter-Agricultural Products</fullName>
+                <default>false</default>
+                <label>Grader &amp; Sorter-Agricultural Products</label>
+            </value>
+            <value>
+                <fullName>Hunter &amp; Trapper</fullName>
+                <default>false</default>
+                <label>Hunter &amp; Trapper</label>
+            </value>
+            <value>
+                <fullName>Logger</fullName>
+                <default>false</default>
+                <label>Logger</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Farming,Fishing,Forestry</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Farming,Fishing,Forestry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

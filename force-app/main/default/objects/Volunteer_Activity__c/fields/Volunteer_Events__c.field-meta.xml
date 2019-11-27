@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteer_Events__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Beautification/Cleaning/Painting/Gardening</fullName>
+                <default>false</default>
+                <label>Beautification/Cleaning/Painting/Gardening</label>
+            </value>
+            <value>
+                <fullName>Business Assistance</fullName>
+                <default>false</default>
+                <label>Business Assistance</label>
+            </value>
+            <value>
+                <fullName>CRA Community Contact</fullName>
+                <default>false</default>
+                <label>CRA Community Contact</label>
+            </value>
+            <value>
+                <fullName>CRA Community Outreach</fullName>
+                <default>false</default>
+                <label>CRA Community Outreach</label>
+            </value>
+            <value>
+                <fullName>Education/Training/Tutoring</fullName>
+                <default>false</default>
+                <label>Education/Training/Tutoring</label>
+            </value>
+            <value>
+                <fullName>Faith-based</fullName>
+                <default>false</default>
+                <label>Faith-based</label>
+            </value>
+            <value>
+                <fullName>Fundraising/Event Management</fullName>
+                <default>false</default>
+                <label>Fundraising/Event Management</label>
+            </value>
+            <value>
+                <fullName>Mentoring/leadership development</fullName>
+                <default>false</default>
+                <label>Mentoring/leadership development</label>
+            </value>
+            <value>
+                <fullName>Professional Skills</fullName>
+                <default>false</default>
+                <label>Professional Skills</label>
+            </value>
+            <value>
+                <fullName>Walks/Runs/Parades/Booth/Table</fullName>
+                <default>false</default>
+                <label>Walks/Runs/Parades/Booth/Table</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Building/Construction/Rehabilitation/Home Maintenance</fullName>
+                <default>false</default>
+                <label>Building/Construction/Rehabilitation/Home Maintenance</label>
+            </value>
+            <value>
+                <fullName>Community Event Participation</fullName>
+                <default>false</default>
+                <label>Community Event Participation</label>
+            </value>
+            <value>
+                <fullName>Food serving/distributing/sorting/delivering</fullName>
+                <default>false</default>
+                <label>Food serving/distributing/sorting/delivering</label>
+            </value>
+            <value>
+                <fullName>Sports</fullName>
+                <default>false</default>
+                <label>Sports</label>
+            </value>
+            <value>
+                <fullName>Health Care and Social Services</fullName>
+                <default>false</default>
+                <label>Health Care and Social Services</label>
+            </value>
+            <value>
+                <fullName>Disaster/Emergency Services</fullName>
+                <default>false</default>
+                <label>Disaster/Emergency Services</label>
+            </value>
+            <value>
+                <fullName>Civic Participation/Political</fullName>
+                <default>false</default>
+                <label>Civic Participation/Political</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

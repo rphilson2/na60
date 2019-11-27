@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Maintenance</fullName>
+                <default>false</default>
+                <label>Account Maintenance</label>
+            </value>
+            <value>
+                <fullName>ACH</fullName>
+                <default>false</default>
+                <label>ACH</label>
+            </value>
+            <value>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+                <label>Analysis</label>
+            </value>
+            <value>
+                <fullName>Checks/Deposits</fullName>
+                <default>false</default>
+                <label>Checks/Deposits</label>
+            </value>
+            <value>
+                <fullName>CMO</fullName>
+                <default>false</default>
+                <label>CMO</label>
+            </value>
+            <value>
+                <fullName>Commercial Banker</fullName>
+                <default>false</default>
+                <label>Commercial Banker</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Drafts</fullName>
+                <default>false</default>
+                <label>Drafts</label>
+            </value>
+            <value>
+                <fullName>First Cash</fullName>
+                <default>false</default>
+                <label>First Cash</label>
+            </value>
+            <value>
+                <fullName>Forex</fullName>
+                <default>false</default>
+                <label>Forex</label>
+            </value>
+            <value>
+                <fullName>IBWS</fullName>
+                <default>false</default>
+                <label>IBWS</label>
+            </value>
+            <value>
+                <fullName>Investment Services</fullName>
+                <default>false</default>
+                <label>Investment Services</label>
+            </value>
+            <value>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+                <label>Line of Credit</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Lockbox</fullName>
+                <default>false</default>
+                <label>Lockbox</label>
+            </value>
+            <value>
+                <fullName>Positive Pay</fullName>
+                <default>false</default>
+                <label>Positive Pay</label>
+            </value>
+            <value>
+                <fullName>Recon</fullName>
+                <default>false</default>
+                <label>Recon</label>
+            </value>
+            <value>
+                <fullName>Remote Capture</fullName>
+                <default>false</default>
+                <label>Remote Capture</label>
+            </value>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+            <value>
+                <fullName>Special Projects</fullName>
+                <default>false</default>
+                <label>Special Projects</label>
+            </value>
+            <value>
+                <fullName>Wall Street</fullName>
+                <default>false</default>
+                <label>Wall Street</label>
+            </value>
+            <value>
+                <fullName>Wires</fullName>
+                <default>false</default>
+                <label>Wires</label>
+            </value>
+            <value>
+                <fullName>DDA/MMDA</fullName>
+                <default>false</default>
+                <label>DDA/MMDA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

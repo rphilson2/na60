@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flood_Community_Focus_Area__c</fullName>
+    <description>For site created to accept applications for flood relief March 2019.</description>
+    <externalId>false</externalId>
+    <label>Flood Community Focus Area</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addressing health and human service needs</fullName>
+                <default>false</default>
+                <label>Addressing health and human service needs</label>
+            </value>
+            <value>
+                <fullName>Cleaning up and protecting natural resources</fullName>
+                <default>false</default>
+                <label>Cleaning up and protecting natural resources</label>
+            </value>
+            <value>
+                <fullName>Implementing Housing Solutions</fullName>
+                <default>false</default>
+                <label>Implementing Housing Solutions</label>
+            </value>
+            <value>
+                <fullName>Restoring Economic Activity and Small Business Vitality</fullName>
+                <default>false</default>
+                <label>Restoring Economic Activity and Small Business Vitality</label>
+            </value>
+            <value>
+                <fullName>Strengthening infrastructure</fullName>
+                <default>false</default>
+                <label>Strengthening infrastructure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

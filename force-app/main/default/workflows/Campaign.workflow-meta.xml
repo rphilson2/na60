@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Activate</fullName>
+        <description>Sets the active flag to True.</description>
+        <field>IsActive</field>
+        <literalValue>1</literalValue>
+        <name>Activate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Activation</fullName>
+        <description>Sets the Activation check box to True.</description>
+        <field>IsActive</field>
+        <literalValue>1</literalValue>
+        <name>Activation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Deactivation</fullName>
+        <description>Sets the active check box to false.</description>
+        <field>IsActive</field>
+        <literalValue>0</literalValue>
+        <name>Deactivation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Completed</fullName>
+        <description>Sets the Status to Completed.</description>
+        <field>Status</field>
+        <literalValue>Completed</literalValue>
+        <name>Status Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_In_Progress</fullName>
+        <description>Sets the Status to In Progress.</description>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>Status In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_In_Progress_1</fullName>
+        <description>Sets the Status to In Progress.</description>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>Status In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Campaign Completed</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.EndDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Deactivates the campaign and sets the Status to Completed once the end date has passed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Deactivation</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Status_Completed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.EndDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Campaign In Progress</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Campaign.StartDate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Activates the campaign and sets the Status to In Progress.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Activate</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Status_In_Progress_1</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Campaign.StartDate</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

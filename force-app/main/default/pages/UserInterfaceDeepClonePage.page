@@ -1,0 +1,32 @@
+<apex:page id="thepage" standardController="nFORCE__Group__c" extensions="UserInterfaceDeepClone">
+
+<apex:form >
+
+    <apex:sectionHeader title="UI Management" subtitle="Clone UI Group"/>
+    
+    <apex:pageBlock id="pgbk2" mode="detail">
+        <apex:pageBlockSection id="pgbk1_1" title="Original Group Information" columns="1">     
+            <apex:outputField value="{!nFORCE__Group__c.Name}"/>
+            <apex:outputField value="{!nFORCE__Group__c.nFORCE__App__c}"/>
+            <apex:outputField value="{!nFORCE__Group__c.nFORCE__lookupKey__c}"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageMessages />    
+    
+    <apex:pageBlock id="pgbk1" mode="detail">
+        <apex:pageBlockSection id="pgbk1_1" title="New Group Information" columns="1">
+            <apex:outputText value="Enter a Name for the new Group below.  Make sure it does not match an existing Group name.  Unique App names will be automatically assigned.  
+                This operation will create an exact duplicate of the original group, with no overlap." label="Note:" />
+            <!-- <apex:outputLabel value=""></apex:outputLabel> -->              
+            <apex:inputText value="{!newGroupName}" label="New Name" />
+            <!-- <apex:outputLabel value=""></apex:outputLabel> -->                        
+
+            <apex:commandButton id="mainbutton" value="Proceed with Clone" style="colStyle4" action="{!prRedirect}" />
+            <apex:message for="mainbutton" />   
+        </apex:pageBlockSection>
+    </apex:pageBlock>    
+
+</apex:form>
+
+</apex:page>

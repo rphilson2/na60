@@ -1,0 +1,134 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="flooddonationrequest_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+<style>
+.myFloodButton {
+        background-color:transparent;
+        border:4px solid #34657F;
+        display:inline-block;
+        cursor:pointer;
+        color:#34657F;
+        font-family:Arial;
+        font-size:20px;
+        padding:22px 39px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #34657F;
+        -webkit-appearance: none;
+}
+.myFloodButton:hover {
+        background-color: #34657F;
+        color:#ffffff;
+}
+.myFloodButton:active {
+        position:relative;
+        top:1px;
+}
+</style>
+   
+    <body>
+                <div class="fixedheader" style="background:#34657F; height:110px; padding-top:0px;">
+                    <div class="textbar">
+                        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz-box.png')}" width="100%"/>
+                    </div>
+                </div>   
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                    <td>
+                                        <p class= "outputtextbold">I.  Fund Overview and Purpose</p>
+                                        <p class="outputtext">
+                                            The Rebuild the Heartland Community Fund (RHCF or the fund), an affiliated fund of the Nebraska Community Foundation, 
+                                            was established by First National Bank of Omaha (FNBO), in collaboration with area businesses in response to the historic floods in the 
+                                            spring of 2019 that severely impacted Nebraska, Iowa, and South Dakota.   In recognition of the devastation caused to families, homes, businesses, 
+                                            farms, and communities, the Rebuild the Heartland Community Fund will support nonprofit organizations’ and local government authorities’ 
+                                            recovery and rebuilding efforts across affected areas.
+                                        </p>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <p class="outputtextbold">II.  Grant Program Eligibility</p>
+                                        <p class="outputtext">
+                                            Grant eligibility is limited to 501c3 organizations and local government authorities leading recovery and rebuilding 
+                                            efforts in communities impacted by the spring and summer 2019 floods in Nebraska, Iowa and South Dakota.  The organization can be located in or serving a 
+                                            flood-impacted community.  A flood-impacted community is defined as a community located in a county that has received a federal disaster designation for 
+                                            Individual Assistance (IA).
+                                        </p>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <p class="outputtextbold">III. Grant Making Strategy</p>
+                                        <p class="outputtext">The purpose of the Rebuild the Heartland Fund is to support projects that will contribute to the long-term economic 
+                                            recovery of heartland communities impacted by the flooding. The grant making strategy is to respond to the community needs as articulated 
+                                            by the Long Term Recovery Teams, and/or other organizations working in the areas impacted by the floods, and infuse philanthropic capital 
+                                            into identified rebuilding projects:
+                                            <ul class="outputtext">
+                                                <li>Implementing community development solutions such as housing construction or rehabilitation, neighborhood revitalization, and/or small 
+                                                    business assistance</li>
+                                                <li>Addressing and improving health and human services needs</li>
+                                                <li>Cleaning up and protecting natural and environmental resources </li>
+                                                <li>Strengthening infrastructure critical to a healthy and resilient community</li>
+                                                <li>Restoration of agriculture activities</li>
+                                                <li>Developing a comprehensive city/town/village-wide plan to coordinate and implement rebuilding activities</li>
+                                            </ul> 
+                                         </p>   
+                                         <p class="outputtext">
+                                            Eligible expenses in support of rebuilding projects can include, but are not limited to, personnel and labor costs, equipment, materials, and 
+                                            sub-contractors.  Grant activities will be funded for a one-year period, with an option to extend the grant period, if necessary. 
+                                            <br/>
+                                            Grants will not be awarded for the following: 
+                                            <ul class="outputtext">
+                                                <li>Religious or political activities</li>
+                                                <li>Endowments</li>
+                                                <li>Assistance provided to an individual</li>
+                                                <li>Fundraising events or fundraising campaigns</li>
+                                                <li>Re-granting funds, except in limited situations approved by FNBO.</li>
+                                            </ul>
+                                          </p>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <td>                                         
+                                          <p class="outputtextbold">IV. Grant Application Process</p>
+                                          <p class="outputtext">Organizations submitting a grant application to the Rebuild the Heartland Community Fund must first have submitted 
+                                          a pre-application and received an invitation to submit a full application.  
+                                          <br/>
+                                          <br/>
+                                          Each application submitted to the Rebuild the Heartland Community Fund 
+                                          will be thoroughly reviewed and evaluated based on the demonstrated understanding of need as a result of the flooding, the extent to which the 
+                                          proposed project responds to the need, coordination with established teams and resources in the area, and the ability of the applicant to successfully 
+                                          execute the proposed project based on track record and infrastructure.  Final grant awards will be based on the strength of individual applications, 
+                                          as well as the diversity (i.e. geography and project type) of the overall grant award portfolio. Organizations will receive notification of funding 
+                                          decisions within 30-60 days of submission. </p>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <p class="outputtextbold">V.    Questions</p>
+                                        <p class="outputtext">
+                                            Questions about the Rebuild the Heartland Community Fund should be directed to: <br/>
+                                            <a href="mailto:communitydevelopment@fnni.com">communitydevelopment@fnni.com</a>
+                                        </p>
+                                    </td>
+                                </tr>                                
+                                
+                                <tr class="blankrow"></tr> 
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                   <td>
+                                      <apex:commandButton value="BEGIN APPLICATION" action="{!beginApplication}" styleClass="myFloodButton"/>
+                                      <apex:param name="Market" value="{!FIC_Survey_Application__c.Market__c}"/>
+                                   </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

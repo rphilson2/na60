@@ -1,0 +1,82 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="donationAndSponsorshipForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image id="fnb_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' 
+                || FIC_Survey_Application__c.Market__c = 'Lincoln' 
+                || FIC_Survey_Application__c.Market__c = 'Kearney' 
+                || FIC_Survey_Application__c.Market__c = 'Columbus'
+                || FIC_Survey_Application__c.Market__c = 'South Dakota'
+                || FIC_Survey_Application__c.Market__c = 'Kansas'
+                || FIC_Survey_Application__c.Market__c = 'Illinois'
+                || FIC_Survey_Application__c.Market__c = 'Colorado', true, false)}"/>
+                <apex:image id="fnbf_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbf_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Fremont', true, false)}"/>
+                <apex:image id="fnbnp_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbnp_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte', true, false)}"/>
+                <apex:image id="fnbsw_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbsw_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas', true, false)}"/>
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="PAGE THREE OF THREE" styleclass="outputtextbold"/></center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="Supporting Documentation" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Please attach event sponsorship levels and benefits, or for capital/other requests, attach supporting materials: " styleClass="outputtext"/>
+                                <i><apex:outputText value="(Items larger than 10 megabytes will not be accepted as attachments)" styleClass="outputtext"/></i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputFile value="{!attachment.body}" filename="{!attachment.name}"/></td>
+                                <tr class="blankrow"></tr>
+                                </tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="ATTACH FILE" action="{!attach}" styleClass="attachButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="CLEAR ATTACHMENTS" action="{!delete25attachments}" styleClass="attachButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                    <td><apex:outputText value="Attachments: " styleClass="outputtextbold"/></td>
+                                </tr>
+                                    <apex:repeat value="{!FIC_Survey_Application__c.attachments}" var="attachments">
+                                        <tr>
+                                        <td><apex:outputText value="{!attachments.name}" styleClass="outputtext"/></td>
+                                        </tr>
+                                    </apex:repeat>
+                                        
+                            </table>
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td>
+                                <apex:commandButton value="SUBMIT REQUEST" action="{!submit}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

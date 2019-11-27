@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Triggered_Data_Campaigns</fullName>
+    <active>true</active>
+    <label>Triggered Data Campaigns</label>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>Bankcard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - CO Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - IL Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - KS Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - Omaha - Ag%2FCoBank%2FRenew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - Omaha - CRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - Omaha - CTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - Omaha - Community Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CBG - Omaha - Corporate Lending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FNTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS - Capital Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS - Investments and Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IS - NEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wealth Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Capital_Markets_Call_Notice_Status__c</picklist>
+        <values>
+            <fullName>NA - Loan Refunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA - New Money</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent - Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Capital_Markets_New_Money_or_Refunding__c</picklist>
+        <values>
+            <fullName>Loan Refunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Money</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refunding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refunding %26 New Money</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond Call Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail %2F Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Finance Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar %2F Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

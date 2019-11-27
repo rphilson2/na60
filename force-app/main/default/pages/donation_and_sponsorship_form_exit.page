@@ -1,0 +1,76 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="donationAndSponsorshipForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+  
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image id="fnb_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' 
+                || FIC_Survey_Application__c.Market__c = 'Lincoln' 
+                || FIC_Survey_Application__c.Market__c = 'Kearney' 
+                || FIC_Survey_Application__c.Market__c = 'Columbus'
+                || FIC_Survey_Application__c.Market__c = 'South Dakota'
+                || FIC_Survey_Application__c.Market__c = 'Kansas'
+                || FIC_Survey_Application__c.Market__c = 'Illinois'
+                || FIC_Survey_Application__c.Market__c = 'Fremont'
+                || FIC_Survey_Application__c.Market__c = 'Colorado', true, false)}"/>
+                <apex:image id="fnbnp_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbnp_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte', true, false)}"/>
+                <apex:image id="fnbsw_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbsw_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas', true, false)}"/>
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <center><p><apex:outputText value="Thank you for submitting your request." styleClass="outputtextbold"/></p></center>
+                                <br></br>
+                                <p><apex:outputText value="Please note that requests are considered on a monthly basis, and notification
+                                will be provided to organizations and, if applicable, individuals/employees
+                                submitting requests on behalf of organizations. If funding is approved for your organization you will be required to submit a W-9 prior to receiving the funds." styleClass="outputtextbold" /></p>
+                                <p><apex:outputText value="Take a moment to learn more about what we support, how we give back and
+                                our vision for the community. " styleClass="outputtextbold" />
+                                <apex:outputLink value="https://www.firstnational.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' || FIC_Survey_Application__c.Market__c = 'Lincoln' , true, false)}" id="fnb">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbplattevalley.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Kearney' , true, false)}" id="fnbkear">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbneb.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Columbus' , true, false)}" id="fnbc">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbfremont.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Fremont' , true, false)}" id="fnbf">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbnp.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte' , true, false)}" id="fnbnp">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbsd.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'South Dakota' , true, false)}" id="fnbsd">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbk.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Kansas' , true, false)}" id="fnbk">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnbil.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Illinois' , true, false)}" id="fnbi">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.1stnationalbank.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Colorado' , true, false)}" id="fnbcolo">Click here.</apex:outputLink>
+                                <apex:outputLink value="https://www.fnsouthwest.com/community" styleClass="outputlinkbold" 
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas' , true, false)}" id="fnbt">Click here.</apex:outputLink>
+                                </p>
+                                <p><apex:outputText value="Questions can be directed to: firstinthecommunity@fnni.com" styleClass="outputtextbold" /> </p>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="REVIEW/CREATE PDF" action="{!createpdf}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

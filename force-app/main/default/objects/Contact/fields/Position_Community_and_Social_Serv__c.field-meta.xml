@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Community_and_Social_Serv__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Community and Social Serv</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Community &amp; Social Services</fullName>
+                <default>false</default>
+                <label>Community &amp; Social Services</label>
+            </value>
+            <value>
+                <fullName>Counselor</fullName>
+                <default>false</default>
+                <label>Counselor</label>
+            </value>
+            <value>
+                <fullName>Director-Religious Activity &amp; Education</fullName>
+                <default>false</default>
+                <label>Director-Religious Activity &amp; Education</label>
+            </value>
+            <value>
+                <fullName>Health Educator</fullName>
+                <default>false</default>
+                <label>Health Educator</label>
+            </value>
+            <value>
+                <fullName>Marriage &amp; Family Therapist</fullName>
+                <default>false</default>
+                <label>Marriage &amp; Family Therapist</label>
+            </value>
+            <value>
+                <fullName>Mental Health/Rehab Counselor</fullName>
+                <default>false</default>
+                <label>Mental Health/Rehab Counselor</label>
+            </value>
+            <value>
+                <fullName>Probation/Correctional Officer</fullName>
+                <default>false</default>
+                <label>Probation/Correctional Officer</label>
+            </value>
+            <value>
+                <fullName>Religious Worker</fullName>
+                <default>false</default>
+                <label>Religious Worker</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>School Counselor</fullName>
+                <default>false</default>
+                <label>School Counselor</label>
+            </value>
+            <value>
+                <fullName>Social &amp; Human Service Assist</fullName>
+                <default>false</default>
+                <label>Social &amp; Human Service Assist</label>
+            </value>
+            <value>
+                <fullName>Social Worker</fullName>
+                <default>false</default>
+                <label>Social Worker</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse &amp; Behavior Counselor</fullName>
+                <default>false</default>
+                <label>Substance Abuse &amp; Behavior Counselor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

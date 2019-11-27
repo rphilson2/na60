@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail</fullName>
+    <active>true</active>
+    <label>Retail</label>
+    <picklistValues>
+        <picklist>Approved_First_Bankcard_POS_Displayed__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Compliance_Category__c</picklist>
+        <values>
+            <fullName>Adverse Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appraisal Notice Disclosure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joint Intent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Compliance_Sub_Category__c</picklist>
+        <values>
+            <fullName>Co-borrower listed as guarantor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-borrower not listed on form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date of withdrawal not listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disclosure not addressed to primary borrower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disclosure not in FirstWork</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disclosure sent outside of three day window</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form not in FirstWork</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarantor listed as co-borrower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarantor not listed on form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect application date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect joint intent date for co-borrower%2Fguarantors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect ownership percentage listed for guarantor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan should have been denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reason and date of withdrawal not listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reason for withdrawal not listed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Create_awareness_of_current_Op_Regs__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Offers_and_Incentives__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Departments_Visited__c</picklist>
+        <values>
+            <fullName>Dealer Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F%26I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FAW_Subj_Detail__c</picklist>
+        <values>
+            <fullName>Careers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Scoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estate Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Planning Basics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Saving Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Buying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Refinancing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identity Theft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investing 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEST</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Networking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retirement Basics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retirement Income Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saving %26 Budgeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sprouting Savings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FAW_Subject__c</picklist>
+        <values>
+            <fullName>Benefit Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kids Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meet %26 Greet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orientation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LLC_BI__Maintenance_Type__c</picklist>
+        <values>
+            <fullName>Add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LLC_BI__SubType__c</picklist>
+        <values>
+            <fullName>Add Authorized User</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Address Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Limit Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Market__c</picklist>
+        <values>
+            <fullName>Agribusiness%2FCo-Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorado Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial - Hansen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial - Struthers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Treasury Services %28CTS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty Banking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parts__c</picklist>
+        <values>
+            <fullName>Compliant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Compliant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Programs_Discussed__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Project_Type__c</picklist>
+        <values>
+            <fullName>BSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prospect_Level__c</picklist>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reinforce_Use_of_FCA_Fulfilment_Checklst__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Review_Current_Training_Status__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Review_Implications_of_DNA_Complaints__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SID_Incentive_Offers__c</picklist>
+        <values>
+            <fullName>NO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YES</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Special_Assessment_Type__c</picklist>
+        <values>
+            <fullName>ATM Owner%2FOperators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agents of a Principal MSB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charitable Organizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domestic Correspondent Banks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domestic Politically Exposed Persons %28%22PEP%22%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Embassy%2FConsulates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grocery%2C Convenience%2C Liquor and Tobacco%2FVapor Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Politically Exposed Persons %28%22PEP%22%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewelry Dealers%2C Pawnshops and Loan%2FFinancing Companies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Services Businesses %28%22MSB%22%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-US Businesses%2FOrganizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Banking Customers as defined in the CIP and Due Diligence Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Privately Held Casino%2FGambling Establishments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Securities and Commodity Firms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party Senders with a Processing Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Used Motor Vehicle Dealers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Market__c</picklist>
+        <values>
+            <fullName>Colorado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Columbus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fremont</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illinois</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kearney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lincoln</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Platte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Dakota</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Check Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm Appointment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up - Info Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up - See Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Introduction Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per Instruction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Respond to Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Results %2F Notes from meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule a Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule a Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Triggered_FLow__c</picklist>
+        <values>
+            <fullName>NCNCW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REFI19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TXIND</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Phone Call - Bus Bldg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press%2FMedia Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Demo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Website_Provider__c</picklist>
+        <values>
+            <fullName>Dealer%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealerfire%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealeron%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drivingforceauto%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinsolutions%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webstreak%2Ecom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

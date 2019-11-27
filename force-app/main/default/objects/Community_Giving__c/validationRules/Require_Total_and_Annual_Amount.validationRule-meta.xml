@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Total_and_Annual_Amount</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Multi_year_Request__c = True,isnull(Request_Annual_Amount__c),isnull(Request_Total_Amount__c))</errorConditionFormula>
+    <errorDisplayField>Multi_year_Request__c</errorDisplayField>
+    <errorMessage>Must fill out the &quot;Total Amount&quot; &amp; &quot;Annual Amount&quot; Fields below when the &quot;Multi-year Request&quot; check box is checked</errorMessage>
+</ValidationRule>

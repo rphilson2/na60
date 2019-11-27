@@ -1,0 +1,32 @@
+<aura:component>
+    <aura:attribute name="task" type="Task" />
+    <aura:attribute name="formattedDate" type="String"/> 
+    <aura:attribute name="baseURL" type="String" />
+    <aura:attribute name="taskHref" type="String"/>
+    <aura:attribute name="whatHref" type="String" />
+    <aura:attribute name="whoHref" type="String" />
+        
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+                  
+    <div class="slds-col slds-border_bottom slds-p-top_none slds-p-bottom_small"/>
+        <div class="slds-grid ">
+            <div class="slds-col slds-size--4-of-5 slds-m-left_x-small slds-p-top_xx-small">
+                <a id="taskRecord" onclick="{!c.clickHandler}" href="{!v.taskHref}" style="text-decoration:underline">{!v.task.Subject}</a> 
+            </div> 
+        <div class="slds-col slds-p-top_xx-small">{!v.formattedDate}</div>
+    </div>
+    <aura:if isTrue="{! not(empty(v.task.What.Name))}">
+        <div class="slds-grid ">
+            <div class="slds-col slds-size--4-of-5 slds-m-left_x-large">
+                <a id="whatRecord" onclick="{!c.clickHandler}" href="{!v.whatHref}" style="color:MIDNIGHTBLUE">{!v.task.What.Name}</a>
+            </div>
+        </div>   
+    </aura:if>
+    <aura:if isTrue="{! not(empty(v.task.Who.Name))}">
+        <div class="slds-grid ">
+            <div class="slds-col slds-size--4-of-5 slds-m-left_x-large">
+                <a id="whoRecord" onclick="{!c.clickHandler}" href="{!v.whoHref}" style="color:MIDNIGHTBLUE">{!v.task.Who.Name}</a>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

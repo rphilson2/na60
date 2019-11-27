@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Independent_Audit__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to indicate whether the non-profit organization undergoes an annual independent audit.</description>
+    <externalId>false</externalId>
+    <label>Annual Independent Audit</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

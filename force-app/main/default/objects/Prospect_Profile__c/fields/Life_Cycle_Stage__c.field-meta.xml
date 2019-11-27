@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Life_Cycle_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Life-Cycle Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Start-up</fullName>
+                <default>false</default>
+                <label>Start-up</label>
+            </value>
+            <value>
+                <fullName>Growth</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>Mature</fullName>
+                <default>false</default>
+                <label>Mature</label>
+            </value>
+            <value>
+                <fullName>Decline/Renewal</fullName>
+                <default>false</default>
+                <label>Decline/Renewal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_New_Wealth_Client_Source_Field</fullName>
+    <active>true</active>
+    <description>If Opportunity type = New Wealth Client, then the New Wealth Client Source field must be populated</description>
+    <errorConditionFormula>AND( 
+    ISPICKVAL(  Type , &quot;New Wealth Client&quot;),
+    ISBLANK(TEXT( New_Wealth_Client_Source__c ) ))</errorConditionFormula>
+    <errorDisplayField>New_Wealth_Client_Source__c</errorDisplayField>
+    <errorMessage>If &quot;New Wealth Client&quot; is selected you must choose a source</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<apex:page standardController="Employee_Board_Membership__c" extensions="BoardReportingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.scripts,'banners.js')}"/>
+<title>{!YEAR(TODAY())} Nonprofit Board Service Reporting</title>
+<body>
+<apex:form >
+<span class="head" ><apex:commandLink action="{!viewBoardReporting}" style="text-decoration: none;color: #006633;" >{!YEAR(TODAY()-365)} Nonprofit Board Service Reporting</apex:commandLink></span>
+<p style="margin-bottom:30px" />
+<script type="text/javascript">
+  show_banners('top');
+</script>
+<table><tr style="font-size:24px"><td>The 2016 Nonprofit Board Service Survey is now closed.<p/>  If you have questions or activities to report, please contact  <a href="mailto:NonprofitServiceQuestions@fnni.com">NonprofitServiceQuestions@fnni.com</a></td></tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+</apex:form>
+</body>   
+</apex:page>

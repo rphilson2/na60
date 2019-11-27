@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortgage_Opportunity_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Mortgage Opportunity Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Inquiry</fullName>
+                <default>false</default>
+                <label>New Inquiry</label>
+            </value>
+            <value>
+                <fullName>Call Back Later</fullName>
+                <default>false</default>
+                <label>Call Back Later</label>
+            </value>
+            <value>
+                <fullName>Initial Contact</fullName>
+                <default>true</default>
+                <label>Initial Contact</label>
+            </value>
+            <value>
+                <fullName>Quote Given</fullName>
+                <default>false</default>
+                <label>Quote Given</label>
+            </value>
+            <value>
+                <fullName>Prequalified</fullName>
+                <default>false</default>
+                <label>Prequalified</label>
+            </value>
+            <value>
+                <fullName>Preapproved</fullName>
+                <default>false</default>
+                <label>Preapproved</label>
+            </value>
+            <value>
+                <fullName>Converted to Loan</fullName>
+                <default>false</default>
+                <label>Converted to Loan</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 1</fullName>
+                <default>false</default>
+                <label>Call Attempt 1</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 2</fullName>
+                <default>false</default>
+                <label>Call Attempt 2</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 3</fullName>
+                <default>false</default>
+                <label>Call Attempt 3</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 4</fullName>
+                <default>false</default>
+                <label>Call Attempt 4</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 5</fullName>
+                <default>false</default>
+                <label>Call Attempt 5</label>
+            </value>
+            <value>
+                <fullName>Call Attempt 6</fullName>
+                <default>false</default>
+                <label>Call Attempt 6</label>
+            </value>
+            <value>
+                <fullName>Need to Nurture</fullName>
+                <default>false</default>
+                <label>Need to Nurture</label>
+            </value>
+            <value>
+                <fullName>Contact Later</fullName>
+                <default>false</default>
+                <label>Contact Later</label>
+            </value>
+            <value>
+                <fullName>Comparing Lenders</fullName>
+                <default>false</default>
+                <label>Comparing Lenders</label>
+            </value>
+            <value>
+                <fullName>Rate Shopping</fullName>
+                <default>false</default>
+                <label>Rate Shopping</label>
+            </value>
+            <value>
+                <fullName>House Hunting</fullName>
+                <default>false</default>
+                <label>House Hunting</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Working</fullName>
+                <default>false</default>
+                <label>Working</label>
+            </value>
+            <value>
+                <fullName>On Hold Per Request</fullName>
+                <default>false</default>
+                <label>On Hold Per Request</label>
+            </value>
+            <value>
+                <fullName>Pre-Application Work</fullName>
+                <default>false</default>
+                <label>Pre-Application Work</label>
+            </value>
+            <value>
+                <fullName>Add to Do Not Call</fullName>
+                <default>false</default>
+                <label>Add to Do Not Call</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewed_outside_of_MCIC_Audit2__c</fullName>
+    <description>Records the date that the &quot;Reviewed outside of MCIC&quot; field was changed, and who changed the value.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Records the date that the &quot;Reviewed outside of MCIC&quot; field was changed, and who changed the value.</inlineHelpText>
+    <label>Reviewed outside of MCIC Audit</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

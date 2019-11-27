@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Production__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Production</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aircraft Assembler</fullName>
+                <default>false</default>
+                <label>Aircraft Assembler</label>
+            </value>
+            <value>
+                <fullName>Assembler &amp; Fabricator-All Other</fullName>
+                <default>false</default>
+                <label>Assembler &amp; Fabricator-All Other</label>
+            </value>
+            <value>
+                <fullName>Baker</fullName>
+                <default>false</default>
+                <label>Baker</label>
+            </value>
+            <value>
+                <fullName>Bindery Worker</fullName>
+                <default>false</default>
+                <label>Bindery Worker</label>
+            </value>
+            <value>
+                <fullName>Cabinetmaker Carpenter</fullName>
+                <default>false</default>
+                <label>Cabinetmaker Carpenter</label>
+            </value>
+            <value>
+                <fullName>Cementing Machine Operator</fullName>
+                <default>false</default>
+                <label>Cementing Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Chemical Processing Operator</fullName>
+                <default>false</default>
+                <label>Chemical Processing Operator</label>
+            </value>
+            <value>
+                <fullName>Cleaning, Washing Operator</fullName>
+                <default>false</default>
+                <label>Cleaning, Washing Operator</label>
+            </value>
+            <value>
+                <fullName>Computer Controlled-Operator</fullName>
+                <default>false</default>
+                <label>Computer Controlled-Operator</label>
+            </value>
+            <value>
+                <fullName>Computer Controlled-Programmer</fullName>
+                <default>false</default>
+                <label>Computer Controlled-Programmer</label>
+            </value>
+            <value>
+                <fullName>Cooling &amp; Freezing Equip Operator</fullName>
+                <default>false</default>
+                <label>Cooling &amp; Freezing Equip Operator</label>
+            </value>
+            <value>
+                <fullName>Cutting &amp; Slicing Trimmer/Operator</fullName>
+                <default>false</default>
+                <label>Cutting &amp; Slicing Trimmer/Operator</label>
+            </value>
+            <value>
+                <fullName>Electrical Equipment Assembler</fullName>
+                <default>false</default>
+                <label>Electrical Equipment Assembler</label>
+            </value>
+            <value>
+                <fullName>Electrical-Winder/Taper/Finisher</fullName>
+                <default>false</default>
+                <label>Electrical-Winder/Taper/Finisher</label>
+            </value>
+            <value>
+                <fullName>Engine &amp; Other Machine Assembler</fullName>
+                <default>false</default>
+                <label>Engine &amp; Other Machine Assembler</label>
+            </value>
+            <value>
+                <fullName>Etcher &amp; Engraver</fullName>
+                <default>false</default>
+                <label>Etcher &amp; Engraver</label>
+            </value>
+            <value>
+                <fullName>Fabric &amp; Apparel Patternmaker</fullName>
+                <default>false</default>
+                <label>Fabric &amp; Apparel Patternmaker</label>
+            </value>
+            <value>
+                <fullName>Fiberglass Laminator &amp; Fabricator</fullName>
+                <default>false</default>
+                <label>Fiberglass Laminator &amp; Fabricator</label>
+            </value>
+            <value>
+                <fullName>Food Batch maker</fullName>
+                <default>false</default>
+                <label>Food Batch maker</label>
+            </value>
+            <value>
+                <fullName>Food Cooking Machine Operator</fullName>
+                <default>false</default>
+                <label>Food Cooking Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Food/Tobacco Machine Operator</fullName>
+                <default>false</default>
+                <label>Food/Tobacco Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Forming Machine Operator</fullName>
+                <default>false</default>
+                <label>Forming Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Forming/Pressing Operator</fullName>
+                <default>false</default>
+                <label>Forming/Pressing Operator</label>
+            </value>
+            <value>
+                <fullName>Grinding &amp; Polishing Worker/Operator</fullName>
+                <default>false</default>
+                <label>Grinding &amp; Polishing Worker/Operator</label>
+            </value>
+            <value>
+                <fullName>Heat Treating Equip Setter/Operator</fullName>
+                <default>false</default>
+                <label>Heat Treating Equip Setter/Operator</label>
+            </value>
+            <value>
+                <fullName>Inspector, Tester, Sorter</fullName>
+                <default>false</default>
+                <label>Inspector, Tester, Sorter</label>
+            </value>
+            <value>
+                <fullName>Jeweler-Precious Stones/Metal Worker</fullName>
+                <default>false</default>
+                <label>Jeweler-Precious Stones/Metal Worker</label>
+            </value>
+            <value>
+                <fullName>Job Printer</fullName>
+                <default>false</default>
+                <label>Job Printer</label>
+            </value>
+            <value>
+                <fullName>Laboratory Technician</fullName>
+                <default>false</default>
+                <label>Laboratory Technician</label>
+            </value>
+            <value>
+                <fullName>Laundry &amp; Dry Cleaning Worker</fullName>
+                <default>false</default>
+                <label>Laundry &amp; Dry Cleaning Worker</label>
+            </value>
+            <value>
+                <fullName>Lay Out Worker</fullName>
+                <default>false</default>
+                <label>Lay Out Worker</label>
+            </value>
+            <value>
+                <fullName>Liquid Waste Treatment Operator</fullName>
+                <default>false</default>
+                <label>Liquid Waste Treatment Operator</label>
+            </value>
+            <value>
+                <fullName>Machine Tool Setter &amp; Operator</fullName>
+                <default>false</default>
+                <label>Machine Tool Setter &amp; Operator</label>
+            </value>
+            <value>
+                <fullName>Meat,Poultry,Fish Butcher/Cutter/Trimmer</fullName>
+                <default>false</default>
+                <label>Meat,Poultry,Fish Butcher/Cutter/Trimmer</label>
+            </value>
+            <value>
+                <fullName>Metal Furnace &amp; Kiln Worker</fullName>
+                <default>false</default>
+                <label>Metal Furnace &amp; Kiln Worker</label>
+            </value>
+            <value>
+                <fullName>Metal &amp; Plastic Worker-All Other</fullName>
+                <default>false</default>
+                <label>Metal &amp; Plastic Worker-All Other</label>
+            </value>
+            <value>
+                <fullName>Mixing &amp; Blending Machine Operator</fullName>
+                <default>false</default>
+                <label>Mixing &amp; Blending Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Molder, Shaper, Caster</fullName>
+                <default>false</default>
+                <label>Molder, Shaper, Caster</label>
+            </value>
+            <value>
+                <fullName>Molding Casting-Machine Operator</fullName>
+                <default>false</default>
+                <label>Molding Casting-Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Packaging Machine Operator</fullName>
+                <default>false</default>
+                <label>Packaging Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Painter</fullName>
+                <default>false</default>
+                <label>Painter</label>
+            </value>
+            <value>
+                <fullName>Painting Machine Worker/Operator</fullName>
+                <default>false</default>
+                <label>Painting Machine Worker/Operator</label>
+            </value>
+            <value>
+                <fullName>Paper Goods Machine Operator</fullName>
+                <default>false</default>
+                <label>Paper Goods Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Patternmaker, Model Maker</fullName>
+                <default>false</default>
+                <label>Patternmaker, Model Maker</label>
+            </value>
+            <value>
+                <fullName>Photographic Worker &amp; Machine Operator</fullName>
+                <default>false</default>
+                <label>Photographic Worker &amp; Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Plant &amp; System Operator-All Other</fullName>
+                <default>false</default>
+                <label>Plant &amp; System Operator-All Other</label>
+            </value>
+            <value>
+                <fullName>Plating &amp; Coating Machine Operator</fullName>
+                <default>false</default>
+                <label>Plating &amp; Coating Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Power Plant-Operator/Dispatcher</fullName>
+                <default>false</default>
+                <label>Power Plant-Operator/Dispatcher</label>
+            </value>
+            <value>
+                <fullName>Presser-Textile Related Material</fullName>
+                <default>false</default>
+                <label>Presser-Textile Related Material</label>
+            </value>
+            <value>
+                <fullName>Printing/Prepress Machine Operator</fullName>
+                <default>false</default>
+                <label>Printing/Prepress Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Production Worker - All Other</fullName>
+                <default>false</default>
+                <label>Production Worker - All Other</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Sawing Woodworking Mach Operator</fullName>
+                <default>false</default>
+                <label>Sawing Woodworking Mach Operator</label>
+            </value>
+            <value>
+                <fullName>Seamstress, Tailor</fullName>
+                <default>false</default>
+                <label>Seamstress, Tailor</label>
+            </value>
+            <value>
+                <fullName>Semiconductor Processor</fullName>
+                <default>false</default>
+                <label>Semiconductor Processor</label>
+            </value>
+            <value>
+                <fullName>Sewing Machine Operator</fullName>
+                <default>false</default>
+                <label>Sewing Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Shoe &amp; Leather Worker</fullName>
+                <default>false</default>
+                <label>Shoe &amp; Leather Worker</label>
+            </value>
+            <value>
+                <fullName>Slaughterer &amp; Meat Packer</fullName>
+                <default>false</default>
+                <label>Slaughterer &amp; Meat Packer</label>
+            </value>
+            <value>
+                <fullName>Stationary Engineer &amp; Boiler Operator</fullName>
+                <default>false</default>
+                <label>Stationary Engineer &amp; Boiler Operator</label>
+            </value>
+            <value>
+                <fullName>Structural Metal Fabricator &amp; Fitter</fullName>
+                <default>false</default>
+                <label>Structural Metal Fabricator &amp; Fitter</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Production &amp;Operator Worker</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Production &amp;Operator Worker</label>
+            </value>
+            <value>
+                <fullName>Textile Machine Operator</fullName>
+                <default>false</default>
+                <label>Textile Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Textile Apparel Furnisher-All Other</fullName>
+                <default>false</default>
+                <label>Textile Apparel Furnisher-All Other</label>
+            </value>
+            <value>
+                <fullName>Timing Device Assembler/Adjuster</fullName>
+                <default>false</default>
+                <label>Timing Device Assembler/Adjuster</label>
+            </value>
+            <value>
+                <fullName>Tire Builder</fullName>
+                <default>false</default>
+                <label>Tire Builder</label>
+            </value>
+            <value>
+                <fullName>Tool &amp; Die Maker</fullName>
+                <default>false</default>
+                <label>Tool &amp; Die Maker</label>
+            </value>
+            <value>
+                <fullName>Tool Grinder, Filer, Sharpener</fullName>
+                <default>false</default>
+                <label>Tool Grinder, Filer, Sharpener</label>
+            </value>
+            <value>
+                <fullName>Welder/Brazier</fullName>
+                <default>false</default>
+                <label>Welder/Brazier</label>
+            </value>
+            <value>
+                <fullName>Wholesale Agent/Broker</fullName>
+                <default>false</default>
+                <label>Wholesale Agent/Broker</label>
+            </value>
+            <value>
+                <fullName>Woodworker - All Other</fullName>
+                <default>false</default>
+                <label>Woodworker - All Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

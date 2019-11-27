@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEP_Personal_Contact_Individual_Existing</fullName>
+    <description>DEP Personal Contact (Individual) Existing Customer Screen Section</description>
+    <displayedFields>
+        <field>Applicant_is_Existing_Customer__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>DEP Personal Contact (Individual) Existing Customer</label>
+</FieldSet>

@@ -1,0 +1,11 @@
+<apex:page standardController="COI__c" extensions="coileadcontroller">
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!coiAccounts}" var="a">
+            <apex:column headerValue="Account Name">
+                <apex:outputlink target="_blank" value="/{!a.id}"> {!a.name} 
+                </apex:outputlink>
+            </apex:column>
+            <apex:column headerValue="Account Owner" value="{!a.Owner.Name}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

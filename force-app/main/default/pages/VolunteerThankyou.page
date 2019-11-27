@@ -1,0 +1,32 @@
+<apex:page standardController="Volunteer_Activity__c" extensions="VolunteerTrackingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Volunteer Activity Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.scripts,'banners.js')}"/>
+<title>Employee Volunteer Activity Reporting</title>
+<body>
+<apex:form >
+<!--
+<span class="head" ><apex:commandLink action="{!viewVolunteerReporting}" style="text-decoration: none;color: #006633;" >Employee Volunteer Activity Reporting</apex:commandLink></span>
+-->
+<p style="margin-bottom:30px" />
+<apex:pageBlock title="Volunteer Activity for: {!Employee_fullname}">
+<script type="text/javascript">
+  show_banners('top');
+</script>
+<span class="copy">
+<table><tr><td>Thank you for serving your community and reporting your time. If you added a new organization, someone may be reaching out to you for more information.</td></tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+</span>
+<br/>
+
+<div style="margin: 36px 0px 100px 100px;">
+        <apex:commandLink action="{!choose_organization_page}" type="image/png">
+        <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/AddNewActivity70pct.png')}" style="margin-left:10px; margin-bottom:7px"/>
+        </apex:commandlink>        
+        <a href="https://www.firstnational.com/site/about-us/in-the-community/index.fhtml" >
+        <apex:image id="theImage" value="{!URLFOR($Resource.images,'images/communitydevelopment/close.png')}" style="margin-left:100px; margin-bottom:7px"/></a>
+</div>
+</apex:pageBlock>
+</apex:form>
+</body>   
+</apex:page>

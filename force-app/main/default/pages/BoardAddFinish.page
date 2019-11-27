@@ -1,0 +1,44 @@
+<apex:page standardController="Employee_Board_Membership__c" sidebar="false"
+    standardStylesheets="true" extensions="BoardReportingExtension" showheader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+    <style type="text/css"> .bPageHeader { display:none; } .zen-pipedList { display:none; } </style>
+    <style>img { border: none;}</style>
+    <title>{!YEAR(TODAY()-365)} Nonprofit Board Service Reporting</title>
+    <body>
+        <apex:form >
+            <span class="head">
+                <apex:commandLink action="{!viewBoardReporting}"
+                    style="text-decoration: none;color: #006633;">{!YEAR(TODAY()-365)} Nonprofit
+                    Board Service Reporting</apex:commandLink>
+            </span>
+            <p style="margin-bottom:30px"/>
+            <apex:pageBlock title="Board Activity for: {!employee.First_Name__c}" >
+                <table>
+                    <tr>
+                        <td>If you have more activity to report,<br/>click "Add More."</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandLink action="{!viewBoardAddMore}" type="image/png">
+                                <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/addmore.jpg')}"/>
+                            </apex:commandlink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>If that is all, select “Finish” to review a summary of your reported activity.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandLink action="{!viewBoardFinish}" type="image/png">
+                                <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/finish.jpg')}"/>
+                            </apex:commandlink>
+                        </td>
+                    </tr>
+                </table>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
+</apex:page>

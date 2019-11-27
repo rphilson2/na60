@@ -1,0 +1,30 @@
+<apex:page showHeader="false" sidebar="false" standardController="Volunteer_Activity__c" extensions="VolActivityCancelControllerExt">
+
+    <body onload="sendCancellationToAll()" onunload="javascript:window.opener.location.href=window.opener.location.href; "> 
+        
+        <apex:image id="theImage" value="{!URLFOR(getVolunteerforceImageUrl)}"/>
+        
+        <apex:form >
+               <apex:actionFunction name="sendCancellationToAll" action="{!sendCancellationToAll}" rerender="out" status="myStatus">
+               </apex:actionFunction>
+
+            <apex:panelGrid cellspacing="20" width="80%" columns="2"> 
+                <apex:outputPanel >&nbsp;</apex:outputPanel>
+                <apex:outputPanel id="uname">
+                    <apex:outputLabel >Cancel Volunteer Event</apex:outputLabel>              
+                </apex:outputPanel>
+               
+                <apex:outputPanel >&nbsp;</apex:outputPanel>
+                <apex:outputPanel id="out">
+                    <apex:pageMessages />
+                    <apex:actionStatus startText="Cancelling..." stopText="" id="myStatus"> 
+                    </apex:actionStatus> 
+                </apex:outputPanel>
+
+               <c:VolActivitySignMeUpCloseButtonComponent url="{!URLFOR($Action.Volunteer_Activity__c.View, Volunteer_Activity__c.Id)}"/>
+
+               </apex:panelGrid>
+        </apex:form>        
+    </body>
+
+</apex:page>

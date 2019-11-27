@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Access_Lending_Assistants_2</fullName>
+    <active>true</active>
+    <description>Prevent users with the Mortgage Lending Assistant role from changing an existing value in the Related Owner 2 field.  They can still update blank values in that field.</description>
+    <errorConditionFormula>And( 
+ischanged( Related_Owner_2__c), 
+Not(isblank(priorvalue( Related_Owner_2__c))), 
+$UserRole.Name = &quot;Mortgage Lending Assistants&quot;)</errorConditionFormula>
+    <errorDisplayField>Related_Owner_2__c</errorDisplayField>
+    <errorMessage>You do not have access to change the value in this field.  Please see management.</errorMessage>
+</ValidationRule>

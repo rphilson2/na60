@@ -1,0 +1,47 @@
+<apex:page standardController="POSI__c" showHeader="false" standardStylesheets="false" extensions="POSI_Controller" sidebar="false" renderAs="pdf"> 
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_pdf)}"/>
+<apex:image id="fnbgreen_4color" value="{!$Resource.Surveyform}" width="265" height="42"/>
+<br/><br/><br/>
+    <div class="pdfpagetext">
+        <center style="font-family:sans-serif; font-weight:bold">Corporate Profile Grid</center>
+        <center style="font-family:sans-serif">{!account_name}</center>       
+    </div>
+    <br></br>
+    <div class="pdfrowtext">
+            <table width="100%" border="1" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                    <th style="border-right: 1px solid #000000; border-left: 0px; border-top: 0px; width: 50%; background: #C5EDD3"><center><apex:outputText value="Profile " style="font-family:sans-serif; font-size:10pt; color:black; font-weight:bold"/>
+                    <apex:outputText value="(As Is)" style="font-family:sans-serif; font-size:10pt; color:black; font-weight:normal; font-style:italic"/></center></th>
+                    <th style="border-right: 1px solid #000000; border-top: 0px; width: 50%; background: #C5EDD3"><center><apex:outputText value="Objectives " style="font-family:sans-serif; font-size:10pt; color:black; font-weight:bold"/>
+                    <apex:outputText value="(To Be)" style="font-family:sans-serif; font-size:10pt; color:black; font-weight:normal; font-style:italic"/></center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td style="border-right: 1px solid #000000; width: 50%; height: 275px; vertical-align:top; white-space: pre-wrap"><apex:outputText value="{!POSI__c.Profile__c}" style="font-family:sans-serif; font-size:10pt; font-weight:normal"/></td>
+                    <td style="width: 50%; height:275px; vertical-align:top; white-space: pre-wrap"><apex:outputText value="{!POSI__c.Objectives__c}" style="font-family:sans-serif; font-size:10pt; font-weight:normal"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <table width="100%" border="1" cellpadding="0" cellspacing="0">           
+                <thead>
+                    <tr>
+                    <th style="border-right: 1px solid #000000; border-left: 0px; border-top: 0px; width: 50%; background: #C5EDD3"><center><apex:outputText value="Issues " style="font-family:sans-serif; font-size:10pt; color:black; font-weight:bold"/>
+                    <apex:outputText value="(Barriers, Trends, & Competition)" style="font-family:sans-serif; font-size:10pt; color:black; font-weight:normal; font-style:italic"/></center></th>
+                    <th style="border-right: 1px solid #000000; border-top: 0px; width: 50%; background: #C5EDD3"><center><apex:outputText value="Strategies " style="font-family:sans-serif; font-size:10pt; color:black; font-weight:bold"/>
+                    <apex:outputText value="(How?)" style="font-family:sans-serif; font-size:10pt; color:black; font-weight:normal; font-style:italic"/></center></th>                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td style="border-right: 1px solid #000000; width: 50%; height: 275px; vertical-align:top; white-space: pre-wrap"><apex:outputText value="{!POSI__c.Issues__c}" style="font-family:sans-serif; font-size:10pt; font-weight:normal"/></td>
+                    <td style="width: 50%; height: 275px; vertical-align:top; white-space: pre-wrap"><apex:outputText value="{!POSI__c.Strategies__c}" style="font-family:sans-serif; font-size:10pt; font-weight:normal"/></td>
+                    </tr>
+                </tbody>                
+            </table>
+    </div>
+    
+</apex:page>

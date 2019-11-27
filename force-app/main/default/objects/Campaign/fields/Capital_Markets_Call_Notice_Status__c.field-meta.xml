@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Markets_Call_Notice_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Capital Markets - Call Notice Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sent - Yes</fullName>
+                <default>false</default>
+                <label>Sent - Yes</label>
+            </value>
+            <value>
+                <fullName>NA - Loan Refunding</fullName>
+                <default>false</default>
+                <label>NA - Loan Refunding</label>
+            </value>
+            <value>
+                <fullName>NA - New Money</fullName>
+                <default>false</default>
+                <label>NA - New Money</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

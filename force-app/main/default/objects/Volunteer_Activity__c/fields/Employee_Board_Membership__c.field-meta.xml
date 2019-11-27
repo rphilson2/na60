@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Board_Membership__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Connect to your Board Membership record, if your activity is related to your Board Service</inlineHelpText>
+    <label>Employee Board Membership</label>
+    <referenceTo>Employee_Board_Membership__c</referenceTo>
+    <relationshipLabel>Volunteer Activities</relationshipLabel>
+    <relationshipName>Volunteer_Activities</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Funded_Trust_Account</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Funded Trust Account</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>// Author: Alexander Nourbakhsh
+// Date Created/Modified: 07.22.2016
+// Project: Unfunded Trust
+// Purpose: Update Status__c field of Unfunded Trust sObject record to &#39;Funded&#39;
+
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+
+
+var fundedTrust = new sforce.SObject(&quot;Unfunded_Trust__c&quot;); 
+fundedTrust.id = &quot;{!Unfunded_Trust__c.Id}&quot;; 
+
+
+fundedTrust.Status__c = &quot;Funded&quot;; 
+
+
+sforce.connection.update([fundedTrust]); 
+
+window.location.reload();</url>
+</WebLink>

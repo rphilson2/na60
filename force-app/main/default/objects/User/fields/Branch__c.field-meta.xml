@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(IF(CONTAINS(User_Role_for_Reporting__c, &quot;Customer Care&quot;), &quot;Customer Care&quot;, IF(ISNUMBER(SUBSTITUTE(RIGHT(User_Role_for_Reporting__c, 7), &quot;)&quot;, &quot;&quot;)), LEFT(SUBSTITUTE(SUBSTITUTE(User_Role_for_Reporting__c, &quot;Banker&quot;, &quot;&quot;), &quot;Management&quot;, &quot;&quot;), FIND(&quot;(&quot;, SUBSTITUTE(SUBSTITUTE(User_Role_for_Reporting__c, &quot;Banker&quot;, &quot;&quot;), &quot;Management&quot;, &quot;&quot;))-1) , &quot;&quot;))),User_Role_for_Reporting__c,IF(CONTAINS(User_Role_for_Reporting__c, &quot;Customer Care&quot;), &quot;Customer Care&quot;, IF(ISNUMBER(SUBSTITUTE(RIGHT(User_Role_for_Reporting__c, 7), &quot;)&quot;, &quot;&quot;)), LEFT(SUBSTITUTE(SUBSTITUTE(User_Role_for_Reporting__c, &quot;Banker&quot;, &quot;&quot;), &quot;Management&quot;, &quot;&quot;), FIND(&quot;(&quot;, SUBSTITUTE(SUBSTITUTE(User_Role_for_Reporting__c, &quot;Banker&quot;, &quot;&quot;), &quot;Management&quot;, &quot;&quot;))-1) , &quot;&quot;)))</formula>
+    <label>Branch</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

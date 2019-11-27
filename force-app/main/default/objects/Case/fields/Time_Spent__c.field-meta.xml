@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Spent__c</fullName>
+    <externalId>false</externalId>
+    <label>Time Spent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>--</fullName>
+                <default>true</default>
+                <label>--</label>
+            </value>
+            <value>
+                <fullName>5 min</fullName>
+                <default>false</default>
+                <label>5 min</label>
+            </value>
+            <value>
+                <fullName>15 min</fullName>
+                <default>false</default>
+                <label>15 min</label>
+            </value>
+            <value>
+                <fullName>30 min</fullName>
+                <default>false</default>
+                <label>30 min</label>
+            </value>
+            <value>
+                <fullName>45 min</fullName>
+                <default>false</default>
+                <label>45 min</label>
+            </value>
+            <value>
+                <fullName>60 min</fullName>
+                <default>false</default>
+                <label>60 min</label>
+            </value>
+            <value>
+                <fullName>75 min</fullName>
+                <default>false</default>
+                <label>75 min</label>
+            </value>
+            <value>
+                <fullName>90 min</fullName>
+                <default>false</default>
+                <label>90 min</label>
+            </value>
+            <value>
+                <fullName>105 min</fullName>
+                <default>false</default>
+                <label>105 min</label>
+            </value>
+            <value>
+                <fullName>120 min</fullName>
+                <default>false</default>
+                <label>120 min</label>
+            </value>
+            <value>
+                <fullName>135 min</fullName>
+                <default>false</default>
+                <label>135 min</label>
+            </value>
+            <value>
+                <fullName>150 min</fullName>
+                <default>false</default>
+                <label>150 min</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

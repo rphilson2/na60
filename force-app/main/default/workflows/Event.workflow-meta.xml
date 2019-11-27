@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Activity_Type</fullName>
+        <description>Copy the Activity Type over to a new custom field for use in Custom Report Types</description>
+        <field>Activity_Type_for_Reporting__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>Activity Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Event_Is_Completed</fullName>
+        <field>Event_Completed__c</field>
+        <literalValue>1</literalValue>
+        <name>Event Is Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Activity Type</fullName>
+        <actions>
+            <name>Activity_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Event.Type</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Copy the Activity Type over to a new custom field for use in Custom Report Types</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Completed Event</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Event.EndDateTime</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Event_Is_Completed</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Event.EndDateTime</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

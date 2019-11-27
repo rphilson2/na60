@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description</fullName>
+    <encryptionScheme>ProbabilisticEncryption</encryptionScheme>
+    <inlineHelpText>Describe the details of the relationship expansion. What needs have we identified for the client? What products or services would be a good fit? Are they asking for anything specific?</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

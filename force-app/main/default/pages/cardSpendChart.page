@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="cardSpendMonthChartController" rendered="{!data.empty != true}">
+    <apex:pageBlock title="TBS Card Spend (Monthly)">
+        <apex:chart height="400" width="100%" data="{!data}">
+              <apex:legend position="right" padding="20" spacing="20" font="16px Helvetica"/>
+              <apex:axis type="Category" position="bottom" fields="name"
+                title="Month End Date">
+                <apex:chartLabel rotate="315"/>
+              </apex:axis>
+              <apex:axis type="Numeric" position="left" fields="data2"
+                title="Month Spend" minimum="0" steps="10" grid="true"/>
+            <apex:lineSeries axis="left" fill="false" xField="name" yField="data2"
+              markerType="circle" markerSize="4" markerFill="#FF4C4C" strokeColor="#FF4C4C" strokeWidth="6" title="Credit Limit (Thousands)"/>
+            <apex:lineSeries axis="left" fill="true" xField="name" yField="data1"
+              markerType="circle" markerSize="4" markerFill="#000" strokeColor="#000" strokeWidth="4" title="Month Spend (Thousands)"/>
+       </apex:chart>
+    </apex:pageBlock>
+</apex:page>

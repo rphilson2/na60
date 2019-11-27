@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Employer_Length</fullName>
+    <active>true</active>
+    <description>Prevents the entry of employers longer than 40 characters.</description>
+    <errorConditionFormula>AND( 
+$User.User_Profile_for_Reporting__c = &quot;nCino Community User&quot;, 
+LEN( Employer__pc ) &gt; 40 
+)</errorConditionFormula>
+    <errorMessage>Invalid Entry. Please enter an Employer less than 40 characters. 
+Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

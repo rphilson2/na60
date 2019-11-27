@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Number_of_Cards_Hist__c</fullName>
+    <description>This Field is being used to look at Estimated # of Cards historically capturing information captured before &quot;Card Product&quot; was created and merging it when applicable with the new method.</description>
+    <externalId>false</externalId>
+    <formula>if( ISBLANK( Estimated_Number_of_Cards_Formula__c ),  Estimated_Number_of_Cards__c  , Estimated_Number_of_Cards_Formula__c )</formula>
+    <label>Estimated Number of Cards (Hist)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

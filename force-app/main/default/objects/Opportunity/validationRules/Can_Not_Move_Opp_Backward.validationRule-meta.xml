@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_Not_Move_Opp_Backward</fullName>
+    <active>false</active>
+    <description>This validation rule will check the Opportunity Stage to see if it has moved back to a previous value. If so, then it will throw an error and not allow the user to save it.</description>
+    <errorConditionFormula>AND(Stage_Override__c = FALSE,  RecordType.Name  &lt;&gt;&quot;Commercial Lending&quot;,  RecordType.Name  &lt;&gt;&quot;Consumer Banking&quot;,
+ CASE( StageName , 
+&quot;Prospecting&quot;,1, 
+&quot;Advisor Introduced&quot;,2,
+&quot;Proposal&quot;,3, 
+&quot;Advisory Model Presented&quot;,4,
+&quot;Situation/Objective Assessment Initiated&quot;,5,
+&quot;Formal Underwriting&quot;,6,
+&quot;Solution Presented&quot;,7, 
+&quot;Negotiation&quot;,8, 
+&quot;Documentation&quot;,9, 
+&quot;Implementation&quot;,10, 
+&quot;Financial Planning Accepted&quot;,11,
+&quot;Closed Won&quot;,12,
+&quot;Financial Planning Declined&quot;,13,
+&quot;Closed Lost&quot;,14,0)  
+&lt; 
+CASE(PRIORVALUE(StageName) , 
+&quot;Prospecting&quot;,1, 
+&quot;Advisor Introduced&quot;,2,
+&quot;Proposal&quot;,3, 
+&quot;Advisory Model Presented&quot;,4,
+&quot;Situation/Objective Assessment Initiated&quot;,5,
+&quot;Formal Underwriting&quot;,6,
+&quot;Solution Presented&quot;,7, 
+&quot;Negotiation&quot;,8, 
+&quot;Documentation&quot;,9, 
+&quot;Implementation&quot;,10, 
+&quot;Financial Planning Accepted&quot;,11,
+&quot;Closed Won&quot;,12,
+&quot;Financial Planning Declined&quot;,13,
+&quot;Closed Lost&quot;,14,0))</errorConditionFormula>
+    <errorMessage>Opportunity Stages cannot be changed backward. Please select the appropriate next stage for your Opportunity, or contact your Salesforce Administrator for assistance.</errorMessage>
+</ValidationRule>

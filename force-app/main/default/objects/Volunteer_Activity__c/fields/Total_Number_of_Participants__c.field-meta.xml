@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Number_of_Participants__c</fullName>
+    <description>COUNT of Volunteer Activity Participant records</description>
+    <externalId>false</externalId>
+    <label>Current Participants</label>
+    <summaryForeignKey>Volunteer_Activity_Participant__c.Volunteer_Activity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

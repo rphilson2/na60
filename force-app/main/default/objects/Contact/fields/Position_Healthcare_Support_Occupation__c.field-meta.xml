@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Healthcare_Support_Occupation__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Healthcare Support Occupation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CNA Certified Nursing Assist</fullName>
+                <default>false</default>
+                <label>CNA Certified Nursing Assist</label>
+            </value>
+            <value>
+                <fullName>Dental Assistant</fullName>
+                <default>false</default>
+                <label>Dental Assistant</label>
+            </value>
+            <value>
+                <fullName>Healthcare Support - All Other</fullName>
+                <default>false</default>
+                <label>Healthcare Support - All Other</label>
+            </value>
+            <value>
+                <fullName>Home Health Aide</fullName>
+                <default>false</default>
+                <label>Home Health Aide</label>
+            </value>
+            <value>
+                <fullName>Laboratory Animal Caretaker</fullName>
+                <default>false</default>
+                <label>Laboratory Animal Caretaker</label>
+            </value>
+            <value>
+                <fullName>Massage Therapist</fullName>
+                <default>false</default>
+                <label>Massage Therapist</label>
+            </value>
+            <value>
+                <fullName>Medical Assistant</fullName>
+                <default>false</default>
+                <label>Medical Assistant</label>
+            </value>
+            <value>
+                <fullName>Medical Equipment Preparer</fullName>
+                <default>false</default>
+                <label>Medical Equipment Preparer</label>
+            </value>
+            <value>
+                <fullName>Medical Transcriptions</fullName>
+                <default>false</default>
+                <label>Medical Transcriptions</label>
+            </value>
+            <value>
+                <fullName>Nursing Aide/Orderly/Attendant</fullName>
+                <default>false</default>
+                <label>Nursing Aide/Orderly/Attendant</label>
+            </value>
+            <value>
+                <fullName>Occupational Therapist Assistant</fullName>
+                <default>false</default>
+                <label>Occupational Therapist Assistant</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Aide</fullName>
+                <default>false</default>
+                <label>Pharmacy Aide</label>
+            </value>
+            <value>
+                <fullName>Physical Therapist Assistant</fullName>
+                <default>false</default>
+                <label>Physical Therapist Assistant</label>
+            </value>
+            <value>
+                <fullName>Psychiatric Aide</fullName>
+                <default>false</default>
+                <label>Psychiatric Aide</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Veterinary Assistant</fullName>
+                <default>false</default>
+                <label>Veterinary Assistant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>36.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Pagination of Visualforce Pages: COI_Leads_Related_List_Open, COI_Leads_Related_List_Not_Open, COI_Opportunities_Related_List,       COI_Accounts_Related_List.</description>
+    <label>COI Pagination</label>
+</ApexPage>

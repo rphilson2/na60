@@ -1,0 +1,46 @@
+<!-- DAG 09/20/2019 Redo of site-- This page is no longer being used. -->
+<apex:page standardController="Volunteer_Activity__c" sidebar="false"
+    standardStylesheets="true" extensions="VolunteerTrackingExtension" showheader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+    <style type="text/css"> .bPageHeader { display:none; } .zen-pipedList { display:none; } </style>
+    <style>img { border: none;}</style>
+    <title>Employee Volunteer Activity Reporting</title>
+    <body>
+        <apex:form >
+            <!--
+            <span class="head">
+                <apex:commandLink action="{!viewVolunteerReporting}"
+                    style="text-decoration: none;color: #006633;">Employee Volunteer Activity Reporting</apex:commandLink>
+            </span>
+            -->
+            <p style="margin-bottom:30px"/>
+            <apex:pageBlock title="Volunteer Activity for: {!employee.First_Name__c}" >
+                <table>
+                    <tr>
+                        <td>If you have more volunteer activity to report,<br/>click "Add More."</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <apex:commandLink action="{!Choose_organization_page}" type="image/png">
+                                <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/addmore.png')}"/>
+                            </apex:commandlink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>If that is all, select “Finish” to review a summary of your reported volunteer activity.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                         <!-- apex:commandLink action="{!viewVolFinish}" type="image/png">
+                                <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/finish.png')}"/>
+                            </apex:commandlink -->
+                        </td>
+                    </tr>
+                </table>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
+</apex:page>

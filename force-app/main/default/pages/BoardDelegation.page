@@ -1,0 +1,41 @@
+<!--DAG_2019_01_22 VersionOne Feature E-08549-- Large Modification on this date.  Changed this whole site from updating the Employee Board Membership object to updating the Volunteer Activity object.-->
+<apex:page standardController="Volunteer_Activity__c" extensions="BoardReportingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>{!YEAR(TODAY())}  Nonprofit Board Service Reporting</title>
+<script type="text/javascript">
+    function setFocus() {
+      document.getElementById('j_id0:myForm:j_id7:eid').focus();
+    }
+    function on_enter() { 
+        if (window.event && window.event.keyCode == 13) { 
+            var el=document.getElementById('sub'); delegateBoard(); return false; 
+        } else { 
+            return true; 
+         } 
+     }
+</script>
+<body onload="setFocus();">
+<apex:form id="myForm">
+<p style="margin-bottom:45px" />
+<span class="head" ><apex:commandLink style="text-decoration: none;color: #006633;" >{!YEAR(TODAY())} Nonprofit Board Service Reporting</apex:commandLink></span>
+<p style="margin-bottom:30px" />
+<apex:pageMessages ></apex:pageMessages>
+<span style="padding: 20px 0px 0px 100px;" />
+<div class="copy">Please enter in the Employee ID in the box below for the person you are filing this out for:</div>
+<p style="margin-bottom:5px" />
+        <apex:pageBlock >
+            <span style="margin-top:40px;margin-bottom:40px" >
+                <apex:outputText id="employee" value="Employee Id:   " />&nbsp;&nbsp;<apex:inputText value="{!q}" size="10" id="eid" style="margin-left:10px;margin-right:10px" onkeypress="return on_enter();" /><br/>
+                <apex:outputText value="(Id used to logon to workstation)" />
+            </span>
+        </apex:pageBlock>
+<span  style="margin-left:500px"  >
+</span>
+<p style="margin-bottom:50px" />
+<apex:actionFunction name="delegateBoard" action="{!delegateBoard}"/>
+<apex:commandLink action="{!delegateBoard}" type="image/png" id="sub">
+<apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/submit.png')}"/>
+</apex:commandlink>
+</apex:form>
+</body>   
+</apex:page>

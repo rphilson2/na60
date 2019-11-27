@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type_for_Reporting__c</fullName>
+    <description>The Activity Type field is not available in Custom Reports types (shame on you Salesforce!).  The workaround is to have a workflow populate this new custom field that can be included in the creation of custom report types</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <label>Activity Type for Reporting</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

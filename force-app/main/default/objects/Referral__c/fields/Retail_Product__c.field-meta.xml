@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retail_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Retail Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Referral_Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bill.com</fullName>
+                <default>false</default>
+                <label>Bill.com</label>
+            </value>
+            <value>
+                <fullName>Deposit Account</fullName>
+                <default>false</default>
+                <label>Deposit Account</label>
+            </value>
+            <value>
+                <fullName>FAW</fullName>
+                <default>false</default>
+                <label>FAW</label>
+            </value>
+            <value>
+                <fullName>Harry A Koch</fullName>
+                <default>false</default>
+                <label>Harry A Koch</label>
+            </value>
+            <value>
+                <fullName>Home Equity</fullName>
+                <default>false</default>
+                <label>Home Equity</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Lending Product (not HELOC)</fullName>
+                <default>false</default>
+                <label>Lending Product (not HELOC)</label>
+            </value>
+            <value>
+                <fullName>Loan</fullName>
+                <default>false</default>
+                <label>Loan</label>
+            </value>
+            <value>
+                <fullName>Paycor</fullName>
+                <default>false</default>
+                <label>Paycor</label>
+            </value>
+            <value>
+                <fullName>Paymaker</fullName>
+                <default>false</default>
+                <label>Paymaker</label>
+            </value>
+            <value>
+                <fullName>TSYS</fullName>
+                <default>false</default>
+                <label>TSYS</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Bill.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Deposit Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>FAW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Harry A Koch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Home Equity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Lending Product (not HELOC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Paycor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>Paymaker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <valueName>TSYS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

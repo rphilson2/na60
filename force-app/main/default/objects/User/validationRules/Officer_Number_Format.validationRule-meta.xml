@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Officer_Number_Format</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF (not(isblank( Officer_Number__c )), 
+    LEN( Officer_Number__c )  &lt;&gt; 5,
+    NULL)</errorConditionFormula>
+    <errorDisplayField>EmailPreferences</errorDisplayField>
+    <errorMessage>Officer number must either be blank (for those without an officer #) or be a 5 digit field (00342, 78000, etc).</errorMessage>
+</ValidationRule>

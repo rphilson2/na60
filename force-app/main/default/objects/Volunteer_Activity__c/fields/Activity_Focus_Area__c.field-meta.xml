@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Focus_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Focus Area</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vibrant Neighborhoods and Stable Housing – Housing development and homeownership organizations</fullName>
+                <default>false</default>
+                <label>Vibrant Neighborhoods and Stable Housing – Housing development and homeownership organizations</label>
+            </value>
+            <value>
+                <fullName>Educated workforce – K to 12 and nonprofit organizations</fullName>
+                <default>false</default>
+                <label>Educated workforce – K to 12 and nonprofit organizations</label>
+            </value>
+            <value>
+                <fullName>Educated workforce – Colleges and Universities</fullName>
+                <default>false</default>
+                <label>Educated workforce – Colleges and Universities</label>
+            </value>
+            <value>
+                <fullName>Strong local economies – Chambers of Commerce and Economic Development organizations</fullName>
+                <default>false</default>
+                <label>Strong local economies – Chambers of Commerce and Economic Development organizations</label>
+            </value>
+            <value>
+                <fullName>Good health – Health care and Social Service organizations</fullName>
+                <default>false</default>
+                <label>Good health – Health care and Social Service organizations</label>
+            </value>
+            <value>
+                <fullName>Access to culture – Arts, Culture and Humanities organizations</fullName>
+                <default>false</default>
+                <label>Access to culture – Arts, Culture and Humanities organizations</label>
+            </value>
+            <value>
+                <fullName>Athletics – Sports organizations</fullName>
+                <default>false</default>
+                <label>Athletics – Sports organizations</label>
+            </value>
+            <value>
+                <fullName>Sustained environment – Environmental  Sustainability and Conservation organizations</fullName>
+                <default>false</default>
+                <label>Sustained environment – Environmental  Sustainability and Conservation organizations</label>
+            </value>
+            <value>
+                <fullName>Community cohesion – Animal, Civic, Political, Disaster, Faith - Based, Scouts, Rotaries, and Service League organizations</fullName>
+                <default>false</default>
+                <label>Community cohesion – Animal, Civic, Political, Disaster, Faith - Based, Scouts, Rotaries, and Service League organizations</label>
+            </value>
+            <value>
+                <fullName>Community cohesion - United way</fullName>
+                <default>false</default>
+                <label>Community cohesion - United way</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Unit A</fullName>
+                <default>false</default>
+                <label>Business Unit A</label>
+            </value>
+            <value>
+                <fullName>Business Unit B</fullName>
+                <default>false</default>
+                <label>Business Unit B</label>
+            </value>
+            <value>
+                <fullName>Business Unit C</fullName>
+                <default>false</default>
+                <label>Business Unit C</label>
+            </value>
+            <value>
+                <fullName>Business Unit D</fullName>
+                <default>false</default>
+                <label>Business Unit D</label>
+            </value>
+            <value>
+                <fullName>Business Unit E</fullName>
+                <default>false</default>
+                <label>Business Unit E</label>
+            </value>
+            <value>
+                <fullName>Business Unit F</fullName>
+                <default>false</default>
+                <label>Business Unit F</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

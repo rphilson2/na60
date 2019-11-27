@@ -1,0 +1,30 @@
+<apex:page standardController="FIC_Survey_Application__c" showheader="false" tabStyle="Salesforce_on_Intranet__tab" cache="false" standardStylesheets="false" title="Grant Application Saved">
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_white.png')}" width="600" height="70"/>
+            </div>
+        </div>
+    
+      <div class="body">
+        <apex:form >
+          <center><apex:outputText value="Thank You" style="font-weight: bold; font-size: 30px; color: #004B63; font-style: italic;"></apex:outputText></center>
+          <br/>
+          <center><apex:outputText value="Your application has been saved.  When you come back, please enter your information on the sign-in page to pick up where you left off." styleclass="outputtext" style="float:center"></apex:outputText></center>
+          <table style="border-spacing: 2px;">
+             <tr class="blankrow"></tr>
+             <tr class="blankrow"></tr>
+             <tr class="blankrow"></tr>                      
+             <tr>
+                <td>
+                   <apex:commandButton value="Exit" action="https://www.fnbo.com/community" styleClass="myButton"/>
+                </td>                              
+             </tr>
+             <tr class="blankrow"></tr>
+          </table>                                     
+        </apex:form>
+      </div>
+  </body>
+</apex:page>

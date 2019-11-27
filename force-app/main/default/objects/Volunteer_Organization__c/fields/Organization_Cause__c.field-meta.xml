@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Organization Cause</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access to Culture</fullName>
+                <default>false</default>
+                <label>Access to Culture</label>
+            </value>
+            <value>
+                <fullName>Athletics</fullName>
+                <default>false</default>
+                <label>Athletics</label>
+            </value>
+            <value>
+                <fullName>Community Cohesion</fullName>
+                <default>false</default>
+                <label>Community Cohesion</label>
+            </value>
+            <value>
+                <fullName>Educated Workforce</fullName>
+                <default>false</default>
+                <label>Educated Workforce</label>
+            </value>
+            <value>
+                <fullName>Good Health</fullName>
+                <default>false</default>
+                <label>Good Health</label>
+            </value>
+            <value>
+                <fullName>Stable Housing</fullName>
+                <default>false</default>
+                <label>Stable Housing</label>
+            </value>
+            <value>
+                <fullName>Strong Local Economies</fullName>
+                <default>false</default>
+                <label>Strong Local Economies</label>
+            </value>
+            <value>
+                <fullName>Sustained Environment</fullName>
+                <default>false</default>
+                <label>Sustained Environment</label>
+            </value>
+            <value>
+                <fullName>Vibrant Neighborhoods</fullName>
+                <default>false</default>
+                <label>Vibrant Neighborhoods</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

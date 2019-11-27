@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DAO_Phone_Numbers_At_Least_10_Digits</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$User.ProfileId = &#39;00e0c00000287hf&#39;, 
+OR( 
+Birth_Date__c &gt;= Today(), 
+YEAR(Birth_Date__c ) &lt; 1900, 
+Birth_Date__c - Today() &gt; 365*18 
+))</errorConditionFormula>
+    <errorMessage>Invalid Entry. Please enter a valid phone number. Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

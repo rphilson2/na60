@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1st_PC_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter your PC Type here. If it is a VDI machine, please select “VDI.” If it is a complete physical computer, like a laptop or desktop, please select “Laptop/Desktop</inlineHelpText>
+    <label>1st PC Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VDI</fullName>
+                <default>false</default>
+                <label>VDI</label>
+            </value>
+            <value>
+                <fullName>Laptop/Desktop</fullName>
+                <default>false</default>
+                <label>Laptop/Desktop</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

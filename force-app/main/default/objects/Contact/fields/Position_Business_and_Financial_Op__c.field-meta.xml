@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Business_and_Financial_Op__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Business and Financial Op</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accountant/Auditor</fullName>
+                <default>false</default>
+                <label>Accountant/Auditor</label>
+            </value>
+            <value>
+                <fullName>Agent/Business Manager</fullName>
+                <default>false</default>
+                <label>Agent/Business Manager</label>
+            </value>
+            <value>
+                <fullName>Benefits/Comp Specialist</fullName>
+                <default>false</default>
+                <label>Benefits/Comp Specialist</label>
+            </value>
+            <value>
+                <fullName>Budget/Credit Analyst</fullName>
+                <default>false</default>
+                <label>Budget/Credit Analyst</label>
+            </value>
+            <value>
+                <fullName>Business Analyst &amp; Consultant</fullName>
+                <default>false</default>
+                <label>Business Analyst &amp; Consultant</label>
+            </value>
+            <value>
+                <fullName>Claims Adjuster/Investigator</fullName>
+                <default>false</default>
+                <label>Claims Adjuster/Investigator</label>
+            </value>
+            <value>
+                <fullName>Compliance Specialist</fullName>
+                <default>false</default>
+                <label>Compliance Specialist</label>
+            </value>
+            <value>
+                <fullName>Emergency Management Spec</fullName>
+                <default>false</default>
+                <label>Emergency Management Spec</label>
+            </value>
+            <value>
+                <fullName>Financial Advisor</fullName>
+                <default>false</default>
+                <label>Financial Advisor</label>
+            </value>
+            <value>
+                <fullName>Financial Examiner</fullName>
+                <default>false</default>
+                <label>Financial Examiner</label>
+            </value>
+            <value>
+                <fullName>Financial/Securities Analyst</fullName>
+                <default>false</default>
+                <label>Financial/Securities Analyst</label>
+            </value>
+            <value>
+                <fullName>HR Recruiter</fullName>
+                <default>false</default>
+                <label>HR Recruiter</label>
+            </value>
+            <value>
+                <fullName>Insurance Appraiser</fullName>
+                <default>false</default>
+                <label>Insurance Appraiser</label>
+            </value>
+            <value>
+                <fullName>Loan Officer/Counselor</fullName>
+                <default>false</default>
+                <label>Loan Officer/Counselor</label>
+            </value>
+            <value>
+                <fullName>Meeting/Convention Planners</fullName>
+                <default>false</default>
+                <label>Meeting/Convention Planners</label>
+            </value>
+            <value>
+                <fullName>Owner/Partner-Accounting</fullName>
+                <default>false</default>
+                <label>Owner/Partner-Accounting</label>
+            </value>
+            <value>
+                <fullName>Owner/Partner-Financial Advisor</fullName>
+                <default>false</default>
+                <label>Owner/Partner-Financial Advisor</label>
+            </value>
+            <value>
+                <fullName>Owner/Partner-Real Estate Appraiser</fullName>
+                <default>false</default>
+                <label>Owner/Partner-Real Estate Appraiser</label>
+            </value>
+            <value>
+                <fullName>Purchasing Agent/Buyer</fullName>
+                <default>false</default>
+                <label>Purchasing Agent/Buyer</label>
+            </value>
+            <value>
+                <fullName>Real Estate-Appraiser/Assessor</fullName>
+                <default>false</default>
+                <label>Real Estate-Appraiser/Assessor</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Tax Examiner/Collector</fullName>
+                <default>false</default>
+                <label>Tax Examiner/Collector</label>
+            </value>
+            <value>
+                <fullName>Tax Preparer/Consultant</fullName>
+                <default>false</default>
+                <label>Tax Preparer/Consultant</label>
+            </value>
+            <value>
+                <fullName>Training/Development Specialist</fullName>
+                <default>false</default>
+                <label>Training/Development Specialist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Programs_Discussed__c</fullName>
+    <externalId>false</externalId>
+    <label>Programs Discussed</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer Card</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial Card</label>
+            </value>
+            <value>
+                <fullName>Overall Engaged Dealer Activity</fullName>
+                <default>false</default>
+                <label>Overall Engaged Dealer Activity</label>
+            </value>
+            <value>
+                <fullName>Enrollment</fullName>
+                <default>false</default>
+                <label>Enrollment</label>
+            </value>
+            <value>
+                <fullName>Route One</fullName>
+                <default>false</default>
+                <label>Route One</label>
+            </value>
+            <value>
+                <fullName>Kick-off/Launch</fullName>
+                <default>false</default>
+                <label>Kick-off/Launch</label>
+            </value>
+            <value>
+                <fullName>Application Submission Goal</fullName>
+                <default>false</default>
+                <label>Application Submission Goal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Acct_Lending_Relationship__c</fullName>
+    <description>Used in a Process Builder flow to auto populate the Activity Prospect level field with the Current Lending Relationship field from the account page.  This only happens for users in the CBG profile.</description>
+    <externalId>false</externalId>
+    <formula>TEXT( Account.Current_Lending_Relationship__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Related Acct Lending Relationship</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

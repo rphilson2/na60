@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Place_of_Birth_Length</fullName>
+    <active>true</active>
+    <description>Prevents from entering more than 25 characters for &#39;Place of birth&#39;.</description>
+    <errorConditionFormula>AND( 
+LEN(Place_of_Birth__c)&gt;25, 
+$User.User_Profile_for_Reporting__c = &quot;nCino Community User&quot; 
+)</errorConditionFormula>
+    <errorMessage>Invalid Entry. Please enter a Place of Birth less than 25 characters. 
+Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Arts_Design_Ent_Sports__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Arts, Design, Ent, Sports</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Actor, Producer &amp; Director</fullName>
+                <default>false</default>
+                <label>Actor, Producer &amp; Director</label>
+            </value>
+            <value>
+                <fullName>Art Appraiser/Consultant</fullName>
+                <default>false</default>
+                <label>Art Appraiser/Consultant</label>
+            </value>
+            <value>
+                <fullName>Art Dealer/Owner</fullName>
+                <default>false</default>
+                <label>Art Dealer/Owner</label>
+            </value>
+            <value>
+                <fullName>Art Director</fullName>
+                <default>false</default>
+                <label>Art Director</label>
+            </value>
+            <value>
+                <fullName>Artist</fullName>
+                <default>false</default>
+                <label>Artist</label>
+            </value>
+            <value>
+                <fullName>Athlete</fullName>
+                <default>false</default>
+                <label>Athlete</label>
+            </value>
+            <value>
+                <fullName>Audio Sound &amp; Video,Broadcast Tech</fullName>
+                <default>false</default>
+                <label>Audio Sound &amp; Video,Broadcast Tech</label>
+            </value>
+            <value>
+                <fullName>Camera Operator</fullName>
+                <default>false</default>
+                <label>Camera Operator</label>
+            </value>
+            <value>
+                <fullName>Coach &amp; Scout</fullName>
+                <default>false</default>
+                <label>Coach &amp; Scout</label>
+            </value>
+            <value>
+                <fullName>Dancer &amp; Choreographer</fullName>
+                <default>false</default>
+                <label>Dancer &amp; Choreographer</label>
+            </value>
+            <value>
+                <fullName>Designer</fullName>
+                <default>false</default>
+                <label>Designer</label>
+            </value>
+            <value>
+                <fullName>Editor</fullName>
+                <default>false</default>
+                <label>Editor</label>
+            </value>
+            <value>
+                <fullName>Entertainer &amp; Performer-All Other</fullName>
+                <default>false</default>
+                <label>Entertainer &amp; Performer-All Other</label>
+            </value>
+            <value>
+                <fullName>Film &amp; Video Editor</fullName>
+                <default>false</default>
+                <label>Film &amp; Video Editor</label>
+            </value>
+            <value>
+                <fullName>Interpreter &amp; Translator</fullName>
+                <default>false</default>
+                <label>Interpreter &amp; Translator</label>
+            </value>
+            <value>
+                <fullName>Media &amp; Communication Worker-All Other</fullName>
+                <default>false</default>
+                <label>Media &amp; Communication Worker-All Other</label>
+            </value>
+            <value>
+                <fullName>Multi-Media Artist &amp; Animators</fullName>
+                <default>false</default>
+                <label>Multi-Media Artist &amp; Animators</label>
+            </value>
+            <value>
+                <fullName>Music Director &amp; Composer</fullName>
+                <default>false</default>
+                <label>Music Director &amp; Composer</label>
+            </value>
+            <value>
+                <fullName>Musicians &amp; Signers</fullName>
+                <default>false</default>
+                <label>Musicians &amp; Signers</label>
+            </value>
+            <value>
+                <fullName>News Anchor/Analyst</fullName>
+                <default>false</default>
+                <label>News Anchor/Analyst</label>
+            </value>
+            <value>
+                <fullName>Photographer</fullName>
+                <default>false</default>
+                <label>Photographer</label>
+            </value>
+            <value>
+                <fullName>Public Relations Specialist</fullName>
+                <default>false</default>
+                <label>Public Relations Specialist</label>
+            </value>
+            <value>
+                <fullName>Radio &amp; Television Announcer</fullName>
+                <default>false</default>
+                <label>Radio &amp; Television Announcer</label>
+            </value>
+            <value>
+                <fullName>Radio Operator</fullName>
+                <default>false</default>
+                <label>Radio Operator</label>
+            </value>
+            <value>
+                <fullName>Reporter &amp; Correspondent</fullName>
+                <default>false</default>
+                <label>Reporter &amp; Correspondent</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Sport - All Other</fullName>
+                <default>false</default>
+                <label>Sport - All Other</label>
+            </value>
+            <value>
+                <fullName>Sport Official</fullName>
+                <default>false</default>
+                <label>Sport Official</label>
+            </value>
+            <value>
+                <fullName>Writer/Technical Writer</fullName>
+                <default>false</default>
+                <label>Writer/Technical Writer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Assessment_Type__c</fullName>
+    <description>Used to classify Special Assessment tasks used by Business Monitoring</description>
+    <externalId>false</externalId>
+    <label>Special Assessment Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ATM Owner/Operators</fullName>
+                <default>false</default>
+                <label>ATM Owner/Operators</label>
+            </value>
+            <value>
+                <fullName>Charitable Organizations</fullName>
+                <default>false</default>
+                <label>Charitable Organizations</label>
+            </value>
+            <value>
+                <fullName>Domestic Correspondent Banks</fullName>
+                <default>false</default>
+                <label>Domestic Correspondent Banks</label>
+            </value>
+            <value>
+                <fullName>Embassy/Consulates</fullName>
+                <default>false</default>
+                <label>Embassy/Consulates</label>
+            </value>
+            <value>
+                <fullName>Grocery, Convenience, Liquor and Tobacco/Vapor Stores</fullName>
+                <default>false</default>
+                <label>Grocery, Convenience, Liquor and Tobacco/Vapor Stores</label>
+            </value>
+            <value>
+                <fullName>Jewelry Dealers, Pawnshops and Loan/Financing Companies</fullName>
+                <default>false</default>
+                <label>Jewelry Dealers, Pawnshops and Loan/Financing Companies</label>
+            </value>
+            <value>
+                <fullName>Money Services Businesses (&quot;MSB&quot;)</fullName>
+                <default>false</default>
+                <label>Money Services Businesses (&quot;MSB&quot;)</label>
+            </value>
+            <value>
+                <fullName>Agents of a Principal MSB</fullName>
+                <default>false</default>
+                <label>Agents of a Principal MSB</label>
+            </value>
+            <value>
+                <fullName>Non-US Businesses/Organizations</fullName>
+                <default>false</default>
+                <label>Non-US Businesses/Organizations</label>
+            </value>
+            <value>
+                <fullName>International Politically Exposed Persons (&quot;PEP&quot;)</fullName>
+                <default>false</default>
+                <label>International Politically Exposed Persons (&quot;PEP&quot;)</label>
+            </value>
+            <value>
+                <fullName>Domestic Politically Exposed Persons (&quot;PEP&quot;)</fullName>
+                <default>false</default>
+                <label>Domestic Politically Exposed Persons (&quot;PEP&quot;)</label>
+            </value>
+            <value>
+                <fullName>Private Banking Customers as defined in the CIP and Due Diligence Policy</fullName>
+                <default>false</default>
+                <label>Private Banking Customers as defined in the CIP and Due Diligence Policy</label>
+            </value>
+            <value>
+                <fullName>Privately Held Casino/Gambling Establishments</fullName>
+                <default>false</default>
+                <label>Privately Held Casino/Gambling Establishments</label>
+            </value>
+            <value>
+                <fullName>Securities and Commodity Firms</fullName>
+                <default>false</default>
+                <label>Securities and Commodity Firms</label>
+            </value>
+            <value>
+                <fullName>Third Party Senders with a Processing Relationship</fullName>
+                <default>false</default>
+                <label>Third Party Senders with a Processing Relationship</label>
+            </value>
+            <value>
+                <fullName>Used Motor Vehicle Dealers</fullName>
+                <default>false</default>
+                <label>Used Motor Vehicle Dealers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<apex:page standardController="Prospect_Profile__c">
+    <apex:pageBlock >
+             <apex:pageBlockSection title="Business Owner's Strategy/Plan (Explicity Stated and Confirmed by Business Owner in meeting 1, 2 or 3)">
+             <apex:outputPanel layout="block" style="white-space:nowrap;">
+                 <table width="400px" align="left">
+                 <tr>
+                        <td width="800px"><h2><apex:outputText value="The Business Opportunities They are Pursuing: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Business_Opportunities_Pursuing__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="800px"><h2><apex:outputText value="The Business Challenges They Forsee in Implementing the Business Opportunities: "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Business_Opportunities_Challenges__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr>
+                        <td width="800px"><h2><apex:outputText value="Changes to Business Processes to Adjust for Opportunities and Challenges (For the Next 3 years): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Changes_to_Business_Processes__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="800px"><h2><apex:outputText value="Changes to Financial Processes (For the Next 3 Years): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Changes_to_Financial_Processes__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 </table>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+     </apex:pageBlock>
+</apex:page>

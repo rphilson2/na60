@@ -1,0 +1,70 @@
+<apex:page standardController="Volunteer_Activity__c" title="Volunteer Activity: {!Volunteer_Activity__c.Name}" extensions="VolActivityMassSignUpControllerExt">      
+
+    <apex:sectionHeader title="Mass Sign Up Users" subtitle="Volunteer Activity: {!Name}" help="http://www.salesforce.com/docs/en/volunteerforce/index_Left.htm#StartTopic=Content/volunteerforce_activities_multi_signup.htm"/>
+    
+    <apex:form id="contactLookupForm">
+        <apex:panelGrid columns="1">
+            <apex:outputLabel for="searchText">
+                <strong>Search Filters</strong>             
+            </apex:outputLabel>         
+        </apex:panelGrid>
+        <apex:panelGrid columns="2">
+            <apex:outputLabel value="{!$ObjectType.user.fields.firstname.label}" />
+            <apex:inputText id="fname" value="{!fname}"/>
+
+            <apex:outputLabel value="{!$ObjectType.user.fields.lastname.label}"/>
+            <apex:inputText id="lname" value="{!lname}"/>
+
+            <apex:outputLabel value="{!$ObjectType.user.fields.department.label}"/>
+            <apex:inputText id="dept" value="{!dept}"/>
+
+            <apex:commandButton rerender="results" action="{!search}" value="Search"/>                                         
+                        
+        </apex:panelGrid>       
+    </apex:form>
+    
+
+    <apex:form >
+    	<apex:inputHidden value="{!Volunteer_Activity__c.Total_Number_of_Participants__c}" />
+    	<apex:inputHidden value="{!Volunteer_Activity__c.Max_Number_of_Participants__c}" />
+    	
+        <apex:outputPanel id="results">
+        <apex:pageMessages />   
+            <apex:panelGrid columns="2">
+                <apex:outputLabel for="">
+                    There are {!noOfParticipants} participants currently signed up for &nbsp;<apex:outputLink value="{!URLFOR($Action.Volunteer_Activity__c.View, Volunteer_Activity__c.Id)}">{!Name}</apex:outputLink>. 
+                </apex:outputLabel>
+                <apex:outputLabel rendered="{!renderMaxParticipants}" > 
+                    The maximum participants allowed are {!noOfMaxParticipants}.
+                </apex:outputLabel>
+                <apex:outputLabel rendered="{!renderMaxParticipants==false}" > 
+                    &nbsp;
+                </apex:outputLabel>
+                <apex:panelGroup id="theGroup">             
+                    <apex:commandLink action="{!prevPage}" rendered="{!renderPrev}" rerender="results" value="Previous Page" />
+                    <apex:outputText rendered="{!renderPrev==false}" value="Previous Page" /> 
+                    <apex:outputText > | &nbsp;</apex:outputText>
+                    <apex:commandLink action="{!nextPage}" rendered="{!renderNext}" rerender="results" value="Next Page" /> 
+                    <apex:outputText rendered="{!renderNext==false}" value="Next Page" /> 
+                </apex:panelGroup>          
+            </apex:panelGrid>           
+            
+            <apex:pageBlock rendered="{!count > 0}">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Add the Selected Users" action="{!massSignUp}" >
+                <apex:param name="id" value="{!id}" />
+                </apex:commandButton>
+            </apex:pageBlockButtons>
+
+            <apex:selectCheckboxes value="{!selUsers}" layout="pageDirection">
+                <apex:selectOptions value="{!items}"/>
+            </apex:selectCheckboxes><br/>       
+            </apex:pageBlock>
+            
+            <apex:pageBlock rendered="{!count == 0}">
+                No results found.
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+        
+</apex:page>

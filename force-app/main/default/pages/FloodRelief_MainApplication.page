@@ -1,0 +1,487 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="flooddonationrequest_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+   <apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+   <apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   <style type="text/css">
+    .myFloodButton {
+            background-color:transparent;
+            border:4px solid #34657F;
+            display:inline-block;
+            cursor:pointer;
+            color:#34657F;
+            font-family:Arial;
+            font-size:20px;
+            padding:22px 39px;
+            text-decoration:none;
+            text-shadow:0px 0px 0px #34657F;
+            -webkit-appearance: none;
+    }
+    .myFloodButton:hover {
+            background-color: #34657F;
+            color:#ffffff;
+    }
+    .myFloodButton:active {
+            position:relative;
+            top:1px;
+    }
+    
+    .visible{
+            display:block;
+        }
+        .hidden{
+            display:none;
+        }
+        
+    table.exceptionText td {
+       font-style:italic;
+       font-size:16px;
+       font-weight:bold;
+       text-align:center;
+       color:#006952;
+       }    
+        
+   </style>
+    
+  <body>  
+      <!--<apex:form -->  
+           
+     <apex:outputPanel id="refreshPage">
+         <div id="section1" class="{!if(showFirstPage,'visible','hidden')}">
+                <div class="fixedheader" style="background:#34657F; height:110px; padding-top:0px;">
+                    <div class="textbar">
+                        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz-box.png')}" width="100%"/>
+                    </div>
+                </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="PAGE ONE OF THREE" styleclass="outputtextbold"/></center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="Organization Overview" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:inputfield value="{!FIC_Survey_Application__c.First_National_Bank_Request__c}" id="First_National_Bank_Request__c" styleClass="inputcheckbox"/><apex:outputText value="Requests for funding from the Rebuild the Heartland Community Fund are considered as submitted.  
+                                Those that do not contain the required information to make a decision will be denied.  
+                                By checking the box, you are acknowledging these statements and certifying that you are an authorized representative of the organization applying for funding." styleClass="outputtext"/>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="First_National_Bank_Request__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>                                
+                                <tr>
+                                <td><apex:outputText value="Your Organization's Tax ID: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Tax_ID__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="A valid tax id must be entered in the 77-7777777 format. If you are unsure of your organization’s tax id, please visit " styleClass="outputtextbluital"/><apex:outputLink value="https://www.guidestar.org/search" styleClass="outputlinkSmall" target="_blank">https://www.guidestar.org/search</apex:outputlink><apex:outputText value="." styleClass="outputtextbluital"/></td>
+                                </tr>                                                                
+                                <tr class="blankrow"></tr>                                
+                                <tr>
+                                <td><apex:outputText value="Name of Organization: " styleClass="outputtext"/></td>
+                                </tr>                                
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Name_of_Organization__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Mission Statement: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Mission_Statement__c}" required="true" onkeydown="limit(this, 500)" onkeyup="limit(this, 500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Project Name: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Name__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide a brief, 1-2 sentence description of how funding will be used to benefit people or geographies impacted by the spring and summer 2019 floods.  Applicants will be able to expand on this description in a later question. (750 character limit)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Description__c}" required="true" onkeydown="limit(this, 750)" onkeyup="limit(this, 750)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Anticipated Project Start Date: (MM/DD/YYYY) " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Date__c}" required="true" showDatePicker="False" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Anticipated Project Completion Date: (MM/DD/YYYY) " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Anticipated_End_Date__c}" required="true" showDatePicker="False" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Amount Requested: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Amount_Requested__c}" required="true" onkeydown="limit(this, 16)" onkeyup="limit(this, 16)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Indicate whether your organization is part of a Long-Term Recovery Group or Committee, and/or a collaborative cohort designed to be 
+                                responsive to the community’s disaster recovery and rebuilding needs.  List partners in that group/cohort and their respective roles and responsibilities, and how 
+                                that group’s activities have informed the proposal you are submitting." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                   <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Long_Term_Recovery_Group__c}" required="true" onkeydown="limit(this, 2000)" onkeyup="limit(this, 2000)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                   <apex:commandButton value="NEXT PAGE" action="{!flood2}" styleClass="myFloodButton"/>
+                              <!--  <apex:commandButton value="Next Page1" action="{!next1}" reRender="refreshPage" /> -->
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+             
+             </div>
+             
+                <div id="section2" class="{!if(showSecPage,'visible','hidden')}">
+                <div class="fixedheader" style="background:#34657F; height:110px; padding-top:0px;">
+                    <div class="textbar">
+                        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz-box.png')}" width="100%"/>
+                    </div>
+                </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="PAGE TWO OF THREE" styleclass="outputtextbold"/></center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="Organization Street Address: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Street_Address__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization City: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_City__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization State: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_State__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization Zip Code: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Zip__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization Website: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Website__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Please select your non-profit status: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Non_Profit_Status__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="If your non-profit status is other, please specify: " styleClass="outputtext"/></i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Non_Profit_Status_Other__c}" id="Non_Profit_Status_Other__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Non_Profit_Status_Other__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Executive Director: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Executive Director Phone Number: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director_Phone_Number__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Executive Director Email Address: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director_Email_Address__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization Contact Person Name: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Contact_Name__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization Contact Person Phone Number: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Contact_Phone_Number__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organization Contact Person Email: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Contact_Email__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Person Completing This Form (Name and Affiliation): " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Person_Completing_This_Form__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Email of Person Completing This Form: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Person_Completing_This_Form_Email__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Project Focus: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Community_Focus_Area__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Describe how the flood impacted your community, with specific attention and information related to the issue your organization/collaborative will address with this grant funding (1500 character limit): " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Describe_Impact__c}" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="How will funding be used to address the impact caused by the floods?  Include cost estimates where known, as well as an estimated timeline for project completion (1500 character limit): " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Funding_Use__c}" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 750)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="List all states, cities, and counties where your organization will focus its work.  Include specific addresses where known (1500 character limit):" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Counties_Served__c}" required="true" id="Flood_Counties_Served" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Describe specific and measurable intended outcomes, and include how you will measure the success of your efforts (1500 character limit): " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Describe_Outcomes__c}" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Describe your organization’s track record and success with implementing and managing projects similar to the project proposed in this application (1500 character limit):" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Describe_Track_Record__c}" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Detail collaborations with other organizations that relate to this project,  including organization names and their role in the project (1500 character limit):" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Collaborations__c}" id="Flood_Collaborations__c" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Detail volunteer opportunities associated with this project and the name, phone number and email address of a volunteer coordinator with whom we can connect volunteers (1500 character limit):" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Flood_Volunteer_Opportunities__c}" id="Flood_Volunteer_Opportunities__c" required="true" onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Flood_Volunteer_Opportunities__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                   <td><apex:outputText value="Does your organization undergo an annual independent audit?  " styleClass="outputtext"/>
+                                      <apex:selectRadio value="{!annual_audit}" dir="ltr" styleClass="outputtext">
+                                         <apex:selectoption itemvalue="true" itemescaped="true" itemlabel="Yes"/>
+                                         <apex:selectoption itemvalue="false" itemescaped="true" itemlabel="No"/>
+                                      </apex:selectRadio>
+                                   </td>
+                                </tr>
+                                <tr>
+                                   <td><apex:pageMessages id="MSG"/></td>
+                                </tr>                                                    
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                   <td>
+                                      <apex:commandButton value="NEXT PAGE" action="{!flood3}" styleClass="myFloodButton"/>
+                                   </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                  </div>
+                  
+                  <!--
+                  <apex:commandButton value="Prev Page1" action="{!goToPrevnext1}" reRender="refreshPage" />   
+                  <apex:commandButton value="Next Page2" action="{!next2}" reRender="refreshPage" />-->
+             
+             </div>
+             
+             <div id="section3" class="{!if(showThirdPage,'visible','hidden')}">
+                <div class="fixedheader" style="background:#34657F; height:110px; padding-top:0px;">
+                    <div class="textbar">
+                        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz-box.png')}" width="100%"/>
+                    </div>
+                </div>   
+            <div class="body">
+            <apex:form >
+                <apex:actionFunction name="ChangeCount" action="{!ChangeCount}"/>
+                <center><apex:outputText value="PAGE THREE OF THREE" styleclass="outputtextbold"/></center>
+                <div class="blankrow"> 
+                </div>
+                <table style="border-spacing: 2px;">
+                    <tr>
+                       <td><apex:outputText value="Supporting Documentation" styleClass="outputtextbold"/></td>
+                    </tr>
+                    <tr class="blankrow"></tr>
+                    <tr>
+                       <td><apex:outputText value="Required Attachments:  " styleClass="outputtextbold"/><apex:outputText value="Attach a project budget that includes ALL of the following elements: " styleClass="outputtext"/></td>
+                    </tr>
+                    <tr><td>
+                        <ul class="outputtext">
+                            <li>Both Revenue and Expenses</li>
+                            <li>Total Project Cost</li>
+                            <li>Anticipated subcontracts – list entity names and potential amounts</li>
+                        </ul>
+                    </td></tr>
+                    <tr>
+                       <td><apex:outputText value="Optional Attachments:" styleClass="outputtextbold"/></td>
+                    </tr>
+                    <tr><td>
+                        <ul class="outputtext">
+                            <li>Include photos, renderings, and/or documents that either illustrate the issue you are addressing, or explain the project you are proposing.  This may 
+                            include photos of local flood impacted communities, renderings of a proposed development, and/or anything you deem important to the review of your proposal.  Only 
+                            attach documents/photos that you have permission to use.</li>
+                            <li>You may be asked to provide an independent audit.  Please <u>do not</u>  attach an audit here.</li>
+                        </ul>
+                    </td></tr>
+                    <tr class="blankrow"></tr>
+                    <tr>
+                       <td><apex:pageMessages id="MSG"/></td>
+                    </tr>                    
+                </table>
+                <table style="border-spacing: 2px;">
+                    <tr>
+                       <td><apex:outputText value="Instructions for uploading documents" styleClass="outputtextteal" style="font-weight:bold"/></td>
+                    </tr>
+                    <tr>
+                       <td><i><apex:outputText value="1.   Select the number of attachments you would like to upload. " styleClass="outputtextteal"/></i></td>
+                    </tr>
+                    <tr>
+                       <td><i><apex:outputText value="2.   A box will appear for each attachment.  Click the “Browse” button next to each box to search for and select your document. " styleClass="outputtextteal"/></i></td>
+                    </tr>
+                    <tr>
+                       <td><i><apex:outputText value="3.   Once all attachments have been selected, click “ATTACH DOC(S)”" styleClass="outputtextteal"/></i></td>
+                    </tr>
+                    <tr>
+                       <td><i><apex:outputText value="4.   Click “SUBMIT REQUEST”" styleClass="outputtextteal"/></i></td>
+                    </tr>                                
+                </table> 
+                <table style="border-spacing: 2px;">
+                    <tr class="blankrow"></tr>
+                    <tr>
+                        <td>
+                           <apex:outputLabel value="How many attachments do you want to upload?" styleClass="outputtext"/>
+                        </td>
+                        <td>
+                           <apex:selectList onchange="ChangeCount() ;" multiselect="false" size="1" value="{!FileCount}" styleClass="outputtext">
+                              <apex:selectOption itemLabel="--None--" itemValue="0"/>
+                              <apex:selectOptions value="{!filesCountList}"/>
+                           </apex:selectList>
+                        </td>
+                    </tr>
+                </table>
+
+                <table style="border-spacing: 2px;">                
+                    <tr styleclass="outputtext">
+                        <td> <apex:repeat value="{!allFileList}" var="AFL">
+                          <apex:inputfile value="{!AFL.body}" filename="{!AFL.Name}"/>
+                        <br/>
+                        </apex:repeat></td>
+                    </tr>
+                    <tr>
+                       <td><i><apex:outputText value="(Items larger than 10 megabytes will not be accepted as attachments)" styleClass="outputtext"/></i></td>
+                    </tr>                                        
+                    <tr class="blankrow"></tr>
+                </table> 
+                <table style="border-spacing: 2px;">                    
+                    <tr>
+                        <td>
+                           <apex:commandButton value="ATTACH DOC(S)" action="{!attach}" styleClass="attachButton" />
+                        </td>
+                        <td>
+                           <apex:commandButton value="CLEAR ATTACHMENTS" action="{!delete25attachments}" styleClass="attachButton" />
+                        </td>
+                    </tr>
+                    
+                    <tr class="blankrow"></tr>
+                </table>
+                
+                <table style="border-spacing: 2px;">
+                    <tr class="blankrow"></tr>
+                    <tr>
+                        <td>
+                           <apex:commandButton value="SUBMIT REQUEST" action="{!submit}" styleClass="myFloodButton"/>
+                        </td>
+                    </tr>
+                    <tr class="blankrow"></tr>
+                </table>
+            </apex:form>                   
+         </div>
+      </div>
+    </apex:outputPanel>
+  </body> 
+</apex:page>

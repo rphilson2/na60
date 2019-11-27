@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Page_Folder_can_not_be_empty</fullName>
+    <active>true</active>
+    <description>Require parent Folder reference on a page.</description>
+    <errorConditionFormula>ISBLANK(Folder__c)</errorConditionFormula>
+    <errorDisplayField>Folder__c</errorDisplayField>
+    <errorMessage>A page needs to have a parent Folder.</errorMessage>
+</ValidationRule>

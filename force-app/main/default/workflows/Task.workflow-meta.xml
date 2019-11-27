@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Compliance_Task_Initial_Notification</fullName>
+        <description>Compliance Task - Initial Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Compliance_Task_Initial_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Compliance_Task_Review_Complete</fullName>
+        <description>Compliance Task - Review Complete</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Compliance_Task_Review_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>Compliance_Task_Review_Needed</fullName>
+        <description>Compliance Task - Review Needed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Compliance_Task_Review_Needed</template>
+    </alerts>
+    <alerts>
+        <fullName>Mortgage_Refi_Notification</fullName>
+        <description>Mortgage Refi Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Mortgage_Refi_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Project_Initial_Notification</fullName>
+        <description>Project - Initial Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Project_Initial_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Assessment_Due</fullName>
+        <description>Special Assessment Due</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Special_Assessment_Due</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Assessment_Initial_Notification</fullName>
+        <description>Special Assessment - Initial Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Special_Assessment_Initial_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Assessment_Past_Due</fullName>
+        <description>Special Assessment - Past Due</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Special_Assessment_Past_Due</template>
+    </alerts>
+    <alerts>
+        <fullName>Special_Assessment_Two_Day_Notification</fullName>
+        <description>Special Assessment - Two Day Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Business_Monitoring_Tasks/Special_Assessment_Two_Day_Notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Activity_Type</fullName>
+        <description>Copy the Activity Type over to a new custom field for use in Custom Report Types</description>
+        <field>Activity_Type_for_Reporting__c</field>
+        <formula>TEXT(Type)</formula>
+        <name>Activity Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Retail_Call_Disposition_Locked</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Change Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mark_as_Failed_to_Complete</fullName>
+        <field>Status</field>
+        <literalValue>Failed to Complete</literalValue>
+        <name>Mark as &#39;Failed to Complete&#39;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Time_Trigger</fullName>
+        <field>Task_Time_Trigger__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Time Trigger</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_to_Completed</fullName>
+        <field>Status</field>
+        <literalValue>Completed</literalValue>
+        <name>Update Status to Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>10 Day Task Time Trigger</fullName>
+        <active>true</active>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>TXIND</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>TXINC</value>
+        </criteriaItems>
+        <description>Populates the Time Trigger Flag 10 days after creation of the task, which fires a second workflow to mark the status as  &#39;Failed to Complete&#39; if not already completed by assignee</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>14 Day Task Time Trigger</fullName>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Retail Welcome Call Disposition - Initial</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>NCNCW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Branch Closure</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed,Failed to Complete</value>
+        </criteriaItems>
+        <description>Populates the Time Trigger Flag 14 days after creation of the task, which fires a second workflow to mark the status as  &#39;Failed to Complete&#39; if not already completed by assignee</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>30 Day Task Time Trigger</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paymaker Task</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>7 Day Task Time Trigger</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Retail Welcome Letter</value>
+        </criteriaItems>
+        <description>Populates the Time Trigger Flag 7 days after creation of the task, which fires a second workflow to mark the status as  &#39;Failed to Complete&#39; if not already completed by assignee</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.CreatedDate</offsetFromField>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Activity Type</fullName>
+        <actions>
+            <name>Activity_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Type</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Copy the Activity Type over to a new custom field for use in Custom Report Types</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Close Task - Overdue 1 Week</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>REFI19</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mortgage Refinance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Is_Follow_Up_Task__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.ActivityDate</offsetFromField>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Close Task - Overdue 16 Days</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>REFI19</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mortgage Refinance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Is_Follow_Up_Task__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.ActivityDate</offsetFromField>
+            <timeLength>16</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Close Task - Overdue 23 Days</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Triggered_FLow__c</field>
+            <operation>equals</operation>
+            <value>REFI19</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mortgage Refinance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Is_Follow_Up_Task__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Time_Trigger</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Task.ActivityDate</offsetFromField>
+            <timeLength>23</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Mark as %27Failed to Complete%27</fullName>
+        <actions>
+            <name>Mark_as_Failed_to_Complete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Task_Time_Trigger__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Not Started,Working</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Mortgage Refinance</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,142 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="Appendix B: Frequently Asked Questions" styleClass="outputtextbold"/></center>
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="What type of a project would be considered Neighborhood Revitalization?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Generally, Neighborhood Revitalization projects attract or retain residents or businesses to live or conduct business in an underserved or blighted area. 
+                                These projects often involve multiple collaborators focused on a specific geographical area. Neighborhood Revitalization activities may be approved by a governing board 
+                                of an Enterprise Community or Empowerment Zone, and there may be a federal, state, or local government 
+                                community development plan associated with the project." styleClass="outputtext"/></td>
+                                </tr>                                                                
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="What types of projects align with the Educated Workforce category?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><apex:outputText value="Educated Workforce programs focus on moving individuals closer to
+                                self-sufficiency. Programs that strongly align are focused on a young adult or adult population and are closely
+                                connected to "/><apex:outputText value="adult" styleClass="outputtext" style="text-decoration: underline"/><apex:outputText value=" basic education and literacy, vocational training, and/or workforce opportunities.  In
+                                many cases, these programs are part of a comprehensive effort to increase skills, knowledge, and connection to
+                                careers for adults and young adults. While we recognize the value of programs that provide out of school and after 
+                                school care for youth, mentoring, and clubs and groups that may periodically expose youth to career opportunities, 
+                                these are outside of our priority areas at the current time." /></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>                                
+                                <td><i><apex:outputText value="My program does not fit within one of the grant goal areas, 
+                                but does fit within another area of support listed on the First in the Community page. May I apply?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><apex:outputText value="Programs outside of the identified grant goal areas will 
+                                not be considered for a Community Development grant. We invite you to learn more about how we support our 
+                                communities, as well as other opportunities to request support by visiting our website. Examples of programs 
+                                we have supported through the Community Development Grant Program are listed in "  styleClass="outputtext"/><a href="/CRAGrant/gr24" target="_blank">Appendix C.</a></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="What are the minimum and maximum grant awards?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="In an effort to maximize impact, the minimum award is $10,000. 
+                                In some cases, grants will be awarded for a lesser amount. 
+                                The majority of grant awards are less than $50,000, with the 
+                                average size around $20,000." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="My organization operates in and serves a county that is not 
+                                listed in Appendix A. May I still apply?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Community Development grants are awarded to eligible programs within 
+                                the areas we operate and serve, listed in <a href="resource/1545148550000/Grant_Appendix_A" target="_blank">Appendix A</a> “Counties Served”. If the organization’s headquarters 
+                                are not within the eligible counties, but it primarily serves individuals within the counties listed, 
+                                the organization is eligible to apply. If the organization’s headquarters and geographical 
+                                service area are both outside of the counties listed in <a href="resource/1545148550000/Grant_Appendix_A" target="_blank">Appendix A</a>, the organization’s application will not be considered.</td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="Is there a way to save the application and come back to it later?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="YES.  Applicants can hit the SAVE AND COME BACK LATER button (At the bottom of each page) to save at any point in the application. To pick up where you left off, just enter the requested information on the Sign-in page (must be identical to what you entered when you started the application the first time) and click the Next button." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Once the application has been submitted, however, additional changes are not permitted." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>                                
+                                <td><i><apex:outputText value="We are looking for funding for technology such as ipads/smartboards/computers/laptops. 
+                                Does that align with this program?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="No. The Community Development Grant Program supports programs, services and initiatives, and not items. Our focus is to help individuals out of poverty through targeted service and program delivery." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="When will I be notified of a decision?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Decisions will be communicated by June 1 for Round One 
+                                applicants and by November 1 for Round Two applicants." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="Why do you need information on income status 
+                                of the clients we serve?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="As part of our commitment to serving our communities, the Community Development Grant 
+                                Program is limited to organizations serving those most in need. We are required to 
+                                prove that the majority of beneficiaries served are low or moderate income as defined by 80% or below of the Median Family Income." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="Can I submit multiple applications for my organization?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Organizations are encouraged to prioritize requests and submit only 
+                                those that are closely aligned with the outlined funding goals. Organizations are 
+                                limited to one grant award per calendar year." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="Our organization has received another source of funding from the bank (donation, sponsorship, multiyear gift). Are we eligible to apply for a grant?" styleClass="outputtextbold"/></i></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Yes, donations, sponsorships, and/or multiyear pledges are reviewed and considered independent of grant funding. Receipt of one does not preclude you from receiving the other." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

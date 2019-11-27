@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ag Business</fullName>
+                <default>false</default>
+                <label>Ag Business</label>
+            </value>
+            <value>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Community Banking</fullName>
+                <default>false</default>
+                <label>Community Banking</label>
+            </value>
+            <value>
+                <fullName>Corporate Lending</fullName>
+                <default>false</default>
+                <label>Corporate Lending</label>
+            </value>
+            <value>
+                <fullName>Corporate Treasury Services</fullName>
+                <default>false</default>
+                <label>Corporate Treasury Services</label>
+            </value>
+            <value>
+                <fullName>Correspondent Banking</fullName>
+                <default>false</default>
+                <label>Correspondent Banking</label>
+            </value>
+            <value>
+                <fullName>FBC Commercial Card</fullName>
+                <default>false</default>
+                <label>FBC Commercial Card</label>
+            </value>
+            <value>
+                <fullName>FBC FI/CoBrand</fullName>
+                <default>false</default>
+                <label>FBC FI/CoBrand</label>
+            </value>
+            <value>
+                <fullName>FNTS</fullName>
+                <default>false</default>
+                <label>FNTS</label>
+            </value>
+            <value>
+                <fullName>Investment &amp; Planning</fullName>
+                <default>false</default>
+                <label>Investment &amp; Planning</label>
+            </value>
+            <value>
+                <fullName>KS</fullName>
+                <default>false</default>
+                <label>KS</label>
+            </value>
+            <value>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+                <label>Wealth Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

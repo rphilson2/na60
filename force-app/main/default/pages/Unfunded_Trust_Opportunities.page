@@ -1,0 +1,14 @@
+<apex:page standardController="Unfunded_Trust__c" extensions="unfundedTrustController" rendered="{!renderPage}">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!Opportunities}" var="a">
+                <apex:column headerValue="Opportunity Name">
+                    <apex:outputlink target="_blank" value="https://na13.salesforce.com/{!a.id}"> {!a.name} 
+                    </apex:outputlink>
+                </apex:column>
+                <apex:column headerValue="Account Name" value="{!a.Account.Name}"/>
+                <apex:column headerValue="Stage" value="{!a.StageName}"/>
+                <apex:column headerValue="Close Date" value="{!a.CloseDate}"/>
+                <apex:column headerValue="Opportunity Owner" value="{!a.Owner.Name}"/>
+         </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

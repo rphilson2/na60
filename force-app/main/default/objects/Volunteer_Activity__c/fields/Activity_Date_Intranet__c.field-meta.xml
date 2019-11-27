@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Date_Intranet__c</fullName>
+    <description>Date of activity for Intranet site.  (Here so users who enter will not have to enter both date and time.  Will be converted to Date_and_time__c in Volunteer site backend apex class.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter date of Activity</inlineHelpText>
+    <label>Activity Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

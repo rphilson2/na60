@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CD_Director_Approval_Updated</fullName>
+        <description>Salesforce Email Alert: CD Director Approval Date Field Has Been Updated</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sbrons@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sgoing@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Community_Giving/CD_Director_Approval_Has_Been_Updated</template>
+    </alerts>
+    <alerts>
+        <fullName>Donation_Process_and_Control_Checklist_Change</fullName>
+        <ccEmails>communitydevelopment@fnni.com</ccEmails>
+        <description>Donation - Process and Control Checklist Change</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Community_Giving/Process_and_Control_Change</template>
+    </alerts>
+    <alerts>
+        <fullName>Salesforce_Email_Alert_CRA_Approved_Field_Has_Been_Updated</fullName>
+        <description>Salesforce Email Alert: CRA Approved Field Has Been Updated</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>agorynski@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>khayes@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sgoing@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Community_Giving/CRA_Approved_Has_Been_Updated</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Clear_Reviewed_Outside_of_MCIC_Audit</fullName>
+        <field>Reviewed_outside_of_MCIC_Audit__c</field>
+        <name>Clear Reviewed Outside of MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Reviewed_by_FIC_Audit</fullName>
+        <field>Reviewed_by_FIC_Audit__c</field>
+        <name>Clear Reviewed by FIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Reviewed_by_MCIC_Audit</fullName>
+        <field>Reviewed_by_MCIC_Audit__c</field>
+        <name>Clear Reviewed by MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reviewed_by_FIC_Audit</fullName>
+        <field>Reviewed_by_FIC_Audit__c</field>
+        <formula>NOW()</formula>
+        <name>Reviewed by FIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reviewed_by_MCIC_Audit</fullName>
+        <field>Reviewed_by_MCIC_Audit__c</field>
+        <formula>NOW()</formula>
+        <name>Reviewed by MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reviewed_outside_of_MCIC_Audit</fullName>
+        <field>Reviewed_outside_of_MCIC_Audit__c</field>
+        <formula>NOW()</formula>
+        <name>Reviewed outside of MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Reviewed_by_FIC_Audit</fullName>
+        <field>Reviewed_by_FIC_Audit2__c</field>
+        <formula>TEXT(TODAY()) &amp; &quot; - &quot; &amp; $User.FirstName &amp; &quot; &quot; &amp; $User.LastName</formula>
+        <name>Update Reviewed by FIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Reviewed_outside_of_MCIC_Audit</fullName>
+        <field>Reviewed_outside_of_MCIC_Audit2__c</field>
+        <formula>TEXT(TODAY()) &amp; &quot; - &quot; &amp; $User.FirstName &amp; &quot; &quot; &amp; $User.LastName</formula>
+        <name>Update Reviewed outside of MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_reviewed_by_MCIC_Audit</fullName>
+        <field>Reviewed_by_MCIC_Audit2__c</field>
+        <formula>TEXT(TODAY()) &amp; &quot; - &quot; &amp; $User.FirstName &amp; &quot; &quot; &amp; $User.LastName</formula>
+        <name>Update reviewed by MCIC Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CD Director Approval</fullName>
+        <actions>
+            <name>CD_Director_Approval_Updated</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Triggers Email Alert when CD Director Approval is changed</description>
+        <formula>ISCHANGED(CD_Director_Approval__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CRA Approved</fullName>
+        <actions>
+            <name>Salesforce_Email_Alert_CRA_Approved_Field_Has_Been_Updated</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Triggers Email Alert when CRA Approved is changed</description>
+        <formula>ISCHANGED(Underwriting_Approved_by_CD_and_CRA__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clear Reviewed by FIC Audit</fullName>
+        <actions>
+            <name>Clear_Reviewed_by_FIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISCHANGED(Reviewed_by_FIC__c), ISBLANK(Reviewed_by_FIC__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clear Reviewed by MCIC Audit</fullName>
+        <actions>
+            <name>Clear_Reviewed_by_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISCHANGED(Reviewed_by_MCIC__c), ISBLANK(Reviewed_by_MCIC__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Clear Reviewed outside of MCIC Audit</fullName>
+        <actions>
+            <name>Clear_Reviewed_Outside_of_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Clears audit field if invoking field is cleared after record update.</description>
+        <formula>AND(ISCHANGED(Reviewed_outside_of_MCIC__c), ISBLANK(Reviewed_outside_of_MCIC__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Donation - Process and Control Checklist Updated</fullName>
+        <actions>
+            <name>Donation_Process_and_Control_Checklist_Change</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+RecordType.DeveloperName = &#39;Donation&#39;,
+OR(
+AND(
+ISNULL(PRIORVALUE(Reviewed_outside_of_MCIC__c)),
+NOT(ISNULL(Reviewed_outside_of_MCIC__c))
+),
+AND(
+ISNULL(PRIORVALUE(Reviewed_by_MCIC__c)),
+NOT(ISNULL(Reviewed_by_MCIC__c))
+),
+AND(
+ISNULL(PRIORVALUE(Reviewed_by_FIC__c)),
+NOT(ISNULL(Reviewed_by_FIC__c))
+),
+AND(
+ISNEW(),
+OR(
+NOT(ISNULL(Reviewed_outside_of_MCIC__c)),
+NOT(ISNULL(Reviewed_by_FIC__c)),
+NOT(ISNULL(Reviewed_by_FIC__c))
+)
+)
+)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reviewed by FIC Audit</fullName>
+        <actions>
+            <name>Reviewed_by_FIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Reviewed_by_FIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISCHANGED(Reviewed_by_FIC__c), NOT(ISBLANK(Reviewed_by_FIC__c))) || AND(ISNEW(), NOT(ISBLANK(Reviewed_by_FIC__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reviewed by MCIC Audit</fullName>
+        <actions>
+            <name>Reviewed_by_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_reviewed_by_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISCHANGED(Reviewed_by_MCIC__c), NOT(ISBLANK(Reviewed_by_MCIC__c))) || AND(ISNEW(), NOT(ISBLANK(Reviewed_by_MCIC__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reviewed outside of MCIC Audit</fullName>
+        <actions>
+            <name>Reviewed_outside_of_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Reviewed_outside_of_MCIC_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISCHANGED(Reviewed_outside_of_MCIC__c), NOT(ISBLANK(Reviewed_outside_of_MCIC__c))) || AND(ISNEW(), NOT(ISBLANK(Reviewed_outside_of_MCIC__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

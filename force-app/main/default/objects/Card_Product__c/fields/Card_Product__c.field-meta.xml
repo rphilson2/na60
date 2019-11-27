@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Card_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>(*) Card Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial &amp; Purchasing</fullName>
+                <default>false</default>
+                <label>Commercial &amp; Purchasing</label>
+            </value>
+            <value>
+                <fullName>Commercial Edition</fullName>
+                <default>false</default>
+                <label>Commercial Edition</label>
+            </value>
+            <value>
+                <fullName>Purchasing Edition</fullName>
+                <default>false</default>
+                <label>Purchasing Edition</label>
+            </value>
+            <value>
+                <fullName>Purchasing with Virtual+</fullName>
+                <default>false</default>
+                <label>Purchasing with Virtual+</label>
+            </value>
+            <value>
+                <fullName>VOX</fullName>
+                <default>false</default>
+                <label>VOX</label>
+            </value>
+            <value>
+                <fullName>Still Needed</fullName>
+                <default>false</default>
+                <label>Still Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

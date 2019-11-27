@@ -1,0 +1,8 @@
+<apex:page controller="PermissionController" cache="true" contentType="text/csv#filename.csv"  language="en-US"> 
+    Profile Name,Object,Create,Read,Edit,Delete,View All,Modify All
+<apex:repeat value="{!permissions}" var="list">
+    <apex:repeat value="{!list}" var="p"> 
+        {!p.profile__c},{!p.obj__c},{!p.create__c},{!p.read__c},{!p.edit__c},{!p.delete__c},{!p.viewAll__c},{!p.modifyAll__c}
+    </apex:repeat>  
+</apex:repeat>      
+</apex:page>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Investment_Client__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox will allow users to indicate if the Opportunity is creating a new investment client.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box if the client is a brand new-to-FN investment client, within the last 12 months.</inlineHelpText>
+    <label>New Investment Client</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

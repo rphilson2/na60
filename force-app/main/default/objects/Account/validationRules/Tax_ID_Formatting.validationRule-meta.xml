@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_ID_Formatting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND
+(NOT(ISBLANK(Tax_ID__c)),
+OR( 
+LEN(Tax_ID__c)&gt;9, 
+LEN(Tax_ID__c)&lt;9, 
+CONTAINS(Tax_ID__c, &quot;/&quot;), 
+CONTAINS(Tax_ID__c, &quot; &quot;), 
+CONTAINS(Tax_ID__c, &quot;-&quot;) 
+))</errorConditionFormula>
+    <errorDisplayField>Tax_ID__c</errorDisplayField>
+    <errorMessage>The Tax ID field must be 9 digits long and cannot contains any slashes, dashes, or spaces</errorMessage>
+</ValidationRule>

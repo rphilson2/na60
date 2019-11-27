@@ -1,0 +1,32 @@
+<apex:page tabStyle="Volunteer_Activity__c" controller="VolActivityQuickCreateController" action="{!displayNoPermPage}">
+    <apex:sectionHeader title="Add an Activity for a new Volunteer Organization" subtitle="Step 2 of 4" help="http://www.salesforce.com/docs/en/volunteerforce/index_CSH.htm#volunteerforce_activities_wiz.htm"/>
+    <apex:form >
+        <apex:pageBlock title="Primary Contact" mode="edit">
+        
+        <apex:pageBlockButtons location="both">
+            <apex:commandButton action="{!step1}" value="Previous"/>
+            <apex:commandButton action="{!step3}" value="Next"/>
+            <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+        </apex:pageBlockButtons>     
+           
+        <apex:pageMessages />
+        
+        <apex:pageBlockSection columns="1" title="Contact Information">
+            <apex:inputField value="{!oc.Salutation__c}"/>
+            <apex:inputField value="{!oc.Name}" required="true"/>
+            <apex:inputField value="{!oc.Title__c}"/>
+            <apex:inputField value="{!oc.Email__c}"/>
+            <apex:inputField value="{!oc.Phone__c}"/>
+            <apex:inputField value="{!oc.Fax__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1" title="Contact Address">
+            <apex:inputField value="{!oc.Mailing_Street__c}"/>
+            <apex:inputField value="{!oc.Mailing_City__c}"/>
+            <apex:inputField value="{!oc.Mailing_State_Province__c}"/>
+            <apex:inputField value="{!oc.Mobile__c}"/>
+            <apex:inputField value="{!oc.Mailing_Zip_Postal_Code__c}"/>
+            <apex:inputField value="{!oc.Mailing_Country__c}"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

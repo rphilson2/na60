@@ -1,0 +1,40 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="donationAndSponsorshipForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86"/>
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><p><apex:outputText value="First National Bank is committed to the goal of building and 
+                                maintaining successful communities in all the places we operate. We will achieve this goal 
+                                by awarding donations and sponsorships to key community partners who are dedicated to 
+                                improving at least one of our eight community focus areas, which include " styleClass="outputtext"/><apex:outputText value="Stable
+                                Housing, Educated Workforce, Strong Local Economies, Vibrant Neighborhoods,
+                                Good Health, Access to Culture, Sustained Environment, and Community Cohesion." styleClass="outputtextbold" /></p>
+                                <p><apex:outputText value="First National Bank reviews donation and sponsorship requests on a monthly basis. 
+                                Requests that are submitted less than 30 days before the event may not be considered. 
+                                To submit a request, please select “Begin” below." styleClass="outputtext"/></p><br></br>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr> 
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                   <td>
+                                      <apex:commandButton value="BEGIN APPLICATION" action="{!southdakota}" styleClass="myButton"/>
+                                   </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                            <apex:outputLink value="/survey/donation_and_sponsorship_form_open" styleClass="outputtext" style="color:#0030A1; font-size:15px">Choose market again</apex:outputlink>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

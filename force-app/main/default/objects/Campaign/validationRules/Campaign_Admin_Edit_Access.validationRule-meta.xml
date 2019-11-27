@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Admin_Edit_Access</fullName>
+    <active>true</active>
+    <description>Only allows Custom System Admins, Marketing Admins, and Super Users to edit campaigns.</description>
+    <errorConditionFormula>AND($User.User_Profile_for_Reporting__c&lt;&gt;&quot;Custom System Admin&quot;, $User.User_Profile_for_Reporting__c&lt;&gt;&quot;Marketing Administrator&quot;, $User.User_Profile_for_Reporting__c&lt;&gt;&quot;Super User&quot;,$User.User_Profile_for_Reporting__c&lt;&gt;&quot;Mortgage&quot;,
+$User.User_Profile_for_Reporting__c&lt;&gt;&quot;CBG&quot;)</errorConditionFormula>
+    <errorMessage>You are not in a profile that allows editing campaigns.</errorMessage>
+</ValidationRule>

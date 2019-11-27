@@ -1,0 +1,65 @@
+<apex:page standardController="Volunteer_Activity__c" sidebar="false"  standardStylesheets="true" extensions="VolunteerTrackingExtension" showheader="false">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>Employee Volunteer Activity Reporting</title>
+<body>
+<apex:form >
+<span class="head" ><apex:outputtext style="color: #7B4000; font-size:28px; font-weight:bold" value="{!YEAR(TODAY())} Nonprofit Volunteer Activity Reporting"/></span>
+<p style="margin-bottom:30px" />
+<div class="copy">              
+           <table style="border-spacing: 2px;">
+              <tr height="30px"/>
+              <tr>
+                 <td width="170px"> 
+                    <apex:outputText value="Volunteer Activity for: " style="font-family:arial;font-weight:bold;color:black;font-size:15px"></apex:outputText>
+                 </td>
+                 <td width="300px">
+                    <apex:outputText value="{!employee.First_Name__c} {!employee.Last_Name__c}" id="EmpName" style="font-family:arial;color:black;font-size:15px"></apex:outputText>                      
+                 </td>
+                 <td width="160px">
+                    <apex:outputText value="Organization Name:  " style="font-family:arial;font-weight:bold;color:black;font-size:15px"></apex:outputText>
+                 </td>
+                 <td>
+                    <apex:outputText value="{!SelectedOrgName}" id="OrgName" style="font-family:arial;color:black;font-size:15px"></apex:outputText>
+                 </td>                      
+              </tr>
+           </table>         
+        </div>
+           <apex:pageBlock >    
+           <apex:pageMessages ></apex:pageMessages>
+           <apex:pageBlockSection columns="3">              
+              <apex:inputField value="{!vact.Employee_Market__c}" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Employee_Market__c.InlineHelpText}" id="employeemarket" style="vertical-align:top;"/>              
+              <apex:outputText value="*Please fill in all fields" style="color:#E9000B;font-size:14px; font-style:italic; font-weight:bold"/>
+              <apex:outputText value="" ></apex:outputText>
+           </apex:pageBlockSection>
+           <apex:pageBlockSection columns="1">                            
+              <apex:inputField value="{!vact.Name}" id="ActivityName" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Name.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Activity_Date_Intranet__c}" id="ActivityDate" showDatePicker="True" styleClass="outputtext"/>              
+              <apex:inputField value="{!vact.Volunteer_Events__c}" id="ActivityCategory" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Volunteer_Events__c.InlineHelpText}" style="vertical-align:top;"/>               
+              <apex:inputField value="{!vact.Number_of_FNB_Employees_Involved__c}" label="Total Number of FNB Employees Involved" id="numFNBEmployees" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Sessions__c}" id="numberSessions" label="Total Number of Sessions" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Sessions__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Duration_hours__c}" id="durationHours" label="Total Duration (hours)" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Sessions__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Number_of_Participants__c}" label="Total Number of Participants" id="numParticipants" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Sessions__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Activity_Focus_Area__c}" id="ActivityFocusArea" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Activity_Focus_Area__c.InlineHelpText}" style="vertical-align:top;"/>
+              <apex:inputField value="{!vact.Event_Summary__c}" id="ActivityDetails" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Event_Summary__c.InlineHelpText}" style="width:750px;height:100px;vertical-align:top;"/>
+              <apex:outputText value="Activity Details –additional information relating to the volunteer activity including a description of the presentations(s), # of presentations,"
+              style="color:#005734;margin-left:330px;font-style:italic"/>
+              <apex:outputText value="# of attendees, and # of FNB employees assisting (including yourself)."
+              style="color:#005734;margin-left:330px;font-style:italic"/>
+              <apex:outputtext value="*New Organization" style="color:blue;font-style:italic" rendered="{!vact.Not_Listed__c}"/>           
+              <!-- apex:commandLink action="{!noserve}" type="image/png" -->
+              <!--    <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/noserve.jpg')}" style="margin-left:400px"/> -->
+              <!-- /apex:commandlink -->           
+           </apex:pageBlockSection>
+           </apex:pageBlock>
+            <apex:commandLink action="{!editVolunteerOrganization}">
+                <apex:param name="SelectedVolActID" value="{!vact.id}"/>
+                <apex:commandButton value="x Cancel" immediate="true" style="background:#210051; margin-left:170px; color: white; font-style:italic; font-size:15pt; width:120px; Height:30px"/>                    
+            </apex:commandlink>
+            <apex:commandLink action="{!addVolunteerActivity}">
+                <apex:param name="EditPage" value="VolunteerActivityEdit"/>
+                <apex:CommandButton value="Save" style="background:#004178; margin-left:200px; color: white; font-style:italic; font-size:15pt; width:120px; Height:30px"/>
+           </apex:commandlink>
+    </apex:form>
+<p style="margin-bottom:100px" />
+</body>   
+</apex:page>

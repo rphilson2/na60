@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortgage_Leads</fullName>
+    <fields>Name</fields>
+    <fields>Home_Phone__c</fields>
+    <fields>Email</fields>
+    <fields>Lead_Source_COI__c</fields>
+    <label>Mortgage Leads</label>
+</CompactLayout>

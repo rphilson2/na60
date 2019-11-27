@@ -1,0 +1,58 @@
+<apex:page Controller="cardSpendChartStatController" rendered="{!renderPage}">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:outputPanel layout="block" style="white-space:nowrap;">
+                <table width="100%" align="center">
+                <tr>
+                <td><b><apex:outputText value="Company Name:"/></b></td>
+                <td><apex:outputText value="{!TBSCompanyName}"/></td>
+                <td><b><apex:outputText value="Company Credit Limit:"/></b></td>
+                <td><apex:outputText value="${0, number, ###,###,##0.00}">
+                <apex:param value="{!CompanyCreditLimit}"/>
+                </apex:outputText></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Company ID:"/></b></td>
+                <td><apex:outputText value="{!CompanyID}"/></td>
+                <td><b><apex:outputText value="Year to Date Spend:"/></b></td>
+                <td><apex:outputText value="${0, number, ###,###,##0.00}">
+                <apex:param value="{!ytdSpendSum}"/>
+                </apex:outputText></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Partnering Bank:"/></b></td>
+                <td><apex:outputText value="{!TBSPartneringBank}"/></td>
+                <td><b><apex:outputText value="Previous Year to Date Spend:"/></b></td>
+                <td><apex:outputText value="${0, number, ###,###,##0.00}">
+                <apex:param value="{!pytdSpendSum}"/>
+                </apex:outputText></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Product Code:"/></b></td>
+                <td><apex:outputText value="{!ProductCode}"/></td>
+                <td><b><apex:outputText value="Year to Date Average Utilization:"/></b></td>
+                <td><apex:outputText value="{!ytdAvgPerUtil}%"/></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Multiple Product Flag:"/></b></td>
+                <td><apex:outputText value="{!MultipleProductFlag}"/></td>
+                <td><b><apex:outputText value="Previous Year to Date Average Utilization:"/></b></td>
+                <td><apex:outputText value="{!pytdAvgPerUtil}%"/></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Managed Flag:"/></b></td>
+                <td><apex:outputText value="{!ManagedFlag}"/></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Number of Live Accounts:"/></b></td>
+                <td><apex:outputText value="{!LiveAccountCount}"/></td>
+                </tr>
+                <tr>
+                <td><b><apex:outputText value="Number of Active Cards:"/></b></td>
+                <td><apex:outputText value="{!ActiveCards}"/></td>
+                </tr>
+                </table>
+            </apex:outputPanel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

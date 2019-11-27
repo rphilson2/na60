@@ -1,0 +1,169 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="donationAndSponsorshipForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image id="fnb_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' 
+                || FIC_Survey_Application__c.Market__c = 'Lincoln' 
+                || FIC_Survey_Application__c.Market__c = 'Kearney' 
+                || FIC_Survey_Application__c.Market__c = 'Columbus'
+                || FIC_Survey_Application__c.Market__c = 'South Dakota'
+                || FIC_Survey_Application__c.Market__c = 'Kansas'
+                || FIC_Survey_Application__c.Market__c = 'Illinois'
+                || FIC_Survey_Application__c.Market__c = 'Colorado', true, false)}"/>
+                <apex:image id="fnbf_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbf_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Fremont', true, false)}"/>
+                <apex:image id="fnbnp_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbnp_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte', true, false)}"/>
+                <apex:image id="fnbsw_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbsw_white_logo.png')}" width="400" height="86" 
+                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas', true, false)}"/>
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <center><apex:outputText value="PAGE ONE OF THREE" styleclass="outputtextbold"/></center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="Organization Overview" styleClass="outputtextbold"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:inputfield value="{!FIC_Survey_Application__c.First_National_Bank_Request__c}" id="First_National_Bank_Request__c" styleClass="inputcheckbox"/><apex:outputText value="First National Bank receives a high volume of funding requests. Whether you are submitting as an
+                                organization, or a First National Bank employee on behalf of an organization, requests are considered
+                                as-is. Incomplete submissions, and those that do not contain the information required to make a
+                                decision will be denied. Funding decisions are made monthly. Requests that are submitted less than 30 days before the event may not be considered." styleClass="outputtext"
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' 
+                                || FIC_Survey_Application__c.Market__c = 'Lincoln' 
+                                || FIC_Survey_Application__c.Market__c = 'Kearney' 
+                                || FIC_Survey_Application__c.Market__c = 'Columbus'
+                                || FIC_Survey_Application__c.Market__c = 'South Dakota'
+                                || FIC_Survey_Application__c.Market__c = 'Kansas'
+                                || FIC_Survey_Application__c.Market__c = 'Illinois'
+                                || FIC_Survey_Application__c.Market__c = 'Colorado', true, false)}"/>
+                                <apex:outputText value="First National Bank Fremont receives a high volume of funding requests. Whether you are submitting as an
+                                organization, or a First National Bank Fremont employee on behalf of an organization, requests are considered
+                                as-is. Incomplete submissions, and those that do not contain the information required to make a
+                                decision will be denied. Funding decisions are made monthly. Requests that are submitted less than 30 days before the event may not be considered." styleClass="outputtext"
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Fremont', true, false)}"/>
+                                <apex:outputText value="First National Bank North Platte receives a high volume of funding requests. Whether you are submitting as an
+                                organization, or a First National Bank North Platte employee on behalf of an organization, requests are considered
+                                as-is. Incomplete submissions, and those that do not contain the information required to make a
+                                decision will be denied. Funding decisions are made monthly. Requests that are submitted less than 30 days before the event may not be considered." styleClass="outputtext"
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte', true, false)}"/>
+                                <apex:outputText value="First National Bank Southwest receives a high volume of funding requests. Whether you are submitting as an
+                                organization, or a First National Bank Southwest employee on behalf of an organization, requests are considered
+                                as-is. Incomplete submissions, and those that do not contain the information required to make a
+                                decision will be denied. Funding decisions are made monthly. Requests that are submitted less than 30 days before the event may not be considered." styleClass="outputtext"
+                                rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas', true, false)}"/>
+                                <p><apex:outputText value="Please check the box above to acknowledge you have read and understand this statement." styleClass="outputtext"/></p><br></br>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="First_National_Bank_Request__c"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:outputText value="Name of Organization: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Name_of_Organization__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Mission Statement: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Mission_Statement__c}" required="true" onkeydown="limit(this, 500)" onkeyup="limit(this, 500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Program/Event Name: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Name__c}" required="true" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Program/Event Description: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Description__c}" required="true" onkeydown="limit(this, 750)" onkeyup="limit(this, 750)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Program/Event Date (MM/DD/YYYY): " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Program_Event_Date__c}" required="true" showDatePicker="False" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Amount Requested: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Amount_Requested__c}" required="true" onkeydown="limit(this, 16)" onkeyup="limit(this, 16)" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Please provide Board of Directors list including organizational/corporate affiliations: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Please_Provide_Board_of_Directors__c}" required="true" onkeydown="limit(this, 2000)" onkeyup="limit(this, 2000)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Does a First National Bank employee serve on a board, committee, or otherwise involved in your
+                                organization?: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.First_National_Bank_Employee_on_Board__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="If Yes, please provide his or her name and a description of service: " styleClass="outputtext"/></i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Provide_Name_and_Service_Description__c}" id="Provide_Name_and_Service_Description__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Provide_Name_and_Service_Description__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Does your organization have a business relationship with First National Bank?: " styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Have_Relationship__c}" required="true" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><i><apex:outputText value="If Yes, please describe: " styleClass="outputtext"/></i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Please_Describe_Relationship__c}" id="Please_Describe_Relationship__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Please_Describe_Relationship__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!donSpon2}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

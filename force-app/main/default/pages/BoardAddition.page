@@ -1,0 +1,170 @@
+<!--DAG_2019_01_22 VersionOne Feature E-08549-- Large Modification on this date.  Changed this whole site from updating the Employee Board Membership object to updating the Volunteer Activity object.-->
+<apex:page standardController="Volunteer_Activity__c" sidebar="false"  standardStylesheets="true" cache="false" expires="0" extensions="BoardReportingExtension" showheader="false">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>Nonprofit Board Service Reporting</title>
+<body>
+<apex:form >
+<span class="head" ><apex:commandLink action="{!viewBoardReporting}" style="text-decoration: none;color: #006633;" >{!YEAR(TODAY())} Nonprofit Board Service Reporting</apex:commandLink></span>
+<p style="margin-bottom:30px" />
+<!-- div class="copy">Board Activity for: {!employee.First_Name__c}</div -->
+         <table style="border-spacing: 2px;">
+            <tr>
+               <td width="150px"> 
+                  <apex:outputText value="Board Activity for: " style="font-family:arial;font-weight:bold;color:black;font-size:15px"></apex:outputText>
+               </td>
+               <td width="300px">
+                  <apex:outputText value="{!employee.First_Name__c} {!employee.Last_Name__c}" id="EmpName" style="font-family:arial;color:black;font-size:15px"></apex:outputText>                      
+               </td>
+               <td width="160px">
+                  <apex:outputText value="Organization Name:  " style="font-family:arial;font-weight:bold;color:black;font-size:15px"></apex:outputText>
+               </td>
+               <td>
+                  <apex:outputText value="{!SelectedOrgName}" id="OrgName" style="font-family:arial;color:black;font-size:15px"></apex:outputText>
+               </td>                      
+            </tr>
+         </table>         
+           <apex:pageBlock >    
+           <apex:pageMessages rendered="{!showmessage}"></apex:pageMessages>
+        <!--apex:pageBlockSection columns="2"-->
+          <!--apex:inputField value="{!ebm.Volunteer_Organization__c}" id="volunteerOrganization" label="Volunteer Organization Lookup"  style="vertical-align:top;"/>-->
+          <!--apex:inputField label="* If not found, enter organization here:" value="{!ebm.Organization_Other__c}" id="otherOrganization" style="vertical-align:top;"/>-->
+        <!--/apex:pageBlockSection-->
+           <apex:outputText value="Board Service Activity Details" style="margin-left:170px;color: #001958;font-weight:bold;font-size:18px"/>
+           <br/>
+        <!--apex:pageBlockSection columns="1" -->
+           <!--apex:outputText value="{!SelectedOrgName}" id="volunteerOrganizationOutput" label="Volunteer Organization" style="vertical-align:top;font-weight:bold;font-size:13px"/ -->
+        <!--/apex:pageBlockSection -->
+           <apex:pageBlockSection columns="2">
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Board_Activity__c.fields.Board_Activity_Date__c.label}"/>
+                 <apex:inputfield value="{!vba.Board_Activity_Date__c}" id="ActivityDate" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Board_Activity_Date__c.InlineHelpText}" showDatePicker="True"/> 
+              </apex:pageBlockSectionItem>                     
+
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Board_Activity__c.fields.Duration__c.label}"/>
+                 <apex:inputfield value="{!vba.Duration__c}" id="ActivityDuration" style="width:28px;" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Duration__c.InlineHelpText}"/> 
+              </apex:pageBlockSectionItem>                     
+
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Activity Description, ex. April Board Meeting"/>
+                 <apex:inputfield value="{!vba.name}" id="ActivityDescription" style="width:370px;" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.name.InlineHelpText}" /> 
+              </apex:pageBlockSectionItem>                     
+
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Board_Activity__c.fields.Served_on_Committee__c.label}"/>
+                 <apex:inputfield value="{!vba.Served_on_Committee__c}" id="ServedOnCommittee" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Served_on_Committee__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>                     
+           
+           <!--apex:inputField value="{!vba.Board_Activity_Date__c}" id="ActivityDate" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Board_Activity_Date__c.InlineHelpText}" showDatePicker="True" styleClass="outputtext" / -->
+           <!--apex:inputField value="{!vba.Duration__c}" id="numberhours" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Duration__c.InlineHelpText}" style="vertical-align:top;width:30px;"/ -->
+           <!--apex:inputField value="{!vba.Name}" id="ActivitySummary" label="Activity Description, ex. April Board Meeting" style="vertical-align:top;width:370px;"/ -->
+           <!--apex:inputField value="{!vba.Served_on_Committee__c}" id="servedCommittee" html-title="{!$ObjectType.Volunteer_Board_Activity__c.fields.Served_on_Committee__c.InlineHelpText}" style="vertical-align:top;"/ -->
+           </apex:pageBlockSection>
+           <br/>
+           <hr/>           
+           <apex:outputText value="Nature of Service with this Organization this Year" style="margin-left:170px;color: #001958;font-weight:bold;font-size:18px"/>
+           <br/>
+           <apex:outputText value="By checking the boxes below, you are indicating that you served the organization in the capacity indicated during the year." style="margin-left:170px;font-size:14px;color: #001958;font-weight:bold"/>
+           <br/>
+           <br/>
+           <apex:outputText value="Hover over the check boxes and 'Service Details' field to obtain clarification about items on this page." style="color:#003518;margin-left:170px;font-style:italic;font-weight:bold"/>
+           <apex:pageBlockSection columns="2">
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_Board_of_Directors__c.label}"/>
+                 <apex:inputfield value="{!ebm.Served_on_Board_of_Directors__c}" id="boardofdirectors" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_Board_of_Directors__c.InlineHelpText}"/> 
+              </apex:pageBlockSectionItem>                     
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Assisted_with_Fundraising__c.label}"/>
+                 <apex:inputfield value="{!ebm.Assisted_with_Fundraising__c}" id="assistFundRaising" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Assisted_with_Fundraising__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_a_Sub_Committee__c.label}"/>
+                 <apex:inputfield value="{!ebm.Served_on_a_Sub_Committee__c}" id="subCommittee" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_a_Sub_Committee__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Provided_HR_IT_or_Legal_Services__c.label}"/>
+                 <apex:inputfield value="{!ebm.Provided_HR_IT_or_Legal_Services__c}" id="legalServices" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Provided_HR_IT_or_Legal_Services__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Provided_Technical_Assistance__c.label}"/>
+                 <apex:inputfield value="{!ebm.Provided_Technical_Assistance__c}" id="TechAssist" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Provided_Technical_Assistance__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_Loan_Review_Committee__c.label}"/>
+                 <apex:inputfield value="{!ebm.Served_on_Loan_Review_Committee__c}" id="servedLoan" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Served_on_Loan_Review_Committee__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Taught_Financial_Education__c.label}"/>
+                 <apex:inputfield value="{!ebm.Taught_Financial_Education__c}" id="TaughtFinEduc" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Taught_Financial_Education__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Contributed_Accounting_or_Bookkeeping__c.label}"/>
+                 <apex:inputfield value="{!ebm.Contributed_Accounting_or_Bookkeeping__c}" id="contributedAccounting" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Contributed_Accounting_or_Bookkeeping__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Provided_Workforce_Dev_Assistance__c.label}"/>
+                 <apex:inputfield value="{!ebm.Provided_Workforce_Dev_Assistance__c}" id="providedWorkforce" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Provided_Workforce_Dev_Assistance__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="{!$ObjectType.Volunteer_Activity__c.fields.Service_Not_Listed__c.label}"/>
+                 <apex:inputfield value="{!ebm.Service_Not_Listed__c}" id="notListed" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Service_Not_Listed__c.InlineHelpText}"/>
+              </apex:pageBlockSectionItem>
+           
+           </apex:pageBlockSection>
+           <apex:pageBlockSection columns="1">
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Service Details"/>
+                 <apex:inputfield value="{!ebm.Board_Service_Details__c}" id="ServiceDetails" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Board_Service_Details__c.InlineHelpText}" style="width:600px;height:100px"/>
+              </apex:pageBlockSectionItem>
+           
+           <!-- apex:inputField value="{!ebm.Event_Summary__c}" id="ServiceDetails" label="Service Details" html-title="{!$ObjectType.Volunteer_Activity__c.fields.Event_Summary__c.InlineHelpText}" style="width:600px;height:100px;vertical-align:top;"/ -->       
+           </apex:pageBlockSection>
+            <br/>
+            <apex:outputText value="Board Activities with this Organization this year" style="font-size:18px;color: #001958;font-weight:bold"/>
+            <apex:outputpanel rendered="{!IF(numberofactivities = 0, true, false)}">
+               <br/>
+               <br/>
+               <apex:outputText value="No activities listed.  Use the fields at top to add a new Board Service activity." rendered="{!IF(numberofactivities = 0, true, false)}" style="font-size:12px; font-style:italic; color: #003518;font-weight:bold"/>         
+            </apex:outputpanel>
+            <apex:pageblocktable value="{!BoardActivityDetails}" var="a" rendered="{!IF(numberofactivities > 0, true, false)}">
+               <apex:column headervalue="Activity">
+                  <apex:commandLink value="{!a.name}" action="{!EditBoardActivity}" style="color:blue" immediate="true" onmouseover="Edit this Activity">
+                     <apex:param name="SelectedBoardActivity" value="{!a.Id}"/>
+                  </apex:commandLink>
+               </apex:column>
+               <apex:column headervalue="Date"> <apex:outputText value="{0,date,MM/dd/yyyy}"> <apex:param value="{!a.Board_Activity_Date__c}" /> </apex:outputText></apex:column>               
+               <apex:column headervalue="Committee"> <apex:outputtext value="{!a.Served_on_Committee__c}"/></apex:column>
+               <apex:column headervalue="Hours"> <apex:outputtext value="{!a.Duration__c}"/></apex:column>
+               <apex:column headervalue="Delete" width="2%">
+                  <apex:commandLink action="{!DeleteBoardActivity}" immediate="true" onclick="if(!confirm('Are you sure you want to delete Activity {!a.Name} from organization {!ebm.Volunteer_Organization__r.name}?')){return false};">
+                     <apex:param name="BoardActivityToDelete" value="{!a.Id}" />
+                     <!--apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/Delete.png')}"/ -->
+                     <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/DeleteButtonDark.png')}"/>
+                  </apex:commandLink>
+               </apex:column>
+            </apex:pageblocktable>
+            <br/>
+            <br/>           
+          </apex:pageBlock>
+            <!-- 00591c -->
+            <apex:commandButton action="{!Choose_Organization_page}" value="Choose Another Organization" immediate="true" rendered="{!ShowBack}" style="background:#006f4c; margin-left:40px; color: white; font-style:italic; font-size:15pt; width:320px; Height:40px"/>                    
+            <apex:commandButton action="{!Choose_Organization_page}" value="Choose New Organization" immediate="true" rendered="{!IF(ShowBack = false, true, false)}" style="background:#006f4c; margin-left:40px; color: white; font-style:italic; font-size:15pt; width:300px; Height:40px"/>                    
+            <apex:commandLink action="{!addBoardActivity}">
+              <apex:param name="EditPage" value="BoardAddition"/>
+              <apex:CommandButton value="Save" style="background:#0000a0; margin-left:90px; color: white; font-style:italic; font-size:15pt; width:200px; Height:40px"/>
+            </apex:commandlink>
+            <apex:commandButton action="{!ReturntoOrganizationList}" value="Return to Summary Page" immediate="true" style="background:#BA2600; margin-left:100px; color: white; font-style:italic; font-size:15pt; width:300px; Height:40px"/>
+          
+    </apex:form>
+<p style="margin-bottom:100px" />
+</body>   
+</apex:page>

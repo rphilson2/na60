@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Final Outcome of the case from the dropdown</inlineHelpText>
+    <label>Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application Approved</fullName>
+                <default>false</default>
+                <label>Application Approved</label>
+            </value>
+            <value>
+                <fullName>Application Denied</fullName>
+                <default>false</default>
+                <label>Application Denied</label>
+            </value>
+            <value>
+                <fullName>Called Customer</fullName>
+                <default>false</default>
+                <label>Called Customer</label>
+            </value>
+            <value>
+                <fullName>Dealer Non Response</fullName>
+                <default>false</default>
+                <label>Dealer Non Response</label>
+            </value>
+            <value>
+                <fullName>Enrollment Processed</fullName>
+                <default>false</default>
+                <label>Enrollment Processed</label>
+            </value>
+            <value>
+                <fullName>Fraud Application</fullName>
+                <default>false</default>
+                <label>Fraud Application</label>
+            </value>
+            <value>
+                <fullName>Incentive Processed</fullName>
+                <default>false</default>
+                <label>Incentive Processed</label>
+            </value>
+            <value>
+                <fullName>MCC Code Updated</fullName>
+                <default>false</default>
+                <label>MCC Code Updated</label>
+            </value>
+            <value>
+                <fullName>No Documentation Available</fullName>
+                <default>false</default>
+                <label>No Documentation Available</label>
+            </value>
+            <value>
+                <fullName>Opened Ticket</fullName>
+                <default>false</default>
+                <label>Opened Ticket</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Signed Documentation Provided</fullName>
+                <default>false</default>
+                <label>Signed Documentation Provided</label>
+            </value>
+            <value>
+                <fullName>Training Scheduled</fullName>
+                <default>false</default>
+                <label>Training Scheduled</label>
+            </value>
+            <value>
+                <fullName>Work Around Solution</fullName>
+                <default>false</default>
+                <label>Work Around Solution</label>
+            </value>
+            <value>
+                <fullName>Large Dollar - Other</fullName>
+                <default>false</default>
+                <label>Large Dollar - Other</label>
+            </value>
+            <value>
+                <fullName>Large Dollar – Repair/Service</fullName>
+                <default>false</default>
+                <label>Large Dollar – Repair/Service</label>
+            </value>
+            <value>
+                <fullName>Large Dollar – Down Payment</fullName>
+                <default>false</default>
+                <label>Large Dollar – Down Payment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,35 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" standardStylesheets="false" sidebar="false" title="Grant Applications">
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <div class="fixedheader">
+          <br/>
+          <br/>
+          <br/>
+    </div>
+    
+    <body>
+      <div class="body">
+        <apex:form >
+          <center><apex:outputText value="Already Submitted" style="font-family:Arial; font-size:28px; color: #008071; font-weight:bold; font-style:italic"></apex:outputText></center>
+          <br/>
+          <table>
+             <tr>
+                <td class="outputtext"><p>Your application has already been submitted for this round.  For questions, please email  
+                <a href="mailto:communitydevelopment@fnni.com">communitydevelopment@fnni.com</a></p></td>
+             </tr>
+          </table>
+          <table style="border-spacing: 2px;">
+             <tr class="blankrow"></tr>
+             <tr class="blankrow"></tr>
+             <tr class="blankrow"></tr>                      
+             <tr>
+                 <td>
+                    <apex:commandButton value="Exit" action="https://www.fnbo.com/community" styleClass="myButton"/>
+                 </td>                              
+             </tr>
+             <tr class="blankrow"></tr>
+          </table>                   
+        </apex:form>
+      </div>
+  </body>
+</apex:page>

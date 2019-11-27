@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_they_worked_with__c</fullName>
+    <description>‘Employee They Worked With’ is the name of the employee the customer worked with at the dealership.  Sometimes the customer can remember and sometimes they.  If they can, we’ll (our support team) populate that field</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>‘Employee They Worked With’ is the name of the employee the customer worked with at the dealership.  Sometimes the customer can remember and sometimes they.  If they can, we’ll (our support team) populate that field</inlineHelpText>
+    <label>Employee they worked with</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Protective_Services__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Protective Services</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animal Control Worker</fullName>
+                <default>false</default>
+                <label>Animal Control Worker</label>
+            </value>
+            <value>
+                <fullName>Correctional / Police Officer</fullName>
+                <default>false</default>
+                <label>Correctional / Police Officer</label>
+            </value>
+            <value>
+                <fullName>Crossing Guard</fullName>
+                <default>false</default>
+                <label>Crossing Guard</label>
+            </value>
+            <value>
+                <fullName>Detective &amp; Criminal Investigator</fullName>
+                <default>false</default>
+                <label>Detective &amp; Criminal Investigator</label>
+            </value>
+            <value>
+                <fullName>Fire Fighter</fullName>
+                <default>false</default>
+                <label>Fire Fighter</label>
+            </value>
+            <value>
+                <fullName>Fire Inspector &amp; Investigator</fullName>
+                <default>false</default>
+                <label>Fire Inspector &amp; Investigator</label>
+            </value>
+            <value>
+                <fullName>Fish &amp; Game Warden</fullName>
+                <default>false</default>
+                <label>Fish &amp; Game Warden</label>
+            </value>
+            <value>
+                <fullName>Gaming Surveillance Officer</fullName>
+                <default>false</default>
+                <label>Gaming Surveillance Officer</label>
+            </value>
+            <value>
+                <fullName>Lifeguard / Ski Patrol</fullName>
+                <default>false</default>
+                <label>Lifeguard / Ski Patrol</label>
+            </value>
+            <value>
+                <fullName>Military</fullName>
+                <default>false</default>
+                <label>Military</label>
+            </value>
+            <value>
+                <fullName>Other Recreational Service Worker</fullName>
+                <default>false</default>
+                <label>Other Recreational Service Worker</label>
+            </value>
+            <value>
+                <fullName>Private Detective &amp; Investigator</fullName>
+                <default>false</default>
+                <label>Private Detective &amp; Investigator</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Security Guard</fullName>
+                <default>false</default>
+                <label>Security Guard</label>
+            </value>
+            <value>
+                <fullName>Sherriff</fullName>
+                <default>false</default>
+                <label>Sherriff</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-All Other</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-All Other</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Correctional Officer</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Correctional Officer</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Fire Fighting &amp; Prevention</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Fire Fighting &amp; Prevention</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager-Police &amp; Detective</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager-Police &amp; Detective</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

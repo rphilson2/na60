@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Food_Service_Preparation__c</fullName>
+    <description>Online Application</description>
+    <externalId>false</externalId>
+    <label>Position - Food Service Preparation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bar Owner/Partner</fullName>
+                <default>false</default>
+                <label>Bar Owner/Partner</label>
+            </value>
+            <value>
+                <fullName>Barista &amp; Coffee Maker</fullName>
+                <default>false</default>
+                <label>Barista &amp; Coffee Maker</label>
+            </value>
+            <value>
+                <fullName>Bartenders</fullName>
+                <default>false</default>
+                <label>Bartenders</label>
+            </value>
+            <value>
+                <fullName>Beer, Wine, Liquor Store Owner</fullName>
+                <default>false</default>
+                <label>Beer, Wine, Liquor Store Owner</label>
+            </value>
+            <value>
+                <fullName>Cafeteria &amp; Coffee Shop Attendant</fullName>
+                <default>false</default>
+                <label>Cafeteria &amp; Coffee Shop Attendant</label>
+            </value>
+            <value>
+                <fullName>Chefs &amp; Head Cooks</fullName>
+                <default>false</default>
+                <label>Chefs &amp; Head Cooks</label>
+            </value>
+            <value>
+                <fullName>Convenience Store Owner</fullName>
+                <default>false</default>
+                <label>Convenience Store Owner</label>
+            </value>
+            <value>
+                <fullName>Cook</fullName>
+                <default>false</default>
+                <label>Cook</label>
+            </value>
+            <value>
+                <fullName>Dishwasher</fullName>
+                <default>false</default>
+                <label>Dishwasher</label>
+            </value>
+            <value>
+                <fullName>Food Preparer &amp; Server</fullName>
+                <default>false</default>
+                <label>Food Preparer &amp; Server</label>
+            </value>
+            <value>
+                <fullName>Food Service</fullName>
+                <default>false</default>
+                <label>Food Service</label>
+            </value>
+            <value>
+                <fullName>Host &amp; Hostess</fullName>
+                <default>false</default>
+                <label>Host &amp; Hostess</label>
+            </value>
+            <value>
+                <fullName>Other Food Service Owner/Partner</fullName>
+                <default>false</default>
+                <label>Other Food Service Owner/Partner</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Restaurant Owner/Partner</fullName>
+                <default>false</default>
+                <label>Restaurant Owner/Partner</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Supervisor &amp; Manager</fullName>
+                <default>false</default>
+                <label>Supervisor &amp; Manager</label>
+            </value>
+            <value>
+                <fullName>Waiter &amp; Waitress</fullName>
+                <default>false</default>
+                <label>Waiter &amp; Waitress</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

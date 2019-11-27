@@ -1,0 +1,33 @@
+<apex:page standardController="Employee_Board_Membership__c" extensions="BoardReportingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.scripts,'banners.js')}"/>
+<title>{!YEAR(TODAY())} Nonprofit Board Service Reporting</title>
+<body>
+<apex:form >
+<span class="head" ><apex:commandLink action="{!viewBoardReporting}" style="text-decoration: none;color: #006633;" >{!YEAR(TODAY()-365)} Nonprofit Board Service Reporting</apex:commandLink></span>
+<p style="margin-bottom:30px" />
+<apex:pageBlock title="Board Information for: {!employee.First_Name__c}">
+<script type="text/javascript">
+  show_banners('top');
+</script>
+<table><tr><td>Thank you for serving your community and reporting your time. If you added a new organization, someone may be reaching out to you for more information.</td></tr>
+    <tr><td>&nbsp;</td></tr>
+    <tr><td><b>Note:</b> If you notice an error below, use the “Review” button to make corrections.  Select “Close” to submit your entries.<br/>  Upon submission, you will be diverted to the First in the Community landing page.</td></tr>
+    <tr><td>&nbsp;</td></tr>
+</table>
+<apex:pageblocktable value="{!employeeBoardMembership}" var="a">
+<apex:column value="{!a.Organization__c}"/>
+<apex:column value="{!a.Estimated_Total_Service_Hours_This_Year__c}"/>
+
+</apex:pageblocktable>
+<div style="margin: 36px 0px 100px 100px;">
+        <apex:commandLink action="{!viewBoardReporting}" type="image/png">
+            <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/review.png')}" />
+        </apex:commandlink>
+        <a href="https://www.firstnational.com/site/about-us/in-the-community/index.fhtml" >
+        <apex:image id="theImage" value="{!URLFOR($Resource.images,'images/communitydevelopment/close.jpg')}" style="margin-left:100px"/></a>
+</div>
+</apex:pageBlock>
+</apex:form>
+</body>   
+</apex:page>

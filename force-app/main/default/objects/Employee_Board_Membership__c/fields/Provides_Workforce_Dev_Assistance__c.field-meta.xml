@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provides_Workforce_Dev_Assistance__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Activity should align with FNBO job duties or area of expertise.  Example: Credit Analyst instructs entrepreneur workshop.</inlineHelpText>
+    <label>Provides Workforce Dev Assistance</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

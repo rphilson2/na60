@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>Employee Business Unit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bankcard</fullName>
+                <default>false</default>
+                <label>Bankcard</label>
+            </value>
+            <value>
+                <fullName>CBG - CO Market</fullName>
+                <default>false</default>
+                <label>CBG - CO Market</label>
+            </value>
+            <value>
+                <fullName>CBG - Corporate Treasury Services</fullName>
+                <default>false</default>
+                <label>CBG - Corporate Treasury Services</label>
+            </value>
+            <value>
+                <fullName>CBG - F @ Work</fullName>
+                <default>false</default>
+                <label>CBG - F @ Work</label>
+            </value>
+            <value>
+                <fullName>CBG - Global Services</fullName>
+                <default>false</default>
+                <label>CBG - Global Services</label>
+            </value>
+            <value>
+                <fullName>CBG - IL Market</fullName>
+                <default>false</default>
+                <label>CBG - IL Market</label>
+            </value>
+            <value>
+                <fullName>CBG - KS Market</fullName>
+                <default>false</default>
+                <label>CBG - KS Market</label>
+            </value>
+            <value>
+                <fullName>CBG - Omaha - Ag/CoBank/Renew</fullName>
+                <default>false</default>
+                <label>CBG - Omaha - Ag/CoBank/Renew</label>
+            </value>
+            <value>
+                <fullName>CBG - Omaha - Commercial Lending</fullName>
+                <default>false</default>
+                <label>CBG - Omaha - Commercial Lending</label>
+            </value>
+            <value>
+                <fullName>CBG - Omaha - Corporate Lending</fullName>
+                <default>false</default>
+                <label>CBG - Omaha - Corporate Lending</label>
+            </value>
+            <value>
+                <fullName>CBG - Omaha - CRE</fullName>
+                <default>false</default>
+                <label>CBG - Omaha - CRE</label>
+            </value>
+            <value>
+                <fullName>FNTS</fullName>
+                <default>false</default>
+                <label>FNTS</label>
+            </value>
+            <value>
+                <fullName>Mortgage</fullName>
+                <default>false</default>
+                <label>Mortgage</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Wealth and Investments - Branch-Based Advisers</fullName>
+                <default>false</default>
+                <label>Wealth and Investments - Branch-Based Advisers</label>
+            </value>
+            <value>
+                <fullName>Wealth and Investments - Capital Markets</fullName>
+                <default>false</default>
+                <label>Wealth and Investments - Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Wealth Management</fullName>
+                <default>false</default>
+                <label>Wealth Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

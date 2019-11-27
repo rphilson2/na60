@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Process Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>First Contact Date</fullName>
+                <default>false</default>
+                <label>First Contact Date</label>
+            </value>
+            <value>
+                <fullName>Submit to Credit for Review</fullName>
+                <default>false</default>
+                <label>Submit to Credit for Review</label>
+            </value>
+            <value>
+                <fullName>Submit to Credit for Limit Increase Review</fullName>
+                <default>false</default>
+                <label>Submit to Credit for Limit Increase Review</label>
+            </value>
+            <value>
+                <fullName>Received by Credit</fullName>
+                <default>false</default>
+                <label>Received by Credit</label>
+            </value>
+            <value>
+                <fullName>Status Green - On Track for Approval Submission</fullName>
+                <default>false</default>
+                <label>Status Green - On Track for Approval Submission</label>
+            </value>
+            <value>
+                <fullName>Status Yellow - Credit Needs More Info</fullName>
+                <default>false</default>
+                <label>Status Yellow - Credit Needs More Info</label>
+            </value>
+            <value>
+                <fullName>Additional Credit Info Provided</fullName>
+                <default>false</default>
+                <label>Additional Credit Info Provided</label>
+            </value>
+            <value>
+                <fullName>Credit Submitted for Approval</fullName>
+                <default>false</default>
+                <label>Credit Submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Application Complete</fullName>
+                <default>false</default>
+                <label>Application Complete</label>
+            </value>
+            <value>
+                <fullName>Approved by Credit</fullName>
+                <default>false</default>
+                <label>Approved by Credit</label>
+            </value>
+            <value>
+                <fullName>Implementation Needs Additional Info</fullName>
+                <default>false</default>
+                <label>Implementation Needs Additional Info</label>
+            </value>
+            <value>
+                <fullName>Implementation Info Provided</fullName>
+                <default>false</default>
+                <label>Implementation Info Provided</label>
+            </value>
+            <value>
+                <fullName>Status Red - Credit Approval Unlikely</fullName>
+                <default>false</default>
+                <label>Status Red - Credit Approval Unlikely</label>
+            </value>
+            <value>
+                <fullName>Declined by Credit</fullName>
+                <default>false</default>
+                <label>Declined by Credit</label>
+            </value>
+            <value>
+                <fullName>Declined for Incompleteness</fullName>
+                <default>false</default>
+                <label>Declined for Incompleteness</label>
+            </value>
+            <value>
+                <fullName>Limit Increase Approved</fullName>
+                <default>false</default>
+                <label>Limit Increase Approved</label>
+            </value>
+            <value>
+                <fullName>Submit to Credit for Re-Review</fullName>
+                <default>false</default>
+                <label>Submit to Credit for Re-Review</label>
+            </value>
+            <value>
+                <fullName>Legal Request Submitted</fullName>
+                <default>false</default>
+                <label>Legal Request Submitted</label>
+            </value>
+            <value>
+                <fullName>Routed for Signatures</fullName>
+                <default>false</default>
+                <label>Routed for Signatures</label>
+            </value>
+            <value>
+                <fullName>Agreement sent to Company</fullName>
+                <default>false</default>
+                <label>Agreement sent to Company</label>
+            </value>
+            <value>
+                <fullName>Executed Agreement Received</fullName>
+                <default>false</default>
+                <label>Executed Agreement Received</label>
+            </value>
+            <value>
+                <fullName>Completed Setup in FI</fullName>
+                <default>false</default>
+                <label>Completed Setup in FI</label>
+            </value>
+            <value>
+                <fullName>Ready for QA</fullName>
+                <default>false</default>
+                <label>Ready for QA</label>
+            </value>
+            <value>
+                <fullName>QA Failed</fullName>
+                <default>false</default>
+                <label>QA Failed</label>
+            </value>
+            <value>
+                <fullName>QA Verification Complete</fullName>
+                <default>false</default>
+                <label>QA Verification Complete</label>
+            </value>
+            <value>
+                <fullName>Cards Mailed</fullName>
+                <default>false</default>
+                <label>Cards Mailed</label>
+            </value>
+            <value>
+                <fullName>CCOR / Data Feed Complete</fullName>
+                <default>false</default>
+                <label>CCOR / Data Feed Complete</label>
+            </value>
+            <value>
+                <fullName>First Usage</fullName>
+                <default>false</default>
+                <label>First Usage</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+            <value>
+                <fullName>**Credit Analyst Assigned</fullName>
+                <default>false</default>
+                <label>**Credit Analyst Assigned</label>
+            </value>
+            <value>
+                <fullName>Product Trainer Assigned</fullName>
+                <default>false</default>
+                <label>**Product Trainer Assigned**</label>
+            </value>
+            <value>
+                <fullName>**Submitted to Implementations</fullName>
+                <default>false</default>
+                <label>**Submitted to Implementations</label>
+            </value>
+            <value>
+                <fullName>**Product Implementation Specialist Assigned</fullName>
+                <default>false</default>
+                <label>**Product Implementation Specialist Assigned</label>
+            </value>
+            <value>
+                <fullName>**Relationship Manager Assigned</fullName>
+                <default>false</default>
+                <label>**Relationship Manager Assigned</label>
+            </value>
+            <value>
+                <fullName>**On Hold**</fullName>
+                <default>false</default>
+                <label>**On Hold**</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

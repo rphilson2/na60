@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Date_Weekday__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(WEEKDAY(DATEVALUE(CompletedDateTime )))&amp;&quot; &quot;&amp;CASE(WEEKDAY(DATEVALUE(CompletedDateTime )), 1, &quot;Sunday&quot;, 2, &quot;Monday&quot;,3, &quot;Tuesday&quot;,4, &quot;Wednesday&quot;,5, &quot;Thursday&quot;, 6, &quot;Friday&quot;, 7, &quot;Saturday&quot;, &quot; &quot;)</formula>
+    <label>Completed Date (Weekday)</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

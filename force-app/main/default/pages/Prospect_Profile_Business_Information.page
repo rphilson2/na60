@@ -1,0 +1,29 @@
+<apex:page standardController="Prospect_Profile__c">
+<style>
+    .container1{
+        overflow:auto;
+        height:60px;
+        width:800px;
+    }
+</style>
+    <apex:pageBlock >
+    <apex:pageBlockSection title="Business Information">
+        <apex:outputPanel layout="block" style="white-space:nowrap;" styleclass="container1">
+            <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                <apex:column headerValue="Life-Cycle Stage" width="200px">
+                <apex:outputField value="{!pp.Life_Cycle_Stage__c}"/>
+                </apex:column>
+                <apex:column headerValue="Ownership Type" width="200px">
+                <apex:outputField value="{!pp.Ownership_Type__c}"/>
+                </apex:column>
+                <apex:column headerValue="Annual Sales Range" width="200px">
+                <apex:outputField value="{!pp.Annual_Sales_Range__c}"/>
+                </apex:column>
+                <apex:column headerValue="Employees" width="200px">
+                <apex:outputField value="{!pp.Employees__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:outputPanel>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

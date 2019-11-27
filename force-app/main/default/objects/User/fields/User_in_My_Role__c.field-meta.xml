@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_in_My_Role__c</fullName>
+    <externalId>false</externalId>
+    <formula>UserRoleId = $UserRole.Id</formula>
+    <label>User in My Role</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failed_to_Complete__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Days_Past_Due__c &gt; 6, TRUE, FALSE )</formula>
+    <label>Failed to Complete</label>
+    <type>Checkbox</type>
+</CustomField>

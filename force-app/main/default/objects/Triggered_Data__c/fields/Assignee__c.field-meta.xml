@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Salesforce user to be assigned the task created from the trigger.</description>
+    <externalId>false</externalId>
+    <label>Assignee</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Triggered_Data</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="naicssearchcontroller">  
+  <apex:form >  
+ <apex:inputText value="{!searchstring}" label="Input"/>   
+  <apex:commandButton value="Search NAICS Codes" action="{!search}"/>  
+   <apex:pageBlock title="Search Result">  
+    <apex:pageblockTable value="{!naics}" var="a">
+     <apex:column headerValue="NAICS">  
+      <apex:outputlink value="https://fnni.my.salesforce.com/{!Account.id}/e?CF00Na000000B82r1_lkid={!a.id}&CF00Na000000B82r1={!a.Name}&retURL=%2F{!Account.id}">{!a.NAICS_Code__c}</apex:outputlink>  
+     </apex:column>     
+     <apex:column value="{!a.Description__c}"/>  
+    </apex:pageBlockTable>     
+   </apex:pageBlock>   
+  </apex:form>  
+</apex:page>

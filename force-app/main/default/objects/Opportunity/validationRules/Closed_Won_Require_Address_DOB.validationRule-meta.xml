@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Require_Address_DOB</fullName>
+    <active>false</active>
+    <description>Require a mailing address and date of birth to be listed on the associated person customer prior to marking an opportunity &#39;closed won.&#39;</description>
+    <errorConditionFormula>AND( 
+   TEXT(StageName) = &quot;Closed Won&quot;,
+   OR( 
+      Account.RecordTypeId = &quot;0120c000001hhl1&quot;,
+      Account.RecordTypeId = &quot;01230000000sSnG&quot;),
+   OR( 
+      TEXT(Account.Birth_Date__pc)=&quot;&quot;, 
+      ISBLANK(Account.PersonMailingAddress)))</errorConditionFormula>
+    <errorMessage>A mailing address and date of birth is required on the associated customer record prior to marking this opportunity &#39;Closed Won.&#39;</errorMessage>
+</ValidationRule>
