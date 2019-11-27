@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_unauth_change_to_Related_Owner_1</fullName>
+    <active>true</active>
+    <description>Prevent Mortgage users from changing the Related Owner 1 field from an existing value to their own name.  They can still update blank fields to include their name.</description>
+    <errorConditionFormula>And( 
+ischanged( Related_Owner_1__c), 
+Not(isblank(priorvalue( Related_Owner_1__c))), 
+(Related_Owner_1__c) = $User.Id)</errorConditionFormula>
+    <errorDisplayField>Related_Owner_1__c</errorDisplayField>
+    <errorMessage>You cannot replace this value with your own name. Please check with management.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <article class="slds-card">
+        <div class="slds-card__body slds-card__body_inner slds-p-top_small">
+            <a onclick="{!c.onClickHandler}" style="text-decoration:underline">Foundation</a>
+        </div>  
+    </article>
+</aura:component>

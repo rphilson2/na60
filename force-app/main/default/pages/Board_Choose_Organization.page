@@ -1,0 +1,62 @@
+<!--DAG_2019_01_22 VersionOne Feature E-08549-- Large Modification on this date.  Changed this whole site from updating the Employee Board Membership object to updating the Volunteer Activity object.-->
+<apex:page standardController="Volunteer_Activity__c" extensions="BoardReportingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+<title>{!YEAR(TODAY())}  Nonprofit Board Service Reporting</title>
+<body>
+<apex:form >
+<center><apex:outputText value="Non-Profit Board Service Reporting" style="font-family: arial; font-size: 26pt; color: #006952"/></center>
+<hr/>
+<br/>
+<center><apex:outputText value="Select from Previously served organizations" style="font-family: sans-serif; font-weight: bold; font-size: 12pt" rendered="{!has_prev_board_memberships}"/></center>
+<br/>
+<center><apex:selectList id="SelectPrevOrgs" value="{!SelectedOrg}" multiselect="false" size="1" rendered="{!has_prev_board_memberships}">
+   <apex:selectOptions value="{!PrevBoardMemberships}"/>
+</apex:selectList>
+</center>
+<br/>
+<center><apex:outputText value="OR" style="font-family: sans-serif; font-size: 13pt; font-weight: bold; font-style: italic; color: #0726ad" rendered="{!has_prev_board_memberships}"></apex:outputText></center>
+<br/>
+<center><apex:outputText value="Select from our list of organizations" style="font-family: sans-serif; font-weight: bold; font-size: 12pt"></apex:outputText></center>
+<br/>
+<center><apex:inputField value="{!ebm.Volunteer_Organization__c}" id="volunteerOrganization" style="vertical-align:top;"/></center>
+<br/>
+<center><apex:outputText value="OR" style="font-family: sans-serif; font-size: 13pt; font-weight: bold; font-style: italic; color: #0726ad"></apex:outputText></center>
+<br/>
+<center><apex:outputText value="Enter in a new Organization" style="font-family: sans-serif; font-weight: bold; font-size: 12pt"></apex:outputText></center>
+<br/>
+<center><apex:inputField value="{!ebm.Organization_Other__c}" id="otherOrganization" style="vertical-align:top;"/></center>
+<center>
+<apex:pageMessages ></apex:pageMessages>
+<table style="border-spacing: 2px;">
+   <tr class="blankrow"></tr>
+   <tr class="blankrow"></tr>
+   <tr>
+      <td>
+         <apex:commandButton action="{!New_Board_Activity}" value="Continue" style="background:#006952; color: white; font-style:italic; font-size:15pt; width:350px; Height:40px"/>                    
+      </td>
+   </tr>
+   <tr class="blankrow"></tr>
+   <tr>
+      <td>
+         <apex:commandButton action="{!ReturntoOrganizationList}" value="Return to Summary" style="background:#C80000; color: white; font-style:italic; font-size:15pt; width:350px; Height:40px"/>   
+      </td>
+   </tr>
+   <tr class="blankrow"></tr>
+   <tr>
+      <td>
+         <apex:commandButton action="{!ReturnToOpen}" value="Return to Opening Page" style="background:#430000; color: white; font-style:italic; font-size:15pt; width:350px; Height:40px"/>
+      </td>
+   </tr>
+   <tr class="blankrow"></tr>
+   <tr>
+      <td>
+         <apex:commandButton action="https://www.fnbo.com/community" value="Exit" style="background:#00578d; color: white; font-style:italic; font-size:15pt; width:350px; Height:40px"/>   
+      </td>
+   </tr>
+   <tr class="blankrow"></tr>
+   <tr class="blankrow"></tr>
+</table>
+</center>   
+</apex:form>
+</body>   
+</apex:page>

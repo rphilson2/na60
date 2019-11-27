@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Unworked_Mortgage_Web_Lead</fullName>
+        <description>Unworked Mortgage Web Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>ericj@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Mortgage/Unworked_Mortgage_Web_Lead</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Change_Lead_Source_to_COI</fullName>
+        <field>LeadSource</field>
+        <literalValue>COI</literalValue>
+        <name>Change Lead Source to COI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Lead_Status_to_Referral_Non_SF_BU</fullName>
+        <field>Status</field>
+        <literalValue>Referral to External BU</literalValue>
+        <name>Change Lead Status to Referral Non SF BU</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Company_to_Employer_Field</fullName>
+        <field>Employer__c</field>
+        <formula>Company</formula>
+        <name>Copy Company to Employer Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copy_Home_Phone</fullName>
+        <field>Home_Phone__c</field>
+        <formula>Phone</formula>
+        <name>Copy Home Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mortgage_Lead_Status</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Mortgage Lead Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Remove_Employer_from_Business</fullName>
+        <field>Employer__c</field>
+        <name>Remove Employer from Business</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Company_to_null</fullName>
+        <field>Company</field>
+        <name>Set Company to null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Copy Phone to Home Phone</fullName>
+        <actions>
+            <name>Copy_Home_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Assigned_LO__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mortgage Web Lead</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Mortgage Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Unworked_Mortgage_Web_Lead</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Lead.CreatedDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Referral Lead Remove Company for Person Referrals 2</fullName>
+        <actions>
+            <name>Set_Company_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Referral / Relationship Expansion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Referral_Type__c</field>
+            <operation>equals</operation>
+            <value>Person</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Company</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Employer__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Referral Person - Copy Company to Emp then Delete Company</fullName>
+        <actions>
+            <name>Copy_Company_to_Employer_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Referral / Relationship Expansion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Referral_Type__c</field>
+            <operation>equals</operation>
+            <value>Person</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Company</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Employer__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>This rule checks for Person Referrals that have a Company and not an Employer, copies Company to Employer, then deletes Company.</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Company_to_null</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

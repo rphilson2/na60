@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trigger_Type__c</fullName>
+    <description>A code indicating which process flow should be activated by the trigger</description>
+    <externalId>false</externalId>
+    <label>Trigger Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NCNCW</fullName>
+                <default>false</default>
+                <label>NCNCW</label>
+            </value>
+            <value>
+                <fullName>MPYFF</fullName>
+                <default>false</default>
+                <label>MPYFF</label>
+            </value>
+            <value>
+                <fullName>ARMAJ</fullName>
+                <default>false</default>
+                <label>ARMAJ</label>
+            </value>
+            <value>
+                <fullName>TXIND</fullName>
+                <default>false</default>
+                <label>TXIND</label>
+            </value>
+            <value>
+                <fullName>TXINC</fullName>
+                <default>false</default>
+                <label>TXINC</label>
+            </value>
+            <value>
+                <fullName>REFI19</fullName>
+                <default>false</default>
+                <label>REFI19</label>
+            </value>
+            <value>
+                <fullName>REF19</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>REF19</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Credit_Card_Numbers</fullName>
+    <active>true</active>
+    <errorConditionFormula>REGEX( Description , &quot;^((4\\d{3})|(5[1-5]\\d{2})|(6011))-?\\d{4}-?\\d{4}-?\\d{4}|3[4,7]\\d{13}$&quot; )</errorConditionFormula>
+    <errorMessage>Credit card numbers cannot be saved in Salesforce.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>a_IntOutgoing_Wire2__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OA</description>
+    <externalId>false</externalId>
+    <label>a IntOutgoing Wire2</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

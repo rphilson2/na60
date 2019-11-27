@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Not_Listed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Box to be checked on Board Reporting if the person&#39;s Activity is not listed on the rest of the Board.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If service type is not listed, please provide details in the ‘Service Details’ text box.</inlineHelpText>
+    <label>Service Not Listed</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

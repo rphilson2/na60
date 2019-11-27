@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paymaker_Require_Comments_Not_Interested</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &#39;Paymaker_Task&#39;,
+TEXT(Initial_Call_Outcome__c) = &#39;Not Interested&#39;,
+ISBLANK(Description))</errorConditionFormula>
+    <errorMessage>Comments are required when the call outcome is Not Interested.</errorMessage>
+</ValidationRule>

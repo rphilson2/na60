@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Source__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the &quot;source&quot; of the opportunity, this is for FNTS</inlineHelpText>
+    <label>Opportunity Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+                <label>Advertisement</label>
+            </value>
+            <value>
+                <fullName>Association</fullName>
+                <default>false</default>
+                <label>Association</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+                <label>Customer Referral</label>
+            </value>
+            <value>
+                <fullName>Data Upload</fullName>
+                <default>false</default>
+                <label>Data Upload</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Executive Summit</fullName>
+                <default>false</default>
+                <label>Executive Summit</label>
+            </value>
+            <value>
+                <fullName>Lunch and Learn</fullName>
+                <default>false</default>
+                <label>Lunch and Learn</label>
+            </value>
+            <value>
+                <fullName>Outbound Letter</fullName>
+                <default>false</default>
+                <label>Outbound Letter</label>
+            </value>
+            <value>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+                <label>Partner Referral</label>
+            </value>
+            <value>
+                <fullName>Phone In</fullName>
+                <default>false</default>
+                <label>Phone In</label>
+            </value>
+            <value>
+                <fullName>Phone Out</fullName>
+                <default>false</default>
+                <label>Phone Out</label>
+            </value>
+            <value>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+                <label>Speaking Engagement</label>
+            </value>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

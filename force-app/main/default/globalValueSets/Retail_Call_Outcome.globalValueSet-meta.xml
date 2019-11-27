@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Wrong Number</fullName>
+        <default>false</default>
+        <label>Wrong Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Left Message</fullName>
+        <default>false</default>
+        <label>Left Message</label>
+    </customValue>
+    <customValue>
+        <fullName>Unable to Contact</fullName>
+        <default>false</default>
+        <label>Unable to Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Add to Do Not Call List</fullName>
+        <default>false</default>
+        <label>Add to Do Not Call List</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Completed</fullName>
+        <default>false</default>
+        <label>Service Completed</label>
+    </customValue>
+    <customValue>
+        <fullName>Requested Call Back</fullName>
+        <default>false</default>
+        <label>Requested Call Back</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Application</fullName>
+        <default>false</default>
+        <label>Product Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner Referral</fullName>
+        <default>false</default>
+        <label>Partner Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Satisfied</fullName>
+        <default>false</default>
+        <label>Satisfied</label>
+    </customValue>
+    <customValue>
+        <fullName>Reassign to CD</fullName>
+        <default>false</default>
+        <label>Reassign to CD</label>
+    </customValue>
+    <customValue>
+        <fullName>Create Follow-Up Task</fullName>
+        <default>false</default>
+        <label>Create Follow-Up Task</label>
+    </customValue>
+    <customValue>
+        <fullName>Create an Opportunity</fullName>
+        <default>false</default>
+        <label>Create an Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Send to Direct - Unable to Contact</fullName>
+        <default>false</default>
+        <label>Send to Direct - Unable to Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Application Taken</fullName>
+        <default>false</default>
+        <label>Application Taken</label>
+    </customValue>
+    <customValue>
+        <fullName>Bad Phone Number</fullName>
+        <default>false</default>
+        <label>Bad Phone Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Call: Contacted/Call Back</fullName>
+        <default>false</default>
+        <label>Call: Contacted/Call Back</label>
+    </customValue>
+    <customValue>
+        <fullName>Called: Left Message</fullName>
+        <default>false</default>
+        <label>Called: Left Message</label>
+    </customValue>
+    <customValue>
+        <fullName>Called: No Contact</fullName>
+        <default>false</default>
+        <label>Called: No Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Better Offer</fullName>
+        <default>false</default>
+        <label>Better Offer</label>
+    </customValue>
+    <customValue>
+        <fullName>Pitched Loan/Worksheet</fullName>
+        <default>false</default>
+        <label>Pitched Loan/Worksheet</label>
+    </customValue>
+    <customValue>
+        <fullName>Uncommon Circumstance</fullName>
+        <default>false</default>
+        <label>Uncommon Circumstance</label>
+    </customValue>
+    <customValue>
+        <fullName>Interested - Basic</fullName>
+        <default>false</default>
+        <label>Interested - Basic</label>
+    </customValue>
+    <customValue>
+        <fullName>Interested - Advanced</fullName>
+        <default>false</default>
+        <label>Interested - Advanced</label>
+    </customValue>
+    <customValue>
+        <fullName>Interested - Unsure</fullName>
+        <default>false</default>
+        <label>Interested - Unsure</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Opened New Account</fullName>
+        <default>false</default>
+        <label>Customer Opened New Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Kept Current Account</fullName>
+        <default>false</default>
+        <label>Customer Kept Current Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Already Discussed</fullName>
+        <default>false</default>
+        <label>Already Discussed</label>
+    </customValue>
+    <description>Values for the retail welcome call process picklists</description>
+    <masterLabel>Retail Call Outcome</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

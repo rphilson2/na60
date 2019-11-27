@@ -1,0 +1,32 @@
+<aura:component controller="myOpenTasksController"
+                implements="flexipage:availableForAllPageTypes" 
+                access="global" >
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="userId" type="String" />
+    <aura:attribute name="openTasks" type="Object[]"/>
+    
+    <aura:handler name="init" value="{! this}" action="{!c.doInit}"/>
+    
+     <article class="slds-card">
+        <!-- HEADER -->
+        <div class="slds-card__header slds-grid">
+            <header class="slds-card__header-title">
+                <h2><b>My Open Tasks</b></h2>
+            </header>
+        </div>
+        
+        <!-- BODY -->
+
+        <div class="slds-card__body slds-card__body_inner">
+            <aura:iteration items="{!v.openTasks}" var="item">
+                <c:myOpenTaskDetail task="{!item}" />
+            </aura:iteration>
+         </div>  
+                  
+        <!-- FOOTER -->
+        <footer class="slds-card__footer">
+            <a onclick="{!c.navToAllTasks}">View All</a>
+        </footer>
+    </article>
+
+</aura:component>

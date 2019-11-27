@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualify_own_referral</fullName>
+    <active>true</active>
+    <description>The Creator of a referral cannot qualify their own referral</description>
+    <errorConditionFormula>And(
+ ISCHANGED( Referral_Status__c ) ,
+ $User.Id =  CreatedById,
+   CONTAINS( Referral_Status_Text__c , &quot;Qualified&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Referral_Status__c</errorDisplayField>
+    <errorMessage>You can not qualify your own created referral</errorMessage>
+</ValidationRule>

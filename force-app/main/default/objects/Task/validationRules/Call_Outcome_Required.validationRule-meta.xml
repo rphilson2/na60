@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Outcome_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+RecordType.DeveloperName =&quot;Retail_Welcome_Call_Disposition_Initial&quot;,
+RecordType.DeveloperName =&quot;Mortgage_Refinance&quot;),
+TEXT(Status) = &quot;Completed&quot;,
+ISBLANK(TEXT(Initial_Call_Outcome__c)))</errorConditionFormula>
+    <errorMessage>This task cannot be completed without a Call Outcome.</errorMessage>
+</ValidationRule>

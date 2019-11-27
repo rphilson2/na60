@@ -1,0 +1,42 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+            </div>
+        </div>   
+                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Thank you for submitting your application</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td class="outputtext"><p>Thank you for submitting your application for a Community Development grant. Your application will be processed and you will receive decision notification for Round 1 grants by June 1, and Round 2 by November 1.</p></td>
+                                </tr>
+                            </table>
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                   <td>
+                                      <apex:outputText value="Use the generate PDF button below to save a copy of your application to your files." style="font-family: sans-serif; font-size: 11pt; font-weight:bold; font-style: italic; color:#13008C"/>
+                                   </td>
+                                </tr>
+                                <tr class="blankrow"></tr>                      
+                                <tr>
+                                <td>
+                                <apex:commandButton value="Generate PDF" action="{!createpdf}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                   <apex:commandButton value="Exit" action="https://www.fnbo.com/community" styleClass="myButton"/>
+                                </td>                              
+                                </tr>
+                                <tr class="blankrow"></tr>
+                            </table>                            
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

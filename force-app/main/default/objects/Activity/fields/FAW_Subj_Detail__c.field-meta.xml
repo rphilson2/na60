@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAW_Subj_Detail__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate subject detail, if applicable</inlineHelpText>
+    <label>FAW Subj Detail</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FAW_Subject__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Careers</fullName>
+                <default>false</default>
+                <label>Careers</label>
+            </value>
+            <value>
+                <fullName>Credit Scoring</fullName>
+                <default>false</default>
+                <label>Credit Scoring</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Estate Planning</fullName>
+                <default>false</default>
+                <label>Estate Planning</label>
+            </value>
+            <value>
+                <fullName>Financial Planning Basics</fullName>
+                <default>false</default>
+                <label>Financial Planning Basics</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Health Saving Accounts</fullName>
+                <default>false</default>
+                <label>Health Saving Accounts</label>
+            </value>
+            <value>
+                <fullName>Home Buying</fullName>
+                <default>false</default>
+                <label>Home Buying</label>
+            </value>
+            <value>
+                <fullName>Home Refinancing</fullName>
+                <default>false</default>
+                <label>Home Refinancing</label>
+            </value>
+            <value>
+                <fullName>Identity Theft</fullName>
+                <default>false</default>
+                <label>Identity Theft</label>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+                <label>In Person</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Investing 101</fullName>
+                <default>false</default>
+                <label>Investing 101</label>
+            </value>
+            <value>
+                <fullName>Local Event</fullName>
+                <default>false</default>
+                <label>Local Event</label>
+            </value>
+            <value>
+                <fullName>NEST</fullName>
+                <default>false</default>
+                <label>NEST</label>
+            </value>
+            <value>
+                <fullName>Networking</fullName>
+                <default>false</default>
+                <label>Networking</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Retirement Basics</fullName>
+                <default>false</default>
+                <label>Retirement Basics</label>
+            </value>
+            <value>
+                <fullName>Retirement Income Strategy</fullName>
+                <default>false</default>
+                <label>Retirement Income Strategy</label>
+            </value>
+            <value>
+                <fullName>Saving &amp; Budgeting</fullName>
+                <default>false</default>
+                <label>Saving &amp; Budgeting</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Sprouting Savings</fullName>
+                <default>false</default>
+                <label>Sprouting Savings</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Community</controllingFieldValue>
+            <valueName>Local Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community</controllingFieldValue>
+            <valueName>Networking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community</controllingFieldValue>
+            <valueName>Sponsorship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <controllingFieldValue>Kids Banking</controllingFieldValue>
+            <valueName>Credit Scoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Estate Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Financial Planning Basics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Home Buying</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Home Refinancing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Identity Theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Investing 101</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>NEST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Retirement Basics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <valueName>Retirement Income Strategy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Education</controllingFieldValue>
+            <controllingFieldValue>Kids Banking</controllingFieldValue>
+            <valueName>Saving &amp; Budgeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kids Banking</controllingFieldValue>
+            <valueName>Careers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kids Banking</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kids Banking</controllingFieldValue>
+            <valueName>Sprouting Savings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orientation</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orientation</controllingFieldValue>
+            <valueName>Health Saving Accounts</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COI</fullName>
+    <availability>online</availability>
+    <description>Start creating a COI from someone in the organization</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>COI</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/a0c/e?retURL=%2Fa0c%3Ffcf%3D00Ba0000009ucoL&amp;Name={!Contact.Salutation}%20{!Contact.FirstName}%20{!Contact.LastName}&amp;00Na000000BR2tW={!Account.Name}&amp;00Na000000BR2tR={!Contact.Title}&amp;00Na000000BR1wt={!Contact.MailingStreet}&amp;00Na000000BR1wy={!Contact.MailingCity}&amp;00Na000000BR1x3={!Contact.MailingState}&amp;00Na000000BR1x8={!Contact.MailingPostalCode}&amp;00Na000000BR1wo={!Contact.Phone}&amp;00Na000000BR1xD={!Contact.Email}&amp;CF00Na000000BR1xI={!Contact.Salutation}%20{!Contact.FirstName}%20{!Contact.LastName}&amp;CF00Na000000BR1xN={!Account.Name}</url>
+</WebLink>

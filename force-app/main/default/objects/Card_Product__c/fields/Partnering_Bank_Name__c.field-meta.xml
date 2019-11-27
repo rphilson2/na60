@@ -1,0 +1,2183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partnering_Bank_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>(*) Partnering Bank Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Is_Agent_Bank__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>114th Commercial Lending</fullName>
+                <default>false</default>
+                <label>114th Commercial Lending</label>
+            </value>
+            <value>
+                <fullName>1st Bank</fullName>
+                <default>false</default>
+                <label>1st Bank</label>
+            </value>
+            <value>
+                <fullName>AAHOA</fullName>
+                <default>false</default>
+                <label>AAHOA</label>
+            </value>
+            <value>
+                <fullName>Ag Lending</fullName>
+                <default>false</default>
+                <label>Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Allegiance Bank</fullName>
+                <default>false</default>
+                <label>Allegiance Bank</label>
+            </value>
+            <value>
+                <fullName>Amerant Bank</fullName>
+                <default>false</default>
+                <label>Amerant Bank</label>
+            </value>
+            <value>
+                <fullName>American National Bank</fullName>
+                <default>false</default>
+                <label>American National Bank</label>
+            </value>
+            <value>
+                <fullName>American Savings Bank FSB</fullName>
+                <default>false</default>
+                <label>American Savings Bank FSB</label>
+            </value>
+            <value>
+                <fullName>Amtrust Bank</fullName>
+                <default>false</default>
+                <label>Amtrust Bank</label>
+            </value>
+            <value>
+                <fullName>Arbor Bank</fullName>
+                <default>false</default>
+                <label>Arbor Bank</label>
+            </value>
+            <value>
+                <fullName>Astoria Federal Savings Bank</fullName>
+                <default>false</default>
+                <label>Astoria Federal Savings Bank</label>
+            </value>
+            <value>
+                <fullName>Bank of the Ozarks</fullName>
+                <default>false</default>
+                <label>Bank of the Ozarks</label>
+            </value>
+            <value>
+                <fullName>Bank of the San Juans</fullName>
+                <default>false</default>
+                <label>Bank of the San Juans</label>
+            </value>
+            <value>
+                <fullName>Barrington Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Barrington Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Beneficial Bank</fullName>
+                <default>false</default>
+                <label>Beneficial Bank</label>
+            </value>
+            <value>
+                <fullName>Beverly Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Beverly Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Big Sky Western Bank</fullName>
+                <default>false</default>
+                <label>Big Sky Western Bank</label>
+            </value>
+            <value>
+                <fullName>Cadence Bank</fullName>
+                <default>false</default>
+                <label>Cadence Bank</label>
+            </value>
+            <value>
+                <fullName>California Bank of Commerce</fullName>
+                <default>false</default>
+                <label>California Bank of Commerce</label>
+            </value>
+            <value>
+                <fullName>California Community Bank</fullName>
+                <default>false</default>
+                <label>California Community Bank</label>
+            </value>
+            <value>
+                <fullName>Canandaigua National Bank</fullName>
+                <default>false</default>
+                <label>Canandaigua National Bank</label>
+            </value>
+            <value>
+                <fullName>Capital City Bank</fullName>
+                <default>false</default>
+                <label>Capital City Bank</label>
+            </value>
+            <value>
+                <fullName>Cathay Bank</fullName>
+                <default>false</default>
+                <label>Cathay Bank</label>
+            </value>
+            <value>
+                <fullName>CerescoBank</fullName>
+                <default>false</default>
+                <label>CerescoBank</label>
+            </value>
+            <value>
+                <fullName>CertusBank</fullName>
+                <default>false</default>
+                <label>CertusBank</label>
+            </value>
+            <value>
+                <fullName>Chain Bridge Bank</fullName>
+                <default>false</default>
+                <label>Chain Bridge Bank</label>
+            </value>
+            <value>
+                <fullName>Chemcial Bank</fullName>
+                <default>false</default>
+                <label>Chemcial Bank</label>
+            </value>
+            <value>
+                <fullName>Cherokee State Bank</fullName>
+                <default>false</default>
+                <label>Cherokee State Bank</label>
+            </value>
+            <value>
+                <fullName>Citizen&#39;s Bank and Trust</fullName>
+                <default>false</default>
+                <label>Citizen&#39;s Bank and Trust</label>
+            </value>
+            <value>
+                <fullName>Citizens Bank</fullName>
+                <default>false</default>
+                <label>Citizens Bank</label>
+            </value>
+            <value>
+                <fullName>Citizens Community Bank</fullName>
+                <default>false</default>
+                <label>Citizens Community Bank</label>
+            </value>
+            <value>
+                <fullName>Citizens Union Bank</fullName>
+                <default>false</default>
+                <label>Citizens Union Bank</label>
+            </value>
+            <value>
+                <fullName>City National Bank</fullName>
+                <default>false</default>
+                <label>City National Bank</label>
+            </value>
+            <value>
+                <fullName>Collegiate Peaks Bank</fullName>
+                <default>false</default>
+                <label>Collegiate Peaks Bank</label>
+            </value>
+            <value>
+                <fullName>Colorado - Ag Lending</fullName>
+                <default>false</default>
+                <label>Colorado - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Colorado - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Colorado - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Colorado - Community Lending</fullName>
+                <default>false</default>
+                <label>Colorado - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Colorado - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Colorado - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Columbus - Ag Lending</fullName>
+                <default>false</default>
+                <label>Columbus - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Columbus - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Columbus - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Columbus - Community Lending</fullName>
+                <default>false</default>
+                <label>Columbus - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Columbus - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Columbus - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Columbus - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Columbus - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Community Bank N.A.</fullName>
+                <default>false</default>
+                <label>Community Bank N.A.</label>
+            </value>
+            <value>
+                <fullName>CommunityBank of Texas</fullName>
+                <default>false</default>
+                <label>CommunityBank of Texas</label>
+            </value>
+            <value>
+                <fullName>CORE Bank</fullName>
+                <default>false</default>
+                <label>CORE Bank</label>
+            </value>
+            <value>
+                <fullName>Crawford County Trust &amp; Savings</fullName>
+                <default>false</default>
+                <label>Crawford County Trust &amp; Savings</label>
+            </value>
+            <value>
+                <fullName>Crystal Lake Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Crystal Lake Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Essex Bank</fullName>
+                <default>false</default>
+                <label>Essex Bank</label>
+            </value>
+            <value>
+                <fullName>First Bank</fullName>
+                <default>false</default>
+                <label>First Bank</label>
+            </value>
+            <value>
+                <fullName>First Bankcard VOX NTNL</fullName>
+                <default>false</default>
+                <label>First Bankcard VOX NTNL</label>
+            </value>
+            <value>
+                <fullName>FirstBank of Nebraska</fullName>
+                <default>false</default>
+                <label>FirstBank of Nebraska</label>
+            </value>
+            <value>
+                <fullName>First Bank of Wyoming</fullName>
+                <default>false</default>
+                <label>First Bank of Wyoming</label>
+            </value>
+            <value>
+                <fullName>First Federal Bank - Inficorp</fullName>
+                <default>false</default>
+                <label>First Federal Bank - Inficorp</label>
+            </value>
+            <value>
+                <fullName>First Federal Lakewood</fullName>
+                <default>false</default>
+                <label>First Federal Lakewood</label>
+            </value>
+            <value>
+                <fullName>First Financial Bank</fullName>
+                <default>false</default>
+                <label>First Financial Bank</label>
+            </value>
+            <value>
+                <fullName>First National Bank Lewistown</fullName>
+                <default>false</default>
+                <label>First National Bank Lewistown</label>
+            </value>
+            <value>
+                <fullName>First National Bank of Omaha</fullName>
+                <default>false</default>
+                <label>First National Bank of Omaha</label>
+            </value>
+            <value>
+                <fullName>First National Bank of Omaha (National Accts Only)</fullName>
+                <default>false</default>
+                <label>First National Bank of Omaha (National Accts Only)</label>
+            </value>
+            <value>
+                <fullName>First National Bank Texas/First Convenience</fullName>
+                <default>false</default>
+                <label>First National Bank Texas/First Convenience</label>
+            </value>
+            <value>
+                <fullName>First National Bank Wealth Management</fullName>
+                <default>false</default>
+                <label>First National Bank Wealth Management</label>
+            </value>
+            <value>
+                <fullName>First National Community Bank</fullName>
+                <default>false</default>
+                <label>First National Community Bank</label>
+            </value>
+            <value>
+                <fullName>First Security of Missoula</fullName>
+                <default>false</default>
+                <label>First Security of Missoula</label>
+            </value>
+            <value>
+                <fullName>First State Bank</fullName>
+                <default>false</default>
+                <label>First State Bank</label>
+            </value>
+            <value>
+                <fullName>First Tri-County Bank</fullName>
+                <default>false</default>
+                <label>First Tri-County Bank</label>
+            </value>
+            <value>
+                <fullName>Five Points Bank of Hastings</fullName>
+                <default>false</default>
+                <label>Five Points Bank of Hastings</label>
+            </value>
+            <value>
+                <fullName>FNB Commercial Card</fullName>
+                <default>false</default>
+                <label>FNB Commercial Card</label>
+            </value>
+            <value>
+                <fullName>FNB Commercial Card - Colorado</fullName>
+                <default>false</default>
+                <label>FNB Commercial Card - Colorado</label>
+            </value>
+            <value>
+                <fullName>FNB Commercial Card - Texas</fullName>
+                <default>false</default>
+                <label>FNB Commercial Card - Texas</label>
+            </value>
+            <value>
+                <fullName>FNBO Commercial Lending</fullName>
+                <default>false</default>
+                <label>FNBO Commercial Lending</label>
+            </value>
+            <value>
+                <fullName>FNBO Correspondent Banking</fullName>
+                <default>false</default>
+                <label>FNBO Correspondent Banking</label>
+            </value>
+            <value>
+                <fullName>Foothills Bank</fullName>
+                <default>false</default>
+                <label>Foothills Bank</label>
+            </value>
+            <value>
+                <fullName>Fort Hood National Bank</fullName>
+                <default>false</default>
+                <label>Fort Hood National Bank</label>
+            </value>
+            <value>
+                <fullName>Fremont - Ag Lending</fullName>
+                <default>false</default>
+                <label>Fremont - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Fremont Bank</fullName>
+                <default>false</default>
+                <label>Fremont Bank</label>
+            </value>
+            <value>
+                <fullName>Fremont - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Fremont - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Fremont - Community Lending</fullName>
+                <default>false</default>
+                <label>Fremont - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Fremont - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Fremont - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Fremont National Bank</fullName>
+                <default>false</default>
+                <label>Fremont National Bank</label>
+            </value>
+            <value>
+                <fullName>Fremont - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Fremont - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Garden State Community Bank</fullName>
+                <default>false</default>
+                <label>Garden State Community Bank</label>
+            </value>
+            <value>
+                <fullName>Gate City Bank</fullName>
+                <default>false</default>
+                <label>Gate City Bank</label>
+            </value>
+            <value>
+                <fullName>GFA Federal Credit Union</fullName>
+                <default>false</default>
+                <label>GFA Federal Credit Union</label>
+            </value>
+            <value>
+                <fullName>Glacier Bank</fullName>
+                <default>false</default>
+                <label>Glacier Bank</label>
+            </value>
+            <value>
+                <fullName>Glens Falls National Bank</fullName>
+                <default>false</default>
+                <label>Glens Falls National Bank</label>
+            </value>
+            <value>
+                <fullName>Grand Valley Bank</fullName>
+                <default>false</default>
+                <label>Grand Valley Bank</label>
+            </value>
+            <value>
+                <fullName>Guaranty Bank and Trust</fullName>
+                <default>false</default>
+                <label>Guaranty Bank and Trust</label>
+            </value>
+            <value>
+                <fullName>Heartland Bank</fullName>
+                <default>false</default>
+                <label>Heartland Bank</label>
+            </value>
+            <value>
+                <fullName>Hinsdale Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Hinsdale Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Houghton State Bank</fullName>
+                <default>false</default>
+                <label>Houghton State Bank</label>
+            </value>
+            <value>
+                <fullName>IBC Bank</fullName>
+                <default>false</default>
+                <label>IBC Bank</label>
+            </value>
+            <value>
+                <fullName>Illinois - Ag Lending</fullName>
+                <default>false</default>
+                <label>Illinois - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Illinois - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Illinois - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Illinois - Community Lending</fullName>
+                <default>false</default>
+                <label>Illinois - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Illinois - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Illinois - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Illinois - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Illinois - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Independent Bank</fullName>
+                <default>false</default>
+                <label>Independent Bank</label>
+            </value>
+            <value>
+                <fullName>Iowa State Bank</fullName>
+                <default>false</default>
+                <label>Iowa State Bank</label>
+            </value>
+            <value>
+                <fullName>Kansas - Ag Lending</fullName>
+                <default>false</default>
+                <label>Kansas - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Kansas - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Kansas - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Kansas - Community Lending</fullName>
+                <default>false</default>
+                <label>Kansas - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Kansas - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Kansas - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Kansas - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Kansas - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Lake Forest Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Lake Forest Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Landmands Bank</fullName>
+                <default>false</default>
+                <label>Landmands Bank</label>
+            </value>
+            <value>
+                <fullName>Landmark National Bank</fullName>
+                <default>false</default>
+                <label>Landmark National Bank</label>
+            </value>
+            <value>
+                <fullName>LegacyTexas</fullName>
+                <default>false</default>
+                <label>LegacyTexas</label>
+            </value>
+            <value>
+                <fullName>Libertyville Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Libertyville Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Lincoln - Ag Lending</fullName>
+                <default>false</default>
+                <label>Lincoln - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Lincoln - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Lincoln - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Lincoln - Community Lending</fullName>
+                <default>false</default>
+                <label>Lincoln - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Lincoln - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Lincoln - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Lincoln - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Lincoln - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Lone Star State Bank</fullName>
+                <default>false</default>
+                <label>Lone Star State Bank</label>
+            </value>
+            <value>
+                <fullName>Meredith Village Savings Bank</fullName>
+                <default>false</default>
+                <label>Meredith Village Savings Bank</label>
+            </value>
+            <value>
+                <fullName>Mountain West Bank</fullName>
+                <default>false</default>
+                <label>Mountain West Bank</label>
+            </value>
+            <value>
+                <fullName>Mutual of Omaha Bank</fullName>
+                <default>false</default>
+                <label>Mutual of Omaha Bank</label>
+            </value>
+            <value>
+                <fullName>National</fullName>
+                <default>false</default>
+                <label>National</label>
+            </value>
+            <value>
+                <fullName>National Bank of Commerce</fullName>
+                <default>false</default>
+                <label>National Bank of Commerce</label>
+            </value>
+            <value>
+                <fullName>National - Equity Bank</fullName>
+                <default>false</default>
+                <label>National - Equity Bank</label>
+            </value>
+            <value>
+                <fullName>National – FRB</fullName>
+                <default>false</default>
+                <label>National – FRB</label>
+            </value>
+            <value>
+                <fullName>Nebraska State Bank &amp; Trust Co</fullName>
+                <default>false</default>
+                <label>Nebraska State Bank &amp; Trust Co</label>
+            </value>
+            <value>
+                <fullName>New York Commercial Bank</fullName>
+                <default>false</default>
+                <label>New York Commercial Bank</label>
+            </value>
+            <value>
+                <fullName>New York Community Bank</fullName>
+                <default>false</default>
+                <label>New York Community Bank</label>
+            </value>
+            <value>
+                <fullName>Northbrook Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Northbrook Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>North Cascades Bank</fullName>
+                <default>false</default>
+                <label>North Cascades Bank</label>
+            </value>
+            <value>
+                <fullName>North Platte - Ag Lending</fullName>
+                <default>false</default>
+                <label>North Platte - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>North Platte - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>North Platte - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>North Platte - Community Lending</fullName>
+                <default>false</default>
+                <label>North Platte - Community Lending</label>
+            </value>
+            <value>
+                <fullName>North Platte - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>North Platte - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>North Platte - Specialty Lending</fullName>
+                <default>false</default>
+                <label>North Platte - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Norwood Bank</fullName>
+                <default>false</default>
+                <label>Norwood Bank</label>
+            </value>
+            <value>
+                <fullName>Ohio Savings Bank</fullName>
+                <default>false</default>
+                <label>Ohio Savings Bank</label>
+            </value>
+            <value>
+                <fullName>Old National Bank</fullName>
+                <default>false</default>
+                <label>Old National Bank</label>
+            </value>
+            <value>
+                <fullName>Old Plank Trail Community Bank</fullName>
+                <default>false</default>
+                <label>Old Plank Trail Community Bank</label>
+            </value>
+            <value>
+                <fullName>Omaha - Ag Lending</fullName>
+                <default>false</default>
+                <label>Omaha - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Omaha - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Omaha - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Omaha - Community Lending</fullName>
+                <default>false</default>
+                <label>Omaha - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Omaha - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Omaha - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Omaha - Small Business Lending</fullName>
+                <default>false</default>
+                <label>Omaha - Small Business Lending</label>
+            </value>
+            <value>
+                <fullName>Omaha - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Omaha - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Platte Valley - Ag Lending</fullName>
+                <default>false</default>
+                <label>Platte Valley - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>Platte Valley - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>Platte Valley - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Platte Valley - Community Lending</fullName>
+                <default>false</default>
+                <label>Platte Valley - Community Lending</label>
+            </value>
+            <value>
+                <fullName>Platte Valley - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>Platte Valley - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>Platte Valley - Specialty Lending</fullName>
+                <default>false</default>
+                <label>Platte Valley - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>Plattsmouth State Bank</fullName>
+                <default>false</default>
+                <label>Plattsmouth State Bank</label>
+            </value>
+            <value>
+                <fullName>Premier Bank</fullName>
+                <default>false</default>
+                <label>Premier Bank</label>
+            </value>
+            <value>
+                <fullName>Provident Bank</fullName>
+                <default>false</default>
+                <label>Provident Bank</label>
+            </value>
+            <value>
+                <fullName>Republic Bank</fullName>
+                <default>false</default>
+                <label>Republic Bank</label>
+            </value>
+            <value>
+                <fullName>River Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>River Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Sandy Spring Bank</fullName>
+                <default>false</default>
+                <label>Sandy Spring Bank</label>
+            </value>
+            <value>
+                <fullName>Saratoga National Bank</fullName>
+                <default>false</default>
+                <label>Saratoga National Bank</label>
+            </value>
+            <value>
+                <fullName>Schaumburg Bank and Trust</fullName>
+                <default>false</default>
+                <label>Schaumburg Bank and Trust</label>
+            </value>
+            <value>
+                <fullName>Security Bank of Kansas City</fullName>
+                <default>false</default>
+                <label>Security Bank of Kansas City</label>
+            </value>
+            <value>
+                <fullName>Shelby County State Bank</fullName>
+                <default>false</default>
+                <label>Shelby County State Bank</label>
+            </value>
+            <value>
+                <fullName>Sibley State Bank</fullName>
+                <default>false</default>
+                <label>Sibley State Bank</label>
+            </value>
+            <value>
+                <fullName>Small Business Lending</fullName>
+                <default>false</default>
+                <label>Small Business Lending</label>
+            </value>
+            <value>
+                <fullName>South Dakota - Ag Lending</fullName>
+                <default>false</default>
+                <label>South Dakota - Ag Lending</label>
+            </value>
+            <value>
+                <fullName>South Dakota - Commercial Real Estate</fullName>
+                <default>false</default>
+                <label>South Dakota - Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>South Dakota - Community Lending</fullName>
+                <default>false</default>
+                <label>South Dakota - Community Lending</label>
+            </value>
+            <value>
+                <fullName>South Dakota - Corporate Treasury Services (CTS)</fullName>
+                <default>false</default>
+                <label>South Dakota - Corporate Treasury Services (CTS)</label>
+            </value>
+            <value>
+                <fullName>South Dakota - Specialty Lending</fullName>
+                <default>false</default>
+                <label>South Dakota - Specialty Lending</label>
+            </value>
+            <value>
+                <fullName>SouthPoint Bank</fullName>
+                <default>false</default>
+                <label>SouthPoint Bank</label>
+            </value>
+            <value>
+                <fullName>St. Charles Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>St. Charles Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>State Bank of the Lakes</fullName>
+                <default>false</default>
+                <label>State Bank of the Lakes</label>
+            </value>
+            <value>
+                <fullName>Sun National Bank</fullName>
+                <default>false</default>
+                <label>Sun National Bank</label>
+            </value>
+            <value>
+                <fullName>Synergy Bank</fullName>
+                <default>false</default>
+                <label>Synergy Bank</label>
+            </value>
+            <value>
+                <fullName>TCF Bank</fullName>
+                <default>false</default>
+                <label>TCF Bank</label>
+            </value>
+            <value>
+                <fullName>The American National Bank of Texas</fullName>
+                <default>false</default>
+                <label>The American National Bank of Texas</label>
+            </value>
+            <value>
+                <fullName>The Freedom Bank of VA</fullName>
+                <default>false</default>
+                <label>The Freedom Bank of VA</label>
+            </value>
+            <value>
+                <fullName>Total Bank</fullName>
+                <default>false</default>
+                <label>Total Bank</label>
+            </value>
+            <value>
+                <fullName>Tower Bank</fullName>
+                <default>false</default>
+                <label>Tower Bank</label>
+            </value>
+            <value>
+                <fullName>Town Bank</fullName>
+                <default>false</default>
+                <label>Town Bank</label>
+            </value>
+            <value>
+                <fullName>UB - Bellevue Private Bank Treasury Services</fullName>
+                <default>false</default>
+                <label>UB - Bellevue Private Bank Treasury Services</label>
+            </value>
+            <value>
+                <fullName>UB - BTMU - HQA ACBE – NY</fullName>
+                <default>false</default>
+                <label>UB - BTMU - HQA ACBE – NY</label>
+            </value>
+            <value>
+                <fullName>UB – BTMU -HQA JCB –Midwest</fullName>
+                <default>false</default>
+                <label>UB – BTMU -HQA JCB –Midwest</label>
+            </value>
+            <value>
+                <fullName>UB-CBD1-SD Pacific Rim Corp Grp</fullName>
+                <default>false</default>
+                <label>UB-CBD1-SD Pacific Rim Corp Grp</label>
+            </value>
+            <value>
+                <fullName>UB-CBD2-LA Pacific Rim Corp Grp</fullName>
+                <default>false</default>
+                <label>UB-CBD2-LA Pacific Rim Corp Grp</label>
+            </value>
+            <value>
+                <fullName>UB-CBD3 - SF Pacific Rim Corp Grp</fullName>
+                <default>false</default>
+                <label>UB-CBD3 - SF Pacific Rim Corp Grp</label>
+            </value>
+            <value>
+                <fullName>UB-CBD4-Seattle Pacific Rim Corp Grp</fullName>
+                <default>false</default>
+                <label>UB-CBD4-Seattle Pacific Rim Corp Grp</label>
+            </value>
+            <value>
+                <fullName>UB-Central Valley Bus. Bk. Dep.</fullName>
+                <default>false</default>
+                <label>UB-Central Valley Bus. Bk. Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-Corporate Deposit Services</fullName>
+                <default>false</default>
+                <label>UB-Corporate Deposit Services</label>
+            </value>
+            <value>
+                <fullName>UB-Desert Region PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Desert Region PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Diablo Valley PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Diablo Valley PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-East Bay CD</fullName>
+                <default>false</default>
+                <label>UB-East Bay CD</label>
+            </value>
+            <value>
+                <fullName>UB-East Bay MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-East Bay MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Fresno MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-Fresno MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB - HQA Jap Corp Bk-Mdwt BTMU</fullName>
+                <default>false</default>
+                <label>UB - HQA Jap Corp Bk-Mdwt BTMU</label>
+            </value>
+            <value>
+                <fullName>UB - IE Corporate Deposits</fullName>
+                <default>false</default>
+                <label>UB - IE Corporate Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Inland Empire MM Dep</fullName>
+                <default>false</default>
+                <label>UB-Inland Empire MM Dep</label>
+            </value>
+            <value>
+                <fullName>UB - Labor Mgmt Deposits</fullName>
+                <default>false</default>
+                <label>UB - Labor Mgmt Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-LA Bus. Bk. Dep.</fullName>
+                <default>false</default>
+                <label>UB-LA Bus. Bk. Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-LA Middle Market</fullName>
+                <default>false</default>
+                <label>UB-LA Middle Market</label>
+            </value>
+            <value>
+                <fullName>UB - LA Middle Market Deposits</fullName>
+                <default>false</default>
+                <label>UB - LA Middle Market Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-LA Real Estate Deposits</fullName>
+                <default>false</default>
+                <label>UB-LA Real Estate Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Los Angeles PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Los Angeles PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-National Corporate Dep.</fullName>
+                <default>false</default>
+                <label>UB-National Corporate Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-Newport Beach PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Newport Beach PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB - OC Business Banking Deposits</fullName>
+                <default>false</default>
+                <label>UB - OC Business Banking Deposits</label>
+            </value>
+            <value>
+                <fullName>UB - OC Middle Market Deposits</fullName>
+                <default>false</default>
+                <label>UB - OC Middle Market Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-OC Priority Banking</fullName>
+                <default>false</default>
+                <label>UB-OC Priority Banking</label>
+            </value>
+            <value>
+                <fullName>UB-Orange Co Bus. Bk. Dep.</fullName>
+                <default>false</default>
+                <label>UB-Orange Co Bus. Bk. Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-Orange County CD</fullName>
+                <default>false</default>
+                <label>UB-Orange County CD</label>
+            </value>
+            <value>
+                <fullName>UB-Pacific NW Business Banking</fullName>
+                <default>false</default>
+                <label>UB-Pacific NW Business Banking</label>
+            </value>
+            <value>
+                <fullName>UB-Portland MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-Portland MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Portland PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Portland PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-RE Treasury Svcs</fullName>
+                <default>false</default>
+                <label>UB-RE Treasury Svcs</label>
+            </value>
+            <value>
+                <fullName>UB-Sacramento MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-Sacramento MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Sacramento PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Sacramento PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-San Diego Bus. Bk. Dep.</fullName>
+                <default>false</default>
+                <label>UB-San Diego Bus. Bk. Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-San Diego GTO PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-San Diego GTO PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-San Diego MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-San Diego MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-San Fernando Valley CD</fullName>
+                <default>false</default>
+                <label>UB-San Fernando Valley CD</label>
+            </value>
+            <value>
+                <fullName>UB-San Francisco Bus Bk Dep</fullName>
+                <default>false</default>
+                <label>UB-San Francisco Bus Bk Dep</label>
+            </value>
+            <value>
+                <fullName>UB-San Francisco Corp. Dep.</fullName>
+                <default>false</default>
+                <label>UB-San Francisco Corp. Dep.</label>
+            </value>
+            <value>
+                <fullName>UB-San Francisco MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-San Francisco MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-San Francisco PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-San Francisco PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Santa Clara Valley MM Dep.</fullName>
+                <default>false</default>
+                <label>UB-Santa Clara Valley MM Dep.</label>
+            </value>
+            <value>
+                <fullName>UB - SD Corporate Deposits</fullName>
+                <default>false</default>
+                <label>UB - SD Corporate Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Seattle MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-Seattle MM Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Seattle PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Seattle PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-Silicon Valley PB Deposits</fullName>
+                <default>false</default>
+                <label>UB-Silicon Valley PB Deposits</label>
+            </value>
+            <value>
+                <fullName>UB-State Govt.- State of CA</fullName>
+                <default>false</default>
+                <label>UB-State Govt.- State of CA</label>
+            </value>
+            <value>
+                <fullName>UB - UBOC CA Local Gov</fullName>
+                <default>false</default>
+                <label>UB - UBOC CA Local Gov</label>
+            </value>
+            <value>
+                <fullName>UB-W LA/South Bay MM Deposits</fullName>
+                <default>false</default>
+                <label>UB-W LA/South Bay MM Deposits</label>
+            </value>
+            <value>
+                <fullName>Union Bank</fullName>
+                <default>false</default>
+                <label>Union Bank</label>
+            </value>
+            <value>
+                <fullName>Valley Bank of Helena</fullName>
+                <default>false</default>
+                <label>Valley Bank of Helena</label>
+            </value>
+            <value>
+                <fullName>Village Bank and Trust</fullName>
+                <default>false</default>
+                <label>Village Bank and Trust</label>
+            </value>
+            <value>
+                <fullName>VOX National</fullName>
+                <default>false</default>
+                <label>VOX National</label>
+            </value>
+            <value>
+                <fullName>Washington County Bank</fullName>
+                <default>false</default>
+                <label>Washington County Bank</label>
+            </value>
+            <value>
+                <fullName>Webster First Federal Credit Union</fullName>
+                <default>false</default>
+                <label>Webster First Federal Credit Union</label>
+            </value>
+            <value>
+                <fullName>Western National Bank</fullName>
+                <default>false</default>
+                <label>Western National Bank</label>
+            </value>
+            <value>
+                <fullName>Western States Bank</fullName>
+                <default>false</default>
+                <label>Western States Bank</label>
+            </value>
+            <value>
+                <fullName>Westside State Savings Bank</fullName>
+                <default>false</default>
+                <label>Westside State Savings Bank</label>
+            </value>
+            <value>
+                <fullName>Wheaton Bank &amp; Trust</fullName>
+                <default>false</default>
+                <label>Wheaton Bank &amp; Trust</label>
+            </value>
+            <value>
+                <fullName>Wintrust</fullName>
+                <default>false</default>
+                <label>Wintrust</label>
+            </value>
+            <value>
+                <fullName>Wintrust Bank NSCBT</fullName>
+                <default>false</default>
+                <label>Wintrust Bank NSCBT</label>
+            </value>
+            <value>
+                <fullName>Wintrust Comm. Banking</fullName>
+                <default>false</default>
+                <label>Wintrust Comm. Banking</label>
+            </value>
+            <value>
+                <fullName>Wintrust Mortgage</fullName>
+                <default>false</default>
+                <label>Wintrust Mortgage</label>
+            </value>
+            <value>
+                <fullName>WSFS Bank</fullName>
+                <default>false</default>
+                <label>WSFS Bank</label>
+            </value>
+            <value>
+                <fullName>York State Bank</fullName>
+                <default>false</default>
+                <label>York State Bank</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Colorado - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Colorado - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Colorado - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Colorado - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Columbus - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Columbus - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Columbus - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Columbus - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Columbus - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Fremont - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Fremont - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Fremont - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Fremont - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Fremont - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Illinois - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Illinois - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Illinois - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Illinois - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Illinois - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Kansas - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Kansas - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Kansas - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Kansas - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Kansas - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Lincoln - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Lincoln - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Lincoln - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Lincoln - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Lincoln - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>National - Equity Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>North Platte - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>North Platte - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>North Platte - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>North Platte - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>North Platte - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Small Business Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Omaha - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Platte Valley - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Platte Valley - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Platte Valley - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Platte Valley - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>Platte Valley - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>South Dakota - Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>South Dakota - Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>South Dakota - Community Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>South Dakota - Corporate Treasury Services (CTS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unchecked</controllingFieldValue>
+            <valueName>South Dakota - Specialty Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>114th Commercial Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>1st Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>AAHOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Ag Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Allegiance Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Amerant Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>American National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>American Savings Bank FSB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Amtrust Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Arbor Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Astoria Federal Savings Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Bank of the Ozarks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Bank of the San Juans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Beneficial Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Big Sky Western Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Cadence Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>California Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Canandaigua National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Cathay Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>CertusBank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Chain Bridge Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Chemcial Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Cherokee State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Citizen&#39;s Bank and Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Citizens Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Citizens Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Citizens Union Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>City National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Collegiate Peaks Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Commercial Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Community Bank N.A.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>CommunityBank of Texas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>CORE Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Crawford County Trust &amp; Savings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Crystal Lake Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Essex Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Bankcard VOX NTNL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FirstBank of Nebraska</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Bank of Wyoming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Federal Bank - Inficorp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Federal Lakewood</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Financial Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Bank Lewistown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Bank of Omaha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Bank of Omaha (National Accts Only)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Bank Texas/First Convenience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Bank Wealth Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First National Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Security of Missoula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>First Tri-County Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Five Points Bank of Hastings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FNB Commercial Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FNB Commercial Card - Colorado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FNB Commercial Card - Texas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FNBO Commercial Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>FNBO Correspondent Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Foothills Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Fort Hood National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Fremont Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Fremont National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Garden State Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Gate City Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>GFA Federal Credit Union</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Glacier Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Glens Falls National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Grand Valley Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Guaranty Bank and Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Heartland Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Hinsdale Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Houghton State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>IBC Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Independent Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Iowa State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Lake Forest Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Landmands Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Landmark National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>LegacyTexas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Libertyville Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Lone Star State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Meredith Village Savings Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Mountain West Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Mutual of Omaha Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>National Bank of Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>National – FRB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Nebraska State Bank &amp; Trust Co</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>New York Commercial Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>New York Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Northbrook Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>North Cascades Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Norwood Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Ohio Savings Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Old National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Old Plank Trail Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Plattsmouth State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Premier Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Provident Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Republic Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>River Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Sandy Spring Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Saratoga National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Schaumburg Bank and Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Security Bank of Kansas City</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Shelby County State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Sibley State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Small Business Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>SouthPoint Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>St. Charles Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>State Bank of the Lakes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Sun National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Synergy Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>TCF Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>The American National Bank of Texas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>The Freedom Bank of VA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Total Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Tower Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Town Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - Bellevue Private Bank Treasury Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - BTMU - HQA ACBE – NY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB – BTMU -HQA JCB –Midwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-CBD1-SD Pacific Rim Corp Grp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-CBD2-LA Pacific Rim Corp Grp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-CBD3 - SF Pacific Rim Corp Grp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-CBD4-Seattle Pacific Rim Corp Grp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Central Valley Bus. Bk. Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Corporate Deposit Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Desert Region PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Diablo Valley PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-East Bay CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-East Bay MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Fresno MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - HQA Jap Corp Bk-Mdwt BTMU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - IE Corporate Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Inland Empire MM Dep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - Labor Mgmt Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-LA Bus. Bk. Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-LA Middle Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - LA Middle Market Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-LA Real Estate Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Los Angeles PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-National Corporate Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Newport Beach PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - OC Business Banking Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - OC Middle Market Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-OC Priority Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Orange Co Bus. Bk. Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Orange County CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Pacific NW Business Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Portland MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Portland PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-RE Treasury Svcs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Sacramento MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Sacramento PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Diego Bus. Bk. Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Diego GTO PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Diego MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Fernando Valley CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Francisco Bus Bk Dep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Francisco Corp. Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Francisco MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-San Francisco PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Santa Clara Valley MM Dep.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - SD Corporate Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Seattle MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Seattle PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-Silicon Valley PB Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-State Govt.- State of CA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB - UBOC CA Local Gov</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>UB-W LA/South Bay MM Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Union Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Valley Bank of Helena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Village Bank and Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>VOX National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Washington County Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Webster First Federal Credit Union</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Western National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Western States Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Westside State Savings Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Wheaton Bank &amp; Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Wintrust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Wintrust Bank NSCBT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Wintrust Comm. Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Wintrust Mortgage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>WSFS Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>York State Bank</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

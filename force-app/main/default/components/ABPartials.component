@@ -1,0 +1,202 @@
+<apex:component >
+	<script type="text/ng-template" id="GenericAutomatedBooking.partial.html">
+		<div style="position: relative;">
+			<div ng-show="vm.showSpinner" class="slds-spinner_container">
+				<spinner size="medium" message="{{vm.spinnerMessage}}"></spinner>
+			</div>
+			<message></message>
+			<div class="slds-align--absolute-center">
+				<div ng-show="!vm.config.bookToCoreButtonEnabled && !vm.config.reserveLoanButtonEnabled">
+					<div><center>{{::vm.labels.AB_Book_To_Core_Completed_Description}}</center></div>
+					<hr />
+					<div ng-show="vm.config.renewLoanButtonEnabled">
+						<div>{{::vm.labels.AB_Renewing_To_Core_Description}}</div>
+						<br/>
+						<div class="slds-align--absolute-center">
+							<button
+								class="slds-button slds-button--brand"
+								ng-click="vm.initiateRenewal()" >
+								{{::vm.labels.AB_Renew_Loan}}
+							</button>
+						</div>
+					</div>
+					<div ng-show="vm.config.modifyLoanButtonEnabled">
+						<div>{{::vm.labels.AB_Modifying_To_Core_Description}}</div>
+						<br/>
+						<div class="slds-align--absolute-center">
+							<button
+								class="slds-button slds-button--brand"
+								ng-click="vm.initiateModification()" >
+								{{::vm.labels.AB_Modify_Loan}}
+							</button>
+						</div>
+					</div>
+				</div>
+				<div ng-show="vm.config.reserveLoanButtonEnabled">
+					<div>{{::vm.labels.AB_Reserve_Loan_Number_Description}}</div>
+					<br/>
+					<div class="slds-align--absolute-center">
+						<button
+							class="slds-button slds-button--brand"
+							ng-click="vm.initiateReservation()" >
+							{{::vm.labels.AB_Reserve_Loan_Number}}
+						</button>
+					</div>
+				</div>
+				<div ng-show="vm.config.bookToCoreButtonEnabled">
+					<div>{{::vm.labels.AB_Book_To_Core_Description}}</div>
+					<br/>
+					<div class="slds-align--absolute-center">
+						<button
+							class="slds-button slds-button--neutral"
+							ng-click="vm.initiateBooking()" >
+							{{::vm.labels.AB_Book_To_Core}}
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- if you wish to include a preview, then use the below to house it -->
+			<!-- BEGIN -->
+			<div class="row">
+				<div class="col-md-12">
+					<a href="javascript:void();" ng-click="vm.getCoreBookingMessage()">{{::vm.labels.AB_ShowPreview}}</a>
+				</div>
+				<div class="col-md-12" ng-show="vm.config.bookingdatapreview != null">
+					
+					<!-- Example two column floating design below -->
+					<!-- BEGIN -->
+					
+					
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 col-wrapper">
+								<div class="row view-container" style="border-top: 1px solid #d8dde6;">
+									
+									<div class="form-horizontal col-md-6 row-clear">
+										<div class="form-group row">
+											<div class="col-sm-4 content-label">
+					    						<span>
+													<div class="content-label">
+														 <label class="form-control-static input-sm">Loan Number</label>
+													</div>
+												</span>
+											</div>
+											<div class="col-sm-6 content-body">
+												<span>
+													<input readonly type="text" class="input-sm form-control" value="{{vm.config.bookingdatapreview.LoanId}}" placeholder="" /> 
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-horizontal col-md-6 row-clear">
+										<div class="form-group row">
+											<div class="col-sm-4 content-label">
+					    						<span>
+													<div class="content-label">
+														 <label class="form-control-static input-sm">Record Id</label>
+													</div>
+												</span>
+											</div>
+											<div class="col-sm-6 content-body">
+												<span>
+													<input readonly type="text" class="input-sm form-control" value="{{vm.config.bookingdatapreview.loan.recordId}}" placeholder="" /> 
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-horizontal col-md-6 row-clear">
+										<div class="form-group row">
+											<div class="col-sm-4 content-label">
+					    						<span>
+													<div class="content-label">
+														 <label class="form-control-static input-sm">Loan Name</label>
+													</div>
+												</span>
+											</div>
+											<div class="col-sm-6 content-body">
+												<span>
+													<input readonly type="text" class="input-sm form-control" value="{{vm.config.bookingdatapreview.loan.name}}" placeholder="" /> 
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-horizontal col-md-6 row-clear">
+										<div class="form-group row">
+											<div class="col-sm-4 content-label">
+					    						<span>
+													<div class="content-label">
+														 <label class="form-control-static input-sm">Product</label>
+													</div>
+												</span>
+											</div>
+											<div class="col-sm-6 content-body">
+												<span>
+													<input readonly type="text" class="input-sm form-control" value="{{vm.config.bookingdatapreview.loan.productReference.name}}" placeholder="" /> 
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<!-- if you wish to include a RAW preview, then use the below to house it -->
+									<!-- BEGIN -->
+									
+									<div class="form-horizontal col-md-12 row-clear">
+										<div class="form-group row">
+											<div class="col-sm-4 content-label">
+					    						<span>
+													<div class="content-label">
+														 <label class="form-control-static input-sm"><a href="javascript:void();" onclick="document.getElementById('datapreview1').style.display == 'none' ? document.getElementById('datapreview1').style.display = 'block' : document.getElementById('datapreview1').style.display = 'none'">{{::vm.labels.AB_ToggleRawView}}</a></label>
+													</div>
+												</span>
+											</div>
+											<div class="col-sm-6 content-body">
+												<span>
+													<textarea readonly id="datapreview1" placeholder="" class="input-sm form-control" style="display:none;width: 100%;height: 200px;overflow-x: scroll;overflow-y: scroll;">{{vm.config.bookingdatapreviewastext}}</textarea>
+												</span>
+											</div>
+										</div>
+									</div>
+									
+									<!-- END -->
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- END -->
+					
+					
+					
+				</div>
+			</div>
+			<!-- END -->
+			<br/>
+			<table class="slds-table slds-table--bordered slds-table--cell-buffer slds-m-top--medium slds-m-bottom--medium">
+				<thead>
+					<tr class="slds-text-heading--label">
+						<th>{{::vm.labels.AB_Status}}</th>
+						<th>{{::vm.labels.AB_DateTime}}</th>
+						<th>{{::vm.labels.AB_Action}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-show="vm.config.requestHistory.length == 0">
+						<td colspan="5" style="text-align: center !important;">
+							{{::vm.labels.AB_Empty_History}}
+						</td>
+					</tr>
+					<tr ng-repeat="historyItem in vm.config.requestHistory">
+						<td>{{historyItem.status}}</td>
+						<td>{{historyItem.requestDate}}</td>
+						<td>{{historyItem.action}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</script>
+</apex:component>

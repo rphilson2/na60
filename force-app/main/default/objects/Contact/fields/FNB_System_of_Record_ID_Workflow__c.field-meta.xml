@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNB_System_of_Record_ID_Workflow__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field resides on the Customer object, but it is needed on the contact object in order to load campaigns via data loader with CIXF ID as the external identifier.  A workflow populates this field on all new person customers.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>true</externalId>
+    <label>FNB System of Record ID (Workflow)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

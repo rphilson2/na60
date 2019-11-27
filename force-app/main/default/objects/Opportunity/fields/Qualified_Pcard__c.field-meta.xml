@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualified_Pcard__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Used to include or exclude Pcards that meet a specific criteria for the 2015 CTS Pcard Campaign</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked means it is included</inlineHelpText>
+    <label>Qualified Pcard</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

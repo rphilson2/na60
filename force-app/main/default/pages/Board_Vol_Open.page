@@ -1,0 +1,54 @@
+<apex:page standardController="Volunteer_Activity__c" extensions="BoardReportingExtension" showheader="false" standardStylesheets="false" tabStyle="Salesforce_on_Intranet__tab" action="{!getq}" title="Volunteer Service Tracking">
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+<style>
+.fixedheader {
+        position:fixed;
+        top:0px;
+        font-stretch: ultra-condensed;
+        left:0px;
+        height:28px;
+        width:100%;
+        background:#006952;
+        padding:20px;
+}
+</style>
+   <body>
+      <apex:form >
+        <center><apex:outputText value="Employee Volunteer Service Reporting" style="font-family: arial; font-size: 26px; font-weight: bold; color: #006952"/></center>
+        <center><apex:outputText value="Thank you for your commitment to strengthening your community." style="font-family: arial; font-size: 18px; font-weight: bold; color: #006952"/></center>
+        <hr/>
+        <table width="70%" align="center">
+            <tr>
+              <td class="outputtext"><p>First National Bank is committed to becoming a top performing bank for the communities we serve.  As
+              part of that commitment, it is important to understand how First National Bank employees spend their 
+              time volunteering in their communities.  To do so, we must first determine whether each employee 
+              volunteer service activity is associated with a nonprofit board or subcommittee, or if it falls under the 
+              category of general volunteerism. </p></td>
+            </tr>
+        </table>
+        <hr/>
+        <br/>
+        <center>
+            <apex:outputText value="Is this for service with a nonprofit board or sub-committee?  " styleclass="outputtext" style="font-weight: bold"></apex:outputText><a href="/boardreporting/BoardReporting?q={!logon_user}" style="font-family: Arial; font-size: 18px; font-style: italic" target="_top">Click Here</a>
+            <br/>
+            <br/>
+            <apex:outputText value="Examples: " style="font-family: arial; font-size: 16px; font-style: Italic; Font-weight: bold; color: #006130"/> <apex:outputText value="Serving on a nonprofit organization’s Board of Directors or Development Committee." style="font-family: arial; font-size: 16px; font-style: Italic; color: #006130"/>
+            <br/>
+            <br/>
+            <br/>
+            <apex:outputText value="Is this for any other volunteer activity with a nonprofit organization? " styleclass="outputtext" style="font-weight: bold"></apex:outputText><a href="/volunteer/VolunteerReporting?q={!logon_user}" style="font-family: Arial; font-size: 18px; font-style: italic" target="_top">Click Here</a>
+            <br/>
+            <br/>
+            <apex:outputText value="Examples: " style="font-family: arial; font-size: 16px; font-style: Italic; Font-weight: bold; color: #006130"/> <apex:outputText value="Providing mentoring to youth at a local school or serving at a food pantry by assembling and organizing donated items." style="font-family: arial; font-size: 16px; font-style: Italic; color: #006130"/>            
+        </center>
+        <br/>
+        <hr/>
+        <br/>
+        <center>
+           <apex:outputText value="If you feel your volunteer activity does not fall under either of these categories, email " styleclass="outputtext"></apex:outputText>
+           <a href="mailto:nonprofitservicequestions@fnni.com" style="font-family: Arial; font-size: 18px">nonprofitservicequestions@fnni.com</a>
+           <apex:outputText value=" for more info." styleclass="outputtext"></apex:outputText>
+        </center>
+      </apex:form>
+   </body>
+</apex:page>

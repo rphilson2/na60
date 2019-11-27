@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Reassignment_Attempts</fullName>
+    <active>true</active>
+    <description>Prohibits users from reassigning a mortgage refinance task multiple times</description>
+    <errorConditionFormula>AND( 
+RecordType.DeveloperName = &quot;Mortgage_Refinance&quot;, 
+Welcome_Call_Task_Count__c &gt; 2, 
+Previous_Call_Outcomes__c = &quot;&quot;)</errorConditionFormula>
+    <errorMessage>Unable to reassign. This task has already been reassigned.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,615 @@
+<apex:page standardController="Community_Giving__c" extensions="GrantReportTemplateCtrl" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Grant Follow Up">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.Surveyform)}"/>
+
+<style>
+.outputtext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+       
+        color: #000000;
+}
+.outputtextbold {
+        font-size: 72px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+}
+.outputlinkbold {
+        font-size: 18px;
+        font-family: Arial;
+        font-weight: bold;
+}
+.fixedheader {
+        top:20px;
+        color:white;
+        background:white;
+}
+.myButton {
+        background-color:transparent;
+        border:4px solid #006952;
+        display:inline-block;
+        cursor:pointer;
+        color:#006952;
+        font-family:Arial;
+        font-size:20px;
+        padding:22px 39px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #006952;
+        -webkit-appearance: none;
+}
+.body {
+        padding-top:40px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        font-family: "Arial";
+        color:#cf1616;
+}
+.textbar {
+        padding-top:50px;
+        align:center;
+        text-align:center;
+        width: 100%;
+}
+.bartext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        background-color: #565656;
+        color:white;
+        padding: 10px;
+}
+.blankrow {
+        height: 30px !important;
+}
+
+.outputtextbold1 {
+        font-size: 40px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    }
+.outputtextbold2 {
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    }
+.outputtextbold3 {
+        font-size: 22px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    }
+.outputtext0 {    
+        align:center;
+        font-size: 40px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    
+    }
+ .output {
+       
+       
+        color: #000000;
+    }
+</style>
+    <div class="fixedheader">
+        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_green.jpg')}" width="720" height="85"/>
+    </div>
+    
+    <body>
+      <div id="main_body" class="{!if(showMain,'visible','hidden')}">    
+      <div class="textbar">
+          <apex:outputText value="Community Development Grant Program Final Report" styleclass="outputtextbold2"></apex:outputText>
+          <br/>
+          <br/>
+          <apex:outputText value="For grants awarded in {!YEAR(Date_awarded)}, with grant periods ending in calendar year {!YEAR(Date_awarded + 365)}" styleclass="outputtext" style="float:center"></apex:outputText>
+      </div>
+      <div class="body">
+
+          <apex:form >
+            <apex:pageBlock >    
+                <table style="border-spacing: 2px;" align="center">
+                    <tr>
+                      <td width="185px"> 
+                         <apex:outputText value="Organization Name: " styleclass="outputtext" style="font-weight:bold;color:#005433"></apex:outputText>
+                      </td>
+                      <td width="45%">
+                         <apex:outputText value="{!organization_name}" id="volunteerOrganization" styleclass="outputtext"></apex:outputText>                      
+                      </td>
+                      <td width="170px">
+                         <apex:outputText value="Name of Program:  " styleclass="outputtext" style="font-weight:bold;color:#005433"></apex:outputText>
+                      </td>
+                      <td>
+                         <apex:outputText value="{!Name_of_Program}" id="ProgramName" styleclass="outputtext"></apex:outputText>
+                      </td>                      
+                   </tr>
+                   <tr>
+                      <td>
+                        <apex:outputText value="Date Awarded:" styleclass="outputtext" style="font-weight:bold;color:#005433"></apex:outputText>
+                      </td>
+                      <td>
+                        <apex:outputText value="{0, date, MMMM d','  yyyy}" id="Awardeddate" styleclass="outputtext">
+                        <apex:param value="{!date_awarded}" /> 
+                        </apex:outputText>                      
+                      </td>
+                      <td>
+                        <apex:outputText value="Grant Priority:  " styleclass="outputtext" style="font-weight:bold;color:#005433"></apex:outputText>
+                      </td>
+                      <td>
+                        <apex:outputText value="{!purpose}" id="GrantPriority" styleclass="outputtext" style="color:{!PrioColor}"></apex:outputText>                  
+                      </td>                      
+                  </tr>
+                </table>               
+           </apex:pageblock>
+           <br/>
+            <apex:pageBlock >    
+                <table style="border-spacing: 2px;" align="left">
+                    <tr>
+                      <td> 
+                         <apex:outputText value="Program Description: " styleclass="outputtext" style="font-weight:bold;color:#005433"></apex:outputText>
+                      </td>
+                   </tr>
+                   <tr>
+                      <td>
+                        <apex:outputText value="{!brief_program_description}" id="ProgDescr" styleclass="outputtext"></apex:outputText>
+                      </td>                      
+                  </tr>
+                </table>               
+           </apex:pageblock>           
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>           
+           <apex:outputText value="Last year, your organization’s program was awarded funds for {!purpose}." styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <br/>
+           <apex:outputPanel rendered="{!Anyofthem}">           
+           <apex:outputText value="On your application you indicated that your organization’s program would achieve the following outcomes: " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!Stabilization}">
+           <apex:pageBlock >
+           <table style="border-spacing: 2px; background-color: #F7F7F7" border-width="1px" border-color="black" align="left">
+              <tr>
+                  <td> 
+                    <apex:outputText value="Number of Housing Units Created/Built: " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!housing_units_created_built}" styleclass="outputtext"></apex:outputText>                      
+                  </td>
+                  <td>
+                     <apex:outputText value="Number of individuals receiving homeownership education:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Individuals_Rec_Homeownership_Educ}" styleclass="outputtext"></apex:outputText>
+                  </td>                                        
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of housing units rehabilitated/renovated:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Number_of_Housing_Units_Rehab_Renov}" styleclass="outputtext"></apex:outputText>
+                  </td>                               
+                  <td>
+                     <apex:outputText value="Number of homeownership education sessions provided:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Homeownership_Educ_Sessions}" styleclass="outputtext"></apex:outputText>
+                  </td>                      
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of housing units financed:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Housing_Units_Financed}" styleclass="outputtext"></apex:outputText>
+                  </td>
+              </tr>           
+           </table>
+           </apex:pageBlock>
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!educatedworkforce}">
+           <apex:pageBlock >
+           <table style="border-spacing: 2px; background-color: #F7F7F7" border-width="1px" border-color="black" align="left">
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of adults provided education:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Adults_Provided_Education}" styleclass="outputtext"></apex:outputText>
+                  </td>                      
+                  <td>
+                     <apex:outputText value="Number of youth provided workforce/career education:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Youth_Provided_Work_Career_Educ}" styleclass="outputtext"></apex:outputText>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of adults provided vocational training:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Adults_Provided_Vocational_Training}" styleclass="outputtext"></apex:outputText>
+                  </td>                      
+                  <td>
+                     <apex:outputText value="Number of youth provided vocational training:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Youth_Provided_Voc_Train_Work_Dev}" id="GrantPriority" styleclass="outputtext"></apex:outputText>
+                  </td>
+              </tr>
+              <tr>
+                  <td> 
+                    <apex:outputText value="Total Number of individuals served: " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Individuals_Served_in_Prop_Program}" styleclass="outputtext"></apex:outputText>                      
+                  </td>
+              </tr>              
+           </table>
+           </apex:pageBlock>
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!stronglocal}">
+           <apex:pageBlock >
+           <table style="border-spacing: 2px; background-color: #F7F7F7" border-width="1px" border-color="black" align="left">
+              <tr>
+                  <td> 
+                    <apex:outputText value="Number of small businesses assisted:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Small_Businesses_Assisted}" styleclass="outputtext"></apex:outputText>                      
+                  </td>
+                  <td>
+                     <apex:outputText value="Number of new businesses served:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!New_Businesses_Served}" styleclass="outputtext"></apex:outputText>
+                  </td>                                        
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of workshops and training events provided:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Workshops_Training_Events_Provided}" styleclass="outputtext"></apex:outputText>
+                  </td>                               
+                  <td>
+                     <apex:outputText value="Number of individual coaching sessions with small businesses:  " styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Indiv_Coaching_Sessions_w_Small_Bus}" styleclass="outputtext"></apex:outputText>
+                  </td>                      
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of full time jobs created:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Jobs_Created_Full_Time}" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="Number of part time jobs created:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:outputText value="{!Jobs_Created_Part_Time}" styleclass="outputtext"></apex:outputText>
+                  </td>                  
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of jobs retained:" styleclass="outputtext" style="color:#005433"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:outputText value="{!Jobs_Retained}" styleclass="outputtext"></apex:outputText>
+                  </td>
+              </tr>              
+           </table>
+           </apex:pageBlock>
+           </apex:outputPanel>           
+           <apex:outputPanel rendered="{!Anyofthem}">
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <apex:pagemessages ></apex:pagemessages>           
+           <br/>
+           <apex:outputText value="Provide the actual outcomes your organization’s program achieved as a direct result of the Bank’s grant award:" styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!Stabilization}">
+           <apex:pageBlock > 
+           <table style="border-spacing: 2px; background-color: #F7F7F7" align="left">
+              <tr>
+                  <td> 
+                    <apex:outputText value="a) Number of housing units created/built:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="15%">
+                     <apex:inputfield value="{!Community_Giving__c.Housing_Units_Created_Built_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" tabOrderHint="1" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/> 
+                  </td>
+                  <td>
+                     <apex:outputText value="d) Number of individuals receiving homeownership education:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Individuals_Rec_Homeownership_Educ_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true"  tabOrderHint="4" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="b) Number of housing units rehabilitated/renovated:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="15%">
+                     <apex:inputfield value="{!Community_Giving__c.Housing_Units_Rehabilitated_Renovated_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" tabOrderHint="2" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+                  <td>
+                     <apex:outputText value="e) Number of homeownership education sessions provided:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Homeownership_Educ_Sessions_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" tabOrderHint="5" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                  
+              </tr>
+              <tr>                  
+                  <td>
+                     <apex:outputText value="c) Number of housing units financed:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Housing_Units_Financed_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" tabOrderHint="3" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                      
+              </tr>           
+           </table>
+           </apex:pageBlock>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <apex:outputText value="Is the number you entered in 2(c) above (#of housing units financed) included within question 2(a)or(b)?" styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <apex:selectRadio value="{!twolofc1}" style="width: 300px; height: 30px;" required="true" styleClass="outputtext">
+              <apex:selectoption itemvalue="Yes" Itemlabel="Yes"/>
+              <apex:selectoption itemvalue="No" itemlabel="No"/>
+           </apex:selectRadio>         
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!educatedworkforce}">           
+           <apex:pageBlock > 
+           <table style="border-spacing: 2px; background-color: #F7F7F7" align="left">
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of adults provided education:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="15%">
+                     <apex:inputfield value="{!Community_Giving__c.Adults_Provided_Education_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                      
+                  <td>
+                     <apex:outputText value="Number of youth provided workforce/career education:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Youth_Provided_Work_Career_Educ_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of adults provided vocational/career training or workforce development:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="15%">
+                     <apex:inputfield value="{!Community_Giving__c.Adults_Provided_Vocational_Training_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                      
+                  <td>
+                     <apex:outputText value="Number of youth provided vocational/career training or workforce development:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Youth_Provided_Voc_Train_Work_Dev_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+              </tr>
+              <tr>
+                  <td> 
+                    <apex:outputText value="Number of individuals served: " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="15%">
+                     <apex:inputfield value="{!Community_Giving__c.Individuals_Served_in_Prop_Program_AI__c}" styleclass="outputtext" style="width: 100px; height: 20px;" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/> 
+                  </td>
+              </tr>              
+           </table>
+           </apex:pageBlock> 
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!stronglocal}">
+           <apex:pageBlock >
+           <table style="border-spacing: 2px; background-color: #F7F7F7" border-width="1px" border-color="black" align="left">
+              <tr>
+                  <td> 
+                    <apex:outputText value="Number of small businesses assisted:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:inputfield value="{!Community_Giving__c.Small_Businesses_Assisted_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+                  <td>
+                     <apex:outputText value="Number of new businesses served:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.New_Businesses_Served_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                                        
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of workshops and training events provided:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:inputfield value="{!Community_Giving__c.Workshops_Training_Events_Provided_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                               
+                  <td>
+                     <apex:outputText value="Number of individual coaching sessions with small businesses:  " styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Indiv_Coaching_Sessions_w_Small_Bus_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                      
+              </tr>
+              <tr>
+                  <td>
+                     <apex:outputText value="Number of full time jobs created:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td width="35%">
+                     <apex:inputfield value="{!Community_Giving__c.Jobs_Created_Full_Time_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>
+                  <td>
+                     <apex:outputText value="Number of part time jobs created:" styleclass="outputtext"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Jobs_Created_Part_Time_AI__c}" styleclass="outputtext" required="true" onkeydown="if(event.keyCode==13){this.blur();actionFunction();}"/>
+                  </td>                  
+              </tr>
+           </table>
+           </apex:pageBlock>
+           </apex:outputPanel>
+           <apex:outputPanel rendered="{!AnyofThem}">
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+               <br/>
+           </apex:outputPanel>
+           <apex:outputText value="Elaborate on the numbers provided by describing measurable outcomes realized or produced by your organization that are " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <apex:outputText value="directly " styleclass="outputtext" style="font-weight:bold; font-style:italic"></apex:outputText>
+           <apex:outputText value="attributable to the grant award provided by the Bank: " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           
+           <br/>
+           <apex:inputfield value="{!Community_Giving__c.Outcomes_directly_attributed_to_grant__c}" styleclass="outputtext" style="width: 750px; height: 125px;" required="true"/>              
+           <br/>
+           <br/>
+           <br/>
+           <apex:outputText value="Describe outcomes realized or produced by your organization that are " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <apex:outputText value="indirectly " styleclass="outputtext" style="font-weight:bold; font-style:italic"></apex:outputText>
+           <apex:outputText value="attributable to the grant award from the Bank (i.e. partnerships, additional funding, leveraging resources, other):" styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <apex:inputfield value="{!Community_Giving__c.Outcomes_indirectly_attributed_to_grant__c}" styleclass="outputtext" style="width: 750px; height: 125px;" required="true"/>
+           <br/>
+           <br/>
+           <br/>
+           <apex:outputText value="Describe how you measure progress toward program objectives (i.e. tracking via database, asking participants, reports produced by another entity, other): " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <apex:inputfield value="{!Community_Giving__c.Hw_to_Measure_progm_toward_Prog_obj__c}" styleclass="outputtext" style="width: 750px; height: 125px;" required="true"/>
+           <br/>
+           <br/>
+           <br/>
+           <apex:outputText value="Share a brief story or anecdote that illustrates the success achieved as a result of the Bank's funding:" styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <apex:inputfield value="{!Community_Giving__c.Success_Story_or_Anecdote__c}" styleclass="outputtext" style="width: 750px; height: 125px;" required="true"/>
+           <br/>
+           <br/>
+           <br/>
+           <apex:outputText value="If your outcomes fell short of your projections or expectations, please explain why.  Detail how you plan to overcome barriers to achieve those outcomes in the future, or whether you are modifying projections:" styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <apex:inputfield value="{!Community_Giving__c.Reasons_outcomes_fell_short_of_expected__c}" styleclass="outputtext" style="width: 750px; height: 125px;" required="false"/>
+           <br/>
+           <br/>
+           <br/>
+           <table style="border-spacing: 2px;">
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+              <tr>
+                 <td>
+                    <apex:commandButton action="{!NextPage}" value="Continue >>" style="background:#005943; color: white; font-style:italic; font-size:14pt; width:180px; Height:30px"/>                    
+                 </td>
+              </tr>
+              <tr class="blankrow"></tr>
+           </table>                 
+           <br/>              
+         </apex:form>
+      </div>          
+      </div>
+      <div id="sec_page" class="{!if(showSec,'visible','hidden')}">
+      <div class="body">
+          <apex:form >                               
+           <div class="textbar">
+               <apex:outputText value="Report Certification" styleclass="outputtextbold3" style="color:#005943"></apex:outputText>
+           </div>
+           <br/>
+           <br/>
+           <apex:pagemessages ></apex:pagemessages>           
+           <apex:outputText value="I attest that all of the information contained within this report and its supporting documents is truthful and accurate to the best of my knowledge." styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+           <br/>
+           <apex:outputText value="Electronic signatures are acceptable and preferred.  Please type your full name and date in the boxes below:" styleclass="outputtext" style="font-style:italic"></apex:outputText>
+           <br/>
+           <br/>
+           <table style="border-spacing: 2px; background-color: #FFFFFF" border-width="1px" border-color="black" align="left">
+              <tr>
+                  <td> 
+                    <apex:outputText value="Full Name: " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+                  </td>
+                  <td width="45%">
+                     <apex:inputfield value="{!Community_Giving__c.Full_Name_and_date__c}" styleclass="outputtext" style="color:#003620; width: 350px"/>
+                  </td>
+                  <td>
+                     <apex:outputText value="Date (MM/DD/YYYY): " styleclass="outputtext" style="font-weight:bold"></apex:outputText>
+                  </td>
+                  <td>
+                     <apex:inputfield value="{!Community_Giving__c.Signed_Date__c}" styleclass="outputtext" style="color:#003620"/>
+                  </td>                                        
+              </tr>
+           </table>
+           <br/>
+           <br/>
+           <br/>          
+           <div class="textbar">
+               <apex:outputText value="Supporting Documentation" styleclass="outputtextbold3" style="color:#005943"></apex:outputText>
+           </div>
+           <table style="border-spacing: 2px;">
+              <tr> <td class="outputtext">If you have documents that highllight outcomes or illustrate the impact of this award, please upload them below (up to two).  Note that any attachments should supplement the textfields, and not be used as a substitute for completing the form. </td></tr>
+              <tr> <td class="outputtext">
+                      <apex:actionregion rendered="{!IF(Attached = false, true, false)}">
+                         <apex:inputFile value="{!attachment.body}" filename="{!attachment.name}" id="file"/>
+                         <apex:commandButton action="{!upload}" value="Upload" style="background:white;width:100px; Height:30px"/>
+                      </apex:actionregion>
+                      <apex:outputText value="Uploaded File 1:  " styleClass="outputtext" style="font-weight:bold; color:#005943" rendered="{!IF(Attached = false, false, true)}"/>
+                      <apex:outputText value="{!Attach_Name}" styleClass="outputtext" style="font-style:italic; color:black" rendered="{!IF(Attached = false, false, true)}"/>                               
+                   </td>
+              </tr>
+              <tr class="blankrow"></tr>
+              <tr> <td class="outputtext">
+                      <apex:outputText value="Upload an additional document here " styleClass="outputtext" rendered="{!IF(Attached1 = false && Attached = true, true, false)}"/>
+              </td></tr>
+              <tr> <td class="outputtext">
+                      <apex:actionregion rendered="{!IF(Attached1 = false && Attached = true, true, false)}">
+                         <apex:inputFile value="{!attachment1.body}" filename="{!attachment1.name}" id="files"/>
+                         <apex:commandButton value="Upload" action="{!upload1}" style="background:white;width:100px; Height:30px"/>
+                      </apex:actionregion>
+                      <apex:outputText value="Uploaded File 2:  " styleClass="outputtext" style="font-weight:bold; color:#005943" rendered="{!IF(Attached1 = false, false, true)}"/>
+                      <apex:outputText value="{!Attach1_Name}" styleClass="outputtext" style="font-style:italic; color:black" rendered="{!IF(Attached1 = false, false, true)}"/>                               
+                   </td>
+              </tr>
+           </table>
+           <table style="border-spacing: 2px;">
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+              <tr>
+                 <td>
+                    <apex:commandButton action="{!PrevPage}" value="<< Previous Page" style="background:white; color: #003620; font-size:15pt; width:180px; Height:40px"/>                     
+                 </td>                  
+                 <td>
+                    <apex:commandButton action="{!Savecommunityinvestment}" value="Submit Form" style="background:#00128A; color: white; font-style:italic; font-size:15pt; width:220px; Height:40px"/>                    
+                 </td>
+              </tr>
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+              <tr class="blankrow"></tr>
+           </table>   
+         </apex:form>
+      </div>
+      </div>          
+  </body>
+</apex:page>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Installation_Maintenance__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Installation Maintenance</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aircraft Mechanic &amp; Service Technician</fullName>
+                <default>false</default>
+                <label>Aircraft Mechanic &amp; Service Technician</label>
+            </value>
+            <value>
+                <fullName>Automated Teller Machine Repairer</fullName>
+                <default>false</default>
+                <label>Automated Teller Machine Repairer</label>
+            </value>
+            <value>
+                <fullName>Automotive/RV Technician</fullName>
+                <default>false</default>
+                <label>Automotive/RV Technician</label>
+            </value>
+            <value>
+                <fullName>Avionics Technician</fullName>
+                <default>false</default>
+                <label>Avionics Technician</label>
+            </value>
+            <value>
+                <fullName>Bicycle Repairer</fullName>
+                <default>false</default>
+                <label>Bicycle Repairer</label>
+            </value>
+            <value>
+                <fullName>Bus &amp; Trucks Mechanic</fullName>
+                <default>false</default>
+                <label>Bus &amp; Trucks Mechanic</label>
+            </value>
+            <value>
+                <fullName>Camera &amp; Photographic Equipment Repair</fullName>
+                <default>false</default>
+                <label>Camera &amp; Photographic Equipment Repair</label>
+            </value>
+            <value>
+                <fullName>Coin Vending, Amusement Machine Repairer</fullName>
+                <default>false</default>
+                <label>Coin Vending, Amusement Machine Repairer</label>
+            </value>
+            <value>
+                <fullName>Commercial Diver</fullName>
+                <default>false</default>
+                <label>Commercial Diver</label>
+            </value>
+            <value>
+                <fullName>Computer Office Machine Repairer</fullName>
+                <default>false</default>
+                <label>Computer Office Machine Repairer</label>
+            </value>
+            <value>
+                <fullName>Control Valve Installer &amp; Repairer</fullName>
+                <default>false</default>
+                <label>Control Valve Installer &amp; Repairer</label>
+            </value>
+            <value>
+                <fullName>Diesel Engine Specialist</fullName>
+                <default>false</default>
+                <label>Diesel Engine Specialist</label>
+            </value>
+            <value>
+                <fullName>Electric Power Tool Repairer</fullName>
+                <default>false</default>
+                <label>Electric Power Tool Repairer</label>
+            </value>
+            <value>
+                <fullName>Electrical Repair &amp; Installer</fullName>
+                <default>false</default>
+                <label>Electrical Repair &amp; Installer</label>
+            </value>
+            <value>
+                <fullName>Fabric Mender</fullName>
+                <default>false</default>
+                <label>Fabric Mender</label>
+            </value>
+            <value>
+                <fullName>Heat &amp; Air Condition Mechanic/Installer</fullName>
+                <default>false</default>
+                <label>Heat &amp; Air Condition Mechanic/Installer</label>
+            </value>
+            <value>
+                <fullName>Heavy Equipment Mechanic</fullName>
+                <default>false</default>
+                <label>Heavy Equipment Mechanic</label>
+            </value>
+            <value>
+                <fullName>Helper of Repairer Workers</fullName>
+                <default>false</default>
+                <label>Helper of Repairer Workers</label>
+            </value>
+            <value>
+                <fullName>Home Appliance Repairer</fullName>
+                <default>false</default>
+                <label>Home Appliance Repairer</label>
+            </value>
+            <value>
+                <fullName>Home Entertainment Equipment Repairer</fullName>
+                <default>false</default>
+                <label>Home Entertainment Equipment Repairer</label>
+            </value>
+            <value>
+                <fullName>Industrial Machinery Mechanic</fullName>
+                <default>false</default>
+                <label>Industrial Machinery Mechanic</label>
+            </value>
+            <value>
+                <fullName>Instrument Repair-All Other</fullName>
+                <default>false</default>
+                <label>Instrument Repair-All Other</label>
+            </value>
+            <value>
+                <fullName>Line Installer &amp; Repairer</fullName>
+                <default>false</default>
+                <label>Line Installer &amp; Repairer</label>
+            </value>
+            <value>
+                <fullName>Locksmith &amp; Safe Repairer</fullName>
+                <default>false</default>
+                <label>Locksmith &amp; Safe Repairer</label>
+            </value>
+            <value>
+                <fullName>Maintenance Worker</fullName>
+                <default>false</default>
+                <label>Maintenance Worker</label>
+            </value>
+            <value>
+                <fullName>Manufactured Mobile Home Installer</fullName>
+                <default>false</default>
+                <label>Manufactured Mobile Home Installer</label>
+            </value>
+            <value>
+                <fullName>Mechanical Door Repairer</fullName>
+                <default>false</default>
+                <label>Mechanical Door Repairer</label>
+            </value>
+            <value>
+                <fullName>Medical Equipment Repairer</fullName>
+                <default>false</default>
+                <label>Medical Equipment Repairer</label>
+            </value>
+            <value>
+                <fullName>Millwright</fullName>
+                <default>false</default>
+                <label>Millwright</label>
+            </value>
+            <value>
+                <fullName>Musical Instrument Repairer &amp; Tuner</fullName>
+                <default>false</default>
+                <label>Musical Instrument Repairer &amp; Tuner</label>
+            </value>
+            <value>
+                <fullName>Radio Mechanic</fullName>
+                <default>false</default>
+                <label>Radio Mechanic</label>
+            </value>
+            <value>
+                <fullName>Recreational Vehicle Service Technician</fullName>
+                <default>false</default>
+                <label>Recreational Vehicle Service Technician</label>
+            </value>
+            <value>
+                <fullName>Refractory Materials Repairer</fullName>
+                <default>false</default>
+                <label>Refractory Materials Repairer</label>
+            </value>
+            <value>
+                <fullName>Refrigeration Mechanic &amp; Installer</fullName>
+                <default>false</default>
+                <label>Refrigeration Mechanic &amp; Installer</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Rigger</fullName>
+                <default>false</default>
+                <label>Rigger</label>
+            </value>
+            <value>
+                <fullName>Security &amp; Fire Alarm System Installer</fullName>
+                <default>false</default>
+                <label>Security &amp; Fire Alarm System Installer</label>
+            </value>
+            <value>
+                <fullName>Signal &amp; Track Switch Repairer</fullName>
+                <default>false</default>
+                <label>Signal &amp; Track Switch Repairer</label>
+            </value>
+            <value>
+                <fullName>Small Motor Boat Mechanic</fullName>
+                <default>false</default>
+                <label>Small Motor Boat Mechanic</label>
+            </value>
+            <value>
+                <fullName>Small Motorcycle Mechanic</fullName>
+                <default>false</default>
+                <label>Small Motorcycle Mechanic</label>
+            </value>
+            <value>
+                <fullName>Small Power Equipment &amp; Engine Mechanic</fullName>
+                <default>false</default>
+                <label>Small Power Equipment &amp; Engine Mechanic</label>
+            </value>
+            <value>
+                <fullName>Telecommunication Equipment Installer</fullName>
+                <default>false</default>
+                <label>Telecommunication Equipment Installer</label>
+            </value>
+            <value>
+                <fullName>Telecommunication Equipment Repairer</fullName>
+                <default>false</default>
+                <label>Telecommunication Equipment Repairer</label>
+            </value>
+            <value>
+                <fullName>Telecommunication Line Installer</fullName>
+                <default>false</default>
+                <label>Telecommunication Line Installer</label>
+            </value>
+            <value>
+                <fullName>Tire, Repairer &amp; Changer</fullName>
+                <default>false</default>
+                <label>Tire, Repairer &amp; Changer</label>
+            </value>
+            <value>
+                <fullName>Watch Repairer</fullName>
+                <default>false</default>
+                <label>Watch Repairer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

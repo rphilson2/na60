@@ -1,0 +1,15 @@
+<apex:page standardController="Account" extensions="POSIRelatedList_Controller">
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!POSI}" var="a">
+            <apex:column headerValue="IMPAX Profile Grid ID">
+                <apex:outputlink target="_blank" value="/apex/POSI?id={!a.id}"> {!a.name} 
+                </apex:outputlink>
+            </apex:column>
+            <apex:column headerValue="Account">
+                <apex:outputText value="{!a.Account__r.Name}">
+                </apex:outputText>
+            </apex:column>
+            <apex:column headerValue="Created Date/Time" value="{!a.CreatedDate}"/>
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

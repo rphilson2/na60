@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Construction_and_Extraction__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Construction and Extraction</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assistant/Helper - All</fullName>
+                <default>false</default>
+                <label>Assistant/Helper - All</label>
+            </value>
+            <value>
+                <fullName>Boilermaker</fullName>
+                <default>false</default>
+                <label>Boilermaker</label>
+            </value>
+            <value>
+                <fullName>Brick mason &amp; Block mason</fullName>
+                <default>false</default>
+                <label>Brick mason &amp; Block mason</label>
+            </value>
+            <value>
+                <fullName>Cement Masonry &amp; Concrete Finisher</fullName>
+                <default>false</default>
+                <label>Cement Masonry &amp; Concrete Finisher</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Building Inspector</fullName>
+                <default>false</default>
+                <label>Construction &amp; Building Inspector</label>
+            </value>
+            <value>
+                <fullName>Derrick Operator - Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Derrick Operator - Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Drywall Taper/Ceiling Tile Installer</fullName>
+                <default>false</default>
+                <label>Drywall Taper/Ceiling Tile Installer</label>
+            </value>
+            <value>
+                <fullName>Earth Driller</fullName>
+                <default>false</default>
+                <label>Earth Driller</label>
+            </value>
+            <value>
+                <fullName>Electrician</fullName>
+                <default>false</default>
+                <label>Electrician</label>
+            </value>
+            <value>
+                <fullName>Elevator Installer &amp; Repairmen</fullName>
+                <default>false</default>
+                <label>Elevator Installer &amp; Repairmen</label>
+            </value>
+            <value>
+                <fullName>Explosive Worker/Expert</fullName>
+                <default>false</default>
+                <label>Explosive Worker/Expert</label>
+            </value>
+            <value>
+                <fullName>Extraction Worker - All Other</fullName>
+                <default>false</default>
+                <label>Extraction Worker - All Other</label>
+            </value>
+            <value>
+                <fullName>Fence Erector</fullName>
+                <default>false</default>
+                <label>Fence Erector</label>
+            </value>
+            <value>
+                <fullName>Flooring/Tile Installer</fullName>
+                <default>false</default>
+                <label>Flooring/Tile Installer</label>
+            </value>
+            <value>
+                <fullName>Glazier</fullName>
+                <default>false</default>
+                <label>Glazier</label>
+            </value>
+            <value>
+                <fullName>Hazardous Material Removal Worker</fullName>
+                <default>false</default>
+                <label>Hazardous Material Removal Worker</label>
+            </value>
+            <value>
+                <fullName>Helper - Extraction Worker</fullName>
+                <default>false</default>
+                <label>Helper - Extraction Worker</label>
+            </value>
+            <value>
+                <fullName>Highway Maintenance Worker</fullName>
+                <default>false</default>
+                <label>Highway Maintenance Worker</label>
+            </value>
+            <value>
+                <fullName>Insulation Worker</fullName>
+                <default>false</default>
+                <label>Insulation Worker</label>
+            </value>
+            <value>
+                <fullName>Miner</fullName>
+                <default>false</default>
+                <label>Miner</label>
+            </value>
+            <value>
+                <fullName>Operating Engineer</fullName>
+                <default>false</default>
+                <label>Operating Engineer</label>
+            </value>
+            <value>
+                <fullName>Other Construction Equipment Operator</fullName>
+                <default>false</default>
+                <label>Other Construction Equipment Operator</label>
+            </value>
+            <value>
+                <fullName>Painter-Construction &amp; Maintenance</fullName>
+                <default>false</default>
+                <label>Painter-Construction &amp; Maintenance</label>
+            </value>
+            <value>
+                <fullName>Paperhanger</fullName>
+                <default>false</default>
+                <label>Paperhanger</label>
+            </value>
+            <value>
+                <fullName>Paving Surfacing &amp; Trampling Equipment Operator</fullName>
+                <default>false</default>
+                <label>Paving Surfacing &amp; Trampling Equipment Operator</label>
+            </value>
+            <value>
+                <fullName>Pile - Driver Operator</fullName>
+                <default>false</default>
+                <label>Pile - Driver Operator</label>
+            </value>
+            <value>
+                <fullName>Pipe layer</fullName>
+                <default>false</default>
+                <label>Pipe layer</label>
+            </value>
+            <value>
+                <fullName>Plasterer &amp; Stucco Mason</fullName>
+                <default>false</default>
+                <label>Plasterer &amp; Stucco Mason</label>
+            </value>
+            <value>
+                <fullName>Plumber, Pipefitter &amp; Steamfitter</fullName>
+                <default>false</default>
+                <label>Plumber, Pipefitter &amp; Steamfitter</label>
+            </value>
+            <value>
+                <fullName>Rail-Track Laying &amp; Maintenance Equipment Operator</fullName>
+                <default>false</default>
+                <label>Rail-Track Laying &amp; Maintenance Equipment Operator</label>
+            </value>
+            <value>
+                <fullName>Reinforcing Iron &amp; Rebar Worker</fullName>
+                <default>false</default>
+                <label>Reinforcing Iron &amp; Rebar Worker</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Rock Splitter - Quarry</fullName>
+                <default>false</default>
+                <label>Rock Splitter - Quarry</label>
+            </value>
+            <value>
+                <fullName>Roof Bolter - Mining</fullName>
+                <default>false</default>
+                <label>Roof Bolter - Mining</label>
+            </value>
+            <value>
+                <fullName>Roofer</fullName>
+                <default>false</default>
+                <label>Roofer</label>
+            </value>
+            <value>
+                <fullName>Rotary Dill Operator-Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Rotary Dill Operator-Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Roustabouts - Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Roustabouts - Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Segmental Pavers</fullName>
+                <default>false</default>
+                <label>Segmental Pavers</label>
+            </value>
+            <value>
+                <fullName>Septic Tank Servicing &amp; Sewer Pipe Cleaner</fullName>
+                <default>false</default>
+                <label>Septic Tank Servicing &amp; Sewer Pipe Cleaner</label>
+            </value>
+            <value>
+                <fullName>Service Unit Operator-Oil,Gas,Mining</fullName>
+                <default>false</default>
+                <label>Service Unit Operator-Oil,Gas,Mining</label>
+            </value>
+            <value>
+                <fullName>Sheet Metal Worker</fullName>
+                <default>false</default>
+                <label>Sheet Metal Worker</label>
+            </value>
+            <value>
+                <fullName>Structural Iron &amp; Steel Worker</fullName>
+                <default>false</default>
+                <label>Structural Iron &amp; Steel Worker</label>
+            </value>
+            <value>
+                <fullName>Supervisor/Manager Construction, Extraction</fullName>
+                <default>false</default>
+                <label>Supervisor/Manager Construction, Extraction</label>
+            </value>
+            <value>
+                <fullName>Terrazzo Worker &amp; Finisher</fullName>
+                <default>false</default>
+                <label>Terrazzo Worker &amp; Finisher</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Related Worker-Other</fullName>
+                <default>false</default>
+                <label>Construction &amp; Related Worker-Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,88 @@
+<apex:page standardController="IMPAX__c" showHeader="false" standardStylesheets="false" extensions="IMPAX_Controller" sidebar="false" renderAs="advanced_pdf"> 
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_pdf)}"/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:image id="fnbgreen_4color" value="{!$Resource.Surveyform}" width="265" height="42"/>
+      </td>
+      <td align="right">
+         <apex:outputText value="Account Name:  " style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+         <apex:outputText value="{!account_name}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>         
+      </td>
+   </tr>
+</table>
+<br/>
+<center><apex:outputText value="IMPAX Profile" style="font-family:sans-serif; font-weight:bold;font-size:12pt"/></center>
+<center><apex:outputText value="{!IMPAX__c.name}" style="font-family:sans-serif; font-weight:normal;font-size:11pt"/></center>
+<br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="Profile" style="font-family:sans-serif; font-size:12pt; color:#003B23"></apex:outputText>
+      </td>
+   </tr>
+   <hr/>
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="{!IMPAX__c.Profile__c}" style="font-family:sans-serif; font-size:10pt; white-space: pre-wrap"></apex:outputText>
+      </td>
+   </tr>
+</table>
+<br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="Goals" style="font-family:sans-serif; font-size:12pt; color:#003B23"></apex:outputText>
+      </td>
+   </tr>
+   <hr/>
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="{!IMPAX__c.Goals__c}" style="font-family:sans-serif; font-size:10pt; white-space: pre-wrap"></apex:outputText>
+      </td>
+   </tr>
+</table>
+<br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="Concerns" style="font-family:sans-serif; font-size:12pt; color:#003B23"></apex:outputText>
+      </td>
+   </tr>
+   <hr/>
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="{!IMPAX__c.Concerns__c}" style="font-family:sans-serif; font-size:10pt; white-space: pre-wrap"></apex:outputText>
+      </td>
+   </tr>
+</table>
+<br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="Outside Assets" style="font-family:sans-serif; font-size:12pt; color:#003B23"></apex:outputText>
+      </td>
+   </tr>
+   <hr/>
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="{!IMPAX__c.Outside_Assets__c}" style="font-family:sans-serif; font-size:10pt; white-space: pre-wrap"></apex:outputText>
+      </td>
+   </tr>
+</table>
+<br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="Follow-up items" style="font-family:sans-serif; font-size:12pt; color:#003B23"></apex:outputText>
+      </td>
+   </tr>
+   <hr/>
+   <tr width="100%">
+      <td align="left">
+         <apex:outputText value="{!IMPAX__c.Follow_Up_Items__c}" style="font-family:sans-serif; font-size:10pt; white-space: pre-wrap"></apex:outputText>
+      </td>
+   </tr>
+</table>
+
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Listed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For the new Volunteer Tracking website.  Need to know if an organization is listed or not.</description>
+    <externalId>false</externalId>
+    <label>Not Listed?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

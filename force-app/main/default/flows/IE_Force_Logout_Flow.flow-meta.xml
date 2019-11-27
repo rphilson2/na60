@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Force_Logout_User</name>
+        <label>Force Logout User</label>
+        <locationX>616</locationX>
+        <locationY>286</locationY>
+        <assignmentItems>
+            <assignToReference>LoginFlow_ForceLogout</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Browser</name>
+        <label>Check Browser</label>
+        <locationX>132</locationX>
+        <locationY>185</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_IE_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isIE</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BlockDisplay</targetReference>
+            </connector>
+            <label>Is IE: Yes</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <description>Here we check if the browser is Internet Explorer.  If yes, the value will be true.  If no, the value will be false.</description>
+        <name>isIE</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+NOT (CONTAINS({!LoginFlow_UserAgent}, &quot;Firefox&quot;)),
+NOT (CONTAINS({!LoginFlow_UserAgent}, &quot;Chrome&quot;)),
+NOT (CONTAINS({!LoginFlow_UserAgent}, &quot;Safari&quot;)),
+NOT (CONTAINS({!LoginFlow_UserAgent}, &quot;Outlook&quot;)) 
+)</expression>
+    </formulas>
+    <interviewLabel>IE Force Logout Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>IE Force Logout Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>BlockDisplay</name>
+        <label>BlockDisplay</label>
+        <locationX>267</locationX>
+        <locationY>373</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>false</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Force_Logout_User</targetReference>
+        </connector>
+        <fields>
+            <name>BlockMessage</name>
+            <fieldText>&lt;p&gt;&lt;img src=&quot;https://seeklogo.com/images/D/do-not-enter-alternate-sign-logo-F2BB998552-seeklogo.com.gif&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Internet Explorer should no longer be used to access Salesforce due to security concerns and lack of compatibility.  Please use one of the following supported browsers:&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>BlockMessage2</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Google Chrome&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Microsoft Edge&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Mozilla Firefox&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>BlockMessage3</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>BlockMessage4</name>
+            <fieldText>If you would still like IE to be your default browser, you can bookmark the following link in a supported browser for easy access (no password needed) to Salesforce:</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>BlockMessage5</name>
+            <fieldText>&lt;p&gt;fnni.my.salesforce.com&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LogOut</name>
+        <label>LogOut</label>
+        <locationX>577</locationX>
+        <locationY>452</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>LogOutText</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>LoginFlow_ForceLogout</elementReference>
+            </defaultValue>
+            <fieldText>LogOutText</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Check_Browser</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>LoginFlow_Application</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Setting this variable to true to forces the user to logout, immediately, and forces the user to exit the flow.</description>
+        <name>LoginFlow_ForceLogout</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This variable holds the details about the user&#39;s current browser.</description>
+        <name>LoginFlow_UserAgent</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This variable holds the Id of the user trying to log in.</description>
+        <name>LoginFlow_UserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

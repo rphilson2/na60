@@ -1,0 +1,39 @@
+<apex:page standardController="Volunteer_Activity__c" extensions="VolunteerTrackingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Volunteer Activity Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>Employee Volunteer Activity Reporting</title>
+<script type="text/javascript">
+    function setFocus() {
+      document.getElementById('j_id0:myForm:j_id7:eid').focus();
+    }
+    function on_enter() { 
+        if (window.event && window.event.keyCode == 13) { 
+            var el=document.getElementById('sub'); SignIn(); return false; 
+        } else { 
+            return true; 
+         } 
+     }
+</script>
+<body onload="setFocus();">
+<apex:form id="myForm">
+<p style="margin-bottom:45px" />
+<span class="head" ><apex:commandLink style="text-decoration: none;color: #006633;" >Employee Volunteer Activity Reporting</apex:commandLink></span>
+<p style="margin-bottom:30px" />
+<span style="padding: 20px 0px 0px 100px;" />
+<div class="copy">Please enter in the Employee ID in the box below for the person you are filling this out for:</div>
+<p style="margin-bottom:5px" />
+        <apex:pageBlock >
+            <span style="margin-top:40px;margin-bottom:40px" >
+                <apex:outputText id="employee" value="Employee ID:   " />&nbsp;&nbsp;<apex:inputText value="{!q}" size="10" id="eid" style="margin-left:10px;margin-right:10px" onkeypress="return on_enter();" /><br/>
+                <apex:outputText value="(ID used to logon to workstation)" />
+            </span>
+        </apex:pageBlock>
+<span  style="margin-left:500px"  >
+</span>
+<p style="margin-bottom:50px" />
+<apex:actionFunction name="SignIn" action="{!SignIn}"/>
+<apex:commandLink action="{!SignIn}" type="image/png" id="sub">
+<apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/submit.png')}"/>
+</apex:commandlink>
+</apex:form>
+</body>   
+</apex:page>

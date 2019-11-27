@@ -1,0 +1,73 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false">
+<style>
+.outputtext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        color: #000000;
+}
+.outputtextbold {
+        font-size: 72px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+}
+.outputlinkbold {
+        font-size: 18px;
+        font-family: Arial;
+        font-weight: bold;
+}
+.fixedheader {
+        position:fixed;
+        top:0px;
+        font-stretch: ultra-condensed;
+        left:0px;
+        height:86px;
+        width:100%;
+        z-index: 1000;
+        color:#CCC;
+        background:#006952;
+        padding:20px;
+}
+.body {
+        padding-top:190px;
+        margin: auto;
+        max-width: 1080px;
+        position: relative;
+        width: 80%;
+        font-family: "Arial";
+        color:#cf1616;
+}
+.textbar {
+        margin: auto;
+        max-width: 1080px;
+        width: 80%;
+}
+.bartext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        background-color: #565656;
+        color:white;
+        padding: 10px;
+}
+.blankrow {
+        height: 30px !important;
+}
+</style>
+   
+    <body>
+        <div class="fixedheader">
+            <div class="textbar">
+                <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86"/>
+            </div>
+        </div>   
+                <div class="body">
+                            <apex:outputText value="401" styleclass="outputtextbold"></apex:outputText>                           
+                                <div class="blankrow">
+                                </div>
+                            <apex:outputText value="Unauthorized. You do not have the permissions required to access this page." styleclass="outputtext"></apex:outputText>
+                  
+                </div>
+    </body>
+</apex:page>

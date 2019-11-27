@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Profile_Created__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Will be created anytime a new Prospect Profile is built for reporting purposes</description>
+    <externalId>false</externalId>
+    <label>Prospect Profile Created</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

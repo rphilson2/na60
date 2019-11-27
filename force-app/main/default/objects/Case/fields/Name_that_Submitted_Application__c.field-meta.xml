@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_that_Submitted_Application__c</fullName>
+    <description>Name that Submitted App’ is the employee at the dealership who actually ran the application for the customer.  Our support team will have to look this up in another system (or SF) to find out who it was.  ‘SID’ is their employee number, ‘Name’ is the name of the employee, and ‘Email’ is that employee’s email address.  That is who we’ll be forwarding the email to, and who we’ll be calling to speak with to tell them that we had a customer call in and complain that they didn’t apply.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Name that Submitted App’ is the employee at the dealership who actually ran the application for the customer.</inlineHelpText>
+    <label>Name that Submitted Application</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

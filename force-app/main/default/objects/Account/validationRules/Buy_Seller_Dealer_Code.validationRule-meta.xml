@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buy_Seller_Dealer_Code</fullName>
+    <active>true</active>
+    <description>If Dealer Status is &quot;Buyer of Sold Dealership&quot; or &quot;Sold to a New Owner&quot;, the Buy/Sell Dealer Code must be populated</description>
+    <errorConditionFormula>And(
+Or(
+ ISPICKVAL( Dealership_Status__c , &quot;Buyer of Sold Dealership&quot;),
+  ISPICKVAL( Dealership_Status__c , &quot;Sold to a New Owner&quot;)),
+     ISBLANK( Buy_Sell_Dealer_Code__c ))</errorConditionFormula>
+    <errorDisplayField>Buy_Sell_Dealer_Code__c</errorDisplayField>
+    <errorMessage>If Dealer Status is &quot;Buyer of Sold Dealership&quot; or &quot;Sold to a New Owner&quot;, the Buy/Sell Dealer Code must be populated</errorMessage>
+</ValidationRule>

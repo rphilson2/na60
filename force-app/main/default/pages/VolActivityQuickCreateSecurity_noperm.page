@@ -1,0 +1,14 @@
+<apex:page tabStyle="Volunteer_Activity__c" controller="VolActivityQuickCreateSecurityController">
+    <apex:sectionHeader title="Add an Activity for a new Volunteer Organization"/>
+    <apex:form >
+        <apex:pageBlock title="Authorization Error">
+
+        <apex:pageBlockButtons location="both">
+            <apex:commandButton action="{!next}" value="View Activities"/>
+        </apex:pageBlockButtons>     
+        
+        <apex:outputText value="You do not have the necessary authorization to create a new volunteer activity."/>
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page controller="HelpController" sidebar="false" showHeader="false" action="{!helpOrganization}">
+
+
+</apex:page>

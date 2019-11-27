@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Sales_Range__c</fullName>
+    <externalId>false</externalId>
+    <label>Annual Sales Range</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>&lt; $5MM</fullName>
+                <default>false</default>
+                <label>&lt; $5MM</label>
+            </value>
+            <value>
+                <fullName>$5MM - $10MM</fullName>
+                <default>false</default>
+                <label>$5MM - $10MM</label>
+            </value>
+            <value>
+                <fullName>$10MM - $20MM</fullName>
+                <default>false</default>
+                <label>$10MM - $20MM</label>
+            </value>
+            <value>
+                <fullName>$20MM - $50MM</fullName>
+                <default>false</default>
+                <label>$20MM - $50MM</label>
+            </value>
+            <value>
+                <fullName>&gt; $50MM</fullName>
+                <default>false</default>
+                <label>&gt; $50MM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

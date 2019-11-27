@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CTS_Imp_Implementation_Completed</fullName>
+        <description>CTS Imp. - Implementation Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CTS_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>CTS_Imp_Paperwork_Rec_and_Comp</fullName>
+        <description>CTS Imp - Paperwork Rec and Comp</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CTS_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Paperwork_Rec_and_Compl</template>
+    </alerts>
+    <alerts>
+        <fullName>CTS_Imp_Paperwork_Sent</fullName>
+        <description>CTS Imp.  - Paperwork Sent</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CTS_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Paperwork_Snt</template>
+    </alerts>
+    <alerts>
+        <fullName>CTS_Imp_Sent_to_Opps</fullName>
+        <description>CTS Imp - Sent to Opps</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CTS_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Sent_to_Ops</template>
+    </alerts>
+    <alerts>
+        <fullName>CTS_Imp_Training_Completed</fullName>
+        <description>CTS Imp - Training Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CTS_Sales_Rep__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CTS/CTS_Imp_Training_Completed</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Assigned_to_Implementation_Queue</fullName>
+        <description>Case Assigned to Implementation Queue</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dortman@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dsinger@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>phuen@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/Case_Assigned_to_Implementation_Queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Test_Case_DNA</fullName>
+        <ccEmails>FCAMastercard@fnni.com</ccEmails>
+        <description>Email Alert Test Case DNA</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dwest@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>spfrang@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tfrank@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/DNA_Case_Auto_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_to_FCA_Team_Case_Closed_Dealer_Non_Response</fullName>
+        <description>Email to FCA Team - Case Closed Dealer Non Response</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dwest@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/DNA_Case_Auto_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Internal_Case_has_been_Closed</fullName>
+        <description>Internal Case has been Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/Internal_Case_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_CBG_Support_Team_of_Case</fullName>
+        <description>Notify CBG Support Team of Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dmather@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dwest@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kwinther@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/Case_Assigned_to_Support_Queue</template>
+    </alerts>
+    <alerts>
+        <fullName>Partnership_Card_Case_Created</fullName>
+        <description>Partnership Card Case Created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bsplichal@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lborst@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tfrank@fnni.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Case/New_Partnership_Case_Creation</template>
+    </alerts>
+    <alerts>
+        <fullName>Partnership_Card_DNA_Case_Created</fullName>
+        <description>Partnership Card (DNA) Case Created</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Case/New_Partnership_DNA_Case_Creation_HTML1</template>
+    </alerts>
+    <alerts>
+        <fullName>Partnership_Card_DNA_Case_Owner_Changed</fullName>
+        <description>Partnership Card (DNA) Case Owner Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Case/New_Partnership_DNA_Case_Creation_HTML1</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CTS_Imp_Implementation_Completed_Date</fullName>
+        <field>Implementation_Completed__c</field>
+        <formula>NOW()</formula>
+        <name>CTS Imp - Implementation Completed Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CTS_Imp_Paperword_Rec_Comp_Date_Stamp</fullName>
+        <field>Paperwork_Received_Date__c</field>
+        <formula>NOW()</formula>
+        <name>CTS - Imp Paperword Rec Comp Date Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CTS_Imp_Sent_to_Opps</fullName>
+        <field>Implementation_to_Ops__c</field>
+        <formula>NOW()</formula>
+        <name>CTS - Imp Sent to Opps Date Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CTS_Training_Date_Stamp</fullName>
+        <field>Training_Completed__c</field>
+        <formula>NOW()</formula>
+        <name>CTS - Training Date Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Case_Status_to_Closed</fullName>
+        <description>Change Case Status to Closed when case meets critera.</description>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Change Case Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Outcome_to_Dealer_Non_Response</fullName>
+        <description>Change Outcome field on Case to Dealer Non Response when criteria is met</description>
+        <field>Outcome__c</field>
+        <literalValue>Dealer Non Response</literalValue>
+        <name>Change Outcome to Dealer Non Response</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Outcome_to_Dealer_Non_Response1</fullName>
+        <field>Outcome__c</field>
+        <literalValue>Dealer Non Response</literalValue>
+        <name>Change Outcome to Dealer Non Response</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Outcome_to_Dealer_Non_Response2</fullName>
+        <field>Outcome__c</field>
+        <literalValue>Dealer Non Response</literalValue>
+        <name>Change Outcome to Dealer Non Response</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CTSSupportOmaha</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Change Owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>SF_User_Support</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Change Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Change Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Change_Status_to_Closed1</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Change Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Paperwork_Sent_Stamp</fullName>
+        <field>Paperwork_Sent_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Paperwork Sent Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Trigger_Criteria</fullName>
+        <field>Trigger_Criteria__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Case Trigger Criteria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Case_Trigger_Criteria2</fullName>
+        <field>Trigger_Criteria__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Case Trigger Criteria</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Change Owner to CTS Support Queue</fullName>
+        <actions>
+            <name>Change_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Case_Owner_s_Role__c</field>
+            <operation>contains</operation>
+            <value>CTS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Case_Owner_s_Role__c</field>
+            <operation>contains</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CTS Support</value>
+        </criteriaItems>
+        <description>When a CTS RM creates a support case, change the owner from that RM to the CTS Support queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Close DNA Cases</fullName>
+        <actions>
+            <name>Email_Alert_Test_Case_DNA</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Change_Outcome_to_Dealer_Non_Response2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Change_Status_to_Closed1</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.User_Issue_or_Question__c</field>
+            <operation>equals</operation>
+            <value>Did Not Apply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Trigger_Criteria__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Internal Case Closed</fullName>
+        <actions>
+            <name>Internal_Case_has_been_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>User Input Case</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <description>When a case created by the user (RC User Input Case&quot; is closed, they get an email with a description of the resolution.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Case Reminder</fullName>
+        <actions>
+            <name>Check_up_on_case</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.CreatedById</field>
+            <operation>contains</operation>
+            <value>molstad,stanfill,ossenkop,ward,halbur,lisa jones,cosgrove,samantha murphy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>A task is created when a new case is opened (1 day out)</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Implementation Case</fullName>
+        <actions>
+            <name>Case_Assigned_to_Implementation_Queue</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>New CTS Implementation</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Business Hours</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CTS Support,New CTS Implementation</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Trigger Criteria</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>FCA Card Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.User_Issue_or_Question__c</field>
+            <operation>equals</operation>
+            <value>Did Not Apply</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Set_Case_Trigger_Criteria</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Case.CreatedDate</offsetFromField>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Check_up_on_DNA_Case</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Check up on DNA Case</subject>
+    </tasks>
+    <tasks>
+        <fullName>Check_up_on_case</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>Check up on case</subject>
+    </tasks>
+    <tasks>
+        <fullName>Follow_Up_on_Case</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Follow Up on Case</subject>
+    </tasks>
+</Workflow>

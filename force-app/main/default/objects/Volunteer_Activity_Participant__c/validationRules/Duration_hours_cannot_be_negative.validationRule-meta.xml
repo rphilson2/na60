@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_hours_cannot_be_negative</fullName>
+    <active>true</active>
+    <errorConditionFormula>Duration_hours__c  &lt; 0</errorConditionFormula>
+    <errorDisplayField>Duration_hours__c</errorDisplayField>
+    <errorMessage>Participation hours cannot be a negative value.</errorMessage>
+</ValidationRule>

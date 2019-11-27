@@ -1,0 +1,100 @@
+<apex:page controller="SearchController">
+<apex:sectionHeader title="Advanced Search" help="http://www.salesforce.com/docs/en/volunteerforce/index_CSH.htm#volunteerforce_search_activities.htm"/>
+<apex:form >
+   <apex:pageblock title="Volunteer Activity Search">
+   <apex:pageBlockButtons location="bottom">
+       <apex:commandButton rerender="results" action="{!search}" value="Search" status="searchStatus"/>
+   </apex:pageBlockButtons>
+   <apex:pageBlockSection columns="3">
+       <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="input1" value="{!SearchObject.Field1Label}"/>
+                <apex:inputText id="input1" value="{!SearchObject.Field1Value}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="input2" value="{!SearchObject.Field2Label}"/>
+                <apex:inputText id="input2" value="{!SearchObject.Field2Value}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="input3" value="{!SearchObject.Field3Label}"/>
+                <apex:inputText id="input3" value="{!SearchObject.Field3Value}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel for="input4" value="{!SearchObject.Field4Label}"/>
+                <apex:inputText id="input4" value="{!SearchObject.Field4Value}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            	<apex:outputLabel for="input5" value="Activity Type"/>
+	            <apex:selectRadio value="{!eventType}" layout="pageDirection">
+	            	<apex:selectOption itemValue="0" itemLabel="One Time Event" />
+	            	<apex:selectOption itemValue="1" itemLabel="Ongoing Opportunity" />
+	            </apex:selectRadio>
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem helpText="To select multiple values, press 'Ctrl' key and click items of the list. To deselect, press 'Ctrl' key and click the item again.">
+                <apex:outputLabel for="input0" value="{!SearchObject.Filter1Label}"/>
+                <apex:selectList id="input0" value="{!SearchObject.Filter1Value}" multiselect="true" size="10">
+                    <apex:selectOptions value="{!SearchObject.Filter1Picklist}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection id="searchResultColn" showHeader="true" columns="5" title="Search Result Columns" collapsible="true">
+        <apex:panelGrid columns="9">
+            <apex:outputText value="Column 1"/><apex:outputText value=""/>
+            <apex:outputText value="Column 2"/><apex:outputText value=""/>
+            <apex:outputText value="Column 3"/><apex:outputText value=""/>
+            <apex:outputText value="Column 4"/><apex:outputText value=""/>
+            <apex:outputText value="Column 5"/>
+            <apex:selectList id="input5" value="{!SearchObject.ResultCol1}" size="1">
+                <apex:selectOptions value="{!SearchObject.ColumnList}"/>
+            </apex:selectList><apex:outputText value=""/>
+            <apex:selectList id="input6" value="{!SearchObject.ResultCol2}" size="1">
+                <apex:selectOptions value="{!SearchObject.ColumnList}"/>
+            </apex:selectList><apex:outputText value=""/>
+            <apex:selectList id="input7" value="{!SearchObject.ResultCol3}" size="1">
+                <apex:selectOptions value="{!SearchObject.ColumnList}"/>
+            </apex:selectList><apex:outputText value=""/>
+            <apex:selectList id="input8" value="{!SearchObject.ResultCol4}" size="1">
+                <apex:selectOptions value="{!SearchObject.ColumnList}"/>
+            </apex:selectList><apex:outputText value=""/>
+            <apex:selectList id="input9" value="{!SearchObject.ResultCol5}" size="1">
+                <apex:selectOptions value="{!SearchObject.ColumnList}"/>
+            </apex:selectList>
+        </apex:panelGrid>
+    </apex:pageBlockSection>
+    </apex:pageblock>
+   </apex:form>
+   
+    <apex:outputPanel id="results">
+       <apex:actionStatus startText="(Searching...)" id="searchStatus"/>
+       <apex:pageBlock title="Results" rendered="{!showResults}">
+           <apex:outputText value="No Results" rendered="{!noresults}"/>
+           <apex:pageBlockTable value="{!results}" var="r">
+               <apex:column ><a href="/{!r.id}">View</a></apex:column>
+               <apex:column >
+                   <apex:facet name="header">{!r.field1Label}</apex:facet>
+                   <apex:outputText value="{!r.field1Value}"/>
+               </apex:column>
+               <apex:column >
+                   <apex:facet name="header">{!r.field2Label}</apex:facet>
+                   <apex:outputText value="{!r.field2Value}"/>
+               </apex:column>
+               <apex:column >
+                   <apex:facet name="header">{!r.field3Label}</apex:facet>
+                   <apex:outputText value="{!r.field3Value}"/>
+               </apex:column>
+               <apex:column >
+                   <apex:facet name="header">{!r.field4Label}</apex:facet>
+                   <apex:outputText value="{!r.field4Value}"/>
+               </apex:column>
+               <apex:column >
+                   <apex:facet name="header">{!r.field5Label}</apex:facet>
+                   <apex:outputText value="{!r.field5Value}"/>
+               </apex:column>
+           </apex:pageBlockTable> 
+        </apex:pageBlock>
+    </apex:outputPanel>
+</apex:page>

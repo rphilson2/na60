@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market__c</fullName>
+    <externalId>false</externalId>
+    <label>Market</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Colorado</fullName>
+                <default>false</default>
+                <label>Colorado</label>
+            </value>
+            <value>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+                <label>Illinois</label>
+            </value>
+            <value>
+                <fullName>Kansas</fullName>
+                <default>false</default>
+                <label>Kansas</label>
+            </value>
+            <value>
+                <fullName>Columbus</fullName>
+                <default>false</default>
+                <label>NE - Columbus, Norfolk, David City</label>
+            </value>
+            <value>
+                <fullName>Fremont</fullName>
+                <default>false</default>
+                <label>NE - Fremont</label>
+            </value>
+            <value>
+                <fullName>Kearney</fullName>
+                <default>false</default>
+                <label>NE - Kearney, Grand Island</label>
+            </value>
+            <value>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+                <label>NE - Lincoln, Beatrice</label>
+            </value>
+            <value>
+                <fullName>North Platte</fullName>
+                <default>false</default>
+                <label>NE - North Platte, Alliance, Chadron, Scottsbluff</label>
+            </value>
+            <value>
+                <fullName>Omaha</fullName>
+                <default>false</default>
+                <label>NE - Omaha Metro Area</label>
+            </value>
+            <value>
+                <fullName>South Dakota</fullName>
+                <default>false</default>
+                <label>South Dakota</label>
+            </value>
+            <value>
+                <fullName>Texas</fullName>
+                <default>false</default>
+                <label>Texas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

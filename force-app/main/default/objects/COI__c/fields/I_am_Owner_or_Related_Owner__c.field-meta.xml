@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_am_Owner_or_Related_Owner__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(Owner:User.Id=$User.Id, Related_Owner_1__r.Id=$User.Id, Related_Owner_2__r.Id=$User.Id, Related_User__r.Id=$User.Id)</formula>
+    <label>I am Owner or Related Owner</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

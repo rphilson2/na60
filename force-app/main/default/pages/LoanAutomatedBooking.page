@@ -1,0 +1,217 @@
+<apex:page standardController="LLC_BI__Loan__c" extensions="ABLoanController">
+<!--the value of the standardController attribute should be the object you want the page to be available for-->
+
+<!-- Webpacked jQuery bundle. -->
+<apex:includeScript value="{!URLFOR($Resource.LLC_BI__llc_web_ui, 'bundles/jquery-bundle.js')}" />
+<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'lib/cometd.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'lib/json2.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.nFUSE__ux, 'lib/jquery_cometd.js')}"/>
+
+<script type="text/javascript">
+
+    var jQueryAutomatedBooking$ = jQuery.noConflict();
+    
+    Visualforce.remoting.timeout = 120000; // Set timeout at page level
+    
+    //default button states
+    var previewType = 'reservationmessage',
+        bookToCoreButtonEnabled = {!bookToCoreButtonEnabled},
+        renewLoanButtonEnabled = {!renewLoanButtonEnabled},
+        modifyLoanButtonEnabled = {!modifyLoanButtonEnabled},
+        reserveLoanButtonEnabled = {!reserveLoanButtonEnabled};
+    
+    function getRawPayload() {
+    
+        if(document.getElementById('datapreview1').style.display == 'none')
+        {
+            //show it
+            // This remoting call will use the page's timeout value
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ABLoanController.getCoreMessage}',
+                '{!objectId}',
+                previewType,
+                handleRawMessageResult
+            );
+        }else if(document.getElementById('datapreview1').style.display == 'block'){
+            //just hide it
+            document.getElementById('datapreview1').style.display = 'none';
+        }
+    
+    }
+    
+    function handleRawMessageResult(result,event){
+        document.getElementById('datapreview1').style.display = 'block';
+        var textd = JSON.stringify(result, null, 2);
+        document.getElementById('datapreview1').value = textd;
+    }
+    
+    function bookLoan() {
+        document.getElementById("LoanAutomatedBooking").disabled = 'disabled';
+        // This remoting call will use the page's timeout value
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ABLoanController.bookLoan}',
+            '{!$CurrentPage.parameters.id}',
+            handleBookingResult
+        );
+        
+        document.getElementById('LoanAutomatedBookingResponse').innerHTML = 'Started'; 
+    }
+    function reserveLoan() {
+        document.getElementById("LoanAutomatedReserveBooking").disabled = 'disabled';
+        // This remoting call will use the page's timeout value
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ABLoanController.reserveLoan}',
+            '{!$CurrentPage.parameters.id}',
+            handleBookingResult
+        );
+        
+        document.getElementById('LoanAutomatedBookingResponse').innerHTML = 'Started'; 
+    }
+    function modifyLoan() {
+        document.getElementById("LoanAutomatedModifyBooking").disabled = 'disabled';
+        // This remoting call will use the page's timeout value
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ABLoanController.modifyLoan}',
+            '{!$CurrentPage.parameters.id}',
+            handleBookingResult
+        );
+        
+        document.getElementById('LoanAutomatedBookingResponse').innerHTML = 'Started'; 
+    }
+    function renewLoan() {
+        document.getElementById("LoanAutomatedRenewBooking").disabled = 'disabled';
+        // This remoting call will use the page's timeout value
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ABLoanController.renewLoan}',
+            '{!$CurrentPage.parameters.id}',
+            handleBookingResult
+        );
+        
+        document.getElementById('LoanAutomatedBookingResponse').innerHTML = 'Started'; 
+    }
+    function getState(externalId) {
+        // This remoting call will use the page's timeout value
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ABLoanController.getTransactionStatus}',
+            externalId,
+            handlePollingResult
+        );
+    }
+    function handleBookingResult(result, event) {
+        if(result.IsSuccessful == true){
+            //wait for the push topic to handle successes
+        }else{
+            if(result.Messages != null && result.Messages != '' && result.Messages.length > 0){
+                document.getElementById('LoanAutomatedBookingResponse').innerHTML = '{!$Label.UXError}' + '{!$Label.UXDelimiter}' + result.Messages;    
+            }else{
+                document.getElementById('LoanAutomatedBookingResponse').innerHTML = '{!$Label.UXError}' + '{!$Label.UXDelimiter}' + '{!$Label.UnhandledException}';    
+            }
+        }
+    }
+    function handlePollingResult(result, event) {
+        if(result.IsComplete == true){
+            if(result.Details != null && result.Details != '' && result.Details.length > 0){
+                document.getElementById('LoanAutomatedBookingResponse').innerHTML = (result.IsSuccessful == true ? '{!$Label.UXSuccess}' : '{!$Label.UXError}') + '{!$Label.UXDelimiter}' + result.Details;    
+            }else{
+                document.getElementById('LoanAutomatedBookingResponse').innerHTML = (result.IsSuccessful == true ? '{!$Label.UXSuccess}' : '{!$Label.UXError}') + '{!$Label.UXDelimiter}' + '{!$Label.BookingCompleted}';    
+            }
+            setButtons(result.reserveLoanButtonEnabled,
+                result.bookToCoreButtonEnabled,
+                result.renewLoanButtonEnabled,
+                result.modifyLoanButtonEnabled);
+    
+        }
+    }
+    
+    function setButtons(reserve,book,renew,modify) {
+        document.getElementById("LoanAutomatedReserveBooking").disabled = (reserve === false ? 'disabled' : '');
+        document.getElementById('LoanAutomatedReserveBooking').style.display = (reserve === false ? 'none' : 'block');
+        
+        document.getElementById("LoanAutomatedBooking").disabled = (book === false ? 'disabled' : '');
+        document.getElementById('LoanAutomatedBooking').style.display = (book === false ? 'none' : 'block');
+        
+        document.getElementById("LoanAutomatedModifyBooking").disabled = (modify === false ? 'disabled' : '');
+        document.getElementById('LoanAutomatedModifyBooking').style.display = (modify === false ? 'none' : 'block');
+        
+        document.getElementById("LoanAutomatedRenewBooking").disabled = (renew === false ? 'disabled' : '');
+        document.getElementById('LoanAutomatedRenewBooking').style.display = (renew === false ? 'none' : 'block');
+        
+        if(!reserve && !book)
+            document.getElementById('LoanAutomatedBookingCompleted').style.display = 'block';
+        if(!reserve && !book && !modify && !renew)
+            document.getElementById('previewContainer1').style.display = 'none';
+            
+        if(reserve === true && book === true){
+			previewType = 'loanmessage';
+		}else if(book === true){
+			previewType = 'loanmessage';
+		}else if(reserve === true){
+			previewType = 'reservationmessage';
+		}else{
+			previewType = 'loanmessage';
+		}
+		
+    }
+    
+    jQueryAutomatedBooking$(document).ready(function() {
+        
+        if(reserveLoanButtonEnabled === true && bookToCoreButtonEnabled === true){
+			previewType = 'loanmessage';
+		}else if(bookToCoreButtonEnabled === true){
+			previewType = 'loanmessage';
+		}else if(reserveLoanButtonEnabled === true){
+			previewType = 'reservationmessage';
+		}else{
+			previewType = 'loanmessage';
+		}
+        
+        setButtons(reserveLoanButtonEnabled,bookToCoreButtonEnabled,renewLoanButtonEnabled,modifyLoanButtonEnabled);
+        
+     	jQueryAutomatedBooking$.cometd.init({
+            url: window.location.protocol+'//'+window.location.hostname+'/cometd/24.0/',
+            requestHeaders: { Authorization: 'OAuth {!$Api.Session_ID}'}
+        });
+    
+        jQueryAutomatedBooking$.cometd.subscribe('/topic/TransactionLogUpdate', function(message) {
+      		//console.log('will send externalid: ' + message.data.sobject.nFUSE__External_Id__c);
+      		//only handle messages related to this record
+      		if(message.data.sobject.nFUSE__Primary_Object_Id__c === '{!objectId}')
+      		    getState(message.data.sobject.nFUSE__External_Id__c);
+     	});
+     	
+    });
+</script>
+
+<div id="ncAutomatedBookingPlainWrapper">
+    <button id="LoanAutomatedReserveBooking" onclick="reserveLoan()" style="display:none;">{!$Label.LoanBookingReserveButton}</button>
+    <button id="LoanAutomatedBooking" onclick="bookLoan()" style="display:none;">{!$Label.LoanBookingButton}</button>
+    <button id="LoanAutomatedModifyBooking" onclick="modifyLoan()" style="display:none;">{!$Label.LoanBookingModifyButton}</button>
+    <button id="LoanAutomatedRenewBooking" onclick="renewLoan()" style="display:none;">{!$Label.LoanBookingRenewButton}</button>
+    
+    <!-- if you wish to include a RAW preview, then use the below to house it -->
+	<!-- BEGIN -->
+	
+	<div class="form-horizontal col-md-12 row-clear" id="previewContainer1">
+		<div class="form-group row">
+			<div class="col-sm-4 content-label">
+				<span>
+					<div class="content-label">
+						 <label class="form-control-static input-sm"><a href="javascript:void();" onclick="getRawPayload()">{!$Label.AB_ToggleRawView}</a></label>
+					</div>
+				</span>
+			</div>
+			<div class="col-sm-6 content-body">
+				<span>
+					<textarea readonly="readonly" id="datapreview1" placeholder="" class="input-sm form-control" style="display:none;width: 100%;height: 100px;overflow-x: scroll;overflow-y: scroll;"></textarea>
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- END -->
+	
+    <div id="LoanAutomatedBookingResponse"></div>
+    <p id="LoanAutomatedBookingCompleted" style="display:none;">{!$Label.BookingCompleted}</p>
+</div>
+
+</apex:page>

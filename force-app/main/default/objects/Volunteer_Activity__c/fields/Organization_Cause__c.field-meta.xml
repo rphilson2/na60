@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_Cause__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(1, 
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Animal Related&quot;), 1, 0), &quot;Animal Related&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Arts&quot;), 1, 0), &quot;Arts&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;BCorp&quot;), 1, 0), &quot;BCorp&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Culture&quot;), 1, 0), &quot;Culture&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Economic Development&quot;), 1, 0), &quot;Economic Development&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Education K-12&quot;), 1, 0), &quot;Education K-12&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Environment&quot;), 1, 0), &quot;Environment&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Healthcare&quot;), 1, 0), &quot;Healthcare&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Humanities&quot;), 1, 0), &quot;Humanities&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Human Services&quot;), 1, 0), &quot;Human Services&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;International Development&quot;), 1, 0), &quot;International Development&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Public/Social Benefit&quot;), 1, 0), &quot;Public/Social Benefit&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Religious&quot;), 1, 0), &quot;Religious&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Research&quot;), 1, 0), &quot;Research&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Social Justice&quot;), 1, 0), &quot;Social Justice&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Technology&quot;), 1, 0), &quot;Technology&quot;,
+IF(ISPICKVAL(Volunteer_Organization__r.Organization_Cause__c , &quot;Youth&quot;), 1, 0), &quot;Youth&quot;,
+&quot;&quot;)</formula>
+    <label>Organization Cause</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

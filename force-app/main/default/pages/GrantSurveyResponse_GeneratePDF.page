@@ -1,0 +1,361 @@
+<apex:page standardController="Community_Giving__c" extensions="GrantReportTemplateCtrl" standardStylesheets="false" sidebar="false" showHeader="false" applyHtmlTag="false" applyBodyTag="false" renderAs="pdf">
+<head>
+<style type="text/css">
+@page {
+    @bottom-left {
+        content: "Date {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}";
+        font-family: sans-serif;
+        font-size: 80%;
+    }
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: sans-serif;
+        font-size: 80%;
+    }
+}
+</style>
+</head>
+      <div class="header">
+        <div>
+        <table width="100%">
+            <tr width="100%">
+                <td width="40%" align="left">
+                    <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_green.jpg')}" width="280" height="33"/>                
+                </td>
+                <td width="60%" align="center">
+                    <apex:outputText value="Community Development Grant Program Final Report" style="font-family: sans-serif; font-size: 12pt; font-weight:bold"></apex:outputText>
+                    <apex:outputText value="For grants awarded in {!YEAR(Date_awarded)}, with grant periods ending in calendar year {!YEAR(Date_awarded + 365)}" style="font-family: sans-serif; font-size: 8pt"></apex:outputText>          
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <hr/></div>
+      </div>
+      <div class="pdfrowtext">
+            <table width="100%">
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization Name:  " style="font-family: sans-serif; font-size: 11pt; font-weight: bold; color: #006633"></apex:outputText>
+                      <apex:outputText value="{!organization_name}" style="font-family: sans-serif; font-size: 11pt"></apex:outputText>                      
+                   </td>
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Program Name:  " style="font-family: sans-serif; font-size: 11pt; font-weight: bold; color: #006633"></apex:outputText>
+                      <apex:outputText value="{!name_of_program}" style="font-family: sans-serif; font-size: 11pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Date Funding Awarded:  " style="font-family: sans-serif; font-size: 11pt; font-weight: bold; color: #006633"></apex:outputText>
+                      <apex:outputText value="{0,date,MM/dd/yyyy}" style="font-family: sans-serif; font-size: 11pt"><apex:param value="{!date_awarded}" /></apex:outputText>                      
+                   </td>
+                </tr>
+            </table>
+            <hr/>
+            <table width="100%">            
+                <tr width="100%">
+                   <td width="70%" align="left" style="text-decoration:underline">
+                      <apex:outputText value="Grant Priority:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!purpose}" style="font-family: sans-serif; font-size: 10pt; color:{!PrioColor}"></apex:outputText>
+                   </td>
+                   <td width="30%" align="right" style="text-decoration:underline">
+                      <apex:outputText value="Your Organization's Impacts" style="font-family: sans-serif; font-size: 10pt; font-weight: bold" rendered="{!anyofthem}"></apex:outputText>
+                   </td>                   
+                </tr>
+            </table>
+            <apex:outputPanel rendered="{!anyofthem}">
+               <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr width="100%" style="background-color:#CFCFCF" border="0" cellpadding="0" cellspacing="0">
+                     <td width="88%" align="left">
+                        <apex:outputText value=" " style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                        <apex:outputText value="Est." style="font-family:sans-serif; font-size:8pt; font-weight:bold;font-style:italic; text-decoration:underline"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                        <apex:outputText value="Actual" style="font-family:sans-serif; font-size:8pt; font-weight:bold; font-style:italic; text-decoration:underline"></apex:outputText>
+                     </td>
+                  </tr>            
+               </table>
+            </apex:outputPanel>                           
+            <apex:outputPanel rendered="{!Stabilization}">
+               <table width="100%" border="0.5" cellpadding="0" cellspacing="0">
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="a) Number of housing units created/built:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Housing_Units_Created_Built__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Housing_Units_Created_Built_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="b) Number of housing units rehabilitated/renovated:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Number_of_Housing_Units_Rehab_Renov__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Housing_Units_Rehabilitated_Renovated_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="c) Number of housing units financed:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Housing_Units_Financed__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Housing_Units_Financed_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="d) Number of individuals receiving homeownership education:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Individuals_Rec_Homeownership_Educ__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Individuals_Rec_Homeownership_Educ_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="e) Number of homeownership education sessions provided:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Homeownership_Educ_Sessions__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Homeownership_Educ_Sessions_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number entered in (c) above included within numbers for (a)or(b)?" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value=" " style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.X2_c__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+               </table>
+            </apex:outputPanel>            
+            <apex:outputPanel rendered="{!EducatedWorkforce}">
+               <table width="100%" border="0.5" cellpadding="0" cellspacing="0">
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of adults provided education:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Adults_Provided_Education__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Adults_Provided_Education_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of youth provided workforce/career education:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Youth_Provided_Work_Career_Educ__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Youth_Provided_Work_Career_Educ_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of adults provided vocational/career training or workforce development:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Adults_Provided_Vocational_Training__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Adults_Provided_Vocational_Training_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of youth provided vocational/career training or workforce development:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Youth_Provided_Voc_Train_Work_Dev__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Youth_Provided_Voc_Train_Work_Dev_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of individuals served:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Individuals_Served_in_Prop_Program__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Individuals_Served_in_Prop_Program_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+               </table>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!StrongLocal}">
+               <table width="100%" border="0.5" cellpadding="0" cellspacing="0">
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of small businesses served:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Small_Businesses_Assisted__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Small_Businesses_Assisted_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of new business created:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.New_Businesses_Served__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.New_Businesses_Served_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of workshop and training events provided:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Workshops_Training_Events_Provided__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Workshops_Training_Events_Provided_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of individual coaching/consulting sessions with small business:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Indiv_Coaching_Sessions_w_Small_Bus__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Indiv_Coaching_Sessions_w_Small_Bus_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of full-time jobs created:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Jobs_Created_Full_Time__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Jobs_Created_Full_Time_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+                  <tr width="100%">
+                     <td width="88%" align="left">
+                         <apex:outputText value="Number of part-time jobs created:" style="font-family:sans-serif; font-size:9pt; font-weight:bold"></apex:outputText>
+                     </td>
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Jobs_Created_Part_Time__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>                  
+                     <td width="6%" align="right">
+                         <apex:outputText value="{!Community_Giving__c.Jobs_Created_Part_Time_AI__c}" style="font-family:sans-serif; font-size:9pt"></apex:outputText>
+                     </td>
+                  </tr>
+               </table>
+            </apex:outputPanel>
+            <br/>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="Elaborate on the numbers provided by describing measurable outcomes realized or produced by your organization that are directly attributable to the grant award provided by the Bank:" style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+                  </td>
+               </tr>
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="{!Community_Giving__c.Outcomes_directly_attributed_to_grant__c}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>
+                  </td>
+               </tr>
+           </table>
+           <br/>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="Describe outcomes realized or produced by your organization that are indirectly attributable to the grant award from the Bank (i.e. partnerships, additional funding, leveraging resources, other):" style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+                  </td>
+               </tr>
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="{!Community_Giving__c.Outcomes_indirectly_attributed_to_grant__c}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>
+                  </td>
+               </tr>
+           </table>
+           <br/>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="Describe how you measure progress toward program objectives (i.e. tracking via database, asking participants, reports produced by another entity, other): " style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+                  </td>
+               </tr>
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="{!Community_Giving__c.Hw_to_Measure_progm_toward_Prog_obj__c}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>
+                  </td>
+               </tr>
+           </table>
+           <br/>           
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="Share a brief story or anecdote that illustrates the success achieved as a result of the Bank's funding:" style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+                  </td>
+               </tr>
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="{!Community_Giving__c.Success_Story_or_Anecdote__c}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>
+                  </td>
+               </tr>
+           </table>
+           <br/>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="If your outcomes fell short of your projections or expectations, please explain why.Detail how you plan to overcome barriers to achieve those outcomes in the future, or whether you are modifying projections:" style="font-family:sans-serif; font-size:10pt; font-weight:bold"></apex:outputText>
+                  </td>
+               </tr>
+               <tr width="100%">
+                  <td align="left">
+                      <apex:outputText value="{!Community_Giving__c.Reasons_outcomes_fell_short_of_expected__c}" style="font-family:sans-serif; font-size:10pt"></apex:outputText>
+                  </td>
+               </tr>
+           </table>
+           <br/>
+           <hr/>           
+           <table width="100%" border="0" cellpadding="0" cellspacing="0">
+               <tr>
+                  <td><apex:outputText value="Attachments: " style="font-family:sans-serif; font-size:11pt; font-weight:bold; text-decoration:underline; color: #004732"/></td>
+               </tr>
+               <apex:repeat value="{!Community_Giving__c.attachments}" var="attachments">
+                 <tr>
+                    <td><apex:outputText value="{!attachments.name}" style="font-family:sans-serif; font-size:10pt"/></td>
+                 </tr>
+               </apex:repeat>
+           </table>           
+        <br></br>
+     </div>
+    
+</apex:page>

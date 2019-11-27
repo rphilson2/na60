@@ -1,0 +1,23 @@
+<apex:page standardController="Volunteer_Activity__c" extensions="VolunteerTrackingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Volunteer Activity Reporting" Action="{!Init}">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>Employee Volunteer Activity Reporting</title>
+<body>
+<apex:form >
+<!--
+<span class="head" ><apex:commandLink action="{!viewVolunteerReporting}" style="text-decoration: none;color: #006633;" >Employee Volunteer Activity Reporting</apex:commandLink></span>&nbsp;&nbsp;
+-->
+<span style="padding: 20px 0px 0px 100px;" />
+<span class="copy"><p><apex:outputText value="Hello {!employee.First_Name__c}"/>,</p>Giving back to the community and helping others is deeply embedded in the culture of First National Bank.  
+As such, we greatly appreciate your service and want to hear about it.<br />Please record your recent volunteer activities by clicking “next” below.  If you are not {!Employee_fullname}, click </span>
+<span class="copy"><apex:outputText value=" "/><apex:commandLink style="color:#005D96" action="{!viewVolunteerSignIn}">here</apex:commandLink>.
+</span><p style="margin-bottom:50px" />
+<span  style="margin-left:500px"  >
+<!--
+<apex:commandLink action="{!hereForTheFirstTime}" type="image/png">
+<apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/next.png')}"/>
+</apex:commandlink>
+-->
+</span>
+</apex:form>
+</body>   
+</apex:page>

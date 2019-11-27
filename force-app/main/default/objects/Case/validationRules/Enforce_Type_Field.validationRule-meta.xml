@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enforce_Type_Field</fullName>
+    <active>true</active>
+    <description>Requested by CTS to drive their users to always select a valid item from the Case Type  picklist</description>
+    <errorConditionFormula>And(
+    ( CreatedDate &lt;&gt; LastModifiedDate ), 
+      ISPICKVAL( Case_Type__c , &quot;Select One&quot;), 
+      RecordTypeId =&quot;01230000000sg0h&quot;,
+      TEXT(Status)  &lt;&gt; &#39;New&#39;
+)</errorConditionFormula>
+    <errorDisplayField>Case_Type__c</errorDisplayField>
+    <errorMessage>You must select from one of the valid options in the CASE TYPE picklist.</errorMessage>
+</ValidationRule>

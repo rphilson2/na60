@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Professional_Interests__c</fullName>
+    <externalId>false</externalId>
+    <label>Professional Interests</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+            <value>
+                <fullName>American Bankers Association (ABA)</fullName>
+                <default>false</default>
+                <label>American Bankers Association (ABA)</label>
+            </value>
+            <value>
+                <fullName>Board Memberships</fullName>
+                <default>false</default>
+                <label>Board Memberships</label>
+            </value>
+            <value>
+                <fullName>Business Succession Planning</fullName>
+                <default>false</default>
+                <label>Business Succession Planning</label>
+            </value>
+            <value>
+                <fullName>CFA/Securities Licenses</fullName>
+                <default>false</default>
+                <label>CFA/Securities Licenses</label>
+            </value>
+            <value>
+                <fullName>Chamber of Commerce</fullName>
+                <default>false</default>
+                <label>Chamber of Commerce</label>
+            </value>
+            <value>
+                <fullName>Community Bankers Iowa (CBA)</fullName>
+                <default>false</default>
+                <label>Community Bankers Iowa (CBA)</label>
+            </value>
+            <value>
+                <fullName>CPA/Accounting</fullName>
+                <default>false</default>
+                <label>CPA/Accounting</label>
+            </value>
+            <value>
+                <fullName>Downtown Business Association</fullName>
+                <default>false</default>
+                <label>Downtown Business Association</label>
+            </value>
+            <value>
+                <fullName>Economic Development</fullName>
+                <default>false</default>
+                <label>Economic Development</label>
+            </value>
+            <value>
+                <fullName>Economic Forecast</fullName>
+                <default>false</default>
+                <label>Economic Forecast</label>
+            </value>
+            <value>
+                <fullName>Iowa Bankers Association (IBA)</fullName>
+                <default>false</default>
+                <label>Iowa Bankers Association (IBA)</label>
+            </value>
+            <value>
+                <fullName>Law/Law Firm</fullName>
+                <default>false</default>
+                <label>Law/Law Firm</label>
+            </value>
+            <value>
+                <fullName>Nebraska Bankers Association (NBA)</fullName>
+                <default>false</default>
+                <label>Nebraska Bankers Association (NBA)</label>
+            </value>
+            <value>
+                <fullName>Nebraska Independent Community Bankers</fullName>
+                <default>false</default>
+                <label>Nebraska Independent Community Bankers</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Real Estate/Construction</fullName>
+                <default>false</default>
+                <label>Real Estate/Construction</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

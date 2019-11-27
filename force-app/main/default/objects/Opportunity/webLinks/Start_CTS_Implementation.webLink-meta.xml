@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_CTS_Implementation</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Start CTS Implementation</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/500/e?retURL=%2F500%2Fo&amp;RecordType=012a0000001NaJN&amp;ent=Case&amp;cas14=Implementation-{!Opportunity.Name}&amp;cas15=Implementation case for CTS for - {!Opportunity.Name}&amp;cas4_lkid={!Opportunity.AccountId}&amp;CF00Na000000B2tUs={!Opportunity.OwnerFullName}</url>
+</WebLink>

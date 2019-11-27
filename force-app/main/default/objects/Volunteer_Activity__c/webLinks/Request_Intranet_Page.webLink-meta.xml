@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Intranet_Page</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Request Intranet Page</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/_ui/core/email/author/EmailAuthor?rtype=003&amp;p3_lkid={!Volunteer_Activity__c.Id}&amp;retURL=%2F{!Volunteer_Activity__c.Id}&amp;p5={!$User.Email}&amp;p24=&quot;salesforcesupport@fnni.com&amp;template_id=00Xa0000001Yg7w</url>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Referral_no_referred_customer</fullName>
+    <active>true</active>
+    <description>A mortgage referral from an internal employee cannot also be referred by a customer</description>
+    <errorConditionFormula>AND(
+      Opp_Created_from_Referral__c  = TRUE,
+     RecordTypeId  = &#39;0120n0000000XUb&#39;,
+     NOT(ISBLANK( Referred_by_Customer__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Referred_by_Customer__c</errorDisplayField>
+    <errorMessage>You cannot select a customer referral on an opportunity created from an internal  employee referral</errorMessage>
+</ValidationRule>

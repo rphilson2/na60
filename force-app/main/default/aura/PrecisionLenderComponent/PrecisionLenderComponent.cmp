@@ -1,0 +1,204 @@
+<aura:component Controller = "PrecisionLenderShowFieldController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="plRec" type="Account" 
+  		description="An account record to be displayed"/>
+    <aura:attribute name="plSetup" type="PrecisionLenderShowField__C" 
+                    description="Setup values for show/hide each field"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>        
+    
+    <!-- Display a lightning card with details about the record -->
+    <lightning:card iconName="standard:account" class=".slds-text-title_bold" title="Precision Lender Financials">        
+        <aura:iteration var="pl" items="{!v.plSetup}">
+            <table>
+                <tr>
+                    <td class="tdata" width="50%"><div class="underline"><p class="theaderleft">Tax Entity</p></div></td>
+                    <td class="tdata" width="50%"><div class="underline"><p class="theaderleft">Relationship</p></div></td>
+                </tr>
+                <tr>
+                    <td class="theader" colspan="2"><br></br><div class="whitegreen">Balance Sheet</div></td>
+                </tr>
+                <tr>
+                    <td class="tdata">                        
+                        <div>
+                        <aura:if isTrue="{!pl.Loan_Average_Balance__c}">
+                            Loan Average Balance <br />                             
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FS_Loan_Average_Balance__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__FS_Loan_Average_Balance__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Average_Assets__c}">
+                            Average Assets <br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FS_Average_Assets__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__FS_Average_Assets__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                    </td>
+                    <td class="tdata">                        
+                        <div>
+                        <aura:if isTrue="{!pl.Total_Loan_Commitment__c}">
+                            Total Loan Commitment <br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Total_Loan_Commitment__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__Total_Loan_Commitment__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Current_Deposit_Balance__c}">
+                            Current Deposit Balance<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Current_Deposit_Balance__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__Current_Deposit_Balance__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Current_Loan_Balance__c}">
+                            Current Loan Balance<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Current_Loan_Balance__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__Current_Loan_Balance__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="theader" colspan="2"><br></br><br></br><div class="whitegreen">Income Statement</div></td>
+                </tr>
+                <tr>
+                    <td class="tdata">                        
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_Net_Income__c}">
+                            FTP Net Income<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_Net_Income__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__FTPFS_Net_Income__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_ROA__c}">
+                            FTP ROA<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_ROA__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__FTPFS_ROA__c}" maximumFractionDigits="2" /> %                      
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_ROE__c}">
+                            FTP ROE<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_ROE__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__FTPFS_ROE__c}" maximumFractionDigits="2" /> %                       
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent" />
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_Target_ROE__c}">
+                            FTP Target ROE<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_Target_ROE__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__FTPFS_Target_ROE__c}" maximumFractionDigits="2" /> %
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_Interest_Income__c}">
+                            FTP Interest Income<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_Interest_Income__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__FTPFS_Interest_Income__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.FTP_Interest_Expense__c}">
+                            FTP Interest Expense<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__FTPFS_Interest_Expense__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__FTPFS_Interest_Expense__c}" />                        
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                    </td>
+                    <td class="tdata">      
+                        <div>                        
+                        <aura:if isTrue="{!pl.Total_Relationship_FTP_Net_Income__c}">
+                            Total Relationship FTP Net Income<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Total_Relationship_FTP_Net_Income__c))}">
+                                <lightning:formattedNumber style="currency" value="{!v.plRec[0].PLNDR__Total_Relationship_FTP_Net_Income__c}" />                        
+                            <aura:set attribute="else">
+                                 <lightning:formattedNumber value="0" style="currency" currencyCode="USD"/>
+                            </aura:set>
+                            </aura:if> 
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Total_Relationship_FTP_ROA__c}">
+                            Total Relationship FTP ROA<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Total_Relationship_FTP_ROA__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__Total_Relationship_FTP_ROA__c}" maximumFractionDigits="2" /> %
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Total_Relationship_FTP_ROE__c}">
+                            Total Relationship FTP ROE<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Total_Relationship_FTP_ROE__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__Total_Relationship_FTP_ROE__c}" maximumFractionDigits="2" /> %
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                        <div>
+                        <aura:if isTrue="{!pl.Total_Relationship_FTP_Target_ROE__c}">
+                            Total Relationship FTP Target ROE<br />                    
+                            <aura:if isTrue="{!not(empty(v.plRec[0].PLNDR__Total_Relationship_FTP_Target_ROE__c))}">
+                                <lightning:formattedNumber value="{!v.plRec[0].PLNDR__Total_Relationship_FTP_Target_ROE__c}" maximumFractionDigits="2" /> %
+                            <aura:set attribute="else">
+                                <lightning:formattedNumber value="0" style="percent"/>
+                            </aura:set>
+                            </aura:if>                        
+                    	</aura:if>
+                        </div>
+                    </td>
+                </tr>
+            </table>            
+        </aura:iteration>
+    </lightning:card>
+   
+</aura:component>

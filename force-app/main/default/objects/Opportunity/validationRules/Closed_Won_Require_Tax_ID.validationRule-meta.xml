@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Require_Tax_ID</fullName>
+    <active>true</active>
+    <description>Require a Tax ID to be listed on the associated business customer prior to marking an opportunity &#39;closed won.&#39;</description>
+    <errorConditionFormula>AND( 
+   TEXT(StageName) = &quot;Closed Won&quot;, 
+   Account.Tax_ID__c = &#39;&#39;, 
+   Account.RecordTypeId = &quot;01230000000sSMd&quot;)</errorConditionFormula>
+    <errorMessage>A Tax ID is required on the associated customer record prior to marking this opportunity &#39;Closed Won.&#39;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capital_Markets_Date_Reported_in_FOCUS__c</fullName>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date reported in FOCUS</inlineHelpText>
+    <label>Capital Markets - Date Reported in FOCUS</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

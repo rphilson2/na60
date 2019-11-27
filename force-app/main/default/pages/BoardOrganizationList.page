@@ -1,0 +1,130 @@
+<!--DAG_2019_01_22 VersionOne Feature E-08549-- Large Modification on this date.  Changed this whole site from updating the Employee Board Membership object to updating the Volunteer Activity object.-->
+<apex:page standardController="Volunteer_Activity__c" extensions="BoardReportingExtension" cache="false" expires="0" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting">
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+
+<style>
+   .outputtextbold {
+       font-size: 13px;
+       font-family:Arial;
+       font-weight:bold;
+   }
+
+</style>
+   
+<title>{!YEAR(TODAY())} Nonprofit Board Service Reporting</title>
+<body>
+   <apex:form >
+      <span class="head" ><apex:commandLink action="{!viewBoardReporting}" style="text-decoration: none;color: #006633;" >{!YEAR(TODAY())} Nonprofit Board Service Reporting</apex:commandLink></span>&nbsp;&nbsp;
+      <apex:commandLink action="{!viewBoardDelegation}" type="image/png">
+          <apex:image style="border:none;height:51px;width:206px" value="{!URLFOR($Resource.images,'images/communitydevelopment/notufull.png')}"/>
+      </apex:commandlink>
+      <p style="margin-bottom:30px" />
+      <apex:outputpanel rendered="{!ShowGreeting}">
+          <span class="copy"><p><apex:outputText value="Hello {!employee.First_Name__c}"/>,</p>We greatly appreciate your service and value when our employees take the initiative to report their time spent in the community. 
+               Please provide us with updated information about the service you have performed with nonprofit boards and committees as we would like to continue seeing the great work you have done!<br /><br /> </span><p style="margin-bottom:20px" />
+      </apex:outputpanel>
+
+      <apex:pageBlock title="Board Information for: {!employee.First_Name__c} {!employee.Last_Name__c}">
+
+      <apex:outputPanel rendered="{!has_Curr_Year_board_memberships}">
+          <table>
+             <tr>
+                <td>
+                   <apex:outputtext value="Instructions:" style="font-size:16px; font-weight: bold; font-family:calibri; color:#00134C"/>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                   <apex:outputtext value="The organizations you have served this year are listed below. New organizations are listed in" style="font-size:15px; font-family:calibri; color:black"/>
+                   <apex:outputtext value=" italics." style="font-size:15px; font-family:calibri; font-style:italic; color:black"/>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <apex:outputtext value="Click on the "  style="font-size:15px; font-family:calibri; color:black"/>
+                    <apex:outputtext value="organization name "  style="font-size:15px; font-family:calibri; color:blue"/> 
+                    <apex:outputtext value="below to edit/add board service activities to the organization."  style="font-size:15px; font-family:calibri; color:black"/> 
+                </td>
+             </tr>
+             <tr>
+                <td>
+                   <apex:outputtext value="Click " style="font-size:15px; font-family:calibri; color:black"/>
+                   <apex:outputtext value="Add New Organization " style="font-size:15px; font-weight:bold; font-style:italic; font-family:calibri; color:black"/>
+                   <apex:outputtext value="to add activity for a new organization not listed below for this year."  style="font-size:15px; font-family:calibri; color:black"/>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                   <apex:outputtext value="Click " style="font-size:15px; font-family:calibri; color:black"/>
+                   <apex:outputtext value="Return to Opening Page " style="font-size:15px; font-weight:bold; font-style:italic; font-family:calibri; color:black"/>
+                   <apex:outputtext value="to return to the page to select Board or Volunteer activity."  style="font-size:15px; font-family:calibri; color:black"/>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                   <apex:outputtext value="Click " style="font-size:15px; font-family:calibri; color:black"/>
+                   <apex:outputtext value="Exit " style="font-size:15px; font-weight:bold; font-style:italic; font-family:calibri; color:black"/>
+                   <apex:outputtext value="to be diverted to the First in the Community Landing page." style="font-size:15px; font-family:calibri; color:black"/>
+                </td>
+             </tr>
+          </table>      
+      </apex:outputPanel>
+      <br/>
+      <br/>
+      <apex:outputPanel rendered="{!IF(has_Curr_Year_board_memberships = false, true,false)}">
+         <table><tr><td><b>Thank you for serving your community and reporting your time. You do not have any time reported for this year.  Click the Add button below enter new board activity for {!YEAR(TODAY())}.</b></td></tr>
+            <tr><td>&nbsp;</td></tr>
+         </table>
+      </apex:outputPanel>
+
+      <apex:pageMessages ></apex:pageMessages>
+      
+      <apex:pageblocktable value="{!EmployeeBoardMembership}" var="a" rendered="{!has_Curr_Year_board_memberships}">
+          <apex:column >
+              <apex:facet name="header">
+                  <APEX:OutputText value="Organization Name" styleclass="outputtextbold"/>
+              </apex:facet>
+              <apex:facet name="footer">
+                  <APEX:OutputText value="Total Board Hours for {!YEAR(TODAY())}" styleclass="outputtextbold" style="font-style:italic"/>
+              </apex:facet>
+              <apex:commandLink value="{!IF(a.Organization_Other__c = '', a.Volunteer_Organization__r.Name, a.Organization_Other__c+'*')}" action="{!EditBoardOrganization}"
+                  style="{!IF(a.Organization_Other__c = '', 'font-style:normal', 'font-style:italic')}; font-size:15px; font-family:calibri; color:blue">
+                  <apex:param name="SelectedBoardOrganization" value="{!a.id}" />
+              </apex:commandLink>
+          </apex:column>
+
+          <apex:column >
+              <apex:facet name="header">
+                  <APEX:OutputText value="Board Hours for {!YEAR(TODAY())}" styleclass="outputtextbold"/>
+              </apex:facet>                  
+              <apex:facet name="footer">
+                  <APEX:OutputText value="{!totBoardHoursThisYear}" styleclass="outputtextbold" style="font-style:italic"/>
+              </apex:facet>                  
+              <apex:outputtext value="{!a.Total_Board_Hours__c}"/>
+          </apex:column>
+          <!--
+          <apex:column headervalue="Total Board Hours for {!YEAR(TODAY())}"> <apex:outputtext value="{!a.Total_Board_Hours__c}"/></apex:column>
+          -->
+          <apex:column >
+              <apex:facet name="header">
+                  <APEX:OutputText value="Delete" styleclass="outputtextbold"/>
+              </apex:facet>                  
+              <apex:commandLink action="{!DeleteBoardOrganization}"  onclick="if(!confirm('Are you sure you want to delete Organization {!IF(a.Organization_Other__c = '', a.Volunteer_Organization__r.Name, a.Organization_Other__c)} and all related activities?')){return false};">
+                 <apex:param name="BoardOrganizationToDelete" value="{!a.Id}" />
+                 <apex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/DeleteButtonDark.png')}"/>
+              </apex:commandLink>
+          </apex:column>
+
+      </apex:pageblocktable>
+      <br/>
+      <apex:outputtext value="*New Organization" style="color:blue;font-style:italic" rendered="{!has_prev_board_memberships}"/>
+
+      <div style="margin: 36px 0px 100px 100px;">
+         <apex:commandButton action="{!choose_Organization_page}" value="+ Add New Organization/Activity" style="background:#006133; color: white; font-style:italic; font-size:15pt; width:330px; Height:40px"/>
+         <apex:commandButton action="{!ReturnToOpen}" value="Return to Opening Page" style="margin-left: 50px; background:#960000; color: white; font-style:italic; font-size:15pt; width:350px; Height:40px"/>        
+         <apex:commandButton action="https://www.fnbo.com/community" value="Exit" style="margin-left: 50px; background:#00578d; color: white; font-style:italic; font-size:15pt; width:230px; Height:40px"/>
+      </div>
+   </apex:pageBlock>
+</apex:form>
+</body>   
+</apex:page>

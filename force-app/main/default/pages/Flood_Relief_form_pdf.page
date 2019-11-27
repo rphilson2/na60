@@ -1,0 +1,336 @@
+<apex:page standardController="FIC_Survey_Application__c" standardStylesheets="false" sidebar="false" renderAs="pdf" showheader="false" applyHtmlTag="false" applyBodyTag="false" >
+
+<head>
+<style type="text/css">
+@page {
+    @bottom-left {
+        content: "Date {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}";
+        font-family: sans-serif;
+        font-size: 80%;
+    }
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: sans-serif;
+        font-size: 80%;
+    }
+}
+</style>
+</head>
+<body>
+      <div class="header">
+        <table width="100%">
+            <tr width="100%">
+                <td width="40%" align="left">
+                    <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz.png')}" width="320" height="16"/>
+                </td>
+                <td width="60%" align="center">
+                    <apex:outputText value="Application for Flood Relief Grant" style="font-family: sans-serif; font-size: 12pt; font-weight:bold"></apex:outputText>
+                    <br/>
+                    <apex:outputText value="Application Date: {0,date,MM/dd/yyyy}" style="font-family: sans-serif; font-size: 8pt">
+                        <apex:param value="{!FIC_Survey_Application__c.createddate}"/>
+                    </apex:outputText>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <hr/>
+      </div>
+      <div class="pdfrowtext">
+            <table width="100%">
+                <tr width="100%">
+                    <td width="100%" align="center">
+                       <apex:outputtext value="Applicant Information" style="font-family: sans-serif; font-size: 11pt; font-weight:bold; color:#13526d"></apex:outputText>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <table width="100%">
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization Name:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Name_of_Organization__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                      
+                   </td>
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="Tax ID:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Tax_ID__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                      
+                   </td>
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization's Street Address:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Organization_Street_Address__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                      <br/>                      
+                      <apex:outputText value=" {!FIC_Survey_Application__c.Organization_City__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                      <apex:outputText value=", {!FIC_Survey_Application__c.Organization_State__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                      
+                      <apex:outputText value=" {!FIC_Survey_Application__c.Organization_Zip__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                      
+                   </td>
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="Website:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Organization_Website__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                      
+                   </td>
+                </tr>                
+                <tr>                
+                   <td width="100%" align="left">
+                      <apex:outputText value="Tax Status:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Non_Profit_Status__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Explanation:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold" rendered="{!IF(FIC_Survey_Application__c.Non_Profit_Status__c != '501C(3)' && FIC_Survey_Application__c.Non_Profit_Status__c != '501C(6)', true, false)}"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Non_Profit_Status_Other__c}" style="font-family: sans-serif; font-size: 10pt" rendered="{!IF(FIC_Survey_Application__c.Non_Profit_Status__c != '501C(3)' && FIC_Survey_Application__c.Non_Profit_Status__c != '501C(6)', true, false)}"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization's Mission Statement:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Mission_Statement__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Executive Director:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Executive_Director__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Executive Director Email Address:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Executive_Director_Email_Address__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Executive Director Phone Number:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Executive_Director_Phone_Number__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization Contact:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Name__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization Contact Person Email:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Email__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Organization Contact Person Phone Number:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Phone_Number__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Person Completing This Form (Name and Affiliation):  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Person_Completing_This_Form__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Email of Person Completing This Form:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Person_Completing_This_Form_Email__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                   
+                   </td>                                                                         
+                </tr>
+            </table>
+            <br/>
+            <hr/>
+            <table width="100%">
+                <tr width="100%">
+                    <td width="100%" align="center">
+                       <apex:outputtext value="Project Information" style="font-family: sans-serif; font-size: 11pt; font-weight:bold; color:#13526d"></apex:outputText>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <table width="100%">
+                <tr width="100%">            
+                   <td width="100%" align="left">
+                      <apex:outputText value="Project Name:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Program_Event_Name__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Anticipated Project Start Date:  " style="font-family: sans-serif; font-size: 10pt; font-weight:bold"/>
+                      <apex:outputText value="{0,date,MM/dd/yyyy}" style="font-family: sans-serif; font-size: 10pt">
+                          <apex:param value="{!FIC_Survey_Application__c.Program_Event_Date__c}"/>
+                      </apex:outputText>                      
+                   </td>                                                                         
+                </tr>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Anticipated Project Completion Date: " style="font-family: sans-serif; font-size: 10pt; font-weight:bold"/>
+                      <apex:outputText value="{0,date,MM/dd/yyyy}" style="font-family: sans-serif; font-size: 10pt">
+                          <apex:param value="{!FIC_Survey_Application__c.Flood_Anticipated_End_Date__c}"/>
+                      </apex:outputText>                      
+                   </td>                                                                         
+                </tr>
+                <br/>
+                <tr width="100%">            
+                   <td width="100%" align="left">
+                      <apex:outputText value="Amount Requested:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold" ></apex:outputText>
+                      <apex:outputText value="{!ROUND(FIC_Survey_Application__c.Amount_Requested__c,2)}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Project Focus:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Community_Focus_Area__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>                       
+                   </td>                                                                         
+                </tr>
+            </table>
+            <br/>
+            <hr/>
+            <table width="100%">
+                <tr width="100%">
+                    <td width="100%" align="center">
+                       <apex:outputtext value="Qualifying Questions" style="font-family: sans-serif; font-size: 11pt; font-weight:bold; color:#13526d"></apex:outputText>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <table>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Provide a brief, 1-2 sentence description of how funding will be used to benefit people or geographies impacted by the spring and summer 2019 floods. 
+                      Applicants will be able to expand on this description in a later question:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Program_Event_Description__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">                
+                      <apex:outputText value="Indicate whether your organization is part of a Long-Term Recovery Group or Committee, and/or a collaborative cohort designed to be 
+                         responsive to the community’s disaster recovery and rebuilding needs.  List partners in that group/cohort and their respective roles and responsibilities, and how 
+                         that group’s activities have informed the proposal you are submitting." style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Long_Term_Recovery_Group__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Describe how the flood impacted your community, with specific attention and information related to the issue your organization will address with 
+                      this grant funding:  " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Describe_Impact__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="How will funding be used to address the impact caused by the floods?  Include cost estimates where known, as well as an estimated timeline for project completion:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Funding_Use__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="List all states, cities, and counties where your organization will focus its work.  Include specific addresses where known:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Counties_Served__c}" style="font-family: sans-serif; font-size: 10pt; white-space: pre-wrap"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Describe specific and measurable intended outcomes, and include how you will measure the success of your efforts:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Describe_Outcomes__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Describe your organization’s track record and success with implementing and managing projects similar to the project proposed in this application:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Describe_Track_Record__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Detail collaborations with other organizations that relate to this project,  including organization names and their role in the project:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Collaborations__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>                   
+                <br/>
+                <tr>
+                   <td width="100%" align="left">
+                      <apex:outputText value="Detail volunteer opportunities associated with this project and the name, phone number and email address of a volunteer coordinator with whom we can connect volunteers:" style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+                   </td>                                                                         
+                </tr>
+                <tr width="100%">
+                   <td width="100%" align="left">
+                      <apex:outputText value="{!FIC_Survey_Application__c.Flood_Volunteer_Opportunities__c}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+                   </td>
+                </tr>
+            </table>
+            <br/>            
+            <apex:outputText value="Does your organization undergo an annual independent audit? " style="font-family: sans-serif; font-size: 10pt; font-weight: bold"></apex:outputText>
+            <apex:outputText value="Yes" rendered="{!IF(FIC_Survey_Application__c.Annual_Independent_Audit__c == true, true, false)}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>
+            <apex:outputText value="No" rendered="{!IF(FIC_Survey_Application__c.Annual_Independent_Audit__c == false, true, false)}" style="font-family: sans-serif; font-size: 10pt"></apex:outputText>            
+            <hr/>            
+            <table width="100%">
+                <tr width="100%">
+                    <td width="100%" align="center">
+                       <apex:outputtext value="Attachments" style="font-family: sans-serif; font-size: 11pt; font-weight:bold; color:#13526d"></apex:outputText>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            <table style="border-spacing: 2px;">
+               <apex:repeat value="{!FIC_Survey_Application__c.attachments}" var="attachments">
+                   <tr>
+                     <td><apex:outputText value="{!attachments.name}" style="font-family: sans-serif; font-style: italic; font-size: 10pt"/></td>
+                   </tr>
+               </apex:repeat>
+            </table>             
+      </div>      
+</body>
+</apex:page>

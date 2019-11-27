@@ -1,0 +1,10 @@
+<apex:page standardController="Unfunded_Trust__c">
+    <apex:tabPanel >
+        <apex:tab label="Accounts">
+            <apex:include pageName="Unfunded_Trust_Accounts"/>
+        </apex:tab>
+            <apex:tab label="Opportunities">
+            <apex:include pageName="Unfunded_Trust_Opportunities"/>
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

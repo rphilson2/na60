@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Computer_and_Math__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Computer and Math</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Actuaries/Statistician</fullName>
+                <default>false</default>
+                <label>Actuaries/Statistician</label>
+            </value>
+            <value>
+                <fullName>Computer Engineer</fullName>
+                <default>false</default>
+                <label>Computer Engineer</label>
+            </value>
+            <value>
+                <fullName>Computer Programmer/Developer</fullName>
+                <default>false</default>
+                <label>Computer Programmer/Developer</label>
+            </value>
+            <value>
+                <fullName>Computer Specialist -All Other</fullName>
+                <default>false</default>
+                <label>Computer Specialist -All Other</label>
+            </value>
+            <value>
+                <fullName>Computer Support Specialist</fullName>
+                <default>false</default>
+                <label>Computer Support Specialist</label>
+            </value>
+            <value>
+                <fullName>Computer Systems Analyst</fullName>
+                <default>false</default>
+                <label>Computer Systems Analyst</label>
+            </value>
+            <value>
+                <fullName>Computer &amp; Info Scientist-Research</fullName>
+                <default>false</default>
+                <label>Computer &amp; Info Scientist-Research</label>
+            </value>
+            <value>
+                <fullName>Data Communications Manager</fullName>
+                <default>false</default>
+                <label>Data Communications Manager</label>
+            </value>
+            <value>
+                <fullName>Database Administrator</fullName>
+                <default>false</default>
+                <label>Database Administrator</label>
+            </value>
+            <value>
+                <fullName>Mathematician</fullName>
+                <default>false</default>
+                <label>Mathematician</label>
+            </value>
+            <value>
+                <fullName>Network Manager/Administrator</fullName>
+                <default>false</default>
+                <label>Network Manager/Administrator</label>
+            </value>
+            <value>
+                <fullName>Operations Research Analyst</fullName>
+                <default>false</default>
+                <label>Operations Research Analyst</label>
+            </value>
+            <value>
+                <fullName>Supervisor Programmer</fullName>
+                <default>false</default>
+                <label>Supervisor Programmer</label>
+            </value>
+            <value>
+                <fullName>Supervisor, Computer Analyst</fullName>
+                <default>false</default>
+                <label>Supervisor, Computer Analyst</label>
+            </value>
+            <value>
+                <fullName>Web Designer/Developer</fullName>
+                <default>false</default>
+                <label>Web Designer/Developer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

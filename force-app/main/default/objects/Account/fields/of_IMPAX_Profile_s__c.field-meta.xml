@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_IMPAX_Profile_s__c</fullName>
+    <description>Sums the number of related IMPAX Profiles connected to a customer.  A validation rule ensures only one IMPAX per customer</description>
+    <externalId>false</externalId>
+    <label># of IMPAX Profiles</label>
+    <summaryForeignKey>IMPAX__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

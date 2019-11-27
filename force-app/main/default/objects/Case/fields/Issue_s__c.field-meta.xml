@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Issue(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FW1 - Doc Not Scanned</fullName>
+                <default>false</default>
+                <label>FW1 - Doc Not Scanned</label>
+            </value>
+            <value>
+                <fullName>FW2 - Improper Placement</fullName>
+                <default>false</default>
+                <label>FW2 - Improper Placement</label>
+            </value>
+            <value>
+                <fullName>PPK1 - Missing Paperwork/Schedule</fullName>
+                <default>false</default>
+                <label>PPK1 - Missing Paperwork/Schedule</label>
+            </value>
+            <value>
+                <fullName>PPK2 - Incomplete Paperwork/Schedule/pg 3</fullName>
+                <default>false</default>
+                <label>PPK2 - Incomplete Paperwork/Schedule/pg 3</label>
+            </value>
+            <value>
+                <fullName>PPK3 - Incorrect Paperwork/Schedule/pg 3</fullName>
+                <default>false</default>
+                <label>PPK3 - Incorrect Paperwork/Schedule/pg 3</label>
+            </value>
+            <value>
+                <fullName>PPK4 - Requestor Not Authorized</fullName>
+                <default>false</default>
+                <label>PPK4 - Requestor Not Authorized</label>
+            </value>
+            <value>
+                <fullName>ENR1 - Incomplete Enrollment Form</fullName>
+                <default>false</default>
+                <label>ENR1 - Incomplete Enrollment Form</label>
+            </value>
+            <value>
+                <fullName>ENR2 - Improper Enrollment Used/Version</fullName>
+                <default>false</default>
+                <label>ENR2 - Improper Enrollment Used/Version</label>
+            </value>
+            <value>
+                <fullName>ENR3 - Incorrect Information for Setup</fullName>
+                <default>false</default>
+                <label>ENR3 - Incorrect Information for Setup</label>
+            </value>
+            <value>
+                <fullName>ENR4 - CMO User Not Set Up</fullName>
+                <default>false</default>
+                <label>ENR4 - CMO User Not Set Up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

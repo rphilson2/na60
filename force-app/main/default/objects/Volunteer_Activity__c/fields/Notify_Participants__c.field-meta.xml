@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_Participants__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Controls the code that notifies participants when volunteer activity details change.  If this field is checked, then the code will send an email notification to all participants with the new volunteer activity details.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sends an email notification to all participants whenever this activity is changed.</inlineHelpText>
+    <label>Notify Participants</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

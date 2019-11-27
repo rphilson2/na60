@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Sales_and_Related__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Sales and Related</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertising Sales Agents</fullName>
+                <default>false</default>
+                <label>Advertising Sales Agents</label>
+            </value>
+            <value>
+                <fullName>Car/Truck/ Boat Sales Agent</fullName>
+                <default>false</default>
+                <label>Car/Truck/ Boat Sales Agent</label>
+            </value>
+            <value>
+                <fullName>Cashier</fullName>
+                <default>false</default>
+                <label>Cashier</label>
+            </value>
+            <value>
+                <fullName>Counter &amp; Rental Clerks</fullName>
+                <default>false</default>
+                <label>Counter &amp; Rental Clerks</label>
+            </value>
+            <value>
+                <fullName>Door-To-Door Sales</fullName>
+                <default>false</default>
+                <label>Door-To-Door Sales</label>
+            </value>
+            <value>
+                <fullName>Insurance Sales Agents</fullName>
+                <default>false</default>
+                <label>Insurance Sales Agents</label>
+            </value>
+            <value>
+                <fullName>Jeweler</fullName>
+                <default>false</default>
+                <label>Jeweler</label>
+            </value>
+            <value>
+                <fullName>Luggage/Leather Goods Dealer/Owner</fullName>
+                <default>false</default>
+                <label>Luggage/Leather Goods Dealer/Owner</label>
+            </value>
+            <value>
+                <fullName>Models</fullName>
+                <default>false</default>
+                <label>Models</label>
+            </value>
+            <value>
+                <fullName>Motorcycle/ATV Sales Agents</fullName>
+                <default>false</default>
+                <label>Motorcycle/ATV Sales Agents</label>
+            </value>
+            <value>
+                <fullName>News &amp; Street Vendor</fullName>
+                <default>false</default>
+                <label>News &amp; Street Vendor</label>
+            </value>
+            <value>
+                <fullName>Other Financial Services Sales</fullName>
+                <default>false</default>
+                <label>Other Financial Services Sales</label>
+            </value>
+            <value>
+                <fullName>Retail Salespersons</fullName>
+                <default>false</default>
+                <label>Retail Salespersons</label>
+            </value>
+            <value>
+                <fullName>Retail Store Owner/Partner</fullName>
+                <default>false</default>
+                <label>Retail Store Owner/Partner</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Sales &amp; Related - All Other</fullName>
+                <default>false</default>
+                <label>Sales &amp; Related - All Other</label>
+            </value>
+            <value>
+                <fullName>Sales Manager/Supervisor</fullName>
+                <default>false</default>
+                <label>Sales Manager/Supervisor</label>
+            </value>
+            <value>
+                <fullName>Sales Representative</fullName>
+                <default>false</default>
+                <label>Sales Representative</label>
+            </value>
+            <value>
+                <fullName>Securities/Commodities Sales</fullName>
+                <default>false</default>
+                <label>Securities/Commodities Sales</label>
+            </value>
+            <value>
+                <fullName>Tobacco Dealer/Owner</fullName>
+                <default>false</default>
+                <label>Tobacco Dealer/Owner</label>
+            </value>
+            <value>
+                <fullName>Used Merchandise Dealer/Owner</fullName>
+                <default>false</default>
+                <label>Used Merchandise Dealer/Owner</label>
+            </value>
+            <value>
+                <fullName>Vending Machine Operator/Owner</fullName>
+                <default>false</default>
+                <label>Vending Machine Operator/Owner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

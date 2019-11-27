@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_one_IMPAX_Profile_per_Customer</fullName>
+    <active>true</active>
+    <errorConditionFormula>of_IMPAX_Profile_s__c  &gt; 1</errorConditionFormula>
+    <errorMessage>Only one IMPAX profile per customer is allowed.  Please edit the existing IMPAX record.</errorMessage>
+</ValidationRule>

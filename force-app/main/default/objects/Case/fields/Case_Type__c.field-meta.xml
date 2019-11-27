@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Select One</fullName>
+                <default>true</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>Task</fullName>
+                <default>false</default>
+                <label>Task</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Account Maintenance</fullName>
+                <default>false</default>
+                <label>Account Maintenance</label>
+            </value>
+            <value>
+                <fullName>Customer Issue</fullName>
+                <default>false</default>
+                <label>Customer Issue</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Customer Feedback</fullName>
+                <default>false</default>
+                <label>Customer Feedback</label>
+            </value>
+            <value>
+                <fullName>Internal Project</fullName>
+                <default>false</default>
+                <label>Internal Project</label>
+            </value>
+            <value>
+                <fullName>Doc Maintenance</fullName>
+                <default>false</default>
+                <label>Doc Maintenance</label>
+            </value>
+            <value>
+                <fullName>Card Maintenance</fullName>
+                <default>false</default>
+                <label>Card Maintenance</label>
+            </value>
+            <value>
+                <fullName>Card Payments</fullName>
+                <default>false</default>
+                <label>Card Payments</label>
+            </value>
+            <value>
+                <fullName>Card Troubleshooting</fullName>
+                <default>false</default>
+                <label>Card Troubleshooting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

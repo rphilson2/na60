@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Unfunded_Trust</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Unfunded Trust</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a12/e?CF00Na000000BC24F={!COI__c.Name}&amp;CF00Na000000BC24F_lkid={!COI__c.Id}&amp;retURL=/{!COI__c.Id}</url>
+</WebLink>

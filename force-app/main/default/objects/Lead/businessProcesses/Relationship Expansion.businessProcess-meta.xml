@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship Expansion</fullName>
+    <description>**RETIRED! Use this lead process to manage the Leads that are expansions of existing relationships</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Converted to Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

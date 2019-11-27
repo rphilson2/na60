@@ -1,0 +1,56 @@
+<apex:page id="thepage" standardController="nFORCE__Route__c" extensions="UICreateScreenFromRouteController">
+
+<!-- CSS Information -->
+<style type="text/css">
+    .myClass { width: 250px; }
+    .narrowClass { width: 50px; }
+</style>
+<!-- /CSS -->
+    
+<apex:form >
+
+    <apex:sectionHeader title="Screen & Screen Sections Quick Create" subtitle="Advanced User Interface"/>
+    <apex:pageMessages />
+
+    <apex:pageBlock id="pgbk1" mode="detail">
+    
+        <apex:pageBlockSection id="pgbk1_1" title="Screen" columns="2">
+            <!-- Relevant Screen Fields -->
+            <apex:outputLabel value="Screen Name:"></apex:outputLabel>            
+            <apex:inputText styleClass="myClass" value="{!screenNameGS}" />
+            <apex:outputLabel value="Disable Print:"></apex:outputLabel>            
+            <apex:inputCheckbox value="{!screenDisablePrintGS}" />
+            <apex:outputLabel value="Show Context Object Name:"></apex:outputLabel>            
+            <apex:inputCheckbox value="{!screenShowContextObjectNameGS}" />                     
+            <!-- <apex:outputLabel value=""></apex:outputLabel> -->
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection id="pgbk1_2" title="Screen Section(s)" columns="5">
+            <apex:outputLabel value=""></apex:outputLabel>
+            <apex:outputLabel value="Yes/No"></apex:outputLabel>
+            <apex:outputLabel value="How many?"></apex:outputLabel>
+            <apex:outputLabel value=""></apex:outputLabel>
+            <apex:outputLabel value=""></apex:outputLabel>                             
+        
+            <apex:outputLabel value="Add Data Grid Screen Section(s)"></apex:outputLabel>
+            <apex:inputCheckbox value="{!addDataGridScreenSectionsGS}" />           
+            <apex:inputText styleClass="narrowClass" value="{!numberOfDataGridScreenSectionsGS}" />
+            <apex:outputLabel value=""></apex:outputLabel>
+            <apex:outputLabel value=""></apex:outputLabel>                         
+            
+            <apex:outputLabel value="Add Related List Screen Section(s):"></apex:outputLabel>
+            <apex:inputCheckbox value="{!addRelatedListScreenSectionsGS}" />              
+            <apex:inputText styleClass="narrowClass" value="{!numberOfRelatedListScreenSectionsGS}" />
+            <apex:outputLabel value=""></apex:outputLabel>
+            <apex:outputLabel value=""></apex:outputLabel>                       
+        </apex:pageBlockSection>
+                    
+        <apex:pageBlockSection id="pgbk1_3" title="Confirm" columns="1">
+            <apex:commandButton id="mainbutton" value="Create Screens" style="colStyle4" action="{!routeRedirect}"/>
+            <apex:message for="mainbutton" />   
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+
+</apex:form>
+</apex:page>

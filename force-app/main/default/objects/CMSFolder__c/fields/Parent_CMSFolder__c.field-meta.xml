@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_CMSFolder__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>If this folder is a subfolder, please select it&#39;s parent here.</inlineHelpText>
+    <label>Parent CMSFolder</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.Type__c</field>
+            <operation>equals</operation>
+            <valueField>CMSFolder__c.Type__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CMSFolder__c</referenceTo>
+    <relationshipLabel>Subfolders</relationshipLabel>
+    <relationshipName>CMSFolder</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

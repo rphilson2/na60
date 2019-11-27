@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MaxParticipants</fullName>
+    <active>true</active>
+    <errorConditionFormula>Max_Number_of_Participants__c  &lt;  Total_Number_of_Participants__c</errorConditionFormula>
+    <errorDisplayField>Max_Number_of_Participants__c</errorDisplayField>
+    <errorMessage>The maximum participants value cannot be less than the number of current participants.</errorMessage>
+</ValidationRule>

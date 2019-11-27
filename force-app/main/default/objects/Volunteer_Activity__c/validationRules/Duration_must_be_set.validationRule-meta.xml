@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_must_be_set</fullName>
+    <active>false</active>
+    <description>Duration must be set for non-ongoing opportunities</description>
+    <errorConditionFormula>AND (
+    ISNULL(Duration_hours__c ) ,
+    IsOpportunity__c = false
+)</errorConditionFormula>
+    <errorDisplayField>Duration_hours__c</errorDisplayField>
+    <errorMessage>Duration is required if the Ongoing Opportunity checkbox is not checked.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<apex:page standardController="Prospect_Profile__c">
+    <apex:pageBlock >
+             <apex:pageBlockSection title="Possible Changes in Business Operations or Financial Management Processes (Anticipated Prior to 1st Meeting)">
+             <apex:outputPanel layout="block" style="white-space:nowrap;">
+                 <table width="200px" align="left">
+                 <tr>
+                        <td width="800px"><h2><apex:outputText value="Business Processes (1 Year): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Business_Processes_1_Year__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="800px"><h2><apex:outputText value="Financial Processes (1 Year): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Financial_Processes_1_Year__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr>
+                        <td width="800px"><h2><apex:outputText value="Business Processes (5 Year): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Business_Processes_5_Year__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 <tr bgcolor="#FFFFFF">
+                        <td width="800px"><h2><apex:outputText value="Financial Processes (5 Year): "/></h2></td>
+                        <td width="150px"><apex:outputField value="{!Prospect_Profile__c.Financial_Processes_5_Year__c}">
+                        </apex:outputField></td>
+                 </tr>
+                 </table>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

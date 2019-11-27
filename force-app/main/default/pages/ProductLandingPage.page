@@ -1,0 +1,2 @@
+<apex:page sidebar="false" action="{!redirect}" controller="ProductLandingPageController" >
+</apex:page>

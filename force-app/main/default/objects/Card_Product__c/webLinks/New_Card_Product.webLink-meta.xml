@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Card_Product</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Card Product</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a0T/e?CF00Na000000B85Lx={!Opportunity.Name}&amp;CF00Na000000B85Lx_lkid={!Opportunity.Id}&amp;CF00Na000000B85Ls={!Opportunity.Account}&amp;CF00Na000000B85Ls_lkid={!Opportunity.AccountId}&amp;retURL={!Opportunity.Id}</url>
+</WebLink>

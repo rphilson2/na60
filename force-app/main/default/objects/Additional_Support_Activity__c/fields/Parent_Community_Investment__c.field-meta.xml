@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Community_Investment__c</fullName>
+    <externalId>false</externalId>
+    <label>Parent Community Investment</label>
+    <referenceTo>Community_Giving__c</referenceTo>
+    <relationshipLabel>Additional Support Activities</relationshipLabel>
+    <relationshipName>Additional_Support_Activities</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

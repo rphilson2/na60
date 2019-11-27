@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNBO_DAO_Read_Only_Control</fullName>
+    <description>nCino DAO</description>
+    <displayedFields>
+        <field>Existing_DDA_Indicator__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>FNBO DAO Read Only Control</label>
+</FieldSet>

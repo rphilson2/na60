@@ -1,0 +1,59 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>        
+                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Section Two: Community Development Need</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">                                                      
+                                <tr>
+                                <td><apex:outputText value="1. Which of the following Community Development goals does your 
+                                proposed grant funded program, service or initiative seek to address?  Select one:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><b><apex:pageMessages /></b></td>
+                                </tr>
+                            </table>                            
+                            <apex:selectRadio value="{!purpose_choice}" dir="ltr" layout="pageDirection" styleClass="outputtext">
+                               <apex:selectoption itemvalue="stablehousing" itemescaped="true" itemlabel="Stable Housing / Neighborhood Revitalization: Increase access to safe, affordable, and quality housing or stimulate revitalization in blighted, underserved, and distressed communities." rendered="false"/>
+                               <apex:selectoption itemvalue="stronglocal" itemlabel="Strong Local Economies: Grow local economies through small business development and job creation." rendered="false"/>
+                               <apex:selectoption itemvalue="revitalize" itemlabel="Neighborhood Revitalization and Stabilization: Stimulate revitalization in blighted, underserved, and distressed communities." rendered="false"/>
+                               <apex:selectoption itemvalue="educwrkfrce" itemlabel="Educated Workforce: Strengthen individual core competencies that will drive economic self-sufficiency." rendered="true"/>
+                            </apex:selectRadio>
+
+                            <table style="border-spacing: 2px;">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>                      
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr16}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

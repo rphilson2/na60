@@ -1,0 +1,185 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" standardStylesheets="false" sidebar="false" cache="false" expires="0">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>        
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext">Box A - Assessment Area Name:</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext"><apex:outputText value="{!FIC_Survey_Application__c.G_Box_A__c}"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext">Box B - 100% Median Family Income:</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext">$<apex:outputText value="{!FIC_Survey_Application__c.G_Box_B__c}"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext">Box C - 80% Median Family Income:</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse" class="outputtext">$<apex:outputText value="{!FIC_Survey_Application__c.G_Box_C__c}"/></td>
+                                    </tr>
+                                  </tbody>
+                                  </table></td>
+                                </tr>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Funding_Primarily_Serve_Youth__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="What percentage of youth served are eligible for Free and Reduced lunch?" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Eligible_for_Free_and_Reduced_Lunch__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="List the school(s) that youth participating in your programming attend, and include Free and Reduced Lunch percentages for each." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Schools_Free_and_Reduced_Lunch__c}"  onkeydown="limit(this, 750)" onkeyup="limit(this, 750)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Medicaid_Eligibility_for_Program__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="What percentage of program beneficiaries are eligible for Medicaid?" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Eligible_for_Medicaid__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Income_Thresholds_to_be_Eligible__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide income thresholds and relate them to the figure in Box B. Your response 
+                                should follow this example: To be eligible for [Insert Program Name], incomes cannot exceed [Insert Income Threshold], 
+                                which is [XX% - Divide threshold by Box B] of the median family income for 
+                                the [Insert Assessment Area Name from Box A] area." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Provide_Income_Thresholds_and_Relate__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Geographical_Radius_of_Organization__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide the address where the services or activities will occur." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Address_of_Services_or_Activities__c}"  onkeydown="limit(this, 255)" onkeyup="limit(this, 255)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide the Median Family Income of the areas where services will occur, reported as BOTH a 
+                                dollar value and as a percentage of Median Family Income. If you are targeting multiple areas, provide all locations. 
+                                Your response should follow this example: This program/service is located in the following area(s): [List all addresses]. 
+                                Median Family Income for this area is: [list Median Family Income for each area], which is [XX%] of the Median Family 
+                                Income for [Assessment Area Name found in box A or Appendix A that corresponds with the address you provided above]." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Family_Income_of_the_areas_where_servi__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Small_Businesses_or_Small_Farms__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="What percentage of businesses served have annual revenues under one million?" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Annual_revenues_under_one_million__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide demographic information on the businesses you serve." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Demographic_information_on_the_bus__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="What is the average wage of jobs created by your program?" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Average_wage_of_jobs_created__c}"  onkeydown="limit(this, 255)" onkeyup="limit(this, 255)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="How does the average wage of jobs created by your program relate to the Median Family Income? 
+                                Divide average wage by the figure in box B. Your response should follow this example: The average wage of jobs created by [program/organization] is $[Average Wage], 
+                                which is [XX]% of the median family income for the [box A area]." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Average_wage_relate_Median_Family_Inc__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Low_or_Moderate_Income_Neighborhood__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Provide an address of the project or activity center and how the activity 
+                                will attract or retain businesses and/or residents to the area. If the project or activity is consistent 
+                                with a federal, state, local government or other community development plan, reference the plan and provide 
+                                a description of how the proposed activity is aligned with the plan. If a map is available, attach it as a 
+                                supplemental document." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Address_of_the_project_center__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!FIC_Survey_Application__c.G_Track_Income_Information__c = 'Yes'}">
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Indicate what percentage of program beneficiaries 
+                                earn incomes at or below the income listed in question 14 Box C. Your 
+                                response should follow this format: [XX]% of individuals served by 
+                                [Program] earn at or below 80% of the median family income for the 
+                                [Box A] area, which is [Box C]." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Program_ben_incomes_at_or_below__c}"  onkeydown="limit(this, 300)" onkeyup="limit(this, 300)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                </apex:outputPanel>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="16. How do you collect and verify beneficiary income data?" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Q_Collect_and_Verify_Beneficiary_Income__c}"  onkeydown="limit(this, 500)" onkeyup="limit(this, 500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!grcert}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

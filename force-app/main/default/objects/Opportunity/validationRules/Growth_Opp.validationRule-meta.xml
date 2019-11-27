@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Growth_Opp</fullName>
+    <active>true</active>
+    <description>Define acceptable values when Pcard Type = Growth</description>
+    <errorConditionFormula>And(
+ ISPICKVAL( P_Card_Type__c , &quot;Growth&quot;),
+     ISBLANK( Additional_Spend_Growth__c ) )</errorConditionFormula>
+    <errorDisplayField>Additional_Spend_Growth__c</errorDisplayField>
+    <errorMessage>Additional Spend Growth must be populated for Growth P-Card Opportunities</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Web_Form_Name_field_can_not_be_empty</fullName>
+    <active>true</active>
+    <description>This rule will fire if somebody fills in a web form without filling in the name field.</description>
+    <errorConditionFormula>IF( ISNULL( Name ), true, false )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>The &#39;Name&#39; field can not be empty.</errorMessage>
+</ValidationRule>

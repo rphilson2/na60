@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Principle_Balance__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This balance may not reflects the Customer&#39;s actual balance as there is a 48 hour lag in updating this field from the source system (Hogan Loans, Harland Loans, TBS, etc).</inlineHelpText>
+    <label>Balance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

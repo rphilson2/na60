@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMSForce_Site_Id_req_Root_folder</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+ISBLANK(Parent_CMSFolder__c),ISBLANK( Site_Id__c ),
+ TEXT(Type__c)  = &#39;Page&#39;
+)
+, true,false)</errorConditionFormula>
+    <errorMessage>Page root folders need to be attached to a Site.</errorMessage>
+</ValidationRule>

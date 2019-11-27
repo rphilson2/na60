@@ -1,0 +1,62 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Section Five: Application Certification</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="I attest that all of the information contained within this application 
+                                and its supporting documents is truthful and accurate to the best of my knowledge. 
+                                Typing your full name in the box below will constitute an electronic signature." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Full Name:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Electronic_Signature_Full_Name__c}"  styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Date (MM/DD/YYYY):" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Electronic_Signature_Date__c}"  showDatePicker="False" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="CERTIFY" action="{!gr21}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

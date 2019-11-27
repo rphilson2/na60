@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nCino_Online_App_DOB</fullName>
+    <active>true</active>
+    <description>Prevents applicants from entering a birth date that is in the future or indicates that they are under the age of 18.</description>
+    <errorConditionFormula>AND( 
+$User.ProfileId = &#39;00e0c00000287hf&#39;, 
+OR( 
+Birth_Date__c &gt;= Today(), 
+YEAR(Birth_Date__c ) &lt; 1900, 
+Today() - Birth_Date__c &lt; (365*18) 
+))</errorConditionFormula>
+    <errorMessage>Invalid birth date. Please enter a valid date of birth.
+Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

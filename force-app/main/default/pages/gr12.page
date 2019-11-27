@@ -1,0 +1,173 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>
+            
+                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Section One: Applicant Information</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td class="outputtext">Organization Name:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Name_of_Organization__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization Name as it appears on your W-9:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Name_of_Organization_W_9__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization's Street Address:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Street_Address__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization's City:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_City__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization's State:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_State__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization's Zip Code:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Organization_Zip__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">What is your organization's tax status:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Non_Profit_Status__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><i>If other, please explain:</i></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Non_Profit_Status_Other__c}" id="Non_Profit_Status_Other__c" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:message for="Non_Profit_Status_Other__c"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization's Mission Statement:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Mission_Statement__c}" onkeydown="limit(this, 500)" onkeyup="limit(this, 500)" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Executive Director:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Executive Director Email Address:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director_Email_Address__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Executive Director Phone Number:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Executive_Director_Phone_Number__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Grant Contact:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Grant_Contact_Name__c}" styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Grant Contact Person Phone Number:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Grant_Contact_Phone__c}" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization’s Facebook Page URL:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Organization_Facebook__c}" styleClass="inputfieldwide"/><br/><apex:outputText value="(If not applicable, type NA)" styleClass="outputtextgrn"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization’s Twitter Handle:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Organization_Twitter_Handle__c}" styleClass="inputfieldwide"/><br/><apex:outputText value="(If not applicable, type NA)" styleClass="outputtextgrn"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Organization’s Instagram Handle:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Organization_Instagram_Handle__c}" styleClass="inputfieldwide"/><br/><apex:outputText value="(If not applicable, type NA)" styleClass="outputtextgrn"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">Other Organizational Social Media Accounts:</td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Other_Social_Media_Accounts__c}" onkeydown="limit(this, 500)" onkeyup="limit(this, 500)" styleClass="inputfieldwide"/><br/><apex:outputText value="(If not applicable, type NA)" styleClass="outputtextgrn"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr13}" styleClass="myButton"/>
+                                </td>                                
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

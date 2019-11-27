@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Referral_cant_have_related_COI</fullName>
+    <active>true</active>
+    <description>A referral from an internal employee cannot also be referred by a COI</description>
+    <errorConditionFormula>AND(
+      Opp_Created_from_Referral__c  = TRUE,
+     RecordTypeId  = &#39;0120c000001hhkz&#39;,
+     NOT(ISBLANK(Lead_Source_COI__c))
+)</errorConditionFormula>
+    <errorDisplayField>Lead_Source_COI__c</errorDisplayField>
+    <errorMessage>You cannot have a Source COI on an opportunity created from an internal referral</errorMessage>
+</ValidationRule>

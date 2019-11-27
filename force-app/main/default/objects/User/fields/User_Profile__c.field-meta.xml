@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Profile__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://fnni.lightning.force.com/lightning/r/User/&quot;&amp;Id&amp;&quot;/view&quot;, FirstName&amp;&quot; &quot;&amp;LastName)</formula>
+    <label>User Profile Link</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

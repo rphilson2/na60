@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(   AND(MONTH(CloseDate)=MONTH( TODAY()),Year(CloseDate)=Year(TODAY())) , &quot;Close Date this Month&quot;,  IF( Probability &lt;0.5, &quot;&lt;50% chance to close&quot;,&quot;&gt;=50% chance to close&quot;) )</formula>
+    <label>Opp Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

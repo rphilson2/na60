@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Competitor(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Business_Unit__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Farm Credit</fullName>
+                <default>false</default>
+                <label>1st Farm Credit</label>
+            </value>
+            <value>
+                <fullName>ADS</fullName>
+                <default>false</default>
+                <label>ADS</label>
+            </value>
+            <value>
+                <fullName>AgStar</fullName>
+                <default>false</default>
+                <label>AgStar</label>
+            </value>
+            <value>
+                <fullName>American National</fullName>
+                <default>false</default>
+                <label>American National</label>
+            </value>
+            <value>
+                <fullName>Ameritas</fullName>
+                <default>false</default>
+                <label>Ameritas</label>
+            </value>
+            <value>
+                <fullName>Amex</fullName>
+                <default>false</default>
+                <label>Amex</label>
+            </value>
+            <value>
+                <fullName>Baker Group</fullName>
+                <default>false</default>
+                <label>Baker Group</label>
+            </value>
+            <value>
+                <fullName>Bankers Bank of the West</fullName>
+                <default>false</default>
+                <label>Bankers Bank of the West</label>
+            </value>
+            <value>
+                <fullName>Bankers Bank Wisconsin</fullName>
+                <default>false</default>
+                <label>Bankers Bank Wisconsin</label>
+            </value>
+            <value>
+                <fullName>Bank Midwest</fullName>
+                <default>false</default>
+                <label>Bank Midwest</label>
+            </value>
+            <value>
+                <fullName>Bank of America</fullName>
+                <default>false</default>
+                <label>Bank of America</label>
+            </value>
+            <value>
+                <fullName>Bank of Arizona</fullName>
+                <default>false</default>
+                <label>Bank of Arizona</label>
+            </value>
+            <value>
+                <fullName>Bank of Oklahoma</fullName>
+                <default>false</default>
+                <label>Bank of Oklahoma</label>
+            </value>
+            <value>
+                <fullName>Bank of the West</fullName>
+                <default>false</default>
+                <label>Bank of the West</label>
+            </value>
+            <value>
+                <fullName>Bank View</fullName>
+                <default>false</default>
+                <label>Bank View</label>
+            </value>
+            <value>
+                <fullName>Barclays</fullName>
+                <default>false</default>
+                <label>Barclays</label>
+            </value>
+            <value>
+                <fullName>BBVA Compass</fullName>
+                <default>false</default>
+                <label>BBVA Compass</label>
+            </value>
+            <value>
+                <fullName>BMO Harris Bank</fullName>
+                <default>false</default>
+                <label>BMO Harris Bank</label>
+            </value>
+            <value>
+                <fullName>Bridges Investment Counsel</fullName>
+                <default>false</default>
+                <label>Bridges Investment Counsel</label>
+            </value>
+            <value>
+                <fullName>BSW Partners</fullName>
+                <default>false</default>
+                <label>BSW Partners</label>
+            </value>
+            <value>
+                <fullName>Cambridge Advisors</fullName>
+                <default>false</default>
+                <label>Cambridge Advisors</label>
+            </value>
+            <value>
+                <fullName>Cap One</fullName>
+                <default>false</default>
+                <label>Cap One</label>
+            </value>
+            <value>
+                <fullName>Carson Wealth Management</fullName>
+                <default>false</default>
+                <label>Carson Wealth Management</label>
+            </value>
+            <value>
+                <fullName>Chase</fullName>
+                <default>false</default>
+                <label>Chase</label>
+            </value>
+            <value>
+                <fullName>Citi</fullName>
+                <default>false</default>
+                <label>Citi</label>
+            </value>
+            <value>
+                <fullName>City National</fullName>
+                <default>false</default>
+                <label>City National</label>
+            </value>
+            <value>
+                <fullName>Co-Bank</fullName>
+                <default>false</default>
+                <label>Co-Bank</label>
+            </value>
+            <value>
+                <fullName>Colorado Financial Management</fullName>
+                <default>false</default>
+                <label>Colorado Financial Management</label>
+            </value>
+            <value>
+                <fullName>Comdata</fullName>
+                <default>false</default>
+                <label>Comdata</label>
+            </value>
+            <value>
+                <fullName>Comerica</fullName>
+                <default>false</default>
+                <label>Comerica</label>
+            </value>
+            <value>
+                <fullName>Commerce Bank</fullName>
+                <default>false</default>
+                <label>Commerce Bank</label>
+            </value>
+            <value>
+                <fullName>Community Bank</fullName>
+                <default>false</default>
+                <label>Community Bank</label>
+            </value>
+            <value>
+                <fullName>Cornhusker Bank</fullName>
+                <default>false</default>
+                <label>Cornhusker Bank</label>
+            </value>
+            <value>
+                <fullName>Country Club Bank</fullName>
+                <default>false</default>
+                <label>Country Club Bank</label>
+            </value>
+            <value>
+                <fullName>Crestone Capital Advisors</fullName>
+                <default>false</default>
+                <label>Crestone Capital Advisors</label>
+            </value>
+            <value>
+                <fullName>DA Davidson</fullName>
+                <default>false</default>
+                <label>DA Davidson</label>
+            </value>
+            <value>
+                <fullName>East West</fullName>
+                <default>false</default>
+                <label>East West</label>
+            </value>
+            <value>
+                <fullName>Edward Jones</fullName>
+                <default>false</default>
+                <label>Edward Jones</label>
+            </value>
+            <value>
+                <fullName>Elan</fullName>
+                <default>false</default>
+                <label>Elan</label>
+            </value>
+            <value>
+                <fullName>Farm Credit Services</fullName>
+                <default>false</default>
+                <label>Farm Credit Services</label>
+            </value>
+            <value>
+                <fullName>Feltz Wealth Plan</fullName>
+                <default>false</default>
+                <label>Feltz Wealth Plan</label>
+            </value>
+            <value>
+                <fullName>FIA</fullName>
+                <default>false</default>
+                <label>FIA</label>
+            </value>
+            <value>
+                <fullName>Fidelity</fullName>
+                <default>false</default>
+                <label>Fidelity</label>
+            </value>
+            <value>
+                <fullName>Fifth Third</fullName>
+                <default>false</default>
+                <label>Fifth Third</label>
+            </value>
+            <value>
+                <fullName>First Tennessee</fullName>
+                <default>false</default>
+                <label>First Tennessee</label>
+            </value>
+            <value>
+                <fullName>First Western Trust Bank</fullName>
+                <default>false</default>
+                <label>First Western Trust Bank</label>
+            </value>
+            <value>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+                <label>HSBC</label>
+            </value>
+            <value>
+                <fullName>Innovest</fullName>
+                <default>false</default>
+                <label>Innovest</label>
+            </value>
+            <value>
+                <fullName>JP Morgan Chase</fullName>
+                <default>false</default>
+                <label>JP Morgan Chase</label>
+            </value>
+            <value>
+                <fullName>Key Bank</fullName>
+                <default>false</default>
+                <label>Key Bank</label>
+            </value>
+            <value>
+                <fullName>Lawson Kroeker</fullName>
+                <default>false</default>
+                <label>Lawson Kroeker</label>
+            </value>
+            <value>
+                <fullName>Lutz and Co.</fullName>
+                <default>false</default>
+                <label>Lutz and Co.</label>
+            </value>
+            <value>
+                <fullName>McCarthy Group Advisors</fullName>
+                <default>false</default>
+                <label>McCarthy Group Advisors</label>
+            </value>
+            <value>
+                <fullName>Merrill Lynch</fullName>
+                <default>false</default>
+                <label>Merrill Lynch</label>
+            </value>
+            <value>
+                <fullName>Morgan Stanley</fullName>
+                <default>false</default>
+                <label>Morgan Stanley</label>
+            </value>
+            <value>
+                <fullName>Mutual of Omaha Bank</fullName>
+                <default>false</default>
+                <label>Mutual of Omaha Bank</label>
+            </value>
+            <value>
+                <fullName>Nebraska Bankers Bank</fullName>
+                <default>false</default>
+                <label>Nebraska Bankers Bank</label>
+            </value>
+            <value>
+                <fullName>No Program</fullName>
+                <default>false</default>
+                <label>No Program</label>
+            </value>
+            <value>
+                <fullName>Northern Trust</fullName>
+                <default>false</default>
+                <label>Northern Trust</label>
+            </value>
+            <value>
+                <fullName>Omaha State Bank</fullName>
+                <default>false</default>
+                <label>Omaha State Bank</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Performance Trust</fullName>
+                <default>false</default>
+                <label>Performance Trust</label>
+            </value>
+            <value>
+                <fullName>Pinnacle Bank</fullName>
+                <default>false</default>
+                <label>Pinnacle Bank</label>
+            </value>
+            <value>
+                <fullName>PNC</fullName>
+                <default>false</default>
+                <label>PNC</label>
+            </value>
+            <value>
+                <fullName>Rabo AgriFinance</fullName>
+                <default>false</default>
+                <label>Rabo AgriFinance</label>
+            </value>
+            <value>
+                <fullName>RBS Citizens</fullName>
+                <default>false</default>
+                <label>RBS Citizens</label>
+            </value>
+            <value>
+                <fullName>Regions</fullName>
+                <default>false</default>
+                <label>Regions</label>
+            </value>
+            <value>
+                <fullName>Roland Manarin Investment Counsel</fullName>
+                <default>false</default>
+                <label>Roland Manarin Investment Counsel</label>
+            </value>
+            <value>
+                <fullName>Sargent Bickham Lagudis</fullName>
+                <default>false</default>
+                <label>Sargent Bickham Lagudis</label>
+            </value>
+            <value>
+                <fullName>Security National Bank</fullName>
+                <default>false</default>
+                <label>Security National Bank</label>
+            </value>
+            <value>
+                <fullName>Self</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+            <value>
+                <fullName>Silicon Valley</fullName>
+                <default>false</default>
+                <label>Silicon Valley</label>
+            </value>
+            <value>
+                <fullName>Silverstone</fullName>
+                <default>false</default>
+                <label>Silverstone</label>
+            </value>
+            <value>
+                <fullName>Smith Barney</fullName>
+                <default>false</default>
+                <label>Smith Barney</label>
+            </value>
+            <value>
+                <fullName>Smith Hayes</fullName>
+                <default>false</default>
+                <label>Smith Hayes</label>
+            </value>
+            <value>
+                <fullName>Sun Trust</fullName>
+                <default>false</default>
+                <label>Sun Trust</label>
+            </value>
+            <value>
+                <fullName>Tagge Rutherford</fullName>
+                <default>false</default>
+                <label>Tagge Rutherford</label>
+            </value>
+            <value>
+                <fullName>TCM</fullName>
+                <default>false</default>
+                <label>TCM</label>
+            </value>
+            <value>
+                <fullName>TD Bank</fullName>
+                <default>false</default>
+                <label>TD Bank</label>
+            </value>
+            <value>
+                <fullName>TIB</fullName>
+                <default>false</default>
+                <label>TIB</label>
+            </value>
+            <value>
+                <fullName>TMG</fullName>
+                <default>false</default>
+                <label>TMG</label>
+            </value>
+            <value>
+                <fullName>UBS</fullName>
+                <default>false</default>
+                <label>UBS</label>
+            </value>
+            <value>
+                <fullName>UMB</fullName>
+                <default>false</default>
+                <label>UMB</label>
+            </value>
+            <value>
+                <fullName>Union Bank</fullName>
+                <default>false</default>
+                <label>Union Bank</label>
+            </value>
+            <value>
+                <fullName>US Bank</fullName>
+                <default>false</default>
+                <label>US Bank</label>
+            </value>
+            <value>
+                <fullName>Various Independent Advisors</fullName>
+                <default>false</default>
+                <label>Various Independent Advisors</label>
+            </value>
+            <value>
+                <fullName>Vining Sparks</fullName>
+                <default>false</default>
+                <label>Vining Sparks</label>
+            </value>
+            <value>
+                <fullName>Wally Weitz Funds</fullName>
+                <default>false</default>
+                <label>Wally Weitz Funds</label>
+            </value>
+            <value>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+                <label>Wells Fargo</label>
+            </value>
+            <value>
+                <fullName>Wells Fargo Advisors</fullName>
+                <default>false</default>
+                <label>Wells Fargo Advisors</label>
+            </value>
+            <value>
+                <fullName>Zions Bank</fullName>
+                <default>false</default>
+                <label>Zions Bank</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Commercial Real Estate</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>American National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Bank of America</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <controllingFieldValue>KS</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Bank of the West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Commercial Real Estate</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Mutual of Omaha Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Commercial Real Estate</controllingFieldValue>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Pinnacle Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Security National Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Lending</controllingFieldValue>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Investment &amp; Planning</controllingFieldValue>
+            <controllingFieldValue>Correspondent Banking</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Wells Fargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate</controllingFieldValue>
+            <valueName>Omaha State Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Real Estate</controllingFieldValue>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Community Banking</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>Union Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>1st Farm Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>AgStar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>Bank of Oklahoma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>BMO Harris Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>Co-Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>Community Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>Farm Credit Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <valueName>Rabo AgriFinance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ag Business</controllingFieldValue>
+            <controllingFieldValue>Correspondent Banking</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <controllingFieldValue>KS</controllingFieldValue>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <controllingFieldValue>Corporate Treasury Services</controllingFieldValue>
+            <valueName>US Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment &amp; Planning</controllingFieldValue>
+            <valueName>Edward Jones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment &amp; Planning</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Merrill Lynch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment &amp; Planning</controllingFieldValue>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Smith Barney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment &amp; Planning</controllingFieldValue>
+            <valueName>Various Independent Advisors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Correspondent Banking</controllingFieldValue>
+            <valueName>Bankers Bank of the West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Correspondent Banking</controllingFieldValue>
+            <valueName>Nebraska Bankers Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Correspondent Banking</controllingFieldValue>
+            <controllingFieldValue>KS</controllingFieldValue>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>UMB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Bridges Investment Counsel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Cambridge Advisors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Carson Wealth Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Feltz Wealth Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Lawson Kroeker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Lutz and Co.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>McCarthy Group Advisors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Morgan Stanley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Roland Manarin Investment Counsel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Silverstone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Smith Hayes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Tagge Rutherford</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Wally Weitz Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth Management</controllingFieldValue>
+            <valueName>Wells Fargo Advisors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KS</controllingFieldValue>
+            <valueName>Bank Midwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>KS</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Commerce Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>ADS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>Bank View</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>Barclays</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Cap One</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Citi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>Elan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>FIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Fifth Third</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>JP Morgan Chase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>No Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>Self</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>TCM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>TIB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC FI/CoBrand</controllingFieldValue>
+            <valueName>TMG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Amex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Bank of Arizona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>BBVA Compass</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Chase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>City National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Comdata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Comerica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>East West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>HSBC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Key Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>PNC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>RBS Citizens</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Regions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Silicon Valley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>Sun Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FBC Commercial Card</controllingFieldValue>
+            <valueName>TD Bank</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

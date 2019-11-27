@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FriendlyUrlsFormat</fullName>
+    <active>true</active>
+    <description>Friendly urls can not start with /</description>
+    <errorConditionFormula>IF( LEFT( FriendlyUrl__c , 1) == &#39;/&#39; , true, false)</errorConditionFormula>
+    <errorDisplayField>FriendlyUrl__c</errorDisplayField>
+    <errorMessage>Do not start a friendly url with a &#39;/&#39;</errorMessage>
+</ValidationRule>

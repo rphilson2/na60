@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <description>This field is used only for reporting and is hidden from the end user.  It is maintained by apex code by copying the values from the user record when participant is added and when the User record changes.</description>
+    <externalId>false</externalId>
+    <label>Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <label>Japan</label>
+            </value>
+            <value>
+                <fullName>US-Central</fullName>
+                <default>false</default>
+                <label>US-Central</label>
+            </value>
+            <value>
+                <fullName>US-West</fullName>
+                <default>false</default>
+                <label>US-West</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>US-East</fullName>
+                <default>false</default>
+                <label>US-East</label>
+            </value>
+            <value>
+                <fullName>AsiaPac</fullName>
+                <default>false</default>
+                <label>AsiaPac</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

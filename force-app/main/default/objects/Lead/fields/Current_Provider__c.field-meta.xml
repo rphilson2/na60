@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Provider</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADS</fullName>
+                <default>false</default>
+                <label>ADS</label>
+            </value>
+            <value>
+                <fullName>BankView</fullName>
+                <default>false</default>
+                <label>BankView</label>
+            </value>
+            <value>
+                <fullName>Barclays</fullName>
+                <default>false</default>
+                <label>Barclays</label>
+            </value>
+            <value>
+                <fullName>BofA</fullName>
+                <default>false</default>
+                <label>BofA</label>
+            </value>
+            <value>
+                <fullName>Cap One</fullName>
+                <default>false</default>
+                <label>Cap One</label>
+            </value>
+            <value>
+                <fullName>Chase</fullName>
+                <default>false</default>
+                <label>Chase</label>
+            </value>
+            <value>
+                <fullName>Citi</fullName>
+                <default>false</default>
+                <label>Citi</label>
+            </value>
+            <value>
+                <fullName>Elan</fullName>
+                <default>false</default>
+                <label>Elan</label>
+            </value>
+            <value>
+                <fullName>FIA</fullName>
+                <default>false</default>
+                <label>FIA</label>
+            </value>
+            <value>
+                <fullName>Fifth Third</fullName>
+                <default>false</default>
+                <label>Fifth Third</label>
+            </value>
+            <value>
+                <fullName>First Bankcard</fullName>
+                <default>false</default>
+                <label>First Bankcard</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>No Program</fullName>
+                <default>false</default>
+                <label>No Program</label>
+            </value>
+            <value>
+                <fullName>Self</fullName>
+                <default>false</default>
+                <label>Self</label>
+            </value>
+            <value>
+                <fullName>TCM</fullName>
+                <default>false</default>
+                <label>TCM</label>
+            </value>
+            <value>
+                <fullName>TIB</fullName>
+                <default>false</default>
+                <label>TIB</label>
+            </value>
+            <value>
+                <fullName>TMG</fullName>
+                <default>false</default>
+                <label>TMG</label>
+            </value>
+            <value>
+                <fullName>UMB</fullName>
+                <default>false</default>
+                <label>UMB</label>
+            </value>
+            <value>
+                <fullName>US Bank</fullName>
+                <default>false</default>
+                <label>US Bank</label>
+            </value>
+            <value>
+                <fullName>WFB</fullName>
+                <default>false</default>
+                <label>WFB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

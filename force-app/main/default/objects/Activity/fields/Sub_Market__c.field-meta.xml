@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Market__c</fullName>
+    <description>Used to categorize Business Monitoring tasks</description>
+    <externalId>false</externalId>
+    <label>Sub Market</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Market__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fremont</fullName>
+                <default>false</default>
+                <label>Fremont</label>
+            </value>
+            <value>
+                <fullName>Lincoln</fullName>
+                <default>false</default>
+                <label>Lincoln</label>
+            </value>
+            <value>
+                <fullName>Omaha</fullName>
+                <default>false</default>
+                <label>Omaha</label>
+            </value>
+            <value>
+                <fullName>Colorado</fullName>
+                <default>false</default>
+                <label>Colorado</label>
+            </value>
+            <value>
+                <fullName>Columbus</fullName>
+                <default>false</default>
+                <label>Columbus</label>
+            </value>
+            <value>
+                <fullName>Illinois</fullName>
+                <default>false</default>
+                <label>Illinois</label>
+            </value>
+            <value>
+                <fullName>Kansas</fullName>
+                <default>false</default>
+                <label>Kansas</label>
+            </value>
+            <value>
+                <fullName>Kearney</fullName>
+                <default>false</default>
+                <label>Kearney</label>
+            </value>
+            <value>
+                <fullName>North Platte</fullName>
+                <default>false</default>
+                <label>North Platte</label>
+            </value>
+            <value>
+                <fullName>South Dakota</fullName>
+                <default>false</default>
+                <label>South Dakota</label>
+            </value>
+            <value>
+                <fullName>Texas</fullName>
+                <default>false</default>
+                <label>Texas</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Hansen</controllingFieldValue>
+            <valueName>Fremont</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Hansen</controllingFieldValue>
+            <valueName>Lincoln</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Hansen</controllingFieldValue>
+            <valueName>Omaha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Colorado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Columbus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Illinois</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Kansas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Kearney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>North Platte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>South Dakota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial - Struthers</controllingFieldValue>
+            <valueName>Texas</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

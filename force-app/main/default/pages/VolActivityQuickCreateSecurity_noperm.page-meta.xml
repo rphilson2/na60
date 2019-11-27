@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>15.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Authorization error page of the wizard to create a new non-profit org, non-profit contact, and volunteer activity in one transaction. This page is displayed if the user does not have permission to create a Volunteer Activity.</description>
+    <label>Activity Quick Create - no permission to create vol activity</label>
+</ApexPage>

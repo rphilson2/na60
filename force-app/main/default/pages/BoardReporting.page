@@ -1,0 +1,23 @@
+<!--DAG_2019_01_22 VersionOne Feature E-08549-- Large Modification on this date.  Changed this whole site from updating the Employee Board Membership object to updating the Volunteer Activity object.-->
+<!--               Commented out the commandlink below that was calling ViewBoardActivity procedure.  Commented out the procedure in the BoardReportingExtension Apex class -->
+<apex:page standardController="Volunteer_Activity__c" extensions="BoardReportingExtension" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Board Reporting" Action="{!Init}" >
+<apex:stylesheet value="{!URLFOR($Resource.styles,'boardreporting.css')}"/>
+<title>{!YEAR(TODAY())}  Nonprofit Board Service Reporting</title>
+<body>
+<apex:form >
+<span class="head" ><apex:commandLink action="{!viewBoardReporting}" style="text-decoration: none;color: #006633;" >{!YEAR(TODAY())} Nonprofit Board Service Reporting</apex:commandLink></span>&nbsp;&nbsp;
+<apex:commandLink action="{!viewBoardDelegation}" type="image/png">
+<apex:image style="border:none;height:51px;width:206px" value="{!URLFOR($Resource.images,'images/communitydevelopment/notufull.png')}"/>
+</apex:commandlink>
+<span style="padding: 20px 0px 0px 100px;" />
+<span class="copy"><p><apex:outputText value="Hello {!employee.First_Name__c}"/>,</p>We appreciate your service, please provide us with the updated information 
+about the services you have performed on nonprofit boards and committees.<br /><br /> </span><p style="margin-bottom:50px" />
+<!-- You may estimate hours served in {!YEAR(TODAY()-365)}.</span><p style="margin-bottom:50px" / -->
+<span  style="margin-left:500px"  >
+<!-- apex:commandLink action="{!viewBoardActivity}" type="image/png" -->
+<!-- pex:image value="{!URLFOR($Resource.images,'images/communitydevelopment/next.png')}"/ -->
+<!-- /apex:commandlink -->
+</span>
+</apex:form>
+</body>   
+</apex:page>

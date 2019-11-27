@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Me_Up2</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Sign Me Up!</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>window.open(&quot;/apex/SignMeUpConfirmation?id={!Volunteer_Activity__c.Id}&amp;uid={!User.Id}&quot;,&quot;Confirmation&quot;, &quot;menubar=0,resizable=1,scrollbars=0,width=300,height=200&quot;);</url>
+</WebLink>

@@ -1,0 +1,182 @@
+<apex:page standardController="Prospect_Profile__c">
+<style>
+    .container{
+        overflow:auto;
+        height:240px;
+        width:800px;
+    }
+        .container1{
+        overflow:auto;
+        height:180px;
+        width:800px;
+    }
+</style>
+         <apex:pageBlock >
+             <apex:pageBlockSection title="Banking Relationship">
+             <apex:outputPanel layout="block" style="white-space:nowrap;" styleclass="container">
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column headerValue="Bank Relationship" width="150px">
+                          <apex:outputText value="Loans: "/>
+                      </apex:column>
+                      <apex:column headerValue="Current Provider" width="250px">
+                          <apex:outputField value="{!pp.CurPro_Loans__c}"/>
+                      </apex:column>
+                      <apex:column headerValue="Other Providers" width="250px">
+                          <apex:outputField value="{!pp.OthPro_Loans__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Depository: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Depository__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Depository__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Treasury Mgmt: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Treasury_Mgmt__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Treasury_Mgmt__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="International Services: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_International_Services__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_International_Services__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Mortgage: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Mortgage__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Mortgage__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Other: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OtherCurPro__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OtherOthPro__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+             <apex:pageBlockSection title="Wealth Management">
+             <apex:outputPanel layout="block" style="white-space:nowrap;" styleclass="container1">
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column headerValue="Wealth Management" width="150px">
+                          <apex:outputText value="Trust: "/>
+                      </apex:column>
+                      <apex:column headerValue="Current Provider" width="250px">
+                          <apex:outputField value="{!pp.CurPro_Trust__c}"/>
+                      </apex:column>
+                      <apex:column headerValue="Other Providers" width="250px">
+                          <apex:outputField value="{!pp.OthPro_Trust__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Investment Mgmt: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Investment_Mgmt__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Investment_Mgmt__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Succession Planning: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Succession_Planning__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Succession_Planning__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="150px">
+                          <apex:outputText value="Wealth Mgmt: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Wealth_Mgmt__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Wealth_Mgmt__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+             <apex:pageBlockSection title="Insurance/Employee Benefits">
+             <apex:outputPanel layout="block" style="white-space:nowrap;" styleclass="container1">
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column headerValue="Insurance/Employee Benefits" width="160px">
+                          <apex:outputText value="Broker: "/>
+                      </apex:column>
+                      <apex:column headerValue="Current Provider" width="250px">
+                          <apex:outputField value="{!pp.CurPro_Broker__c}"/>
+                      </apex:column>
+                      <apex:column headerValue="Other Providers" width="250px">
+                          <apex:outputField value="{!pp.OthPro_Broker__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="160px">
+                          <apex:outputText value="Health Insurance: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_Health_Insurance__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_Health_Insurance__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="160px">
+                          <apex:outputText value="P&C: "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_P_C__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_P_C__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+                 <apex:pageBlockTable value="{!Prospect_Profile__c}" var="pp">
+                      <apex:column width="160px">
+                          <apex:outputText value="401(k): "/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.CurPro_401k__c}"/>
+                      </apex:column>
+                      <apex:column width="250px">
+                          <apex:outputField value="{!pp.OthPro_401k__c}"/>
+                      </apex:column>
+                 </apex:pageBlockTable>
+             </apex:outputPanel>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:page>

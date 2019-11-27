@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COI_Source_no_referred_Customer</fullName>
+    <active>true</active>
+    <description>A COI sourced opportunity cannot also be referred by a customer</description>
+    <errorConditionFormula>AND(
+     NOT(ISBLANK( Lead_Source_COI__c)) ,
+     RecordTypeId  = &#39;0120c000001hhkz&#39;,
+     NOT(ISBLANK( Referred_by_Customer__c ))
+)</errorConditionFormula>
+    <errorMessage>A COI Sourced opportunity cannot also be referred by a customer</errorMessage>
+</ValidationRule>

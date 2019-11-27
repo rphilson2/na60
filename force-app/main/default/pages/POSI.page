@@ -1,0 +1,272 @@
+<apex:page standardController="POSI__c" extensions="POSI_Controller" showHeader="false" standardStylesheets="false" sidebar="false" cache="false">
+<style>
+    .POSICellBold {
+            font-size: 18px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #000000;
+            width: 99%;
+    }
+    .POSICell {
+            font-size: 18px;
+            font-family: Arial;
+            font-weight: normal;
+            color: #000000;
+            width: 99%;
+    }
+    .POSIHdrBold {
+            font-size: 18px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #FFFFFF;
+            width: 99%;
+    }
+    .POSIHdr {
+            font-size: 18px;
+            font-family: Arial;
+            font-weight: normal;
+            color: #FFFFFF;
+            width: 99%;
+    }    
+   .SaveButton {
+        background-color:transparent;
+        border:4px solid #007516;
+        display:inline-block;
+        cursor:pointer;
+        color:#007516;
+        font-family:Arial;
+        font-size:20px;
+        Font-weight:bold;
+        Font-style:italic;
+        padding:15px 39px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #007516;
+        -webkit-appearance: none;
+    }
+   .SaveButton:hover {
+        background-color: #007516;
+        color:#ffffff;
+    }
+   .SaveButton:active {
+        position:relative;
+        top:1px;
+    }
+   .DeleteButton {
+        background-color:transparent;
+        border:4px solid #7D000C;
+        display:inline-block;
+        cursor:pointer;
+        color:#7D000C;
+        font-family:Arial;
+        font-size:20px;
+        Font-weight:bold;
+        Font-style:italic;
+        padding:15px 37px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #7D000C;
+        -webkit-appearance: none;
+    }
+   .DeleteButton:hover {
+        background-color: #7D000C;
+        color:#ffffff;
+    }
+   .DeleteButton:active {
+        position:relative;
+        top:1px;
+    }        
+   .CancelButton {
+        background-color:transparent;
+        border:4px solid black;
+        display:inline-block;
+        cursor:pointer;
+        color:black;
+        font-family:Arial;
+        font-size:20px;
+        Font-weight:bold;
+        Font-style:italic;
+        padding:15px 30px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px white;
+        -webkit-appearance: none;
+    }
+   .CancelButton:hover {
+        background-color: black;
+        color:#ffffff;
+    }
+   .CancelButton:active {
+        position:relative;
+        top:1px;
+    }        
+   .PDFButton {
+        background-color:transparent;
+        border:4px solid #0D0099;
+        display:inline-block;
+        cursor:pointer;
+        color:#0D0099;
+        font-family:Arial;
+        font-size:20px;
+        Font-weight:bold;
+        Font-style:italic;
+        padding:15px 65px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #0D0099;
+        -webkit-appearance: none;
+    }
+   .PDFButton:hover {
+        background-color: #0D0099;
+        color:#ffffff;
+    }
+   .PDFButton:active {
+        position:relative;
+        top:1px;
+    }
+   .fixedheader4d {
+        position:fixed;
+        top:0px;
+        font-stretch: ultra-condensed;
+        left:0px;
+        height:86px;
+        width:100%;
+        z-index: 1000;
+        color:#CCC;
+        background:#FFFFFF;
+        padding:20px;
+    }
+   .outputtextbbold {
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    }
+               
+}
+</style>
+
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+    <body class="body">
+       <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme3'}">
+         <div class="fixedheader">
+            <div class="textbar">
+                <apex:image id="fnb_white_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86" />
+            </div>
+        </div>
+       </apex:outputpanel> 
+       <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme4d'}">
+         <div class="fixedheader">
+            <div class="textbar">
+                <apex:image id="fnb_white_logo4d" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnb_white_logo.png')}" width="400" height="86" />
+            </div>
+         </div>
+         <div class="blankrow"></div>
+         <div class="blankrow"></div>
+         <div class="blankrow"></div>
+         <div class="blankrow"></div>
+         <div class="blankrow"></div>
+       </apex:outputpanel> 
+       
+        <div>
+            <apex:form >
+                <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme3'}">            
+                   <center><apex:outputText value="CORPORATE PROFILE GRID" styleclass="outputtextbold"/></center>
+                   <center><apex:outputText value="{!account_name}" styleclass="outputtext"/></center>                
+                   <div class="blankrow"></div>
+                   <div class="blankrow"></div>
+                </apex:outputpanel>
+                <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme4d'}">            
+                   <center><apex:outputText value="CORPORATE PROFILE GRID" styleclass="outputtextbbold"/></center>
+                   <center><apex:outputText value="{!account_name}" styleclass="outputtext"/></center>                
+                   <div class="blankrow"></div>
+                </apex:outputpanel>                
+                <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme3'}">
+                <table border="1" cellpadding="0" cellspacing="0">
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:outputText value="Profile" styleClass="POSICellBold" />
+                                      <br></br><apex:outputText value="(As Is)" styleClass="POSICell"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:outputText value="Objectives" styleClass="POSICellBold" />
+                                      <br></br><apex:outputText value="(To Be)" styleClass="POSICell"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:inputField value="{!POSI__c.Profile__c}" styleClass="POSICell"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"  width="50%"><apex:inputField value="{!POSI__c.Objectives__c}" styleClass="POSICell"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:outputText value="Issues" styleClass="POSICellBold"/>
+                                      <br></br><apex:outputText value="(Barriers, Trends, & Competition)" styleClass="POSICell"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:outputText value="Strategies" styleClass="POSICellBold"/>
+                                      <br></br><apex:outputText value="(How?)" styleClass="POSICell"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:inputField value="{!POSI__c.Issues__c}" styleClass="POSICell"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse; width: 500px;"><apex:inputField value="{!POSI__c.Strategies__c}" styleClass="POSICell"/></td>
+                                    </tr>
+                                  </tbody>
+                </table>
+                </apex:outputpanel>
+                <apex:outputpanel rendered="{! $User.UIThemeDisplayed == 'Theme4d'}">
+                <center>
+                <table width="950px" border="1" cellpadding="0" cellspacing="0">
+                                    <tr width="100%">
+                                      <td width="50%" style="border: 1px solid #000000; border-collapse: collapse; background:#D4D6D6"><center><apex:outputText value="Profile" styleClass="POSICellBold"/>
+                                      <br/><apex:outputText value="(As Is)" styleClass="POSICell"/></center></td>
+                                      <td width="50%" style="border: 1px solid #000000; border-collapse: collapse; background:#D4D6D6"><center><apex:outputText value="Objectives" styleClass="POSICellBold"/>
+                                      <br/><apex:outputText value="(To Be)" styleClass="POSICell"/></center></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse;"><apex:inputField value="{!POSI__c.Profile__c}" styleClass="POSICell"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse;"><apex:inputField value="{!POSI__c.Objectives__c}" styleClass="POSICell"/></td>
+                                    </tr>
+                                    <tr width="100%">
+                                      <td width="50%" style="border: 1px solid #000000; border-collapse: collapse; background:#D4D6D6"><center><apex:outputText value="Issues" styleClass="POSICellBold"/>
+                                      <br/><apex:outputText value="(Barriers, Trends, & Competition)" styleClass="POSICell"/></center></td>
+                                      <td width="50%" style="border: 1px solid #000000; border-collapse: collapse; background:#D4D6D6"><center><apex:outputText value="Strategies" styleClass="POSICellBold" />
+                                      <br/><apex:outputText value="(How?)" styleClass="POSICell"/></center></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse;"><apex:inputField value="{!POSI__c.Issues__c}" styleClass="POSICell"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse;"><apex:inputField value="{!POSI__c.Strategies__c}" styleClass="POSICell"/></td>
+                                    </tr>
+                </table>
+                </center>
+                </apex:outputpanel>                
+                <center>
+                <table border="0" cellpadding="3" cellspacing="8">
+                   <tr class="blankrow"></tr>
+                   <tr>
+                      <td>
+                         <apex:commandButton value="Save & Return to Account" action="{!insertPOSI}" styleClass="SaveButton" rendered="{!POSI__c.Account__c = null}"/>
+                         <apex:commandButton value="Save & Return to Account" action="{!updatePOSI}" styleClass="SaveButton" rendered="{!POSI__c.Account__c != null}"/>
+                      </td>                  
+                      <td rendered="{!POSI__c.Account__c != null}">
+                         <apex:commandButton value="Delete & Return to Account" action="{!deletePOSI}" styleClass="DeleteButton" rendered="{!POSI__c.Account__c != null}"/>
+                      </td>
+                      <td>
+                         <apex:commandButton value="Cancel & Return to Account" action="{!cancelPOSI}" styleClass="CancelButton" rendered="{!POSI__c.Account__c != null}"/>
+                      </td>
+                      <td>
+                         <apex:commandButton value="Save & Generate PDF" action="{!insertPOSIpdf}" styleClass="PDFButton" rendered="{!POSI__c.Account__c = null}"/>
+                      </td>                      
+                  </tr>
+                  <tr>
+                     <td/>
+                     <td>
+                        <apex:commandButton value="Save & Generate PDF" action="{!POSIpdf}" styleClass="PDFButton" rendered="{!POSI__c.Account__c != null}"/>
+                     </td>
+                     <td/>
+                  </tr>
+                  <tr class="blankrow"></tr>
+                  <tr class="blankrow"></tr>
+               </table>
+               </center>
+            </apex:form>                
+        </div>
+    </body>
+</apex:page>

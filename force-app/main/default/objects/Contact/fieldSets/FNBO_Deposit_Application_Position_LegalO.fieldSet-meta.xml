@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FNBO_Deposit_Application_Position_LegalO</fullName>
+    <description>FNBO - Deposit Application - 	 Position - Legal Occupations</description>
+    <displayedFields>
+        <field>Position_Legal_Occupations__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>FNBO - Deposit Application - 	 Position - Legal Occupations</label>
+</FieldSet>

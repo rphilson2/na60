@@ -1,0 +1,136 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>          
+                <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold">Section Four: Primary Beneficiary Information</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="14. Are a majority (51%) of the proposed program beneficiaries low or moderate income, 
+                                as defined by 80% or below median family income? Beneficiaries can include individuals, families, or census tracts." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Beneficiaries_Low_or_Moderate_Income__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext">15. Use <a href="resource/1494431717000/Grant_Appendix_A" target="_blank">Appendix A</a> to complete the following section:</td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li type="A">Use the “Counties Served” column to identify where your program or service delivery 
+                                    will occur and enter the name of the Assessment Area (column A) in box A below. 
+                                    Enter the location exactly as it appears in Column A. Do NOT enter the county name in Box A.</li>
+                                    <li type="A">Enter the 100% Median Family Income figure (column B) in box B below.</li>
+                                    <li type="A">Enter the 80% Median Family Income figure (column C) in box C below.</li>
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Box A - Assessment Area Name:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Box_A__c}"  styleClass="inputfieldwide"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Box B - 100% Median Family Income:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Box_B__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="Box C - 80% Median Family Income:" styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.G_Box_C__c}"  styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="16. Consider the program for which you are requesting funding and answer the following questions. You must select Yes for at least one of the questions below." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Does the program for which you are requesting funding primarily serve youth?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Funding_Primarily_Serve_Youth__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Do you track Medicaid eligibility for program participants?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Medicaid_Eligibility_for_Program__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Does your program have income thresholds to be eligible for program participation?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Income_Thresholds_to_be_Eligible__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Is your program or organization targeted to individuals or families within a close geographical radius of the organization’s location?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Geographical_Radius_of_Organization__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Are you requesting funds to support technical assistance, training, development, or financing of small businesses or small farms?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Small_Businesses_or_Small_Farms__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Are you requesting funds to support the revitalization and stabilization of a low or moderate income neighborhood?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Low_or_Moderate_Income_Neighborhood__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Do you track income information of clients served?" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Track_Income_Information__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr19}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

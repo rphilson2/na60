@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Require_Address</fullName>
+    <active>true</active>
+    <description>Require a mailing address to be listed on the associated person customer prior to marking an opportunity &#39;closed won.&#39;</description>
+    <errorConditionFormula>AND( 
+   TEXT(StageName) = &quot;Closed Won&quot;,
+   ISBLANK(Account.PersonMailingAddress),
+   Account.RecordType.Name = &quot;Consumer Prospect&quot;)</errorConditionFormula>
+    <errorMessage>A mailing address is required on the associated customer record prior to marking this opportunity &#39;Closed Won.&#39;</errorMessage>
+</ValidationRule>

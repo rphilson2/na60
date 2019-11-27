@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Life_Physical_and_Social_Scie__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Life Physical and Social Scie</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultural &amp; Food Science Tech</fullName>
+                <default>false</default>
+                <label>Agricultural &amp; Food Science Tech</label>
+            </value>
+            <value>
+                <fullName>Animal Scientist</fullName>
+                <default>false</default>
+                <label>Animal Scientist</label>
+            </value>
+            <value>
+                <fullName>Anthropologist &amp; Archeologist</fullName>
+                <default>false</default>
+                <label>Anthropologist &amp; Archeologist</label>
+            </value>
+            <value>
+                <fullName>Astronomer</fullName>
+                <default>false</default>
+                <label>Astronomer</label>
+            </value>
+            <value>
+                <fullName>Atmospheric &amp; Space Scientist</fullName>
+                <default>false</default>
+                <label>Atmospheric &amp; Space Scientist</label>
+            </value>
+            <value>
+                <fullName>Biochemist/Biophysicist</fullName>
+                <default>false</default>
+                <label>Biochemist/Biophysicist</label>
+            </value>
+            <value>
+                <fullName>Biological Scientist-All Other</fullName>
+                <default>false</default>
+                <label>Biological Scientist-All Other</label>
+            </value>
+            <value>
+                <fullName>Biological Technician</fullName>
+                <default>false</default>
+                <label>Biological Technician</label>
+            </value>
+            <value>
+                <fullName>Chemical Technician</fullName>
+                <default>false</default>
+                <label>Chemical Technician</label>
+            </value>
+            <value>
+                <fullName>Chemist</fullName>
+                <default>false</default>
+                <label>Chemist</label>
+            </value>
+            <value>
+                <fullName>Clinical, Counsel &amp; School Psychologist</fullName>
+                <default>false</default>
+                <label>Clinical, Counsel &amp; School Psychologist</label>
+            </value>
+            <value>
+                <fullName>Conservation Scientist</fullName>
+                <default>false</default>
+                <label>Conservation Scientist</label>
+            </value>
+            <value>
+                <fullName>Economist</fullName>
+                <default>false</default>
+                <label>Economist</label>
+            </value>
+            <value>
+                <fullName>Environmental Health Scientist</fullName>
+                <default>false</default>
+                <label>Environmental Health Scientist</label>
+            </value>
+            <value>
+                <fullName>Environmental Science &amp; Protection Tech</fullName>
+                <default>false</default>
+                <label>Environmental Science &amp; Protection Tech</label>
+            </value>
+            <value>
+                <fullName>Environmental Scientist &amp; Specialist</fullName>
+                <default>false</default>
+                <label>Environmental Scientist &amp; Specialist</label>
+            </value>
+            <value>
+                <fullName>Forensic Science Technician</fullName>
+                <default>false</default>
+                <label>Forensic Science Technician</label>
+            </value>
+            <value>
+                <fullName>Forest &amp; Conservation Tech</fullName>
+                <default>false</default>
+                <label>Forest &amp; Conservation Tech</label>
+            </value>
+            <value>
+                <fullName>Forester</fullName>
+                <default>false</default>
+                <label>Forester</label>
+            </value>
+            <value>
+                <fullName>Geographer</fullName>
+                <default>false</default>
+                <label>Geographer</label>
+            </value>
+            <value>
+                <fullName>Geological &amp; Petroleum Tech</fullName>
+                <default>false</default>
+                <label>Geological &amp; Petroleum Tech</label>
+            </value>
+            <value>
+                <fullName>Geoscientist</fullName>
+                <default>false</default>
+                <label>Geoscientist</label>
+            </value>
+            <value>
+                <fullName>Historian</fullName>
+                <default>false</default>
+                <label>Historian</label>
+            </value>
+            <value>
+                <fullName>Hydrologist</fullName>
+                <default>false</default>
+                <label>Hydrologist</label>
+            </value>
+            <value>
+                <fullName>Industrial-Organizational Psychologist</fullName>
+                <default>false</default>
+                <label>Industrial-Organizational Psychologist</label>
+            </value>
+            <value>
+                <fullName>Market Research Analyst</fullName>
+                <default>false</default>
+                <label>Market Research Analyst</label>
+            </value>
+            <value>
+                <fullName>Materials Scientist</fullName>
+                <default>false</default>
+                <label>Materials Scientist</label>
+            </value>
+            <value>
+                <fullName>Medical Scientist</fullName>
+                <default>false</default>
+                <label>Medical Scientist</label>
+            </value>
+            <value>
+                <fullName>Microbiologist</fullName>
+                <default>false</default>
+                <label>Microbiologist</label>
+            </value>
+            <value>
+                <fullName>Nuclear Technician</fullName>
+                <default>false</default>
+                <label>Nuclear Technician</label>
+            </value>
+            <value>
+                <fullName>Physicist</fullName>
+                <default>false</default>
+                <label>Physicist</label>
+            </value>
+            <value>
+                <fullName>Political Scientist</fullName>
+                <default>false</default>
+                <label>Political Scientist</label>
+            </value>
+            <value>
+                <fullName>Psychologist</fullName>
+                <default>false</default>
+                <label>Psychologist</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Social Science Researcher</fullName>
+                <default>false</default>
+                <label>Social Science Researcher</label>
+            </value>
+            <value>
+                <fullName>Sociologist</fullName>
+                <default>false</default>
+                <label>Sociologist</label>
+            </value>
+            <value>
+                <fullName>Soil/Plant Scientist</fullName>
+                <default>false</default>
+                <label>Soil/Plant Scientist</label>
+            </value>
+            <value>
+                <fullName>Supervisor, Laboratory</fullName>
+                <default>false</default>
+                <label>Supervisor, Laboratory</label>
+            </value>
+            <value>
+                <fullName>Supervisor, Geological &amp; Petroleum Tech</fullName>
+                <default>false</default>
+                <label>Supervisor, Geological &amp; Petroleum Tech</label>
+            </value>
+            <value>
+                <fullName>Survey Researcher</fullName>
+                <default>false</default>
+                <label>Survey Researcher</label>
+            </value>
+            <value>
+                <fullName>Urban/Regional Planner</fullName>
+                <default>false</default>
+                <label>Urban/Regional Planner</label>
+            </value>
+            <value>
+                <fullName>Zoologist</fullName>
+                <default>false</default>
+                <label>Zoologist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

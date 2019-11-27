@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_it_worth_Pursuing__c</fullName>
+    <externalId>false</externalId>
+    <formula>Solution_Fit__c  +  Current_Case_Size_0_to_10__c  +  Future_Case_Size_0_to_10__c  +  Budget_Asset_Availability__c  +  Logistics_5_to_5__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is it worth Pursuing (-5 to 45)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

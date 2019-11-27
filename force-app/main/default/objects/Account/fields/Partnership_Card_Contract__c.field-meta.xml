@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partnership_Card_Contract__c</fullName>
+    <externalId>false</externalId>
+    <label>Partnership Card Contract Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FNBO</fullName>
+                <default>false</default>
+                <label>FNBO</label>
+            </value>
+            <value>
+                <fullName>Route 1</fullName>
+                <default>false</default>
+                <label>Route 1</label>
+            </value>
+            <value>
+                <fullName>DealerTrack</fullName>
+                <default>false</default>
+                <label>DealerTrack</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

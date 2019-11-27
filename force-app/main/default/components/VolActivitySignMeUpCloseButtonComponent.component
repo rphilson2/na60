@@ -1,0 +1,14 @@
+<apex:component >
+
+  <apex:attribute name="url" type="String" description="Close URL"/>
+  
+  <apex:commandButton onclick="javascript:closeRefresh('{!url}');" value="Close"/>
+  
+   <script language='JavaScript' type="text/javascript">        
+        function closeRefresh(url) 
+        {
+            top.parent.window.opener.location.href = url;
+            top.parent.window.close();
+        }        
+    </script>
+</apex:component>

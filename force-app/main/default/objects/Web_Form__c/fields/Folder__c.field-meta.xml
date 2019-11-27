@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Folder__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a folder this web form belongs to.</inlineHelpText>
+    <label>Folder</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>The folder in which you place a web form needs to be of type &#39;WebForm&#39;</errorMessage>
+        <filterItems>
+            <field>CMSFolder__c.Type__c</field>
+            <operation>equals</operation>
+            <value>WebForm</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CMSFolder__c</referenceTo>
+    <relationshipLabel>Web Forms</relationshipLabel>
+    <relationshipName>Web_Forms</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

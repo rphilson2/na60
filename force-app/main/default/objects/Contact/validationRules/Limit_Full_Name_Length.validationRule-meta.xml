@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Full_Name_Length</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+LEN(FirstName + &#39; &#39; + MiddleName + &#39; &#39; + LastName) &gt; 40,
+$User.ProfileId = &#39;00e0c00000287hf&#39; 
+)</errorConditionFormula>
+    <errorMessage>Invalid Entry. Please enter a full name less than 40 characters.
+Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

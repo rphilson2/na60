@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_COI</fullName>
+    <availability>online</availability>
+    <description>Create COI Button</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create COI</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/a0c/e?CF00Na000000BR1xN_lkid={!Account.Id}&amp;CF00Na000000BR1xN={!Account.Name}&amp;00Na000000BR2tR={!Account.PersonTitle}&amp;Name={!Account.Name}&amp;00Na000000BR1xD={!Account.PersonEmail}&amp;00Na000000BR1wo={!Account.Phone}&amp;00Na000000BR1wt={!Account.PersonMailingStreet}&amp;00Na000000BR1wy={!Account.PersonMailingCity}&amp;00Na000000BR1x3={!Account.PersonMailingState}&amp;00Na000000BR1x8={!Account.PersonMailingPostalCode}</url>
+</WebLink>

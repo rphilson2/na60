@@ -1,0 +1,59 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="flooddonationrequest_Controller" showHeader="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+<style>
+.myFloodButton {
+        background-color:transparent;
+        border:4px solid #34657F;
+        display:inline-block;
+        cursor:pointer;
+        color:#34657F;
+        font-family:Arial;
+        font-size:20px;
+        padding:22px 39px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #34657F;
+        -webkit-appearance: none;
+}
+.myFloodButton:hover {
+        background-color: #34657F;
+        color:#ffffff;
+}
+.myFloodButton:active {
+        position:relative;
+        top:1px;
+}
+</style>  
+       <body>
+                <div class="fixedheader" style="background:#34657F; height:110px; padding-top:0px;">
+                    <div class="textbar">
+                        <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/rgb_RebuildHeartland_horiz-box.png')}" width="100%"/>
+                    </div>
+                </div>   
+                <div class="body">
+                        <apex:form >
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <p class="outputtextbold">Thank you for submitting an application to the Rebuild the Heartland Community Fund. If any additional information is needed, 
+                                fund representatives will reach out to the grant contact identified in the application.</p>
+                                <p class="outputtextbold">Please direct questions to: <a href="mailto:communitydevelopment@fnni.com">communitydevelopment@fnni.com</a></p>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                   <apex:commandButton value="REVIEW/CREATE PDF" action="{!createpdf}" styleClass="myFloodButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

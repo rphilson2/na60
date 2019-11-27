@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Clear_FNBO_Mailing_State</fullName>
+        <field>FNBO_Mailing_Address_State__c</field>
+        <name>Clear [FNBO] Mailing State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Mailing_City</fullName>
+        <field>MailingCity</field>
+        <name>Clear Mailing City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Mailing_Street</fullName>
+        <field>MailingStreet</field>
+        <name>Clear Mailing Street</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Mailing_Zipcode</fullName>
+        <field>MailingPostalCode</field>
+        <name>Clear Mailing Zipcode</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Contact_Business_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Business_Contact</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Contact Business Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Contact_Individual_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Individual_Contact</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Contact Individual Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Date_of_Birth_Text</fullName>
+        <field>Date_of_Birth_Text__c</field>
+        <formula>text(Date_of_Birth__c)</formula>
+        <name>Populate Date of Birth Text</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_MailingAddress_Validator_Field</fullName>
+        <field>MailingAddressValidator__c</field>
+        <formula>MailingStreet</formula>
+        <name>Update MailingAddress Validator Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>LLC_BI__Contact Set Business Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Set_Contact_Business_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.LLC_BI__Primary_Contact__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>sets Record Type to Business if Contact is not marked as primary</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Contact Set Individual Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Set_Contact_Individual_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.LLC_BI__Primary_Contact__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>sets Record Type to Individual if Contact is marked as primary</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mailing Address Same As Home Address</fullName>
+        <actions>
+            <name>Clear_FNBO_Mailing_State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Mailing_City</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Mailing_Street</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Mailing_Zipcode</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Contact.Mailing_Address_Same_as_Home_Address__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.User_Profile_for_Reporting__c</field>
+            <operation>equals</operation>
+            <value>nCino Community User</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Date of Birth</fullName>
+        <actions>
+            <name>Populate_Date_of_Birth_Text</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+OR(
+ISNEW(),
+ISCHANGED(Date_of_Birth__c)
+),
+NOT(ISBLANK(Date_of_Birth__c))
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

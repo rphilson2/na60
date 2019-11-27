@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Check_the_Put_First_in_Addressee_CB</fullName>
+        <field>Put_This_Contact_First__c</field>
+        <literalValue>1</literalValue>
+        <name>Check the Put First in Addressee CB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>First_Line_Addressee_Update_w_Formal_Add</fullName>
+        <description>This field update will populate the First Line Addressee with either the Joint of Singular Formal Addressee, depending on the Spouse Client Record value.</description>
+        <field>First_Line_of_Addressee__c</field>
+        <formula>IF(Spouse_Client_Record__pc  &lt;&gt; &quot;&quot;, 
+ Joint_Formal_Addressee__c,
+ Formal_Addressee__c)</formula>
+        <name>First Line Addressee Update w Formal Add</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Account_Business_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Business</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Account Business Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Account_Household_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Household</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Account Household Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Account_Individual_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Individual</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Account Individual Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Set_Default_App_to_Counterparty_Report</fullName>
+        <description>Update default app to Counterparty Report</description>
+        <field>LLC_BI__Default_App__c</field>
+        <literalValue>counterparty-report.counterparty-report</literalValue>
+        <name>Set Default App to Counterparty Report</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>LLC_BI__Update_Record_Type_to_Lender</fullName>
+        <description>If Account type is &quot;Institutional Investor&quot; or &quot;Financial Institution&quot; update record type to Lender.</description>
+        <field>RecordTypeId</field>
+        <lookupValue>LLC_BI__Lender</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type to Lender</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Date_of_Birth_Text</fullName>
+        <description>person account</description>
+        <field>Date_of_Birth_Text__pc</field>
+        <formula>TEXT(MONTH(Birth_Date__pc))+&quot;/&quot; +TEXT(DAY(Birth_Date__pc))+&quot;/&quot; +TEXT(YEAR(Birth_Date__pc))</formula>
+        <name>Populate Date of Birth Text</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Populate_Person_Mailing_State</fullName>
+        <field>PersonMailingState</field>
+        <formula>Text(FNBO_Mailing_Address_State__pc)</formula>
+        <name>Populate Person Mailing State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Read_Only_Zip</fullName>
+        <field>Zip_Code_Read_Only__pc</field>
+        <formula>PersonMailingPostalCode</formula>
+        <name>Read Only Zip</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Existing_DDA_Flag_to_No</fullName>
+        <field>Existing_DDA_Indicator__c</field>
+        <literalValue>No</literalValue>
+        <name>Update Existing DDA Flag to No</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FNB_ID_on_Contact</fullName>
+        <description>Updates the FNB System of Record ID on the contact object with the same field on the account object.  Needed to facilitate campaign loading via data loader</description>
+        <field>FNB_System_of_Record_ID_Workflow__pc</field>
+        <formula>FNB_System_of_record_id__c</formula>
+        <name>Update FNB ID on Contact</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_FNB_System_of_Record_ID_on_Contac</fullName>
+        <field>FNB_System_of_Record_ID_Workflow__pc</field>
+        <formula>FNB_System_of_record_id__c</formula>
+        <name>Update FNB System of Record ID on Contac</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Wealth_Pers_Acct_Billing_City_w_Mail_Cit</fullName>
+        <field>BillingCity</field>
+        <formula>PersonMailingCity</formula>
+        <name>Wealth Pers Acct Billing City w Mail Cit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Wealth_Pers_Acct_Billing_State_w_Mailin2</fullName>
+        <field>BillingState</field>
+        <formula>PersonMailingState</formula>
+        <name>Wealth Pers Acct Billing State w Mailing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Wealth_Pers_Acct_Billing_State_w_Mailing</fullName>
+        <field>BillingStreet</field>
+        <formula>PersonMailingState</formula>
+        <name>Wealth Pers Acct Billing State w Mailing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Wealth_Pers_Acct_Billing_Zip_w_Mailing</fullName>
+        <field>BillingPostalCode</field>
+        <formula>PersonMailingPostalCode</formula>
+        <name>Wealth Pers Acct Billing Zip w Mailing</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Welath_Pers_Acct_Billing_St_w_Mail_st</fullName>
+        <field>BillingStreet</field>
+        <formula>PersonMailingStreet</formula>
+        <name>Wealth Pers Acct Billing St w Mail st</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>LLC_BI__Account Set Business Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Set_Account_Business_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>notEqual</operation>
+            <value>Household,Individual,Sole Proprietorship,Financial Institution,Institutional Investor</value>
+        </criteriaItems>
+        <description>sets Record Type to Business if Account Type is not &quot;Household&quot;, &quot;Sole Proprietorship&quot;, &quot;Institutional Investor&quot;, &quot;Financial Institution&quot; or &quot;Individual&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Account Set Household Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Set_Account_Household_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Household</value>
+        </criteriaItems>
+        <description>sets Record Type to Household if Account Type is &quot;Household&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Account Set Individual Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Set_Account_Individual_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Individual,Sole Proprietorship</value>
+        </criteriaItems>
+        <description>sets Record Type to Individual if Account Type is &quot;Sole Proprietorship&quot; or &quot;Individual&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Account Set Lender Record Type</fullName>
+        <actions>
+            <name>LLC_BI__Update_Record_Type_to_Lender</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Financial Institution,Institutional Investor</value>
+        </criteriaItems>
+        <description>sets Record Type to Lender if Account Type is &quot;Financial Institution&quot; or &quot;Institutional Investor&quot;</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>LLC_BI__Set Default App for Lenders</fullName>
+        <actions>
+            <name>LLC_BI__Set_Default_App_to_Counterparty_Report</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lender</value>
+        </criteriaItems>
+        <description>When Record Type is Lender, set default app to be counterparty report.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Date of Birth</fullName>
+        <actions>
+            <name>Populate_Date_of_Birth_Text</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>person account</description>
+        <formula>NOT(ISBLANK(Birth_Date__pc))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Put First Checkbox True for Non-Spouse-Related Accounts</fullName>
+        <actions>
+            <name>Check_the_Put_First_in_Addressee_CB</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow will trigger a field update to automatically check the Put First in Addressee checkbox for any records without a spouse lookup. This will help ensure consistent mailing.</description>
+        <formula>Spouse_Client_Record__pc  =  &quot;&quot;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Existing DDA Flag to No</fullName>
+        <actions>
+            <name>Update_Existing_DDA_Flag_to_No</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Record_Type_ID__c</field>
+            <operation>equals</operation>
+            <value>0120c000001hhuB</value>
+        </criteriaItems>
+        <description>For net new portal person accounts</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update FNB System of Record on Open and Fund customers %28Upon Update%29</fullName>
+        <actions>
+            <name>Update_FNB_System_of_Record_ID_on_Contac</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populates the Person Customer system of record ID with the same value from the Customer System of Record field.  This applies only to Open and Fund customers as the System of record ID is applied AFTER creation of the record</description>
+        <formula>And(
+ NOT(ISBLANK( FNB_System_of_record_id__c )),
+   RecordTypeId  = &#39;0120c000001hhuB&#39;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update FNB System of Record on Person Customer field %28On Creation%29</fullName>
+        <actions>
+            <name>Update_FNB_ID_on_Contact</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populates the Person Customer system of record ID with the same value from the Customer system of record ID upon creation of new records</description>
+        <formula>AND(
+   IsPersonAccount = TRUE,
+   NOT(ISBLANK( FNB_System_of_record_id__c ))
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update First Line Addressee</fullName>
+        <actions>
+            <name>First_Line_Addressee_Update_w_Formal_Add</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>First_Line_Override__c  = FALSE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mailing State on nCino Customers</fullName>
+        <actions>
+            <name>Populate_Person_Mailing_State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.FNBO_Mailing_Address_State__pc</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Record_Type_ID__c</field>
+            <operation>equals</operation>
+            <value>0120c000001hhuB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PersonMailingStreet</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>On nCino sourced customers, populate the Person Mailing State field with the contents of the FNBO Mailing state field (custom picklist used in the nCino app)</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Read Only Zip</fullName>
+        <actions>
+            <name>Read_Only_Zip</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Populates read only zipcode field for DAO read only screen section</description>
+        <formula>AND(
+OR(
+NOT(ISBLANK(PersonMailingPostalCode)),
+ISCHANGED(PersonMailingPostalCode ),
+$User.ProfileId = &#39;00e0c00000287hf&#39;
+))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Wealth - Populate Billing%2FShipping Addresses w Mailing Addresses</fullName>
+        <actions>
+            <name>Wealth_Pers_Acct_Billing_City_w_Mail_Cit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Wealth_Pers_Acct_Billing_State_w_Mailin2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Wealth_Pers_Acct_Billing_Zip_w_Mailing</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Welath_Pers_Acct_Billing_St_w_Mail_st</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(IsPersonAccount = true,OR(BillingStreet = null, ShippingStreet = null))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Follow_up_Call</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>12</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Follow-up Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Follow_up_Call_and_request_Referral</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>90</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Follow-up Call and request Referral</subject>
+    </tasks>
+    <tasks>
+        <fullName>Handwritten_Thank_you_card</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Handwritten Thank you card</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Customer_Survey</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>60</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Customer Survey</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Follow_up_Mailer</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Follow up Mailer</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Gift</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>45</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Send Gift</subject>
+    </tasks>
+</Workflow>

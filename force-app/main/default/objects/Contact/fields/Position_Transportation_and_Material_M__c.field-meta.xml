@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Transportation_and_Material_M__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Transportation and Material M</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Air Traffic Controller</fullName>
+                <default>false</default>
+                <label>Air Traffic Controller</label>
+            </value>
+            <value>
+                <fullName>Airfield Operations Specialist</fullName>
+                <default>false</default>
+                <label>Airfield Operations Specialist</label>
+            </value>
+            <value>
+                <fullName>Ambulance Driver &amp; Attendant</fullName>
+                <default>false</default>
+                <label>Ambulance Driver &amp; Attendant</label>
+            </value>
+            <value>
+                <fullName>Bridge &amp; Lock Tender</fullName>
+                <default>false</default>
+                <label>Bridge &amp; Lock Tender</label>
+            </value>
+            <value>
+                <fullName>Bus Driver</fullName>
+                <default>false</default>
+                <label>Bus Driver</label>
+            </value>
+            <value>
+                <fullName>Captain/Mate -Water Vessels</fullName>
+                <default>false</default>
+                <label>Captain/Mate -Water Vessels</label>
+            </value>
+            <value>
+                <fullName>Conveyor Operations &amp; Tender</fullName>
+                <default>false</default>
+                <label>Conveyor Operations &amp; Tender</label>
+            </value>
+            <value>
+                <fullName>Crane &amp; Tower Operator</fullName>
+                <default>false</default>
+                <label>Crane &amp; Tower Operator</label>
+            </value>
+            <value>
+                <fullName>Dredge Operator</fullName>
+                <default>false</default>
+                <label>Dredge Operator</label>
+            </value>
+            <value>
+                <fullName>Excavating Loading Machine Operator</fullName>
+                <default>false</default>
+                <label>Excavating Loading Machine Operator</label>
+            </value>
+            <value>
+                <fullName>Freight/Stock/Material Mover</fullName>
+                <default>false</default>
+                <label>Freight/Stock/Material Mover</label>
+            </value>
+            <value>
+                <fullName>Gas Station Operator</fullName>
+                <default>false</default>
+                <label>Gas Station Operator</label>
+            </value>
+            <value>
+                <fullName>Gas Station Owner</fullName>
+                <default>false</default>
+                <label>Gas Station Owner</label>
+            </value>
+            <value>
+                <fullName>Hoist &amp; Winch Operator</fullName>
+                <default>false</default>
+                <label>Hoist &amp; Winch Operator</label>
+            </value>
+            <value>
+                <fullName>Industrial Truck &amp; Tractor Operator</fullName>
+                <default>false</default>
+                <label>Industrial Truck &amp; Tractor Operator</label>
+            </value>
+            <value>
+                <fullName>Laborer</fullName>
+                <default>false</default>
+                <label>Laborer</label>
+            </value>
+            <value>
+                <fullName>Loading Machine Operator-Mining</fullName>
+                <default>false</default>
+                <label>Loading Machine Operator-Mining</label>
+            </value>
+            <value>
+                <fullName>Locomotive Engineer</fullName>
+                <default>false</default>
+                <label>Locomotive Engineer</label>
+            </value>
+            <value>
+                <fullName>Material Moving Worker-All Other</fullName>
+                <default>false</default>
+                <label>Material Moving Worker-All Other</label>
+            </value>
+            <value>
+                <fullName>Motor Vehicle Operator-All Other</fullName>
+                <default>false</default>
+                <label>Motor Vehicle Operator-All Other</label>
+            </value>
+            <value>
+                <fullName>Motorboat Operator</fullName>
+                <default>false</default>
+                <label>Motorboat Operator</label>
+            </value>
+            <value>
+                <fullName>Other Transit Service Owner</fullName>
+                <default>false</default>
+                <label>Other Transit Service Owner</label>
+            </value>
+            <value>
+                <fullName>Parking Lot Attendant</fullName>
+                <default>false</default>
+                <label>Parking Lot Attendant</label>
+            </value>
+            <value>
+                <fullName>Parking Lot Owner/Operator</fullName>
+                <default>false</default>
+                <label>Parking Lot Owner/Operator</label>
+            </value>
+            <value>
+                <fullName>Pilot / Flight Engineer</fullName>
+                <default>false</default>
+                <label>Pilot / Flight Engineer</label>
+            </value>
+            <value>
+                <fullName>Production Supervisor</fullName>
+                <default>false</default>
+                <label>Production Supervisor</label>
+            </value>
+            <value>
+                <fullName>Pumping - Wellhead Pumper</fullName>
+                <default>false</default>
+                <label>Pumping - Wellhead Pumper</label>
+            </value>
+            <value>
+                <fullName>Rail Transportation Worker-Other</fullName>
+                <default>false</default>
+                <label>Rail Transportation Worker-Other</label>
+            </value>
+            <value>
+                <fullName>Refuse/Recyclable Material Collector</fullName>
+                <default>false</default>
+                <label>Refuse/Recyclable Material Collector</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Sailor &amp; Marine Oilier</fullName>
+                <default>false</default>
+                <label>Sailor &amp; Marine Oilier</label>
+            </value>
+            <value>
+                <fullName>Service Station Attendant</fullName>
+                <default>false</default>
+                <label>Service Station Attendant</label>
+            </value>
+            <value>
+                <fullName>Ship Engineer</fullName>
+                <default>false</default>
+                <label>Ship Engineer</label>
+            </value>
+            <value>
+                <fullName>Shuttle Car Operator</fullName>
+                <default>false</default>
+                <label>Shuttle Car Operator</label>
+            </value>
+            <value>
+                <fullName>Subway &amp; Streetcar Operator</fullName>
+                <default>false</default>
+                <label>Subway &amp; Streetcar Operator</label>
+            </value>
+            <value>
+                <fullName>Tank Car, Truck &amp; Ship Loader</fullName>
+                <default>false</default>
+                <label>Tank Car, Truck &amp; Ship Loader</label>
+            </value>
+            <value>
+                <fullName>Taxi Driver &amp; Chauffeur</fullName>
+                <default>false</default>
+                <label>Taxi Driver &amp; Chauffeur</label>
+            </value>
+            <value>
+                <fullName>Taxi/Limo Service Owner</fullName>
+                <default>false</default>
+                <label>Taxi/Limo Service Owner</label>
+            </value>
+            <value>
+                <fullName>Traffic Technician</fullName>
+                <default>false</default>
+                <label>Traffic Technician</label>
+            </value>
+            <value>
+                <fullName>Transportation Inspector</fullName>
+                <default>false</default>
+                <label>Transportation Inspector</label>
+            </value>
+            <value>
+                <fullName>Transportation Worker - All Other</fullName>
+                <default>false</default>
+                <label>Transportation Worker - All Other</label>
+            </value>
+            <value>
+                <fullName>Truck Driver/Delivery Service</fullName>
+                <default>false</default>
+                <label>Truck Driver/Delivery Service</label>
+            </value>
+            <value>
+                <fullName>Water Transit Service Owner</fullName>
+                <default>false</default>
+                <label>Water Transit Service Owner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

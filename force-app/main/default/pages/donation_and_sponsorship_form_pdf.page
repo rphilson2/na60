@@ -1,0 +1,151 @@
+<apex:page standardController="FIC_Survey_Application__c" showHeader="false" standardStylesheets="false" sidebar="false" renderAs="pdf"> 
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_pdf)}"/>
+
+<apex:image id="fnb_green_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNB_Logo_40_pct.png')}" width="300" height="47" 
+rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Omaha' 
+|| FIC_Survey_Application__c.Market__c = 'Lincoln' 
+|| FIC_Survey_Application__c.Market__c = 'Kearney' 
+|| FIC_Survey_Application__c.Market__c = 'Columbus'
+|| FIC_Survey_Application__c.Market__c = 'South Dakota'
+|| FIC_Survey_Application__c.Market__c = 'Kansas'
+|| FIC_Survey_Application__c.Market__c = 'Illinois'
+|| FIC_Survey_Application__c.Market__c = 'Fremont'
+|| FIC_Survey_Application__c.Market__c = 'Colorado', true, false)}"/>
+<apex:image id="fnbnp_green_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbnp_green_logo.png')}" width="300" height="125" 
+rendered="{!IF(FIC_Survey_Application__c.Market__c = 'North Platte', true, false)}"/>
+<apex:image id="fnbsw_green_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/fnbsw_green_logo.png')}" width="300" height="125" 
+rendered="{!IF(FIC_Survey_Application__c.Market__c = 'Texas', true, false)}"/> 
+
+    <div class="pdfrowtext">
+            <p>
+            <apex:outputText value="Market: "/><apex:outputText value="{!FIC_Survey_Application__c.Market__c}"/>
+            </p>
+    </div>
+    <div class="pdfpagetext">
+        PAGE ONE
+    </div>
+    <div class="pdfrowtext">
+            <table border="1" cellpadding="0" cellspacing="0">
+                <tr><th>First National Bank receives a high volume of funding requests. Whether you are submitting as an organization, or a First National Bank employee on behalf of an organization, requests are considered as-is. Incomplete submissions, and those that do not contain the information required to make a decision will be denied. Funding decisions are made monthly. Requests that are submitted less than 30 days before the event may not be considered. Please check the box above to acknowledge you have read and understand this statement.</th>
+                    <td width="50%"><apex:outputText value="{!FIC_Survey_Application__c.First_National_Bank_Request__c}"/></td>
+                </tr>
+                <tr><th>Name of Organization:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Name_of_Organization__c}"/></td>
+                </tr>
+                <tr><th>Mission Statement:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Mission_Statement__c}"/></td>
+                </tr>
+                <tr><th>Program/Event Name:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Program_Event_Name__c}"/></td>
+                </tr>
+                <tr><th>Program/Event Description:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Program_Event_Description__c}"/></td>
+                </tr>
+                <tr><th>Program/Event Date:</th>
+                    <td><apex:outputText value="{0, date, MMMM d','  yyyy}">
+                    <apex:param value="{!FIC_Survey_Application__c.Program_Event_Date__c}"/>
+                    </apex:outputText></td>
+                </tr>
+                <tr><th>Amount Requested:</th>
+                    <td><apex:outputText value="$"/><apex:outputText value="{!FLOOR(FIC_Survey_Application__c.Amount_Requested__c)}"/></td>
+                </tr>
+                <tr><th>Please provide Board of Directors list including organizational/corporate affiliations:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Please_Provide_Board_of_Directors__c}"/></td>
+                </tr>
+                <tr><th>Does a First National Bank employee serve on a board, committee, or otherwise involved in your organization?:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.First_National_Bank_Employee_on_Board__c}"/></td>
+                </tr>
+                <tr><th>If Yes, please provide his or her name and a description of service:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Provide_Name_and_Service_Description__c}"/></td>
+                </tr>
+                <tr><th>Does your organization have a business relationship with First National Bank?:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Have_Relationship__c}"/></td>
+                </tr>
+                <tr><th>If Yes, please describe:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Please_Describe_Relationship__c}"/></td>
+                </tr>
+            </table>
+            <br></br>
+    </div>
+    <div class="pdfpagetext">
+        PAGE TWO
+    </div>
+    <div class="pdfrowtext">
+            <table border="1" cellpadding="0" cellspacing="0">
+                <tr><th>Organization Street Address:</th>
+                    <td width="50%"><apex:outputText value="{!FIC_Survey_Application__c.Organization_Street_Address__c}"/></td>
+                </tr>
+                <tr><th>Organization City:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_City__c}"/></td>
+                </tr>
+                <tr><th>Organization State:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_State__c}"/></td>
+                </tr>
+                <tr><th>Organization Zip Code:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Zip__c}"/></td>
+                </tr>
+                <tr><th>Organization Website:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Website__c}"/></td>
+                </tr>
+                <tr><th>Please select your non-profit status:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Non_Profit_Status__c}"/></td>
+                </tr>
+                <tr><th>If your non-profit status is other, please specify:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Non_Profit_Status_Other__c}"/></td>
+                </tr>
+                <tr><th>Executive Director:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Executive_Director__c}"/></td>
+                </tr>
+                <tr><th>Executive Director Phone Number:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Executive_Director_Phone_Number__c}"/></td>
+                </tr>
+                <tr><th>Executive Director Email Address:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Executive_Director_Email_Address__c}"/></td>
+                </tr>
+                <tr><th>Organization Contact Person Name:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Name__c}"/></td>
+                </tr>
+                <tr><th>Organization Contact Person Phone Number:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Phone_Number__c}"/></td>
+                </tr>
+                <tr><th>Organization Contact Person Email:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Contact_Email__c}"/></td>
+                </tr>
+                <tr><th>Person Completing This Form (Name and Affiliation):</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Person_Completing_This_Form__c}"/></td>
+                </tr>
+                <tr><th>Email of Person Completing This Form:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Person_Completing_This_Form_Email__c}"/></td>
+                </tr>
+                <tr><th>Organization's Community Focus Area:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Organization_Community_Focus_Area__c}"/></td>
+                </tr>
+                <tr><th>Briefly describe the community issue your organization is working to address:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Briefly_Describe_Community_Issue__c}"/></td>
+                </tr>
+                <tr><th>Briefly describe the success of your organization in addressing the stated community issue, citing specific organizational outcomes and community outcomes (what results did your organization realize, and what difference did it make on the community):</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Briefly_Describe_Community_Success__c}"/></td>
+                </tr>
+                <tr><th>Briefly describe how the funds requested here will impact your organization and will enhance your ability to continue to serve the community:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Briefly_Describe_Funds__c}"/></td>
+                </tr>
+                <tr><th>Is the request for a capital campaign? If so, a member of our team will connect with you for additional information:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Request_for_Capital_Campaign__c}"/></td>
+                </tr>
+                <tr><th>Are a majority (51%) of the individual served by the organization or program being funded by the proposed contribution considered low-to-moderate income (low-tomoderate income is defined as a family income that is 80% or below the area median family income)?:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Individuals_Served_Low_Income__c}"/></td>
+                </tr>
+                <tr><th>If Yes, please provide evidence of the income status of the program beneficiaries:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Evidence_of_Income_Status__c}"/></td>
+                </tr>
+                <tr><th>Estimated Attendance (if applicable):</th>
+                    <td><apex:outputText value="{!FLOOR(FIC_Survey_Application__c.Estimated_Attendance__c)}"/></td>
+                </tr>
+                <tr><th>Are there media opportunities?:</th>
+                    <td><apex:outputText value="{!FIC_Survey_Application__c.Media_Opportunities_del__c}"/></td>
+                </tr>
+            </table>
+            <br></br>
+     </div>   
+</apex:page>

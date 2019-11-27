@@ -1,0 +1,45 @@
+<apex:page tabStyle="Volunteer_Activity__c" controller="VolActivityQuickCreateController" action="{!displayNoPermPage}">
+    <apex:sectionHeader title="Add an Activity for a new Volunteer Organization" subtitle="Step 3 of 4" help="http://www.salesforce.com/docs/en/volunteerforce/index_CSH.htm#volunteerforce_activities_wiz.htm"/>
+    <apex:form >
+        <apex:pageBlock title="Volunteer Activity Description" mode="edit">
+                        
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton action="{!step2}" value="Previous" immediate="true"/>
+                <apex:commandButton action="{!step4}" value="Next"/>
+                <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+            </apex:pageBlockButtons>        
+            
+            <apex:pageMessages />
+            
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="activityName" value="Activity Name"/>
+                  <apex:inputField id="activityName" value="{!va.Name}" required="true"/>            
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >              
+		          <apex:outputLabel value="Activity Category" for="activityCategory"/>
+		          <apex:inputField id="activityCategory" value="{!va.Volunteer_Events__c}" required="true"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="activitySummary" value="Activity Summary"/>
+                  <apex:inputText id="activitySummary" value="{!va.Description__c}" size="60"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="activityDetails" value="Activity Details"/>
+                  <apex:inputTextArea id="activityDetails" value="{!va.Event_Summary__c}" cols="80" rows="4"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel for="maxParticipants" value="Max Participants"/>
+                  <apex:inputField id="maxParticipants" value="{!va.Max_Number_of_Participants__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Activity Type" for="type"/>
+                  <apex:selectRadio id="type" value="{!activityType}" layout="pageDirection">
+                    <apex:selectOptions value="{!ActivityTypes}"/>
+                  </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

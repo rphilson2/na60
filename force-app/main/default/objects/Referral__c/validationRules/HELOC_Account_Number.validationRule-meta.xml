@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HELOC_Account_Number</fullName>
+    <active>true</active>
+    <description>Only allows editing the HELOC Account Number field if the Home Equity picklist option is selected from the Retail Product field.</description>
+    <errorConditionFormula>AND(ISCHANGED( HELOC_Account_Number__c ), Text(Retail_Product__c) &lt;&gt; &quot;Home Equity&quot;)</errorConditionFormula>
+    <errorDisplayField>HELOC_Account_Number__c</errorDisplayField>
+    <errorMessage>Home Equity must be chosen from the Retail Product picklist</errorMessage>
+</ValidationRule>

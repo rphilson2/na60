@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fraternity__c</fullName>
+    <externalId>false</externalId>
+    <label>Fraternity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alpha Gamma Rho</fullName>
+                <default>false</default>
+                <label>Alpha Gamma Rho</label>
+            </value>
+            <value>
+                <fullName>Delta Tau Delta</fullName>
+                <default>false</default>
+                <label>Delta Tau Delta</label>
+            </value>
+            <value>
+                <fullName>Farmhouse</fullName>
+                <default>false</default>
+                <label>Farmhouse</label>
+            </value>
+            <value>
+                <fullName>Kappa Sigma</fullName>
+                <default>false</default>
+                <label>Kappa Sigma</label>
+            </value>
+            <value>
+                <fullName>Lamba Chi Alpha</fullName>
+                <default>false</default>
+                <label>Lamba Chi Alpha</label>
+            </value>
+            <value>
+                <fullName>Phi Delta Theta</fullName>
+                <default>false</default>
+                <label>Phi Delta Theta</label>
+            </value>
+            <value>
+                <fullName>Phi Gamma Iota</fullName>
+                <default>false</default>
+                <label>Phi Gamma Iota</label>
+            </value>
+            <value>
+                <fullName>Phi Kappa Delta</fullName>
+                <default>false</default>
+                <label>Phi Kappa Delta</label>
+            </value>
+            <value>
+                <fullName>Sigma Alpha Epsilon</fullName>
+                <default>false</default>
+                <label>Sigma Alpha Epsilon</label>
+            </value>
+            <value>
+                <fullName>Sigma Chi</fullName>
+                <default>false</default>
+                <label>Sigma Chi</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

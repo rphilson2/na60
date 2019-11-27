@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FBC_Chrysler</fullName>
+    <fields>Name</fields>
+    <fields>BillingAddress</fields>
+    <fields>Phone</fields>
+    <fields>Dealer_Code__c</fields>
+    <fields>Region_Code__c</fields>
+    <label>FBC Chrysler</label>
+</CompactLayout>

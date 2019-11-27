@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Position Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01 - Dealer Principal</fullName>
+                <default>false</default>
+                <label>01 - Dealer Principal</label>
+            </value>
+            <value>
+                <fullName>02 - General Manager</fullName>
+                <default>false</default>
+                <label>02 - General Manager</label>
+            </value>
+            <value>
+                <fullName>03 - General Sales Manager</fullName>
+                <default>false</default>
+                <label>03 - General Sales Manager</label>
+            </value>
+            <value>
+                <fullName>04 - Sales Manager</fullName>
+                <default>false</default>
+                <label>04 - Sales Manager</label>
+            </value>
+            <value>
+                <fullName>05 - Truck Sales Manager</fullName>
+                <default>false</default>
+                <label>05 - Truck Sales Manager</label>
+            </value>
+            <value>
+                <fullName>06 - Office Manager</fullName>
+                <default>false</default>
+                <label>06 - Office Manager</label>
+            </value>
+            <value>
+                <fullName>07 - Used Car Sales Manager</fullName>
+                <default>false</default>
+                <label>07 - Used Car Sales Manager</label>
+            </value>
+            <value>
+                <fullName>08 - Parts Manager</fullName>
+                <default>false</default>
+                <label>08 - Parts Manager</label>
+            </value>
+            <value>
+                <fullName>09 - Service Manager</fullName>
+                <default>false</default>
+                <label>09 - Service Manager</label>
+            </value>
+            <value>
+                <fullName>10 - Body Shop Manager</fullName>
+                <default>false</default>
+                <label>10 - Body Shop Manager</label>
+            </value>
+            <value>
+                <fullName>11 - F&amp;I / Business Manager</fullName>
+                <default>false</default>
+                <label>11 - F&amp;I / Business Manager</label>
+            </value>
+            <value>
+                <fullName>12 - New Car Sales</fullName>
+                <default>false</default>
+                <label>12 - New Car Sales</label>
+            </value>
+            <value>
+                <fullName>13 - Service Advisor</fullName>
+                <default>false</default>
+                <label>13 - Service Advisor</label>
+            </value>
+            <value>
+                <fullName>14 - Parts Advisor</fullName>
+                <default>false</default>
+                <label>14 - Parts Advisor</label>
+            </value>
+            <value>
+                <fullName>15 - Dealer Sales Administrator/NVDR Person</fullName>
+                <default>false</default>
+                <label>15 - Dealer Sales Administrator/NVDR Person</label>
+            </value>
+            <value>
+                <fullName>16 - Dealer Service Administration</fullName>
+                <default>false</default>
+                <label>16 - Dealer Service Administration</label>
+            </value>
+            <value>
+                <fullName>17 - Service Director</fullName>
+                <default>false</default>
+                <label>17 - Service Director</label>
+            </value>
+            <value>
+                <fullName>18 - Shop Foreman</fullName>
+                <default>false</default>
+                <label>18 - Shop Foreman</label>
+            </value>
+            <value>
+                <fullName>19 - Parts Administration</fullName>
+                <default>false</default>
+                <label>19 - Parts Administration</label>
+            </value>
+            <value>
+                <fullName>20 - Lube Specialist</fullName>
+                <default>false</default>
+                <label>20 - Lube Specialist</label>
+            </value>
+            <value>
+                <fullName>22 - Vice President</fullName>
+                <default>false</default>
+                <label>22 - Vice President</label>
+            </value>
+            <value>
+                <fullName>23 - Service Technician</fullName>
+                <default>false</default>
+                <label>23 - Service Technician</label>
+            </value>
+            <value>
+                <fullName>24 - Body Shop Technician</fullName>
+                <default>false</default>
+                <label>24 - Body Shop Technician</label>
+            </value>
+            <value>
+                <fullName>25 - Assistant Sales Manager</fullName>
+                <default>false</default>
+                <label>25 - Assistant Sales Manager</label>
+            </value>
+            <value>
+                <fullName>26 - System Coordinator</fullName>
+                <default>false</default>
+                <label>26 - System Coordinator</label>
+            </value>
+            <value>
+                <fullName>27 - Assistant Service Manager</fullName>
+                <default>false</default>
+                <label>27 - Assistant Service Manager</label>
+            </value>
+            <value>
+                <fullName>28 - New Vehicle Prep</fullName>
+                <default>false</default>
+                <label>28 - New Vehicle Prep</label>
+            </value>
+            <value>
+                <fullName>29 - Warranty Administration</fullName>
+                <default>false</default>
+                <label>29 - Warranty Administration</label>
+            </value>
+            <value>
+                <fullName>30 - Fleet Manager</fullName>
+                <default>false</default>
+                <label>30 - Fleet Manager</label>
+            </value>
+            <value>
+                <fullName>31 - Dealer Customer Relations</fullName>
+                <default>false</default>
+                <label>31 - Dealer Customer Relations</label>
+            </value>
+            <value>
+                <fullName>32 - Parts Director</fullName>
+                <default>false</default>
+                <label>32 - Parts Director</label>
+            </value>
+            <value>
+                <fullName>33 - Service / Parts Director</fullName>
+                <default>false</default>
+                <label>33 - Service / Parts Director</label>
+            </value>
+            <value>
+                <fullName>34 - Used Car Salesperson</fullName>
+                <default>false</default>
+                <label>34 - Used Car Salesperson</label>
+            </value>
+            <value>
+                <fullName>35 - Parts / Service Director</fullName>
+                <default>false</default>
+                <label>35 - Parts / Service Director</label>
+            </value>
+            <value>
+                <fullName>36 - President</fullName>
+                <default>false</default>
+                <label>36 - President</label>
+            </value>
+            <value>
+                <fullName>37 - Owner / Partner</fullName>
+                <default>false</default>
+                <label>37 - Owner / Partner</label>
+            </value>
+            <value>
+                <fullName>38 - Lease Loyalty Coordinator</fullName>
+                <default>false</default>
+                <label>38 - Lease Loyalty Coordinator</label>
+            </value>
+            <value>
+                <fullName>39 - Secretary / Treasurer</fullName>
+                <default>false</default>
+                <label>39 - Secretary / Treasurer</label>
+            </value>
+            <value>
+                <fullName>40 - Assistant Parts Manager</fullName>
+                <default>false</default>
+                <label>40 - Assistant Parts Manager</label>
+            </value>
+            <value>
+                <fullName>41 - BusinessLink Account Manager</fullName>
+                <default>false</default>
+                <label>41 - BusinessLink Account Manager</label>
+            </value>
+            <value>
+                <fullName>42 - BusinessLink Sales Consultant</fullName>
+                <default>false</default>
+                <label>42 - BusinessLink Sales Consultant</label>
+            </value>
+            <value>
+                <fullName>48 - Body Shop Contractor</fullName>
+                <default>false</default>
+                <label>48 - Body Shop Contractor</label>
+            </value>
+            <value>
+                <fullName>52 - Dealer Standards Coordinator</fullName>
+                <default>false</default>
+                <label>52 - Dealer Standards Coordinator</label>
+            </value>
+            <value>
+                <fullName>64 - Driver</fullName>
+                <default>false</default>
+                <label>64 - Driver</label>
+            </value>
+            <value>
+                <fullName>65 - General / Other</fullName>
+                <default>false</default>
+                <label>65 - General / Other</label>
+            </value>
+            <value>
+                <fullName>74 - General Office Administration</fullName>
+                <default>false</default>
+                <label>74 - General Office Administration</label>
+            </value>
+            <value>
+                <fullName>75 - Body Shop Administration</fullName>
+                <default>false</default>
+                <label>75 - Body Shop Administration</label>
+            </value>
+            <value>
+                <fullName>79 - Refinishing Technician</fullName>
+                <default>false</default>
+                <label>79 - Refinishing Technician</label>
+            </value>
+            <value>
+                <fullName>85 - Refinishing Contractor</fullName>
+                <default>false</default>
+                <label>85 - Refinishing Contractor</label>
+            </value>
+            <value>
+                <fullName>99 - Miscellaneous</fullName>
+                <default>false</default>
+                <label>99 - Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>ES - Express Lane Service Technician</fullName>
+                <default>false</default>
+                <label>ES - Express Lane Service Technician</label>
+            </value>
+            <value>
+                <fullName>ET - Express Lane Service Technician</fullName>
+                <default>false</default>
+                <label>ET - Express Lane Service Technician</label>
+            </value>
+            <value>
+                <fullName>IM - Internet Sales Manager</fullName>
+                <default>false</default>
+                <label>IM - Internet Sales Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

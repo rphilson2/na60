@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Spend_Hist__c</fullName>
+    <description>This Field is being used to look at card spend historically capturing information captured before &quot;Card Product&quot; was created and merging it when applicable with the new method.</description>
+    <externalId>false</externalId>
+    <formula>if(  ISBLANK(Annual_Spend_Formula__c),  Annual_Spend__c , Annual_Spend_Formula__c)</formula>
+    <label>Annual Spend (Hist)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

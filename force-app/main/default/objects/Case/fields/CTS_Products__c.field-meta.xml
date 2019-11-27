@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CTS_Products__c</fullName>
+    <externalId>false</externalId>
+    <label>CTS Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Maintenance</fullName>
+                <default>false</default>
+                <label>Account Maintenance</label>
+            </value>
+            <value>
+                <fullName>ACH</fullName>
+                <default>false</default>
+                <label>ACH</label>
+            </value>
+            <value>
+                <fullName>ACH Addenda Reporting</fullName>
+                <default>false</default>
+                <label>ACH Addenda Reporting</label>
+            </value>
+            <value>
+                <fullName>ACH PP/Block</fullName>
+                <default>false</default>
+                <label>ACH PP/Block</label>
+            </value>
+            <value>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+                <label>Analysis</label>
+            </value>
+            <value>
+                <fullName>Cash Vault</fullName>
+                <default>false</default>
+                <label>Cash Vault</label>
+            </value>
+            <value>
+                <fullName>Check Block</fullName>
+                <default>false</default>
+                <label>Check Block</label>
+            </value>
+            <value>
+                <fullName>Checks/Deposits</fullName>
+                <default>false</default>
+                <label>Checks/Deposits</label>
+            </value>
+            <value>
+                <fullName>CMO</fullName>
+                <default>false</default>
+                <label>CMO</label>
+            </value>
+            <value>
+                <fullName>Commercial Banker</fullName>
+                <default>false</default>
+                <label>Commercial Banker</label>
+            </value>
+            <value>
+                <fullName>Control Agreement</fullName>
+                <default>false</default>
+                <label>Control Agreement</label>
+            </value>
+            <value>
+                <fullName>Controlled Disbursement</fullName>
+                <default>false</default>
+                <label>Controlled Disbursement</label>
+            </value>
+            <value>
+                <fullName>Controlled Disbursement Drafts</fullName>
+                <default>false</default>
+                <label>Controlled Disbursement Drafts</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Drafts</fullName>
+                <default>false</default>
+                <label>Drafts</label>
+            </value>
+            <value>
+                <fullName>First Cash</fullName>
+                <default>false</default>
+                <label>First Cash</label>
+            </value>
+            <value>
+                <fullName>Forex</fullName>
+                <default>false</default>
+                <label>Forex</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>IBWS</fullName>
+                <default>false</default>
+                <label>IBWS</label>
+            </value>
+            <value>
+                <fullName>ICS</fullName>
+                <default>false</default>
+                <label>ICS</label>
+            </value>
+            <value>
+                <fullName>Image Archive</fullName>
+                <default>false</default>
+                <label>Image Archive</label>
+            </value>
+            <value>
+                <fullName>Information Reporting</fullName>
+                <default>false</default>
+                <label>Information Reporting</label>
+            </value>
+            <value>
+                <fullName>Insured Cash Sweep</fullName>
+                <default>false</default>
+                <label>Insured Cash Sweep</label>
+            </value>
+            <value>
+                <fullName>Investment Services</fullName>
+                <default>false</default>
+                <label>Investment Services</label>
+            </value>
+            <value>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+                <label>Line of Credit</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Loan Sweep</fullName>
+                <default>false</default>
+                <label>Loan Sweep</label>
+            </value>
+            <value>
+                <fullName>Lockbox (Retail)</fullName>
+                <default>false</default>
+                <label>Lockbox (Retail)</label>
+            </value>
+            <value>
+                <fullName>Lockbox (Wholesale)</fullName>
+                <default>false</default>
+                <label>Lockbox (Wholesale)</label>
+            </value>
+            <value>
+                <fullName>MCRPPS</fullName>
+                <default>false</default>
+                <label>MCRPPS</label>
+            </value>
+            <value>
+                <fullName>Mobile Banking</fullName>
+                <default>false</default>
+                <label>Mobile Banking</label>
+            </value>
+            <value>
+                <fullName>Multicurrency Accounts</fullName>
+                <default>false</default>
+                <label>Multicurrency Accounts</label>
+            </value>
+            <value>
+                <fullName>Online Trade Services</fullName>
+                <default>false</default>
+                <label>Online Trade Services</label>
+            </value>
+            <value>
+                <fullName>Payables+</fullName>
+                <default>false</default>
+                <label>Payables+</label>
+            </value>
+            <value>
+                <fullName>Positive Pay</fullName>
+                <default>false</default>
+                <label>Positive Pay</label>
+            </value>
+            <value>
+                <fullName>Recon</fullName>
+                <default>false</default>
+                <label>Recon</label>
+            </value>
+            <value>
+                <fullName>Remote Capture</fullName>
+                <default>false</default>
+                <label>Remote Capture</label>
+            </value>
+            <value>
+                <fullName>Return Item/Reclear</fullName>
+                <default>false</default>
+                <label>Return Item/Reclear</label>
+            </value>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+            <value>
+                <fullName>Reverse Positive Pay</fullName>
+                <default>false</default>
+                <label>Reverse Positive Pay</label>
+            </value>
+            <value>
+                <fullName>Special Projects</fullName>
+                <default>false</default>
+                <label>Special Projects</label>
+            </value>
+            <value>
+                <fullName>Sweep</fullName>
+                <default>false</default>
+                <label>Sweep</label>
+            </value>
+            <value>
+                <fullName>Trade Services</fullName>
+                <default>false</default>
+                <label>Trade Services</label>
+            </value>
+            <value>
+                <fullName>Wall Street</fullName>
+                <default>false</default>
+                <label>Wall Street</label>
+            </value>
+            <value>
+                <fullName>Wires (Online)</fullName>
+                <default>false</default>
+                <label>Wires (Online)</label>
+            </value>
+            <value>
+                <fullName>Wires (Phone)</fullName>
+                <default>false</default>
+                <label>Wires (Phone)</label>
+            </value>
+            <value>
+                <fullName>ZBA</fullName>
+                <default>false</default>
+                <label>ZBA</label>
+            </value>
+            <value>
+                <fullName>ZBA Master</fullName>
+                <default>false</default>
+                <label>ZBA Master</label>
+            </value>
+            <value>
+                <fullName>ZBA Sub</fullName>
+                <default>false</default>
+                <label>ZBA Sub</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Tell us whether we are trying to ultimately do business with a COMPANY or with a PERSON.</inlineHelpText>
+    <label>Referral Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Person</fullName>
+                <default>false</default>
+                <label>Person</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

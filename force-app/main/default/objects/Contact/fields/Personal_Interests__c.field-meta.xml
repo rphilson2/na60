@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Interests__c</fullName>
+    <externalId>false</externalId>
+    <label>Personal Interests</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aims Community College</fullName>
+                <default>false</default>
+                <label>Aims Community College</label>
+            </value>
+            <value>
+                <fullName>Bank Events</fullName>
+                <default>false</default>
+                <label>Bank Events</label>
+            </value>
+            <value>
+                <fullName>Casual Dining</fullName>
+                <default>false</default>
+                <label>Casual Dining</label>
+            </value>
+            <value>
+                <fullName>Charity Events</fullName>
+                <default>false</default>
+                <label>Charity Events</label>
+            </value>
+            <value>
+                <fullName>Chicago Bears</fullName>
+                <default>false</default>
+                <label>Chicago Bears</label>
+            </value>
+            <value>
+                <fullName>Chicago Blackhawks</fullName>
+                <default>false</default>
+                <label>Chicago Blackhawks</label>
+            </value>
+            <value>
+                <fullName>Chicago Bulls</fullName>
+                <default>false</default>
+                <label>Chicago Bulls</label>
+            </value>
+            <value>
+                <fullName>Chicago Cubs</fullName>
+                <default>false</default>
+                <label>Chicago Cubs</label>
+            </value>
+            <value>
+                <fullName>Chicago White Sox</fullName>
+                <default>false</default>
+                <label>Chicago White Sox</label>
+            </value>
+            <value>
+                <fullName>College Sports</fullName>
+                <default>false</default>
+                <label>College Sports</label>
+            </value>
+            <value>
+                <fullName>Colorado Avalanche</fullName>
+                <default>false</default>
+                <label>Colorado Avalanche</label>
+            </value>
+            <value>
+                <fullName>Colorado Buffaloes</fullName>
+                <default>false</default>
+                <label>Colorado Buffaloes</label>
+            </value>
+            <value>
+                <fullName>Colorado Eagles Hockey</fullName>
+                <default>false</default>
+                <label>Colorado Eagles Hockey</label>
+            </value>
+            <value>
+                <fullName>Colorado Rockies</fullName>
+                <default>false</default>
+                <label>Colorado Rockies</label>
+            </value>
+            <value>
+                <fullName>Comedy Acts</fullName>
+                <default>false</default>
+                <label>Comedy Acts</label>
+            </value>
+            <value>
+                <fullName>Concerts</fullName>
+                <default>false</default>
+                <label>Concerts</label>
+            </value>
+            <value>
+                <fullName>Craft Brewing Industry</fullName>
+                <default>false</default>
+                <label>Craft Brewing Industry</label>
+            </value>
+            <value>
+                <fullName>Creighton Basketball</fullName>
+                <default>false</default>
+                <label>Creighton Basketball</label>
+            </value>
+            <value>
+                <fullName>CSU Alumni</fullName>
+                <default>false</default>
+                <label>CSU Alumni</label>
+            </value>
+            <value>
+                <fullName>CSU Basketball</fullName>
+                <default>false</default>
+                <label>CSU Basketball</label>
+            </value>
+            <value>
+                <fullName>CSU Football</fullName>
+                <default>false</default>
+                <label>CSU Football</label>
+            </value>
+            <value>
+                <fullName>CU Alumni</fullName>
+                <default>false</default>
+                <label>CU Alumni</label>
+            </value>
+            <value>
+                <fullName>CU Basketball</fullName>
+                <default>false</default>
+                <label>CU Basketball</label>
+            </value>
+            <value>
+                <fullName>CU Football</fullName>
+                <default>false</default>
+                <label>CU Football</label>
+            </value>
+            <value>
+                <fullName>CWS</fullName>
+                <default>false</default>
+                <label>CWS</label>
+            </value>
+            <value>
+                <fullName>Dallas Cowboys</fullName>
+                <default>false</default>
+                <label>Dallas Cowboys</label>
+            </value>
+            <value>
+                <fullName>Dallas Mavericks</fullName>
+                <default>false</default>
+                <label>Dallas Mavericks</label>
+            </value>
+            <value>
+                <fullName>Denver Broncos</fullName>
+                <default>false</default>
+                <label>Denver Broncos</label>
+            </value>
+            <value>
+                <fullName>Denver Nuggets</fullName>
+                <default>false</default>
+                <label>Denver Nuggets</label>
+            </value>
+            <value>
+                <fullName>Family/Young Kids</fullName>
+                <default>false</default>
+                <label>Family/Young Kids</label>
+            </value>
+            <value>
+                <fullName>Farmer’s Market</fullName>
+                <default>false</default>
+                <label>Farmer’s Market</label>
+            </value>
+            <value>
+                <fullName>Fighting Illini</fullName>
+                <default>false</default>
+                <label>Fighting Illini</label>
+            </value>
+            <value>
+                <fullName>Fine Dining</fullName>
+                <default>false</default>
+                <label>Fine Dining</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Horseracing</fullName>
+                <default>false</default>
+                <label>Horseracing</label>
+            </value>
+            <value>
+                <fullName>Hunting</fullName>
+                <default>false</default>
+                <label>Hunting</label>
+            </value>
+            <value>
+                <fullName>Husker Basketball</fullName>
+                <default>false</default>
+                <label>Husker Basketball</label>
+            </value>
+            <value>
+                <fullName>Husker Football</fullName>
+                <default>false</default>
+                <label>Husker Football</label>
+            </value>
+            <value>
+                <fullName>Kansas Basketball</fullName>
+                <default>false</default>
+                <label>Kansas Basketball</label>
+            </value>
+            <value>
+                <fullName>Kansas State Football</fullName>
+                <default>false</default>
+                <label>Kansas State Football</label>
+            </value>
+            <value>
+                <fullName>KC Chiefs</fullName>
+                <default>false</default>
+                <label>KC Chiefs</label>
+            </value>
+            <value>
+                <fullName>KC Royals</fullName>
+                <default>false</default>
+                <label>KC Royals</label>
+            </value>
+            <value>
+                <fullName>KC Sporting</fullName>
+                <default>false</default>
+                <label>KC Sporting</label>
+            </value>
+            <value>
+                <fullName>KSU</fullName>
+                <default>false</default>
+                <label>KSU</label>
+            </value>
+            <value>
+                <fullName>KU</fullName>
+                <default>false</default>
+                <label>KU</label>
+            </value>
+            <value>
+                <fullName>MU</fullName>
+                <default>false</default>
+                <label>MU</label>
+            </value>
+            <value>
+                <fullName>NIU Alumni</fullName>
+                <default>false</default>
+                <label>NIU Alumni</label>
+            </value>
+            <value>
+                <fullName>NIU Huskies</fullName>
+                <default>false</default>
+                <label>NIU Huskies</label>
+            </value>
+            <value>
+                <fullName>Opera/Musicals</fullName>
+                <default>false</default>
+                <label>Opera/Musicals</label>
+            </value>
+            <value>
+                <fullName>Political Events</fullName>
+                <default>false</default>
+                <label>Political Events</label>
+            </value>
+            <value>
+                <fullName>Social Events</fullName>
+                <default>false</default>
+                <label>Social Events</label>
+            </value>
+            <value>
+                <fullName>Sporting Events</fullName>
+                <default>false</default>
+                <label>Sporting Events</label>
+            </value>
+            <value>
+                <fullName>Symphony</fullName>
+                <default>false</default>
+                <label>Symphony</label>
+            </value>
+            <value>
+                <fullName>Texas Rangers</fullName>
+                <default>false</default>
+                <label>Texas Rangers</label>
+            </value>
+            <value>
+                <fullName>Theater</fullName>
+                <default>false</default>
+                <label>Theater</label>
+            </value>
+            <value>
+                <fullName>UNC Alumni</fullName>
+                <default>false</default>
+                <label>UNC Alumni</label>
+            </value>
+            <value>
+                <fullName>UNC Basketball</fullName>
+                <default>false</default>
+                <label>UNC Basketball</label>
+            </value>
+            <value>
+                <fullName>UNC Football</fullName>
+                <default>false</default>
+                <label>UNC Football</label>
+            </value>
+            <value>
+                <fullName>UNO Hockey</fullName>
+                <default>false</default>
+                <label>UNO Hockey</label>
+            </value>
+            <value>
+                <fullName>U of Ilinois Alumni</fullName>
+                <default>false</default>
+                <label>U of Ilinois Alumni</label>
+            </value>
+            <value>
+                <fullName>Wine Tastings</fullName>
+                <default>false</default>
+                <label>Wine Tastings</label>
+            </value>
+            <value>
+                <fullName>Wyoming Alumni</fullName>
+                <default>false</default>
+                <label>Wyoming Alumni</label>
+            </value>
+            <value>
+                <fullName>Wyoming Basketball</fullName>
+                <default>false</default>
+                <label>Wyoming Basketball</label>
+            </value>
+            <value>
+                <fullName>Wyoming Football</fullName>
+                <default>false</default>
+                <label>Wyoming Football</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

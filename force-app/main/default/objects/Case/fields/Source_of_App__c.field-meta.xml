@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_App__c</fullName>
+    <description>Tracks the source of dealer sourced card applications</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Input the source of the Chrysler application</inlineHelpText>
+    <label>Source of App</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Card Central</fullName>
+                <default>false</default>
+                <label>Credit Card Central</label>
+            </value>
+            <value>
+                <fullName>Route One</fullName>
+                <default>false</default>
+                <label>Route One</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

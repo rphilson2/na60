@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_HELOC_Account_Number</fullName>
+    <active>true</active>
+    <description>Retail referral with the Home Equity Retail Product cannot be qualified without a HELOC account number</description>
+    <errorConditionFormula>AND( 
+CONTAINS(TEXT(Referral_Status__c), &quot;Qualified&quot;), 
+ISBLANK(HELOC_Account_Number__c), 
+TEXT(Retail_Product__c) = &quot;Home Equity&quot; 
+)</errorConditionFormula>
+    <errorMessage>A Home Equity referral cannot be qualified without a HELOC Account Number.</errorMessage>
+</ValidationRule>

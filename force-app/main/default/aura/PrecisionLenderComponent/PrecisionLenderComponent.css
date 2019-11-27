@@ -1,0 +1,23 @@
+.THIS .tdata { vertical-align: top;
+        border: 5px solid white;        
+}
+
+.THIS .underline { 
+    text-decoration: underline;
+}
+
+.THIS .theader {
+    text-align: center;       
+}
+
+.THIS .theaderleft {
+    text-align: left;    
+    display:inline;    
+}
+
+.THIS .whitegreen {    
+    color: white;
+    background-color: green;   
+}
+
+.THIS .title{font-weight: bold}

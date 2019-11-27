@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>US_Zip_Code_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(Zip_Postal_Code__c = &quot;&quot;),
+ISPICKVAL(Country__c, &quot;United States&quot;),
+NOT(REGEX( Zip_Postal_Code__c , &quot;\\d{5}(-\\d{4})?&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Zip_Postal_Code__c</errorDisplayField>
+    <errorMessage>US Zip Codes must be in 99999 or 99999-9999 format.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>P_Card_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>P-Card Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not A P-Card Opportunity</fullName>
+                <default>false</default>
+                <label>Not A P-Card Opportunity</label>
+            </value>
+            <value>
+                <fullName>New_LG_bus_Card</fullName>
+                <default>false</default>
+                <label>New LG Bus Card</label>
+            </value>
+            <value>
+                <fullName>New VOX card</fullName>
+                <default>false</default>
+                <label>New VOX card</label>
+            </value>
+            <value>
+                <fullName>Growth</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>Small Business</fullName>
+                <default>false</default>
+                <label>Small Business</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <label>Conversion</label>
+            </value>
+            <value>
+                <fullName>AP Opportunity</fullName>
+                <default>false</default>
+                <label>AP Opportunity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

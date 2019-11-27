@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Legal_Occupations__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Legal Occupations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adjudicator</fullName>
+                <default>false</default>
+                <label>Adjudicator</label>
+            </value>
+            <value>
+                <fullName>Arbitrator/Mediator</fullName>
+                <default>false</default>
+                <label>Arbitrator/Mediator</label>
+            </value>
+            <value>
+                <fullName>Court Reporter</fullName>
+                <default>false</default>
+                <label>Court Reporter</label>
+            </value>
+            <value>
+                <fullName>Hearing Officer</fullName>
+                <default>false</default>
+                <label>Hearing Officer</label>
+            </value>
+            <value>
+                <fullName>Judge/Magistrate</fullName>
+                <default>false</default>
+                <label>Judge/Magistrate</label>
+            </value>
+            <value>
+                <fullName>Law Clerk</fullName>
+                <default>false</default>
+                <label>Law Clerk</label>
+            </value>
+            <value>
+                <fullName>Law Teacher</fullName>
+                <default>false</default>
+                <label>Law Teacher</label>
+            </value>
+            <value>
+                <fullName>Lawyer/Attorney</fullName>
+                <default>false</default>
+                <label>Lawyer/Attorney</label>
+            </value>
+            <value>
+                <fullName>Legal Support Worker</fullName>
+                <default>false</default>
+                <label>Legal Support Worker</label>
+            </value>
+            <value>
+                <fullName>Manager, Legal Department</fullName>
+                <default>false</default>
+                <label>Manager, Legal Department</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Owner / Partner</fullName>
+                <default>false</default>
+                <label>Owner / Partner</label>
+            </value>
+            <value>
+                <fullName>Paralegal/Legal Assistant</fullName>
+                <default>false</default>
+                <label>Paralegal/Legal Assistant</label>
+            </value>
+            <value>
+                <fullName>Public Defender/Prosecutor</fullName>
+                <default>false</default>
+                <label>Public Defender/Prosecutor</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Title Examiner/Searcher</fullName>
+                <default>false</default>
+                <label>Title Examiner/Searcher</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

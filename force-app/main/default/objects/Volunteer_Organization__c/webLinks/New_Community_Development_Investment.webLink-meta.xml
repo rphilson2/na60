@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Community_Development_Investment</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>New Community Development Investment</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a1d/e?CF00Na000000B7vx2={!Volunteer_Organization__c.Name}&amp;CF00Na000000B7vx2_lkid={!Volunteer_Organization__c.Id}&amp;RecordType=012a0000001ZV2P</url>
+</WebLink>

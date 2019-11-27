@@ -1,0 +1,5 @@
+<apex:page standardController="Card_Product__c">
+    <apex:form >
+        <apex:commandButton action="$Action.Card_Product__c.Copy_Physical_Address_to_Billing_Address" value="Copy Physical Address to Mailing Address" style="float: right;"/>
+    </apex:form>
+</apex:page>

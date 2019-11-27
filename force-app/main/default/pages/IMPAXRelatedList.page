@@ -1,0 +1,21 @@
+<apex:page standardController="Account" extensions="IMPAXRelatedList_Controller" lightningStylesheets="true">
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!IMPAX}" var="a">
+            <apex:column headerValue="IMPAX ID">
+                <apex:outputlink target="_top" value="/apex/IMPAX?id={!a.id}"> {!a.name} 
+                </apex:outputlink>
+            </apex:column>
+            <apex:column headerValue="Account">
+                <apex:outputText value="{!a.Account__r.Name}">
+                </apex:outputText>
+            </apex:column>
+            <apex:column headerValue="PDF">
+                <apex:outputlink target="_blank" value="/apex/IMPAX_PDF?id={!a.id}"> PDF 
+                </apex:outputlink>
+            </apex:column>            
+            <apex:column headerValue="Created Date/Time" value="{!a.CreatedDate}"/>
+            <apex:column headerValue="Last Modified By" value="{!a.LastModifiedById}"/>        
+            <apex:column headerValue="Last Modified Date" value="{!a.LastModifiedDate}"/>            
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

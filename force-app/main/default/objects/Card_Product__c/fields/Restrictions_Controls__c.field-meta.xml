@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrictions_Controls__c</fullName>
+    <externalId>false</externalId>
+    <label>Restrictions/Controls</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>MCC</fullName>
+                <default>false</default>
+                <label>MCC</label>
+            </value>
+            <value>
+                <fullName>MCC, MCG, &amp; Velocity</fullName>
+                <default>false</default>
+                <label>MCC, MCG, &amp; Velocity</label>
+            </value>
+            <value>
+                <fullName>MCC &amp; MCG</fullName>
+                <default>false</default>
+                <label>MCC &amp; MCG</label>
+            </value>
+            <value>
+                <fullName>MCC &amp; Velocity</fullName>
+                <default>false</default>
+                <label>MCC &amp; Velocity</label>
+            </value>
+            <value>
+                <fullName>MCG</fullName>
+                <default>false</default>
+                <label>MCG</label>
+            </value>
+            <value>
+                <fullName>MCG &amp; Velocity</fullName>
+                <default>false</default>
+                <label>MCG &amp; Velocity</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Velocity</fullName>
+                <default>false</default>
+                <label>Velocity</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

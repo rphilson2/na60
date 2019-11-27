@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Referral_Notification</fullName>
+        <description>Referral Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Referrals/New_Referral_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>Referral_Qualified</fullName>
+        <description>Referral Qualified</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Referrals/Qualified_Referral</template>
+    </alerts>
+    <alerts>
+        <fullName>Task_created_Referral</fullName>
+        <description>Task-created Referral</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Referrals/Task_created_Referral</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Populate_Completed_Role</fullName>
+        <field>Owner_Role__c</field>
+        <formula>Owner:User.User_Role_for_Reporting__c</formula>
+        <name>Populate Completed Role</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Date_Qualified</fullName>
+        <field>Date_Qualified__c</field>
+        <formula>NOW()</formula>
+        <name>Update Date Qualified</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Date Qualified</fullName>
+        <actions>
+            <name>Update_Date_Qualified</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Referral__c.Referral_Status__c</field>
+            <operation>equals</operation>
+            <value>Qualified_Create_Opp,Qualified - No Opportunity</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Completed Role</fullName>
+        <actions>
+            <name>Populate_Completed_Role</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Referral__c.Referral_Status__c</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Referral__c.Referral_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Working</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

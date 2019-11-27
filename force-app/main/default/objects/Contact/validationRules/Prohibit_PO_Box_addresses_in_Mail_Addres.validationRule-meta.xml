@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prohibit_PO_Box_addresses_in_Mail_Addres</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.ProfileId = &#39;00e0c00000287hf&#39;, 
+OR(
+CONTAINS(MailingStreet, &#39;PO &#39;),
+CONTAINS(MailingStreet, &#39;PO B&#39;),
+CONTAINS(MailingStreet, &#39;PO&#39;),
+CONTAINS(MailingStreet,&#39;POS &#39;),
+CONTAINS(MailingStreet, &#39;POBOX&#39;),
+CONTAINS(MailingStreet, &#39;P O &#39;),
+CONTAINS(MailingStreet, &#39;P o &#39;),
+CONTAINS(MailingStreet, &#39;p o &#39;),
+CONTAINS(MailingStreet, &#39;p O &#39;),
+CONTAINS(MailingStreet, &#39;P_O&#39;),
+CONTAINS(MailingStreet, &#39;P_o&#39;),
+CONTAINS(MailingStreet, &#39;p_O&#39;),
+CONTAINS(MailingStreet, &#39;p_o&#39;),
+CONTAINS(MailingStreet, &#39;P_O_&#39;),
+CONTAINS(MailingStreet, &#39;po&#39;)
+))</errorConditionFormula>
+    <errorMessage>Please enter a non-PO Box address in this field. Enter PO Box addresses in the Mailing Address fields.
+Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

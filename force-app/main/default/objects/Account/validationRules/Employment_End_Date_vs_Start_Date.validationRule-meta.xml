@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employment_End_Date_vs_Start_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$User.ProfileId = &#39;00e0c00000287hf&#39;, 
+Start_Date__pc &gt; End_Date__pc 
+)</errorConditionFormula>
+    <errorMessage>Invalid Employment End Date. Please Enter a valid Employment End Date. Having Trouble? Call us! (800) 551-5651 between 6 am and 10 pm. (Central Time)</errorMessage>
+</ValidationRule>

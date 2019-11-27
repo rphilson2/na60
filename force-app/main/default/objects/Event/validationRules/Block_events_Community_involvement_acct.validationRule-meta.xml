@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_events_Community_involvement_acct</fullName>
+    <active>true</active>
+    <description>Prevent users from addings tasks to the old Community Involvement accounts via Salesforce for Outlook - All volunteer and community activities should now go through the new Volunteer tracking portal</description>
+    <errorConditionFormula>OR( 
+WhatId = &#39;00130000013LSax&#39;, 
+WhatId = &#39;001300000128K94&#39;, 
+WhatId = &#39;00130000013LSY3&#39;, 
+WhatId = &#39;00130000015DXE2&#39;,
+WhatId = &#39;00130000013LSMl&#39;, 
+WhatId = &#39;00130000013LSC8&#39; 
+)</errorConditionFormula>
+    <errorMessage>Activities can no longer be added tot his account. Please log all community and volunteer activities in the new Volunteer Tracking Portal</errorMessage>
+</ValidationRule>

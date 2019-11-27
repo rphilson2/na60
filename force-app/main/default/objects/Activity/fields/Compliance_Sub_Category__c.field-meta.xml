@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Sub_Category__c</fullName>
+    <description>Used to categorize compliance tasks used by Business Monitoring</description>
+    <externalId>false</externalId>
+    <label>Compliance Sub Category</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Compliance_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Form not in FirstWork</fullName>
+                <default>false</default>
+                <label>Form not in FirstWork</label>
+            </value>
+            <value>
+                <fullName>Incorrect application date</fullName>
+                <default>false</default>
+                <label>Incorrect application date</label>
+            </value>
+            <value>
+                <fullName>Incorrect joint intent date for co-borrower/guarantors</fullName>
+                <default>false</default>
+                <label>Incorrect joint intent date for co-borrower/guarantors</label>
+            </value>
+            <value>
+                <fullName>Co-borrower not listed on form</fullName>
+                <default>false</default>
+                <label>Co-borrower not listed on form</label>
+            </value>
+            <value>
+                <fullName>Guarantor not listed on form</fullName>
+                <default>false</default>
+                <label>Guarantor not listed on form</label>
+            </value>
+            <value>
+                <fullName>Co-borrower listed as guarantor</fullName>
+                <default>false</default>
+                <label>Co-borrower listed as guarantor</label>
+            </value>
+            <value>
+                <fullName>Guarantor listed as co-borrower</fullName>
+                <default>false</default>
+                <label>Guarantor listed as co-borrower</label>
+            </value>
+            <value>
+                <fullName>Incorrect ownership percentage listed for guarantor</fullName>
+                <default>false</default>
+                <label>Incorrect ownership percentage listed for guarantor</label>
+            </value>
+            <value>
+                <fullName>Disclosure not in FirstWork</fullName>
+                <default>false</default>
+                <label>Disclosure not in FirstWork</label>
+            </value>
+            <value>
+                <fullName>Disclosure not addressed to primary borrower</fullName>
+                <default>false</default>
+                <label>Disclosure not addressed to primary borrower</label>
+            </value>
+            <value>
+                <fullName>Disclosure sent outside of three day window</fullName>
+                <default>false</default>
+                <label>Disclosure sent outside of three day window</label>
+            </value>
+            <value>
+                <fullName>Reason for withdrawal not listed</fullName>
+                <default>false</default>
+                <label>Reason for withdrawal not listed</label>
+            </value>
+            <value>
+                <fullName>Date of withdrawal not listed</fullName>
+                <default>false</default>
+                <label>Date of withdrawal not listed</label>
+            </value>
+            <value>
+                <fullName>Reason and date of withdrawal not listed</fullName>
+                <default>false</default>
+                <label>Reason and date of withdrawal not listed</label>
+            </value>
+            <value>
+                <fullName>Loan should have been denied</fullName>
+                <default>false</default>
+                <label>Loan should have been denied</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Form not in FirstWork</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Incorrect application date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Incorrect joint intent date for co-borrower/guarantors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Co-borrower not listed on form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Guarantor not listed on form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Co-borrower listed as guarantor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Guarantor listed as co-borrower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Joint Intent</controllingFieldValue>
+            <valueName>Incorrect ownership percentage listed for guarantor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appraisal Notice Disclosure</controllingFieldValue>
+            <valueName>Disclosure not in FirstWork</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appraisal Notice Disclosure</controllingFieldValue>
+            <valueName>Disclosure not addressed to primary borrower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appraisal Notice Disclosure</controllingFieldValue>
+            <valueName>Disclosure sent outside of three day window</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adverse Action</controllingFieldValue>
+            <valueName>Reason for withdrawal not listed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adverse Action</controllingFieldValue>
+            <valueName>Date of withdrawal not listed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adverse Action</controllingFieldValue>
+            <valueName>Reason and date of withdrawal not listed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adverse Action</controllingFieldValue>
+            <valueName>Loan should have been denied</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

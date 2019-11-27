@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Declined_by_Credit_Adverse_Action_Letter</fullName>
+    <active>true</active>
+    <description>Date that the  Adverse action letter is mailed when a Card Product is &quot;Declined&quot; in Salesforce</description>
+    <errorConditionFormula>AND(NOT(ISPICKVAL(Implementation_Stage__c, &quot;Status Red - Credit Approval Unlikely&quot;)), NOT(ISPICKVAL( Implementation_Stage__c ,&quot;Declined by Credit&quot;)),NOT(ISPICKVAL( Implementation_Stage__c, &quot;Withdrawn&quot;)), NOT(ISPICKVAL( Implementation_Stage__c , &quot;Declined for Incompleteness&quot;)), NOT(ISBLANK( Adverse_Action_Letter_Mailed__c )))</errorConditionFormula>
+    <errorDisplayField>Adverse_Action_Letter_Mailed__c</errorDisplayField>
+    <errorMessage>Only Valid for Process Stage: Status Red - Credit Approval Unlikely, Declined By Credit, Declined for Incompleteness, and Withdrawn</errorMessage>
+</ValidationRule>

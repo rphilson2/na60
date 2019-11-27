@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flood_Community_Focus_Area__c</fullName>
+    <description>New field for temporary website</description>
+    <externalId>false</externalId>
+    <label>Flood Community Focus Area</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Implementing Housing Solutions</fullName>
+                <default>false</default>
+                <label>Implementing Housing Solutions</label>
+            </value>
+            <value>
+                <fullName>Restoring Economic Activity and Small Business Vitality</fullName>
+                <default>false</default>
+                <label>Restoring Economic Activity and Small Business Vitality</label>
+            </value>
+            <value>
+                <fullName>Addressing health and human service needs</fullName>
+                <default>false</default>
+                <label>Addressing Health and Human Service Needs</label>
+            </value>
+            <value>
+                <fullName>Cleaning up and protecting natural resources</fullName>
+                <default>false</default>
+                <label>Cleaning up and Protecting Natural Resources</label>
+            </value>
+            <value>
+                <fullName>Strengthening infrastructure</fullName>
+                <default>false</default>
+                <label>Strengthening Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Restoration of Agricultural Activities</fullName>
+                <default>false</default>
+                <label>Restoration of Agricultural Activities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

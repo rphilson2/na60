@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liability_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>(*) Liability Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank Guarantee</fullName>
+                <default>false</default>
+                <label>Bank Guarantee</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Joint &amp; Several</fullName>
+                <default>false</default>
+                <label>Joint &amp; Several</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Personal Guarantee</fullName>
+                <default>false</default>
+                <label>Personal Guarantee</label>
+            </value>
+            <value>
+                <fullName>Secured</fullName>
+                <default>false</default>
+                <label>Secured</label>
+            </value>
+            <value>
+                <fullName>Still Needed</fullName>
+                <default>false</default>
+                <label>Still Needed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

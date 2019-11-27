@@ -1,0 +1,91 @@
+<apex:component controller="ExpQual">
+        <script type="text/javascript">
+        function redirectToUrl(url) {
+            window.location = url;
+        }
+
+        var destURL = window.location.href;
+    </script>
+ 
+    <div Id="Message">
+        <p class="portal-center-text slds-m-top--small"
+           n-style="pso-application-body-subheader"
+           resizer="true" ng-show="isMediumOrBigger">
+            Sit tight while we verify your identity
+        </p>
+    </div>
+    <div Id="SuccessMessage" style="Visibility: hidden">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                <!-- Overridden nPortal Next button -->
+                <!-- Added for nCino Support Case #72140 -->
+                <!-- Navigates user to next route group in the portal UI. Works for all UI groups. -->
+                <!-- Calls getNextRoute method in ExpQual class. Modifies App name in  URL in response function, reloads page. -->
+                <nPortal:NextButton buttonText="Next" ngClick="
+                                                               Visualforce.remoting.Manager.invokeAction(
+                                                               	'{!$RemoteAction.ExpQual.getNextRoute}', 
+                                                               	getUrlVars()['id'], 
+                                                               	function(result, event){
+                                                               		if(!event.detail || event.detail == 1){
+                                                               			var newURL = window.location.href.split('/');
+                                                               			var groupAndApp = newURL.pop();
+                                                               			var group = groupAndApp.split('.');
+                                                               			group = group[0];
+                                                               			newURL = newURL.join('/');
+                                                               			location.href = newURL + group + '.' + result;
+                                                               			window.location.reload();
+                                                               		}	
+                                                               	},
+                                                               	{escape: true});
+                                                              "/>
+            </div>
+        </div>
+    </div>
+    <div Id="ErrorMessage" style="Visibility: hidden">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col--padded slds-size--1-of-1 slds-m-top--medium">
+                <button style='margin:0 auto; display:block; color: #ffffff; background-color: #006341;' class='slds-button slds-button_outline-brand' onclick='redirectToUrl("{!$Label.FailedCustomerURL}")'>Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        jQuery('.portal-loader-overlay').hide();
+        Visualforce.remoting.timeout = 120000;
+
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.ExpQual.sendRequest}',
+            getUrlVars()['id'],
+            function(result, event) {
+                jQuery('body > div.portal-loader-overlay.ng-scope').hide();
+                if (event.status) {
+                    if(result.status === '{!$Label.SUCCESS_MESSAGE}'){
+                        document.getElementById("Message").innerHTML = result.message;
+                        document.getElementById("SuccessMessage").style.visibility = "visible";
+                        document.getElementById("ErrorMessage").style.visibility = "hidden";
+                    } else if(result.status === '{!$Label.FAILURE_MESSAGE}'){
+                        window.location.reload(true);
+                    } else if(result.status === '{!$Label.ERROR_MESSAGE}'){
+                        document.getElementById("Message").innerHTML = result.message;
+                        document.getElementById("SuccessMessage").style.visibility = "hidden";
+                        document.getElementById("ErrorMessage").style.visibility = "visible";                       
+                    }
+                } else {
+                    document.getElementById("Message").innerHTML = '{!$Label.IntegrationMessageError}';
+                    document.getElementById("SuccessMessage").style.visibility = "hidden";
+                    document.getElementById("ErrorMessage").style.visibility = "visible";                       
+                }
+            },
+            {escape: true}
+        );
+    </script>
+
+</apex:component>

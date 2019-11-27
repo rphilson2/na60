@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Architecture_and_Eng__c</fullName>
+    <description>Online App</description>
+    <externalId>false</externalId>
+    <label>Position - Architecture and Eng</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aerospace Engineer/Ops Tech</fullName>
+                <default>false</default>
+                <label>Aerospace Engineer/Ops Tech</label>
+            </value>
+            <value>
+                <fullName>Agricultural Engineer</fullName>
+                <default>false</default>
+                <label>Agricultural Engineer</label>
+            </value>
+            <value>
+                <fullName>Architect/Civil Drafter</fullName>
+                <default>false</default>
+                <label>Architect/Civil Drafter</label>
+            </value>
+            <value>
+                <fullName>Biomedical Engineer</fullName>
+                <default>false</default>
+                <label>Biomedical Engineer</label>
+            </value>
+            <value>
+                <fullName>Cartographer/Photogrammetrist</fullName>
+                <default>false</default>
+                <label>Cartographer/Photogrammetrist</label>
+            </value>
+            <value>
+                <fullName>Chemical Engineer</fullName>
+                <default>false</default>
+                <label>Chemical Engineer</label>
+            </value>
+            <value>
+                <fullName>Civil Engineer</fullName>
+                <default>false</default>
+                <label>Civil Engineer</label>
+            </value>
+            <value>
+                <fullName>Computer Engineer</fullName>
+                <default>false</default>
+                <label>Computer Engineer</label>
+            </value>
+            <value>
+                <fullName>Drafter</fullName>
+                <default>false</default>
+                <label>Drafter</label>
+            </value>
+            <value>
+                <fullName>Electronical Engineer</fullName>
+                <default>false</default>
+                <label>Electronical Engineer</label>
+            </value>
+            <value>
+                <fullName>Engineering Technician</fullName>
+                <default>false</default>
+                <label>Engineering Technician</label>
+            </value>
+            <value>
+                <fullName>Environmental Engineer</fullName>
+                <default>false</default>
+                <label>Environmental Engineer</label>
+            </value>
+            <value>
+                <fullName>Health/Safety Engineer</fullName>
+                <default>false</default>
+                <label>Health/Safety Engineer</label>
+            </value>
+            <value>
+                <fullName>Industrial Engineer</fullName>
+                <default>false</default>
+                <label>Industrial Engineer</label>
+            </value>
+            <value>
+                <fullName>Landscape Architect</fullName>
+                <default>false</default>
+                <label>Landscape Architect</label>
+            </value>
+            <value>
+                <fullName>Manager, Surveyor</fullName>
+                <default>false</default>
+                <label>Manager, Surveyor</label>
+            </value>
+            <value>
+                <fullName>Marine Engineer/Naval Architect</fullName>
+                <default>false</default>
+                <label>Marine Engineer/Naval Architect</label>
+            </value>
+            <value>
+                <fullName>Materials Engineer</fullName>
+                <default>false</default>
+                <label>Materials Engineer</label>
+            </value>
+            <value>
+                <fullName>Mechanical Engineer</fullName>
+                <default>false</default>
+                <label>Mechanical Engineer</label>
+            </value>
+            <value>
+                <fullName>Mining/Safety-Geo Engineer</fullName>
+                <default>false</default>
+                <label>Mining/Safety-Geo Engineer</label>
+            </value>
+            <value>
+                <fullName>Nuclear Engineer</fullName>
+                <default>false</default>
+                <label>Nuclear Engineer</label>
+            </value>
+            <value>
+                <fullName>Petroleum Engineer</fullName>
+                <default>false</default>
+                <label>Petroleum Engineer</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Safety Supervisor</fullName>
+                <default>false</default>
+                <label>Safety Supervisor</label>
+            </value>
+            <value>
+                <fullName>Supervisor Capagraphy/Mapping</fullName>
+                <default>false</default>
+                <label>Supervisor Capagraphy/Mapping</label>
+            </value>
+            <value>
+                <fullName>Surveying/Mapping Technician</fullName>
+                <default>false</default>
+                <label>Surveying/Mapping Technician</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

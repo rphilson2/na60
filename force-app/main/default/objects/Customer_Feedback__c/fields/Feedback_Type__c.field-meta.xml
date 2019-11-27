@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Feedback Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branch Survey</fullName>
+                <default>false</default>
+                <label>Branch Survey</label>
+            </value>
+            <value>
+                <fullName>Digital Survey</fullName>
+                <default>false</default>
+                <label>Digital Survey</label>
+            </value>
+            <value>
+                <fullName>Call Center Survey</fullName>
+                <default>false</default>
+                <label>Call Center Survey</label>
+            </value>
+            <value>
+                <fullName>Collections Survey</fullName>
+                <default>false</default>
+                <label>Collections Survey</label>
+            </value>
+            <value>
+                <fullName>Fraud Survey</fullName>
+                <default>false</default>
+                <label>Fraud Survey</label>
+            </value>
+            <value>
+                <fullName>Mortgage Survey</fullName>
+                <default>false</default>
+                <label>Mortgage Survey</label>
+            </value>
+            <value>
+                <fullName>Welcome Survey</fullName>
+                <default>false</default>
+                <label>Welcome Survey</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

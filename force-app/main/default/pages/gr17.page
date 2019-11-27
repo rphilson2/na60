@@ -1,0 +1,135 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" cache="false" expires="0" showHeader="false" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="blankrow"></div>
+            <div class="shortblankrow"></div>
+            <center>
+            <apex:outputText value="Do NOT use your browser’s back button, as you could lose edits you’ve made. Instead, please scroll down and use the BACK and NEXT buttons at the bottom of the page to navigate back and forth within the application" styleclass="fixedredtext" style="color:#B50021; font-style:italic"></apex:outputText>            
+            </center>
+        </div>        
+                <div class="body">
+                        <apex:form >
+                            <center>
+                                <apex:pagemessages ></apex:pagemessages>
+                            </center>
+                            <center>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td><apex:outputText value="12. Indicate the percentage of funding for the particular program and your organization that comes from:" styleClass="outputtext"/></td>
+                                </tr>                                
+                                <tr class="blankrow"></tr>                                
+                                <tr>
+                                <td><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <thead>
+                                    <tr>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Funding Mechanism" styleClass="outputtextbold"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Program" styleClass="outputtextbold"/></th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Organization" styleClass="outputtextbold"/></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Government contracts/grants" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Government_Contracts_Grants__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Government_Contracts_Grants__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Individual contributions/grants" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Individual_Contributions_Grant__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Individual_contributions_grants__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Corporate contributions/grants/fees" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Corporate_Cont_Grants_Fees__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Corporate_Cont_Grants_Fees__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Foundation contributions/grants/fees" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Foundation_Cont_Grants_Fees__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Foundation_Cont_Grants_Fees__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Membership dues/fees" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Membership_dues_fees__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Membership_Dues_Fees__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Investment interest/tax revenue" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Investment_Interest_Tax_Rev__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Investment_Interest_Tax_Rev__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Earned Revenue" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Earned_Revenue__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Earned_Revenue__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="United Way" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_United_Way__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_United_Way__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:outputText value="Other" styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Program_Other__c}"  styleClass="outputtext"/></td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse"><apex:inputField value="{!FIC_Survey_Application__c.G_Org_Other__c}"  styleClass="outputtext"/></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                <tr>
+                                <td style="font-family: Arial; font-size: 11pt; font-weight: bold; color: #13008C"><i>The "Program" column and the "Organization" column must each have a combined total value of 100%.</i></td>
+                                </tr>                                
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td><apex:outputText value="13. Please list the specific sources of funding and the amount contributed for the project in the most recent year (i.e. Smith Family Foundation - $20,000;
+                                Community Development Block Grant Funding - $50,000).  These should be specific to the project for which you are requesting funding (1500 character limit)." styleClass="outputtext"/></td>
+                                </tr>
+                                <tr>
+                                <td><apex:inputField value="{!FIC_Survey_Application__c.Specific_Funding_Sources__c}"  onkeydown="limit(this, 1500)" onkeyup="limit(this, 1500)" styleClass="inputfieldwide"/></td>
+                                </tr>                                
+                            </table>
+                            </center>
+                            <table style="border-spacing: 2px; margin-left: 0%">
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BACK" action="{!back}" styleClass="myButton"/>
+                                </td>                                
+                                <td>
+                                <apex:commandButton value="SAVE AND COME BACK LATER" action="{!saveforlater}" styleClass="myButton"/>
+                                </td>
+                                <td>
+                                <apex:commandButton value="NEXT PAGE" action="{!gr18}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                
+                </div>
+    </body>
+</apex:page>

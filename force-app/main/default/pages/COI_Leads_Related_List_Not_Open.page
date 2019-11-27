@@ -1,0 +1,13 @@
+<apex:page standardController="COI__c" extensions="coileadcontroller">
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!coiLeadsNotOpen}" var="a">
+            <apex:column headerValue="Lead Name">
+                <apex:outputlink target="_blank" value="/{!a.id}"> {!a.name} 
+                </apex:outputlink>
+            </apex:column>
+            <apex:column headerValue="Status" value="{!a.Status}"/>
+            <apex:column headerValue="Referral Type" value="{!a.Referral_Type__c}"/>
+            <apex:column headerValue="Lead Owner" value="{!a.Owner.Name}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hidden__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When this field is checked, it will be hidden in the Web Form</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this field to hide it on the form. Hidden fields require a default value.</inlineHelpText>
+    <label>Hidden</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

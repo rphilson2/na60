@@ -1,0 +1,43 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" expires="0" standardStylesheets="false" sidebar="false">
+<apex:includeScript value="{!$Resource.inputfieldmaxchar}" />
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+
+    <body>
+        <div class="fixedheader">
+             <div class="textbar">
+                <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_white.png')}" width="600" height="70"/>
+                <div class="fixedheadermini">
+                   <center>
+                      <apex:outputText value="If you’re having difficulty accessing your in-progress application or if you have questions, please email " style="font-family: arial; font-size: 18px; color:#004017; font-weight:bold; font-style:italic"/><apex:outputLink value="mailto:communitydevelopment@fnni.com" style="font-family: arial; font-size: 18px; color:#004017; font-weight:bold; font-style:italic">communitydevelopment@fnni.com</apex:outputLink><apex:outputText value=" for assistance." style="font-family: arial; font-size: 18px; color:#004017; font-weight:bold; font-style:italic"/>
+                   </center>
+                </div>          
+             </div>  
+        </div>
+    
+        <div class="body">  
+            <apex:form >
+                <center><apex:outputText value="Please enter your organization's Tax ID" styleClass="outputtextbold"/></center>
+                <center><apex:inputField value="{!FIC_Survey_Application__c.Tax_ID__c}" required="true" styleClass="inputfield" tabOrderHint="1"/></center>
+                <center><apex:outputText value="A valid tax id must be entered in the 77-7777777 format. If you are unsure of your organization’s tax id, please visit " styleClass="outputtextbluital"/><apex:outputLink value="https://www.guidestar.org/search" target="_blank" styleClass="outputlinkSmall">https://www.guidestar.org/search</apex:outputlink><apex:outputText value="." styleClass="outputtextbluital"/></center>                
+                <br/>
+                <br/>
+                <center><apex:outputText value="Please select your Market" styleClass="outputtextbold"/></center>
+                <center><apex:inputField value="{!FIC_Survey_Application__c.Market__c}" required="true" styleClass="inputfield" tabOrderHint="2"/></center>
+                <center><apex:outputText value="The market selected should reflect the location of the primary beneficiaries served as proposed by this application." styleClass="outputtextbluital"/></center>                
+                <br/>
+                <br/>
+                <br/>
+                <center><apex:outputText value="Grant Contact Email Address" styleClass="outputtextbold"/></center>
+                <center><apex:inputField value="{!FIC_Survey_Application__c.Grant_Contact_Email__c}" required="true" styleClass="inputfield" tabOrderHint="3"/></center>
+                <br/>
+                <br/>
+                <br/>
+                <br/>                
+                <center><apex:outputText value="(If you are returning to finish a partially completed application, pressing Next will take you directly to the page where you left off)" styleClass="outputtextgrn" style="font-style:italic"/></center>
+                <br/>
+                <center><apex:commandButton value="NEXT" action="{!signin}" styleClass="myButton"/></center>
+           </apex:form>
+        </div>
+    </body>
+</apex:page>

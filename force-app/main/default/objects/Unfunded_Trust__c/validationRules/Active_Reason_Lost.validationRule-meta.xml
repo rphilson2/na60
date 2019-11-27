@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Reason_Lost</fullName>
+    <active>true</active>
+    <description>The the Unfunded Trust is active, it cannot have a Reason Lost populated</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Status__c, &quot;Active&quot;), 
+Not(ISBLANK(text( Reason_Lost__c ))) 
+)</errorConditionFormula>
+    <errorMessage>An Active Unfunded Trust cannot have a Reason Lost populated</errorMessage>
+</ValidationRule>

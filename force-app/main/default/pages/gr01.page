@@ -1,0 +1,232 @@
+<apex:page standardController="FIC_Survey_Application__c" extensions="grantApplicationForm_Controller" showHeader="false" cache="false" standardStylesheets="false" sidebar="false">
+
+<apex:stylesheet value="{!URLFOR($Resource.fic_survey_form)}"/>
+   
+    <body>
+        <div class="fixedheader">
+             <div class="textbar">
+                <apex:image value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNBO_white.png')}" width="600" height="70"/>
+                <div class="fixedheadermini">
+                   <center>
+                      <apex:outputText value="To access an in-progress application, please scroll down and click the BEGIN button." style="font-family: arial; font-size: 18px; color:#3000F0; font-style:italic"/>
+                   </center>
+                </div>          
+             </div>  
+        </div>
+              <div class="body">
+                        <apex:form >
+                            <center class="outputtextbold" style="font-size:14pt">Community Development Grant Program</center>
+                            <div class="blankrow">
+                            </div>
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td class="outputtextbold">I. Program Overview</td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext"><p>Through the Community Development Grant Program, First National Bank of 
+                                Omaha (which also operates as First National Bank, First National Bank North Platte and and FNBO, and hereinafter referred to as "Bank" or "the Bank") 
+                                supports the implementation of community development activities in communities where the Bank operates 
+                                and serves.</p></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtextbold">II. Program Goals</td>
+                                </tr>
+                                <tr>
+                                <td><p><apex:outputText value="The goal of the Bank's Community Development 
+                                Grant Program is " styleClass="outputtext"/><apex:outputText value="to build strong and successful 
+                                communities. " styleClass="outputtextbold" />
+                                <apex:outputText value="Applicants requesting a Community Development grant must 
+                                currently be implementing or planning to implement a program, service, or initiative that 
+                                will achieve one of the following community development goals for the benefit of low or 
+                                moderate income individuals, families, and/or communities:" styleClass="outputtext"/></p></td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li class="outputtextbold">Strong Local Economies<sup>1</sup>:</li>
+                                    <ul>
+                                    <li>Grow local economies through small business and entrepreneurship development and 
+                                    job creation by supporting training, technical assistance, education and microfinance.</li>
+                                    </ul> 
+                                    <li class="outputtextbold">Stable Housing / Neighborhood Revitalization<sup>1</sup>:</li>
+                                    <ul>
+                                    <li>Increase access to safe, affordable, and quality housing through construction, site development, housing rehabilitation, homeownership education, or foreclosure prevention
+                                    programs and services, or stimulate revitalization in blighted, underserved, and distressed communities.</li>
+                                    </ul> 
+                                    <li class="outputtextbold">Educated Workforce<sup>2</sup>:</li>
+                                    <ul>
+                                    <li>Strengthen individual core competencies that will improve personal 
+                                    economic self-sufficiency, including financial education, adult basic education, and 
+                                    vocational and employability training.</li>
+                                    </ul> 
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtextbold">III. Program Eligibility</td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li class="outputtextbold">Community Development Purpose:</li>
+                                    <ul>
+                                    <li>Grants are awarded to support the grant program goals outline above, which are Strong Local Economies, 
+                                    Stable Housing / Neighborhood Revitalization, and Educated Workforce.</li>
+                                    </ul>
+                                    <li class="outputtextbold">Tax Status: </li>
+                                    <ul>
+                                    <li>Eligibility is limited to 501(c)(3) nonprofit organizations that are currently 
+                                    implementing or planning to implement programs, services, and initiatives that 
+                                    are consistent with the community development goals identified above.</li>
+                                    </ul> 
+                                    <li class="outputtextbold">Geography:</li>
+                                    <ul>
+                                    <li>Organizations eligible for a Community Development Grant must serve a county listed in 
+                                   <a href="resource/1545148550000/Grant_Appendix_A" target="_blank">Appendix A</a> in the “Counties Served” column, and the program/service/initiative must 
+                                    benefit individuals in one of the counties listed.</li>
+                                    </ul> 
+                                    <li class="outputtextbold">Program Beneficiaries:</li>
+                                    <ul>
+                                    <li>The majority (51 percent or more) of the beneficiaries (individuals, families, and/or census tract(s)) of 
+                                    any grant funded program or service must be low or moderate income. Low or moderate income is defined as 80 
+                                    percent or below the area Median Family Income. Grant applicants must demonstrate that a majority of the 
+                                    grant funded program beneficiaries are or will be low or moderate income by providing the specific data 
+                                    points requested in section 4 (Primary Beneficiary Information) for the target beneficiary group. 
+                                    Organizations that do not provide accurate or complete information will not be eligible for funding.</li>
+                                    </ul> 
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtextbold">IV. Funding Parameters</td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext"><p>Grants can support the direct implementation of programs, services, and 
+                                initiatives of eligible nonprofit organizations, consistent with the grant program goals. Funds can be used to 
+                                support program related expenses, including: personnel, supplies, materials, and sub-contracts. Grants may be used 
+                                for funding multiple programs or general operating expenses if the organization’s mission and overall activities 
+                                are consistent with the Community Development goals and a majority of the organization’s beneficiaries are low or 
+                                moderate income. Grants should cover a period of one year; multiyear grant awards will be considered on a 
+                                case-by-case basis, at the discretion of the Bank. Grant funding should be expended within one year of the 
+                                award, and grant renewals are not guaranteed.</p></td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext">Funding will not be provided to organizations or programs for the following purposes:</td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Organizations that are not tax-exempt defined by 501(c)(3) </li>
+                                    <li>Capital or endowment campaigns</li>
+                                    <li>Expenses for travel or for the benefit of an individual(s)</li>
+                                    <li>Political organizations or those that lobby as a primary area of focus</li>
+                                    <li>Health or disease specific programs or organizations</li>
+                                    <li>Religious organizations for religious purposes</li>
+                                    <li>Organizations outside of Bank’s geographic footprint</li>
+                                    <li>Fundraising events or sponsorships</li>
+                                </ul>
+                                </td></tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtextbold">V. Grant Application Requirements</td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext"><p>Organizations applying for a Community Development grant must 
+                                complete an online grant application and submit supplemental documentation.</p>
+                                <p>First National Bank Community Development Grants will be awarded twice per calendar year, 
+                                and each cycle is dedicated to one or more specific goal area(s), as indicated in Table 1. Only grants related to the specified 
+                                goal area will be accepted during each application period. Applications must be completed online and received within the time 
+                                frame indicated below. Applications submitted outside of the designated goal area and/or time period will not be considered, 
+                                and will not be retained for future rounds.  For example, an application for an education and workforce training program submitted in Round 1 
+                                will not be held over and considered in Round 2.  The applicant will need to reapply in the grant cycle designated to Educated Workforce 
+                                programs.  For additional information regarding alignment with First National Bank goal areas, please review the information in Section 2 above, 
+                                as well as <a href="/CRAGrant/gr24" target="_blank">Appendix C</a>.</p>
+                                <p>Table 1: Grant Cycles and Goal Areas</p></td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext"><table style="border: 1px solid #000000; border-collapse: collapse">
+                                  <thead>
+                                    <tr class="outputtextbold">
+                                      <th style="border: 1px solid #000000; border-collapse: collapse">2019 Grant Cycle</th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse">Applications Accepted</th>
+                                      <th style="border: 1px solid #000000; border-collapse: collapse">Goal Area</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">Grant Cycle 2</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">June 3 – July 8, 2019</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">Educated Workforce</td>
+                                    </tr>                                  
+                                    <tr>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">Grant Cycle 1</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">Currently closed—<br/>will reopen January 2020</td>
+                                      <td style="border: 1px solid #000000; border-collapse: collapse">Stable Housing/<br></br>
+                                      Neighborhood Revitalization<br></br>
+                                      Strong Local Economies<br></br></td>                                      
+                                    </tr>                                  
+                                  </tbody>
+                                </table></td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr>
+                                <td class="outputtext"><p>The following documents must be combined into one PDF document and submitted with the grant application:</p></td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext">
+                                1. Program Budget – current year and forecast<br></br>
+                                2. Board of Directors – Directors names, organization affiliation; and term of directorship<br/>
+                                3. Audited financial statements – If the organization does not receive an annual audit, CPA-reviewed financial statements are acceptable. If an independent audit or reviewed financial statements are unavailable, board-approved financial statements must be provided.</td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext"><p>Applicants may be required to submit a completed W-9 at a later date.</p></td>
+                                </tr>
+                                <tr>
+                                <td class="outputtext">Grants will be evaluated based on several factors, including but not limited to:</td>
+                                </tr>
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li>Demonstrated community need</li>
+                                    <li>Alignment with Community Development Grant Program goals</li>
+                                    <li>Proposed and past program outcomes, impacts and sustainability</li>
+                                    <li>Strategy to achieve outcomes</li>
+                                    <li>Organizational effectiveness</li>
+                                </ul>
+                                </td></tr>
+                           </table>
+                           <table style="border-spacing: 2px;">
+                                <tr>
+                                <td class="outputtextbold">Resources to Assist with the Application</td>
+                                </tr>                           
+                                <tr><td>
+                                <ul class="outputtext">
+                                    <li class="outputtext">Click <a href="resource/1545087699000/Grant_Sample_App_2019" target="_blank">here</a> to view a PDF of the questions asked in the application</li>
+                                    <li class="outputtext">Do NOT use the browser’s back and next buttons, as they may result in losing information.  Use the BACK and NEXT buttons within the application</li>
+                                    <li class="outputtext">Applicants can save the application in-progress by selecting the SAVE AND COME BACK LATER button at the bottom of the page.  Once applicants select SUBMIT APPLICATION, no additional changes can be made.</li>
+                                    <li class="outputtext">After selecting SUBMIT APPLICATION, applicants can save a PDF copy of the application, and an automated email containing the application will be sent to the grant contact email address.</li>
+                                    <li><a href="/CRAGrant/gr23" target="_blank">Appendix B</a> contains Frequently Asked Questions </li>
+                                    <li><a href="/CRAGrant/gr24" target="_blank">Appendix C</a> contains examples of programs supported by First National Bank’s Community Development Grant Program</li>
+                                </ul>
+                                </td></tr>
+                                <tr>
+                                <td class="outputtext"><p>If you have questions after reviewing the application and appendices A through C, direct them to: 
+                                <a href="mailto:communitydevelopment@fnni.com">communitydevelopment@fnni.com</a></p></td>
+                                </tr>                                
+                            </table>                               
+                            <table style="border-spacing: 2px;">
+                                <tr>
+                                <td>
+                                <apex:commandButton value="BEGIN" action="{!beginApp}" styleClass="myButton"/>
+                                </td>
+                                </tr>
+                                <tr class="blankrow"></tr>
+                                <tr class="blankrow"></tr>
+                                <tr><td class="outputtext"><i><sup>1</sup>Applications for Stable Housing/Neighborhood Revitalization 
+                                and Strong Local Economies are accepted only during Grant Cycle 1, beginning in January.</i></td></tr>
+                                <br></br>
+                                <tr><td class="outputtext"><i><sup>2</sup>Applications for Educated Workforce are accepted only 
+                                during Grant Cycle 2, beginning in June.</i></td></tr>
+                                <tr class="blankrow"></tr>
+                            </table>
+                        </apex:form>                   
+                </div>
+    </body>
+</apex:page>

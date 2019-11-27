@@ -1,0 +1,59 @@
+<apex:page standardController="FIC_Survey_Application__c" showheader="false" tabStyle="Salesforce_on_Intranet__tab" title="Grant Applications">
+<apex:stylesheet value="{!URLFOR($Resource.Surveyform)}"/>
+
+<style>
+.outputtext {
+        font-size: 18px;
+        font-family:Arial;
+        font-weight: normal;
+        color: #000000;
+}
+.outputtextbold {
+        font-size: 72px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+}
+.fixedheader {
+        top:20px;
+        color:white;
+        background:white;
+}
+.textbar {
+        padding-top:50px;
+        align:center;
+        text-align:center;
+        width: 100%;
+}
+.outputtextbold2 {
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #000000;
+    }
+ .output {
+       
+       
+        color: #000000;
+    }
+</style>
+    <div class="fixedheader">
+          <br/>
+          <br/>
+          <apex:image id="fnb_green_logo" value="{!URLFOR($Resource.firstincommunitylogos, '/firstincommunitylogos/FNB_Logo_40_pct.png')}" width="550" height="86"/>
+          <br/>
+          <br/>
+          <br/>
+    </div>
+    
+    <body>
+      <div class="body">
+          <center><apex:outputText value="Grant Application Round closed" styleclass="outputtextbold2"></apex:outputText></center>
+          <br/>
+          <center><apex:outputText value="Grant applications are closed for Round 1, {!YEAR(TODAY())}.  Please check back for Round 2, beginning in June." styleclass="outputtext" style="float:center" rendered="{!IF (MONTH(TODAY()) > 1 && MONTH(TODAY()) < 6, true, false)}"></apex:outputText></center>
+          <center><apex:outputText value="Grant applications are closed for {!YEAR(TODAY())}.  Please check back for Round 1, {!YEAR(TODAY() + 365)}, beginning in January." styleclass="outputtext" style="float:center" rendered="{!IF (MONTH(TODAY()) > 6 && MONTH(TODAY()) < 13, true, false)}"></apex:outputText></center>          
+          <center><apex:outputText value="Grant applications are not open yet, but should be this month.  Please check back again in about a week." styleclass="outputtext" style="float:center" rendered="{!IF (MONTH(TODAY()) = 1 || MONTH(TODAY()) = 6, true, false)}"></apex:outputText></center>
+         
+      </div>
+  </body>
+</apex:page>
